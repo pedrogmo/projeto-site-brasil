@@ -40,6 +40,12 @@ nav#menuPrincipal ul li a
 	border-radius: 20px;
 }
 
+nav#menuPrincipal ul li a:hover
+{
+	color: #ffff00;
+	background-color: #0000ff;
+}
+
 section#principal{
 margin: auto;
 width: 100%;
@@ -56,4 +62,11 @@ background: #ccccff;
 
 section#principal .governantes td{
 	padding: 10px;
+	border: 1px solid black;
+}
+
+section#principal .governantes td.cabecalho{
+	font-weight: bold;
+	background-color: white;
+	color: black;
 }
