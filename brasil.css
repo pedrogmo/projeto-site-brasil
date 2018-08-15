@@ -46,17 +46,18 @@ nav#menuPrincipal ul li a:hover
 }
 
 section#principal{
-margin: auto;
-width: 100%;
-background: #6699ff;
-height: 100%;
+	margin: auto;
+	width: 100%;
+	background: #6699ff;
+	height: 100%;
 }
 
 section#principal .governantes{
-margin: auto;
-border: 1px solid black;
-font-size: 20px;
-background: #ccccff;
+	margin: auto;
+	border: 1px solid black;
+	font-size: 20px;
+	background: #ccccff;
+	border-collapse: collapse;
 }
 
 section#principal .governantes td{
