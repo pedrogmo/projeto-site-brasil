@@ -6,7 +6,7 @@ body{
 
 nav#menuPrincipal{
 	height:60px;
-	width: 100%;
+	width: 100% - 30px;
 	background:#00cc00;
 	padding:10px;
 	margin: auto;
@@ -15,7 +15,6 @@ nav#menuPrincipal{
 nav#menuPrincipal ul li{
 	display: inline;
 	margin-left: 30px;
-	float :center;
 }
 
 nav#menuPrincipal ul li .logo{
