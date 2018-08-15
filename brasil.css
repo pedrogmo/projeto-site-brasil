@@ -70,3 +70,7 @@ section#principal .governantes td.cabecalho{
 	background-color: white;
 	color: black;
 }
+
+img{
+	border: solid 1px black;
+}
