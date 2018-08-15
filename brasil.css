@@ -47,17 +47,16 @@ nav#menuPrincipal ul li a:hover
 }
 
 section#principal{
-margin: auto;
-width: 100%;
-background: #6699ff;
-height: 100%;
+	margin: auto;
+	width: 100%;
+	background: #6699ff;
 }
 
 section#principal .governantes{
-margin: auto;
-border: 1px solid black;
-font-size: 20px;
-background: #ccccff;
+	margin: auto;
+	border: 1px solid black;
+	font-size: 20px;
+	background: #ccccff;
 }
 
 section#principal .governantes td{
@@ -69,4 +68,208 @@ section#principal .governantes td.cabecalho{
 	font-weight: bold;
 	background-color: white;
 	color: black;
+}
+
+section#principal .governantes td.gov_-1{
+	background: url('./Imagens/-1.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_0{
+	background: url('./Imagens/0.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_1{
+	background: url('./Imagens/1.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_2{
+	background: url('./Imagens/2.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_3{
+	background: url('./Imagens/3.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_4{
+	background: url('./Imagens/4.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_5{
+	background: url('./Imagens/5.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_6{
+	background: url('./Imagens/6.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_7{
+	background: url('./Imagens/7.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_8{
+	background: url('./Imagens/8.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_9{
+	background: url('./Imagens/9.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_10{
+	background: url('./Imagens/10.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_11{
+	background: url('./Imagens/11.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_12{
+	background: url('./Imagens/12.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_13{
+	background: url('./Imagens/13.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_14{
+	background: url('./Imagens/14.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_15{
+	background: url('./Imagens/15.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_16{
+	background: url('./Imagens/16.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_17{
+	background: url('./Imagens/17.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_18{
+	background: url('./Imagens/18.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_19{
+	background: url('./Imagens/19.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_20{
+	background: url('./Imagens/20.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_21{
+	background: url('./Imagens/21.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_22{
+	background: url('./Imagens/22.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_23{
+	background: url('./Imagens/23.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_24{
+	background: url('./Imagens/24.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_25{
+	background: url('./Imagens/25.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_26{
+	background: url('./Imagens/26.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_27{
+	background: url('./Imagens/27.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_28{
+	background: url('./Imagens/28.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_29{
+	background: url('./Imagens/29.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_30{
+	background: url('./Imagens/30.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_31{
+	background: url('./Imagens/31.jpg') no-repeat;
+	width: ;
+	height: ;
+}
+
+section#principal .governantes td.gov_32{
+	background: url('./Imagens/32.jpg') no-repeat;
+	width: ;
+	height: ;
 }
