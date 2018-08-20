@@ -48,7 +48,7 @@ nav#menuPrincipal ul li a:hover
 section#principal{
 	margin: auto;
 	width: 100%;
-	background: #6699ff;
+	background: #1E90FF;
 	height: 100%;
 }
 
@@ -135,4 +135,20 @@ background: #A0522D
 }
 section#principal .governantes_leg td.leg_nova{
 background: #D3D3D3
+}
+
+h1{
+
+}
+
+h2{
+
+}
+
+h3{
+
+}
+
+p{
+
 }
