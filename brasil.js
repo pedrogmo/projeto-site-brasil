@@ -7,8 +7,15 @@ function quizInicio()
 	{	
 		/*var quiz = window.open("", "_blank", 'height=800,width=1000');
 		window.focus(); */  	
-    	var certo = "<b>Correto!</b>"; var errado = "<b style='color:red;'>Errado!</b>";var o = new Array();
-    	var acertos=0; var erros=0; var respostas = new Array(); var p = new Array();var r = new Array();
+    	var certo = "<b>Correto!</b>"; var errado = "<b style='color:red;'>Errado!</b>";
+      
+    	var acertos=0;
+      var erros=0;
+
+      var respostas = new Array();
+      var o = new Array();
+      var p = new Array();
+      var r = new Array();
     	var t=10;
     	
     	//perguntas:
@@ -32,37 +39,67 @@ function quizInicio()
     	r[9] = 18;
     	p[10] = "Quantos nomes tinha D. Pedro II?";
     	r[10] = 15;
-    
-     	for(var i=1;i<=t;i++){o[i] = i;} 
+      
+     	for(var i=1;i<=t;i++)
+        o[i] = i;
+
      	for(var i=1;i<=10;i++)          
      	{
-     		n=Math.round(t*(Math.random())); 
-      		m=Math.round(t*(Math.random()));
-      		if(m==0){m++;}
-      		if(n==0){n++;}
-      		var temp = o[n];
-      		o[n]=o[m];
-      		o[m]=temp;
+     	  var n=Math.round(t*(Math.random())); 
+      	var m=Math.round(t*(Math.random()));
+
+      	if(m==0)
+          m++;
+      	if(n==0)
+          n++;
+      	
+        var temp = o[n];
+      	o[n]=o[m];
+      	o[m]=temp;
      	} 
+
     	for(var i=1;i<=t;i++)
     	{
     	  respostas[o[i]] = prompt(p[o[i]],"");
-    	   if(respostas[o[i]]==r[o[i]]){respostas[o[i]]=certo;acertos++;}else{respostas[o[i]]=errado;erros++;}
+    	  if(respostas[o[i]]==r[o[i]])
+          {
+            respostas[o[i]]=certo;acertos++;
+          }        
+        else
+        {
+          respostas[o[i]]=errado;
+          erros++;
+         }
     	}
+
     	//fim do quiz
-    	document.write("Javascript Quiz:<br><br>Suas respostas:<br><br>");
-    	document.write("<ol>");
-    	for(var i=1;i<=t;i++)
-    	{
-    		document.write("<li>"+respostas[o[i]]);}
-    		document.write("</ol>");
-    		document.write("<br>Total de acertos: "+acertos);
-    		document.write("<br>Total de erros: "+erros);
-    		document.write("<br><br><input type=button value='Respostas' Onclick=javascript:if(document.getElementById('rp').style.display=='none'){document.getElementById('rp').style.display='block';}else{document.getElementById('rp').style.display='none';}>");
-    		document.write("<br><div id='rp' class='rp' style='display:none;'><ol>");
-    	for(var i=1;i<=t;i++)
-    	{
-    		document.write("<li>"+p[o[i]]+"<br>R:"+r[o[i]]);}
-    		document.write("</ol></div>");
-   		}
-	}
+    	var texto = "<h1>Resultado do quiz</h1>";
+    	texto += "<ol>";
+    	for(var i=1;i<=t;i++)    	
+    		texto += "<li>"+respostas[o[i]];      
+    	texto += "</ol>";
+    	texto += "<br><p>Total de acertos: "+acertos + "</p>";
+    	texto += "<br><p>Total de erros: "+erros + "</p>";
+    	texto += "<br><br><input class = 're' type=button value='Respostas' onclick = javascript:if(document.getElementById('rp').style.display=='none'){document.getElementById('rp').style.display='block';}else{document.getElementById('rp').style.display='none';}>";
+    	texto += "<br><div id='rp' class='rp' style='display:none;'><ol>";
+    	for(var i=1;i<=t;i++)    	
+    		texto += "<li>"+p[o[i]]+"<br>R:"+r[o[i]];
+    	texto += "</ol></div>";
+
+      document.write('' +
+      '<body onload = "quizInicio();">' +
+      '<link href="brasil.css" rel="stylesheet" type="text/css"/>' +
+      '<nav id = "menuPrincipal">'+
+        '<ul>'+
+          '<li><span class = "logo"></span></li>'+
+          '<li><a href = "./brasil.html">Início</a></li>'+
+          '<li><a href = "./historia.html">História</a></li>'+
+          '<li><a href = "./governantes.html">Governantes</a></li>'+
+          '<li><a href = "./quiz.html">Quiz</a></li>'+
+        '</ul>'+
+      '</nav>'+
+      '<section id = principal> <br>'+ texto +
+      '</section>'+
+      '</body>');
+    }
+  }

@@ -1,5 +1,4 @@
 body{
-	text-align: center;
 	margin: auto;
 	max-width: 1500px;
 }
@@ -28,6 +27,7 @@ nav#menuPrincipal ul li .logo{
 
 nav#menuPrincipal ul li a 
 {
+	text-align: center;
 	font-family: tahoma;
 	padding: 2px 10px;
 	display: inline-block;
@@ -139,18 +139,30 @@ background: #D3D3D3
 
 h1{
 	font-size: 35px;
+	text-align: center;
 }
 
 h2{
 	font-size: 30px;
+	text-align: center;
 }
 
 h3{
 	font-size: 25px;
+	text-align: center;
 }
 
 p{
 	text-align: left;
 	margin-left: 30px;
 	font-size: 20px;
+}
+ul, ol{
+	text-align:left;
+}
+
+section#principal div#rp{
+	text-align: center;
+	margin:auto;
+	float:center;
 }
