@@ -1,6 +1,7 @@
 function quizInicio()
 {
-	var confirmacao = confirm("Bem-vindo ao quiz do Brasil. Você deseja começar?");
+	setTimeout(function(){
+  var confirmacao = confirm("Bem-vindo ao quiz do Brasil. Você deseja começar?");
 	if (!confirmacao)
 		alert('Que pena, você não quiz participar...');
 	else
@@ -102,4 +103,5 @@ function quizInicio()
       '</section>'+
       '</body>');
     }
+    }, 200);
   }
