@@ -53,9 +53,9 @@ function quizInicio()
       	if(n==0)
           n++;
       	
-        var temp = o[n];
+        var aux = o[n];
       	o[n]=o[m];
-      	o[m]=temp;
+      	o[m]=aux;
      	} 
 
     	for(var i=1;i<=t;i++)
@@ -74,14 +74,14 @@ function quizInicio()
 
     	//fim do quiz
     	var texto = "<h1>Resultado do quiz</h1>";
-    	texto += "<ol>";
+    	texto += "<div id = 'e'><ol>";
     	for(var i=1;i<=t;i++)    	
     		texto += "<li>"+respostas[o[i]];      
     	texto += "</ol>";
     	texto += "<br><p>Total de acertos: "+acertos + "</p>";
     	texto += "<br><p>Total de erros: "+erros + "</p>";
-    	texto += "<br><br><input class = 're' type=button value='Respostas' onclick = javascript:if(document.getElementById('rp').style.display=='none'){document.getElementById('rp').style.display='block';}else{document.getElementById('rp').style.display='none';}>";
-    	texto += "<br><div id='rp' class='rp' style='display:none;'><ol>";
+    	texto += "<br><br><input class = 're' type = button value='Respostas' onclick = javascript:if(document.getElementById('d').style.display=='none'){document.getElementById('d').style.display='block';}else{document.getElementById('d').style.display='none';}></div>";
+    	texto += "<br><div id='d' class='d' style='display:none;'><ol>";
     	for(var i=1;i<=t;i++)    	
     		texto += "<li>"+p[o[i]]+"<br>R:"+r[o[i]];
     	texto += "</ol></div>";

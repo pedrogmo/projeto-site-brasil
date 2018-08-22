@@ -161,8 +161,17 @@ ul, ol{
 	text-align:left;
 }
 
-section#principal div#rp{
+section#principal div#e{
+	text-align: left;
+	float:left;
+}
+
+section#principal .re{
+	margin-left: 100px;
+}
+
+section#principal div#d{
 	text-align: center;
-	margin:auto;
+	margin-left: 300px;
 	float:center;
 }
