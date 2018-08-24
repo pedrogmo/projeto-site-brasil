@@ -6,11 +6,14 @@ function initMap() {
   });
 }
 
-var estados = new Array(
-ac{nome = "Acre", info = "não existe"}
-	);
+var estados = new Array("Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal",
+				"Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais",
+				"Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte",
+				"Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins");
+
+var info = new Array("");
 
 function trocaEstado(){
 	var indice = document.getElementById("cbxEstados").selectedIndex;
-	alert('Você selecionou: ' + estados[i].nome);
+	alert('Você selecionou: ' + estados[indice] + info[indice]);
 }
