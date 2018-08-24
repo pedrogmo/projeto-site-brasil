@@ -52,6 +52,18 @@ section#principal{
 	height: 100%;
 }
 
+section#principal div#map{
+	width:1000px;
+	height:400px;
+	margin: auto;
+}
+
+section#principal select{
+	font-size: 20px;
+	width:200px;
+	margin-left: 650px;
+}
+
 section#principal .governantes{
 	margin: auto;
 	border: 1px solid black;

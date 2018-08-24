@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="initial-scale=1.0">
 	<meta charset="utf-8">
-	<title>Site do Brasil</title>
-    
-    <link rel="stylesheet" type="text/css" href="brasil.css">
-	  <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<title>Site do Brasil</title>    
+    <link rel="stylesheet" type="text/css" href="brasil.css">	
 </head>
 <body>
 
@@ -20,8 +17,40 @@
 		<li><a href = "./quiz.html">Quiz</a></li>
 	</ul>
 </nav>
-<br><br><br><br>
 
-<section id = "principal">
-    
+<section id = "principal"><br>
+    <h1>Mapa do Brasil</h1><br><br>
+    <div id = "map"></div><br><br>
+    <h1>Selecione um estado</h1><br><br>
+    <select id = "cbxEstados" onchange="trocaEstado();">
+    	<option>Acre</option>
+    	<option>Alagoas</option>
+    	<option>Amapá</option>
+    	<option>Amazonas</option>
+    	<option>Bahia</option>
+    	<option>Ceará</option>
+    	<option>Distrito Federal</option>
+    	<option>Espírito Santo</option>
+		<option>Goiás</option>
+		<option>Maranhão</option>
+		<option>Mato Grosso</option>
+		<option>Mato Grosso do Sul</option>
+		<option>Minas Gerais</option>
+		<option>Pará</option>
+		<option>Paraíba</option>
+		<option>Paraná</option>
+		<option>Pernambuco</option>
+		<option>Piauí</option>
+		<option>Rio de Janeiro</option>
+		<option>Rio Grande do Norte</option>
+		<option>Rio Grande do Sul</option>
+		<option>Rondônia</option>
+		<option>Roraima</option>
+		<option>Santa Catarina</option>
+		<option>São Paulo</option>
+		<option>Sergipe</option>
+		<option>Tocantins</option>
+    </select><br><br>
+    <script src="./mapa.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaMDqc4Uzt61yRQ-bJed3kXuJvX3JQ3Dc&callback=initMap"async defer></script>
 </section>
