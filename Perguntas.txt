@@ -1,4 +1,4 @@
-1 - P. Qual foi o presidente que governou por menos tempo?
+﻿1 - P. Qual foi o presidente que governou por menos tempo?
 
 R.	Carlos Luz.
 
@@ -19,6 +19,8 @@ R. 	15 anos.
 
 
 5 - P. Quanto tempo durou a Era Vargas? 
+
+R. 	18 anos.
 
 
 6 - P. Quantos anos Dom Pedro II governou o Brasil? 
