@@ -8,6 +8,10 @@
 </head>
 <body>
 
+
+
+
+
 <nav id = "menuPrincipal">
 	<ul>
 		<li><span class = "logo"></span></li>
@@ -20,9 +24,14 @@
 </nav>
 
 <section id = "principal"><br>
-    <h1>Mapa do Brasil</h1><br><br>
+
+	<h1>Inicio</h1>
+
+	<p>Bem vindo ao nosso site, logo abaixo temos um mapa onde é possivel selecionar seu estado para saber algumas curiosidades a mais sobre ele</p> 
+    
+    <h2>Mapa do Brasil</h2><br><br>
     <div id = "map"></div><br><br>
-    <h1>Selecione um estado</h1><br><br>
+    <h2>Selecione um estado</h2><br><br>
     <select id = "cbxEstados" onchange="trocaEstado();">
     	<option>Acre</option>
     	<option>Alagoas</option>
@@ -55,3 +64,6 @@
     <script src="./mapa.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaMDqc4Uzt61yRQ-bJed3kXuJvX3JQ3Dc&callback=initMap"async defer></script>
 </section>
+
+</body>
+</html>
