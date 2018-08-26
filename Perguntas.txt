@@ -27,46 +27,45 @@ R. 	15 anos e 3 meses.
 R.	58 anos.
 
 
-7 - P.
+7 - P. Qual o estado brasileiro com menor número de menos habitantes?
+ 
+R.
+
+8 - P. Qual o estado brasileiro com maior número de menos habitantes?
 
 R.
 
-
-8 - P.
-
-R.
-
-9 - P.
+9 - P. Qual o estado brasileiro com com maior densidade demografica?
 
 R.
 
-10 - P.
+10 - P. Qual o estado brasileiro com com maior densidade demografica?
 
 R.
 
-11 - P.
+11 - P. Qual o estado brasileiro com com maior PIB?
 
 R.
 
-12 - P.
+12 - P. Qual o estado brasileiro com menor PIB?
 
 R.
 
-13 - P.
+13 - P. Qual o estado com maior número de presidentes nascidos PIB?
 
-R.
+R. Minas Gerais
 
-14 - P.
+14 - P. Qual é o unico presidente do Brasil que não nasceu em solo brasileiro?
 
-R.
+R. Itamar Franco
 
-15 - P.
+15 - P. Qual presidente nasceu em 1882 mas na juventude, alterou alguns documentos, para fazer alterar o ano de nascimento para 1883?
 
-R.
+R. Getúlio Vargas
 
-16 - P.
+16 - P. Qual foi o ano em que mais governantes nasceram?
 
-R.
+R. 1905
 
 17 - P.
 
@@ -129,53 +128,68 @@ R.
 
 Acre
 
-área é de 164 123,040 km
- Municípios	22
+Municípios	22
 
-- PIB	R$ Aumento 13.459.000 bilhões (25º)
+Área - 			164 123,040 km² (16º) 
+
+População	
+ - Estimativa		829 619 hab. (25º)
+ - Densidade		5,05 hab./km² (24º)
+
+Economia	
+ - PIB			R$13.459.000 bilhões (25º)
  - PIB per capita	R$ 17.034,15 (17º)
 
-ndicadores	2010/2015[5][6]
- - Esper. de vida (2015)	73,6 anos (15º)
- - Mort. infantil (2015)	17,6‰ nasc. (8º)
- - Alfabetização (2010)	84,8% (18º)
- - IDH (2010)	0,663 (21º) – médio [7]
+Indicadores	
+ - Esper. de vida 	73,6 anos (15º)
+ - Mort. infantil 	17,6‰ nasc. (8º)
+ - Alfabetização 	84,8% (18º)
+ - IDH  		0,663 (21º) – médio 
 
 
 
 Alagoas
 
  - Municípios	102
-Área	 
- - Total	27 848,140 km² (25º) [2]
-População	2017
- - Estimativa	3 375 823 hab. (16º)[3]
- - Densidade	121,22 hab./km² (4º)
-Economia	2014[4]
- - PIB	R$ 40.975.000 (20º)
+
+Área - 			27 848,140 km² (25º) [2]
+
+População	
+ - Estimativa		3 375 823 hab. (16º)
+ - Densidade		121,22 hab./km² (4º)
+
+Economia	
+ - PIB			R$ 40.975.000 (20º)
  - PIB per capita	R$ 18.205,44 (25º)
-Indicadores	2010/2015[5][6]
- - Esper. de vida (2015)	76,2 anos (23º)
- - Mort. infantil (2015)	14,45‰ nasc. (3º)
- - Alfabetização (2010)	78,9% (27º)
- - IDH (2010)	0,631 (27º) – médio [7]
+
+Indicadores	
+ - Esper. de vida 	76,2 anos (23º)
+ - Mort. infantil 	14,45‰ nasc. (3º)
+ - Alfabetização 	78,9% (27º)
+ - IDH     		0,631 (27º) – médio
+
+
 
 Amapá
 
-- Municípios	16
-Área	 
- - Total	142 828,521 km² (18º) [1]
-População	2017
- - Estimativa	807 810 hab. (26º)[2]
- - Densidade	5,66 hab./km² (22º)
-Economia	2016[3][4]
- - PIB	R$ 16.968 bilhões (25º)
+ Municípios		16
+
+Área-			142 828,521 km² (18º)
+
+População		
+ - Estimativa		807 810 hab. (26º)
+ - Densidade		5,66 hab./km² (22º)
+
+Economia	
+ - PIB			R$ 16.968 bilhões (25º)
  - PIB per capita	R$ 13.105,24 (15º)
-Indicadores	2010/2015[5][6]
- - Esper. de vida (2016)	73,8 anos (13º)
- - Mort. infantil (2015)	23,5‰ nasc. (1º)
- - Alfabetização (2010)	92,1% (12º)
- - IDH (2014)	0,747 (12º) – elevado [7]
+
+Indicadores	
+ - Esper. de vida 	73,8 anos (13º)
+ - Mort. infantil 	23,5‰ nasc. (1º)
+ - Alfabetização   	92,1% (12º)
+ - IDH 			0,747 (12º) – elevado [7]
+
 
 
 Amazonas
@@ -195,6 +209,8 @@ Indicadores	2010/2015[4][5]
  - Alfabetização (2010)	90,4% (14º)
  - IDH (2010)	0,674 (18º) – médio [6]
 
+
+
 Bahia
 
  - Municípios	417
@@ -211,6 +227,8 @@ Indicadores	2010/2015[6][7]
  - Mort. infantil (2015)	18,1‰ nasc. (7º)
  - Alfabetização (2010)	84,6% (19º)
  - IDH (2010)	0,660 (22º) – médio [8]
+
+
 
 Ceará
 
@@ -230,6 +248,8 @@ Indicadores	2010/2015[4][5][6]
  - Alfabetização (2010)	82,8% (22º)
  - IDH (2010)	0,682 (17º) – médio [7]
 
+
+
 Distrito Federal
 
 Área	 
@@ -246,6 +266,9 @@ Indicadores	2010/2015[5][6]
  - Mort. infantil (2015)	10,8‰ nasc. (22º)
  - Alfabetização (2010)	96,7% (1º)
  - IDH (2010)	0,824 (1º) – muito elevad
+
+
+
 
 Espíito Santo
 
@@ -264,6 +287,9 @@ Indicadores	2010/2015[3][4]
  - Alfabetização (2010)	92,5% (9º)
  - IDH (2010)	0,740 (7º) – elevado [5]
 
+
+
+
 Goiás
 
  - Municípios	246
@@ -280,6 +306,9 @@ Indicadores	2010/2015[4][5]
  - Mort. infantil (2015)	19,3‰ nasc. (19º)
  - Alfabetização (2010)	82,7% (10º)
  - IDH (2010)	0,735 (11º) – elevado [6]
+
+
+
 
 Maranhão
 
@@ -298,6 +327,9 @@ Indicadores	2010/2015[4][5]
  - Alfabetização (2010)	80,7% (24º)
  - IDH (2014)	0,678 (26º) – médio [6]
 
+
+
+
 Mato Grosso
 
  - Municípios	141
@@ -314,6 +346,9 @@ Indicadores	2010/2015[3][4]
  - Mort. infantil (2015)	17,3‰ nasc. (10º)
  - Alfabetização (2010)	92,2% (11º)
  - IDH (2010)	0,725 (11º) – elevado [5]
+
+
+
 
 Mato Grosso do Sul
 
@@ -332,6 +367,9 @@ Indicadores	2010/2015[3][4]
  - Alfabetização (2010)	93,0% (7º)
  - IDH (2010)	0,729 (10º) – elevado [5]
 
+
+
+
 Minas Gerais
 
  - Municípios	853
@@ -348,6 +386,9 @@ Indicadores	2010/2015[4][5]
  - Mort. infantil (2015)	11,4‰ nasc. (21º)
  - Alfabetização (2010)	92,3% (10º)
  - IDH (2010)	0,731 (9º) – elevado [6]
+
+
+
 
 Pará
 
@@ -366,6 +407,9 @@ Indicadores	2010/2015[4][5]
  - Alfabetização (2010)	88,8% (16º)
  - IDH (2010)	0,646 (25º) – médio [6]
 
+
+
+
 Paraíba
 
  - Municípios	223
@@ -383,6 +427,9 @@ Indicadores	2010/2015[5][6]
  - Alfabetização (2010)	79,8% (25º)
  - IDH (2010)	0,658 (23º) – médio [7]
 
+
+
+
 Paraná
 
 - Municípios	399
@@ -399,6 +446,9 @@ Indicadores	2010/2015[3][4]
  - Mort. infantil (2015)	9,7‰ nasc. (25º)
  - Alfabetização (2010)	94,2% (6º)
  - IDH (2010)	0,749 (5º) – elevado [5]
+
+
+
 
 Pernambuco
 
@@ -434,6 +484,9 @@ Indicadores	2010/2015[4][5]
  - Alfabetização (2010)	78,9% (26º)
  - IDH (2010)	0,646 (24º) – médio [6]
 
+
+
+
 Rio de Janeiro
 
  - Municípios	92
@@ -451,6 +504,9 @@ Indicadores	2010/2015[4][5]
  - Alfabetização (2010)	95,9% (4º)
  - IDH (2010)	0,761 (4º) – elevado [6]
 
+
+
+
 Rio Grande do Norte
 
  - Municípios	167
@@ -467,6 +523,9 @@ Indicadores	2010/2015[5][6]
  - Mort. infantil (2015)	15,3‰ nasc. (16º)
  - Alfabetização (2010)	82,6% (23º)
  - IDH (2010)	0,684 (16º) – médio [7]
+
+
+
 
 Rio Grande do Sul
 
@@ -486,6 +545,9 @@ Indicadores	2010/2015[5][6]
  - Alfabetização (2010)	95,8% (5º)
  - IDH (2010)	0,746 (6º) – elevado [7]
 
+
+
+
 Rondônia
 
  - Municípios	52
@@ -502,6 +564,8 @@ Indicadores	2010/2015[4][5]
  - Mort. infantil (2015)	20,4‰ nasc. (4º)
  - Alfabetização (2010)	92,1% (13º)
  - IDH (2010)	0,690 (15º) – médio [6]
+
+
 
 Roraima
 
@@ -520,6 +584,9 @@ Indicadores	2010/2015[5][6]
  - Alfabetização (2010)	90,3% (15º)
  - IDH (2010)	0,707 (13º) – elevado [7]
 
+
+
+
 Santa Catarina
 
  - Municípios	295
@@ -536,6 +603,9 @@ Indicadores	2010/2015[4][5]
  - Mort. infantil (2015)	9,5‰ nasc. (26º)
  - Alfabetização (2010)	96,1% (2º)
  - IDH (2010)	0,774 (3º) – elevado [6]
+
+
+
 
 São Paulo
 
@@ -556,6 +626,8 @@ Indicadores	2010/2015[7][8]
  - IDH (2010)	0,783 (2º) – elevado [9]
 
 
+
+
 Sergipe
 
  - Municípios	75
@@ -572,6 +644,9 @@ Indicadores	2010/2015[4][5]
  - Mort. infantil (2015)	17,0‰ nasc. (12º)
  - Alfabetização (2010)	83,0% (21º)
  - IDH (2010)	0,665 (20º) – médio [6]
+
+
+
 
 Tocantins
 
