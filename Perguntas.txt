@@ -1,11 +1,11 @@
-1 - P. Qual foi o presidente que governou por menos tempo?
+ï»¿1 - P. Qual foi o presidente que governou por menos tempo?
 
 R.	Carlos Luz.
 
 
 2 - P. Qual foi o presidente que governou por mais tempo?
 
-R.	Getúlio Vargas.
+R.	Get?lio Vargas.
 
 
 3 - P. Quanto durou o menor mandato presidencial brasileiro?
@@ -21,7 +21,6 @@ R. 	15 anos.
 5 - P. Quanto tempo durou a Era Vargas? 
 
 R. 	15 anos e 3 meses.
-
 
 6 - P. Quantos anos Dom Pedro II governou o Brasil? 
 
@@ -141,29 +140,29 @@ Alagoas
 
 
 
-Amapá
+Amap?
 Amazonas
 Bahia
-Ceará
+Cear?
 Distrito Federal
-Espírito Santo
-Goiás
-Maranhão
+Esp?ito Santo
+Goi?
+Maranh?
 Mato Grosso
 Mato Grosso do Sul
 Minas Gerais
-Pará
-Paraíba
-Paraná
+Par?
+Para?a
+Paran?
 Pernambuco
-Piauí
+Piau?
 Rio de Janeiro
 Rio Grande do Norte
 Rio Grande do Sul
-Rondônia
+Rond?ia
 Roraima
 Santa Catarina
-São Paulo
+S? Paulo
 Sergipe
 Tocantins
 

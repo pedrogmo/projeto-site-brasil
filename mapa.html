@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>Mapa do Brasil</title>    
+    <link rel="stylesheet" type="text/css" href="brasil.css">	
+</head>
+<body>
+
+
+
+
+
+<nav id = "menuPrincipal">
+	<ul>
+		<li><span class = "logo"></span></li>
+		<li><a href = "./inicio.html">Início</a></li>
+		<li><a href = "./mapa.html">Mapa</a></li>
+		<li><a href = "./historia.html">História</a></li>
+		<li><a href = "./governantes.html">Governantes</a></li>
+		<li><a href = "./quiz.html">Quiz</a></li>
+	</ul>
+</nav>
+
+<section id = "principal"><br>
+
+	<h1>Inicio</h1>
+
+	<p>Bem vindo ao nosso site, logo abaixo temos um mapa onde é possivel selecionar seu estado para saber algumas curiosidades a mais sobre ele</p> 
+    
+    <h2>Mapa do Brasil</h2><br><br>
+    <div id = "map"></div><br><br>
+    <h2>Selecione um estado</h2><br><br>
+    <select id = "cbxEstados" onchange="trocaEstado();">
+    	<option>Acre</option>
+    	<option>Alagoas</option>
+    	<option>Amapá</option>
+    	<option>Amazonas</option>
+    	<option>Bahia</option>
+    	<option>Ceará</option>
+    	<option>Distrito Federal</option>
+    	<option>Espírito Santo</option>
+		<option>Goiás</option>
+		<option>Maranhão</option>
+		<option>Mato Grosso</option>
+		<option>Mato Grosso do Sul</option>
+		<option>Minas Gerais</option>
+		<option>Pará</option>
+		<option>Paraíba</option>
+		<option>Paraná</option>
+		<option>Pernambuco</option>
+		<option>Piauí</option>
+		<option>Rio de Janeiro</option>
+		<option>Rio Grande do Norte</option>
+		<option>Rio Grande do Sul</option>
+		<option>Rondônia</option>
+		<option>Roraima</option>
+		<option>Santa Catarina</option>
+		<option>São Paulo</option>
+		<option>Sergipe</option>
+		<option>Tocantins</option>
+    </select><br><br>
+    <script src="./mapa.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaMDqc4Uzt61yRQ-bJed3kXuJvX3JQ3Dc&callback=initMap"async defer></script>
+</section>
+
+</body>
+</html>
