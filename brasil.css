@@ -1,6 +1,6 @@
 body{
 	margin: auto;
-	max-width: 1500px;
+	max-width: 100%;	
 }
 
 nav#menuPrincipal{
@@ -24,6 +24,10 @@ nav#menuPrincipal ul li .logo{
 	position: relative;
 	top: -10px;
 }
+nav#menuPrincipal ul li .logo:hover{
+	transform: scale(1.2,1.2);
+}
+
 
 nav#menuPrincipal ul li a 
 {
@@ -52,6 +56,11 @@ section#principal{
 	height: 100%;
 }
 
+section#principal p.centro{
+	text-align: center;
+	margin-left: 0px;
+}
+
 section#principal div#map{
 	width:1000px;
 	height:400px;
@@ -75,6 +84,7 @@ section#principal .governantes{
 section#principal .governantes td{
 	padding: 10px;
 	border: 1px solid black;
+	text-align: center;
 }
 
 section#principal .governantes td.cabecalho{
@@ -171,6 +181,10 @@ p{
 }
 ul, ol{
 	text-align:left;
+}
+
+section#principal.quiz{
+	height: 130%;
 }
 
 section#principal div#e{
