@@ -32,3 +32,22 @@ create table UsuarioPergunta
 	constraint fkUsuario foreign key(codUsuario) references Usuario(codUsuario),
 	constraint fkPergunta foreign key(codPergunta) references Pergunta(codPergunta)
 )
+
+create table Produto
+(
+	codProduto int primary key,
+	nome varchar(30) not null,
+	descricao ntext not null,
+	preco money not null
+)
+
+create table Compra
+(
+	codCompra int primary key,
+	codUsuario int not null,
+	codProduto int not null,
+	data dateTime not null
+	
+	constraint fkCompraUsuario foreign key(codusuario) references Usuario(codUsuario),
+	constrint fkCompraProduto foreign key(codProduto) references Produto(codProduto)
+)
