@@ -29,99 +29,122 @@ R.	58 anos.
 
 7 - P. Qual o estado brasileiro com menor número de menos habitantes?
  
-R.
+R.	Roraima
+
 
 8 - P. Qual o estado brasileiro com maior número de menos habitantes?
 
-R.
+R.	São Paulo
 
-9 - P. Qual o estado brasileiro com com maior densidade demografica?
 
-R.
+9 - P. Qual o estado brasileiro com com menor densidade demografica?
 
-10 - P. Qual o estado brasileiro com com maior densidade demografica?
+R.	Roraima
 
-R.
+
+10 - P. Qual unidade federativa brasileira com com maior densidade demografica?
+
+R.	Distrito Federal
+
 
 11 - P. Qual o estado brasileiro com com maior PIB?
 
-R.
+R.	São Paulo
 
-12 - P. Qual o estado brasileiro com menor PIB?
 
-R.
+12 - P. Qual é o estado brasileiro com menor PIB?
 
-13 - P. Qual o estado com maior número de presidentes nascidos PIB?
+R.	Roraima
 
-R. Minas Gerais
+
+13 - P. Qual é o estado com maior número de presidentes nascidos PIB?
+
+R.	Minas Gerais
+
 
 14 - P. Qual é o unico presidente do Brasil que não nasceu em solo brasileiro?
 
-R. Itamar Franco
+R.	Itamar Franco
+
 
 15 - P. Qual presidente nasceu em 1882 mas na juventude, alterou alguns documentos, para fazer alterar o ano de nascimento para 1883?
 
-R. Getúlio Vargas
+R. 	Getúlio Vargas
+
 
 16 - P. Qual foi o ano em que mais governantes nasceram?
 
-R. 1905
+R. 	1905
 
-17 - P.
 
-R.
+17 - P. Qual o estado brasileiro com menor PIB?
 
-18 - P.
+R.	Roraima
 
-R.
 
-19 - P.
+18 - P. Qual é o estado brasileiro com maior número de municípios?
 
-R.
+R.	Minas Gerais (853)
 
-20 - P.
 
-R.
+19 - P. Qual é o estado brasileiro com menor número de municípios?
 
-21 - P.
+R.	 Roraima (15 ashasuhaushuahs)
 
-R.
 
-22 - P.
+20 - P. Qual é o menor estado brasileiro?
 
-R.
+R.	Sergipe
 
-23 - P.
 
-R.
+21 - P. Qual é o maior estado brasileiro?
 
-24 - P.
+R.	Amazonas
 
-R.
 
-25 - P.
+22 - P. Qual o estado brasileiro com maior expectativa de vida?
 
-R.
+R.	Santa Catarina
 
-26 - P.
 
-R.
+23 - P. Qual o estado brasileiro com menor expectativa de vida?
 
-27 - P.
+R.	Maranhão
 
-R.
 
-28 - P.
+24 - P. Como o Brasil foi chamado inicialmente quando "descoberto"?
 
-R.
+R.	Terra de Vera Cruz
 
-29 - P.
 
-R.
+25 - P. Qual é a unidade federativa brasileira que tem maior IDH?
 
-30 - P.
+R.	Distrito Federal
 
-R.
+
+26 - P. Qual é a unidade federativa brasileira que tem menor IDH?
+
+R.	Alagoas
+
+
+27 - P. Qual é a unidade federativa brasileira que tem menor mortalidade infantil?
+
+R.	São Paulo
+
+
+28 - P. Qual é a unidade federativa brasileira que tem maior mortalidade infantil?
+
+R.	Distrito Federal
+
+
+29 - P. Qual foi o primeiro presidente a sofrer um processo de impeachment?
+
+R.	Getúlio Vargas
+
+
+30 - P. Qual foi o presidente do brasil que entregou uma carta de renúncia, na esperança de que fosse negada, mas foi aceita?
+
+R. 	Jânio Quadros
 
 
 
