@@ -2,7 +2,8 @@ create table Estado
 (
 	codEstado int primary key,
 	nome varchar(15) not null,
-	informacao ntext not null
+	informacao ntext not null,
+	regiao varchar(15) not null
 )
 
 create table Usuario
@@ -33,21 +34,37 @@ create table UsuarioPergunta
 	constraint fkPergunta foreign key(codPergunta) references Pergunta(codPergunta)
 )
 
-create table Produto
+create table Curiosidade
 (
-	codProduto int primary key,
-	nome varchar(30) not null,
-	descricao ntext not null,
-	preco money not null
+	codCuriosidade int primary key,
+	texto ntext not null,
+	tipo varchar(15) not null
 )
 
-create table Compra
+create table EraPolitica
 (
-	codCompra int primary key,
-	codUsuario int not null,
-	codProduto int not null,
-	data dateTime not null
-	
-	constraint fkCompraUsuario foreign key(codusuario) references Usuario(codUsuario),
-	constraint fkCompraProduto foreign key(codProduto) references Produto(codProduto)
+	codEra int primary key,
+	nome varchar(30) not null,
+	inicio dateTime not null,
+	fim dateTime not null,
+	textoHistoria ntext not null,
+)
+
+create table Governante
+(
+	codGovernante int primary key,
+	nome varchar(30) null,
+	inicio dateTime not null,
+	fim dateTime not null,
+	partido varchar(30) not null
+)
+
+create table EraGovernante
+(
+	codigo int primary key,
+	codGovernante int not null,
+	codEra int not null
+
+	constraint fkGovernante foreign key(codGovernante) references Governante(codGovernante),
+	constraint fkEra foreign key(codEra) references EraPolitica(codEra)
 )

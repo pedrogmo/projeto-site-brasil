@@ -5,19 +5,23 @@
 	<meta charset="utf-8">
 	<title>Site do Brasil</title>    
     <link rel="stylesheet" type="text/css" href="brasil.css">
-    <script src="easteregg.js"></script>
+    <script src="curiosidades.js"></script>
 </head>
-<body onload="onLoad()">
-
+<body>
+<div id = "faixa">
+	Brasil
+</div>
+<hr class = "faixaAzul"></hr>
 <nav id = "menuPrincipal">
 	<ul>
-		<li><span onclick = "logoClick()" class = "logo"></span></li>
+		<li onclick = "bandeira();"><span class = "logo"></span></li>
 		<li><a href = "./inicio.html">Início</a></li>
 		<li><a href = "./mapa.html">Mapa</a></li>
 		<li><a href = "./historia.html">História</a></li>
 		<li><a href = "./governantes.html">Governantes</a></li>
+		<li><a href = "./noticias.html">Notícias</a></li>
 		<li><a href = "./quiz.html">Quiz</a></li>
-		<li><a href = "./loja.html">Loja</a></li>
+		<li onclick = "curiosidade();"><a>Curiosidades</a></li>
 	</ul>
 </nav>
 
