@@ -49,5 +49,5 @@ create table Compra
 	data dateTime not null
 	
 	constraint fkCompraUsuario foreign key(codusuario) references Usuario(codUsuario),
-	constrint fkCompraProduto foreign key(codProduto) references Produto(codProduto)
+	constraint fkCompraProduto foreign key(codProduto) references Produto(codProduto)
 )
