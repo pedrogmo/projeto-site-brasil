@@ -87,10 +87,6 @@ function quizInicio()
     '<body onload = "quizInicio();">' +
     '<link href="brasil.css" rel="stylesheet" type="text/css"/>' +
     '<script src="curiosidades.js"></script>' +
-    '<div id = "faixa">' +
-      'Brasil' +
-    '</div>' +
-    '<hr class = "faixaAzul"></hr>' +
     '<nav id = "menuPrincipal">'+
     '<ul>'+
     '<li onclick = "bandeira();"><span class = "logo"></span></li>' +
@@ -103,6 +99,7 @@ function quizInicio()
     '<li onclick = "curiosidade();"><a>Curiosidades</a></li>' +
     '</ul>'+
     '</nav>'+
+    '<br><br><br><br>'+
     '<section id = principal class = "quiz"> <br>'+ texto +
     '</section>'+
     '</body>');    
