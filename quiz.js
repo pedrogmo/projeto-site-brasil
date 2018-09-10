@@ -99,7 +99,7 @@ function quizInicio()
     '<li onclick = "curiosidade();"><a>Curiosidades</a></li>' +
     '</ul>'+
     '</nav>'+
-    '<br><br><br><br>'+
+    '<br><br><br>'+
     '<section id = principal class = "quiz"> <br>'+ texto +
     '</section>'+
     '</body>');    
