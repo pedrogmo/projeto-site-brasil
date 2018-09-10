@@ -71,7 +71,6 @@ function quizInicio()
     
     //fim do quiz
     texto = "<h1>Resultado do quiz</h1>";
-    texto += "<div id = 'e'><ol>";
     for(var i=1;i<=t;i++)    	
       texto += "<li>"+respostas[o[i]];      
     texto += "</ol>";
