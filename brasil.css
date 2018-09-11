@@ -225,6 +225,7 @@ section#principal.quiz{
 section#principal div#e{
 	text-align: left;
 	float:left;
+	margin-left: 10px;
 }
 
 section#principal .re{
@@ -233,6 +234,10 @@ section#principal .re{
 
 section#principal div#d{
 	text-align: center;
-	margin-left: 300px;
+	margin-left: 400px;
 	float:center;
+}
+
+section#principal ol li{
+	margin-left: 10px;
 }

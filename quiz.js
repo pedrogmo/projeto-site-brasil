@@ -7,7 +7,8 @@ function quizInicio()
     texto += '<h2>Que pena, você não "quiz" participar...</h2>';
   else
   {	
-    var certo = "<b>Correto!</b>"; var errado = "<b style='color:red;'>Errado!</b>";
+    var certo = "<b>Correto!</b>"; 
+    var errado = "<b style='color:red;'>Errado!</b>";
  
     var acertos=0;
     var erros=0;
@@ -71,9 +72,11 @@ function quizInicio()
     
     //fim do quiz
     texto = "<h1>Resultado do quiz</h1>";
+    texto = "<div id = 'e'>";
     for(var i=1;i<=t;i++)    	
       texto += "<li>"+respostas[o[i]];      
     texto += "</ol>";
+    texto += "</div>";
     texto += "<br><p>Total de acertos: "+acertos + "</p>";
     texto += "<br><p>Total de erros: "+erros + "</p>";
     texto += "<br><br><input class = 're' type = button value='Respostas' onclick = javascript:if(document.getElementById('d').style.display=='none'){document.getElementById('d').style.display='block';}else{document.getElementById('d').style.display='none';}></div>";
