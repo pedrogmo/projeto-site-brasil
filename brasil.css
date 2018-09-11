@@ -236,6 +236,9 @@ section#principal div#d{
 	text-align: center;
 	margin-left: 400px;
 	float:center;
+	position: absolute;
+	top: 80px;
+	z-index: 100px;
 }
 
 section#principal ol li{

@@ -72,11 +72,11 @@ function quizInicio()
     
     //fim do quiz
     texto = "<h1>Resultado do quiz</h1>";
-    texto = "<div id = 'e'>";
+    texto = "<br><div id = 'e'>";
     for(var i=1;i<=t;i++)    	
       texto += "<li>"+respostas[o[i]];      
     texto += "</ol>";
-    texto += "</div>";
+    texto += "</div><br><br><br><br><br><br><br><br><br><br>";
     texto += "<br><p>Total de acertos: "+acertos + "</p>";
     texto += "<br><p>Total de erros: "+erros + "</p>";
     texto += "<br><br><input class = 're' type = button value='Respostas' onclick = javascript:if(document.getElementById('d').style.display=='none'){document.getElementById('d').style.display='block';}else{document.getElementById('d').style.display='none';}></div>";
