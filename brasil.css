@@ -222,23 +222,21 @@ section#principal.quiz{
 	height: 130%;
 }
 
-section#principal div#e{
+section#principal .re{
+	margin-left: 100px;
+}
+
+section#principal div#respondido{
 	text-align: left;
 	float:left;
 	margin-left: 10px;
 }
 
-section#principal .re{
-	margin-left: 100px;
-}
-
-section#principal div#d{
-	text-align: center;
-	margin-left: 400px;
-	float:center;
+section#principal div#certo{
 	position: absolute;
 	top: 80px;
-	z-index: 100px;
+	left: 400px;	
+	/*z-index: -100px;*/
 }
 
 section#principal ol li{
