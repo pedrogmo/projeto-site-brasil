@@ -80,7 +80,7 @@ function quizInicio()
     texto += "<br><p>Total de acertos: "+acertos + "</p>";
     texto += "<br><p>Total de erros: "+erros + "</p>";
     texto += "<br><br><input class = 're' type = button value='Respostas' onclick = javascript:if(document.getElementById('certo').style.display=='none'){document.getElementById('certo').style.display='block';}else{document.getElementById('certo').style.display='none';}>";
-    texto += "<br><div id='certo' style='display: none;'><ol>";
+    texto += "<br><div id='certo' style='display: none;'><ol class = 'certinho'>";
     for(var i=1;i<=t;i++)    	
       texto += "<li>"+p[o[i]]+"<br>R:"+r[o[i]] + "</li>";
     texto += "</ol></div>";
