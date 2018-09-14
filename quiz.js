@@ -72,23 +72,23 @@ function quizInicio()
     
     //fim do quiz
     texto = "<h1>Resultado do quiz</h1>";
-    texto = "<br><div id = 'respondido'><ol>";
+    texto = "<br><aside id = 'respondido'><ol>";
     for(var i=1;i<=t;i++)    	
       texto += "<li>"+respostas[o[i]] + "</li>";      
     texto += "</ol>";
-    texto += "</div><br><br><br><br><br><br><br><br><br><br>";
     texto += "<br><p>Total de acertos: "+acertos + "</p>";
     texto += "<br><p>Total de erros: "+erros + "</p>";
     texto += "<br><br><input class = 're' type = button value='Respostas' onclick = javascript:if(document.getElementById('certo').style.display=='none'){document.getElementById('certo').style.display='block';}else{document.getElementById('certo').style.display='none';}>";
-    texto += "<br><div id='certo' style='display: none;'><ol class = 'certinho'>";
+    texto += "</aside><br><article id='certo' style='display: none;'><ol class = 'certinho'>";
     for(var i=1;i<=t;i++)    	
       texto += "<li>"+p[o[i]]+"<br>R:"+r[o[i]] + "</li>";
-    texto += "</ol></div>";
+    texto += "</ol></article>";
     }
-    document.write('' +
+    document.write('' + 
     '<body onload = "quizInicio();">' +
     '<link href="brasil.css" rel="stylesheet" type="text/css"/>' +
     '<script src="curiosidades.js"></script>' +
+    '<script src="quiz.js"></script>' +
     '<nav id = "menuPrincipal">'+
     '<ul>'+
     '<li onclick = "bandeira();"><span class = "logo"></span></li>' +
