@@ -1,6 +1,6 @@
 function quizInicio()
 {
-  var texto = "";
+  var texto = '';
   setTimeout(function(){
   var confirmacao = confirm("Bem-vindo ao quiz do Brasil. Você deseja começar?");
   if (!confirmacao)
@@ -57,29 +57,19 @@ function quizInicio()
     } 
     for(var i=1;i<=t;i++)
     {
-      respostas[o[i]] = prompt(p[o[i]],"");
-      if(respostas[o[i]]==r[o[i]])
-      {
-        respostas[o[i]]=certo;
-        acertos++;
-      }        
-      else
-      {
-        respostas[o[i]]=errado;
-        erros++;
-      }
-    }
-    
-
-    
+      texto += '<p>' + p[o[i]] + '</p>';
+      var id = i = "";
+      texto += '<input type = "text" id = "' + id + '"></input>';
+    }    
     }
     document.write('' +
       '<html>' +
       '<head>' +
       '  <meta charset="utf-8">' +
-      '  <title>História do Brasil</title>' +
+      '  <title>Quiz do Brasil</title>' +
       '  <link href="brasil.css" rel="stylesheet" type="text/css"/>' +
       '  <script src="curiosidades.js"></script>' +
+      '  <script src="quiz.js"></script>' +
       '</head>' +
       '<body>' +
       '<nav id = "menuPrincipal">' +
@@ -100,10 +90,25 @@ function quizInicio()
       '</section>'
       );  
     }, 200);
-}
+} 
 function fim()
 {
-  //fim do quiz
+  for(var i=1;i<=t;i++)
+    {
+      var id = i + "";
+      respostas[o[i]] = document.getElementById(id).value;
+      if(respostas[o[i]]==r[o[i]])
+      {
+        respostas[o[i]]=certo;
+        acertos++;
+      }        
+      else
+      {
+        respostas[o[i]]=errado;
+        erros++;
+      }
+    }
+
     texto = "<h1>Resultado do quiz</h1>";
     texto += "<br><aside id = 'respondido'><ol>";
     for(var i=1;i<=t;i++)     
@@ -117,29 +122,30 @@ function fim()
       texto += "<li>"+p[o[i]]+"<br>R:"+r[o[i]] + "</li>";
     texto += "</ol></article>";
 
-    document.write('' +
-      '<html>' +
-      '<head>' +
-      '  <meta charset="utf-8">' +
-      '  <title>História do Brasil</title>' +
-      '  <link href="brasil.css" rel="stylesheet" type="text/css"/>' +
-      '  <script src="curiosidades.js"></script>' +
-      '</head>' +
-      '<body>' +
-      '<nav id = "menuPrincipal">' +
-      '  <ul>' +
-      '    <li onclick = "bandeira();"><span class = "logo"></span></li>' +
-      '    <li><a href = "./inicio.html">Início</a></li>' +
-      '    <li><a href = "./mapa.html">Mapa</a></li>' +
-      '    <li><a href = "./historia.html">História</a></li>' +
-      '    <li><a href = "./governantes.html">Governantes</a></li>' +
-      '    <li><a href = "./noticias.html">Notícias</a></li>' +
-      '    <li><a href = "./quiz.html">Quiz</a></li>' +
-      '    <li onclick = "curiosidade();"><a>Curiosidades</a></li>' +
-      '  </ul>' +
-      '</nav>' +
-      '<br><br><br>' +
-      '<section id = "principal"> <br>' + texto +
-      '</section'
+    document.write("" +
+      "<html>" +
+      "<head>" +
+      "  <meta charset='utf-8'>" +
+      "  <title>Quiz do Brasil</title>" +
+      "  <link href='brasil.css' rel='stylesheet' type='text/css'/>" +
+      "  <script src='curiosidades.js'></script>" +
+      "  <script src='quiz.js'></script>" +
+      "</head>" +
+      "<body>" +
+      "<nav id = 'menuPrincipal'>" +
+      "  <ul>" +
+      "    <li onclick = 'bandeira();'><span class = 'logo'></span></li>" +
+      "    <li><a href = './inicio.html'>Início</a></li>" +
+      "    <li><a href = './mapa.html'>Mapa</a></li>" +
+      "    <li><a href = './historia.html'>História</a></li>" +
+      "    <li><a href = './governantes.html'>Governantes</a></li>" +
+      "    <li><a href = './noticias.html'>Notícias</a></li>" +
+      "    <li><a href = './quiz.html'>Quiz</a></li>" +
+      "    <li onclick = 'curiosidade();'><a>Curiosidades</a></li>" +
+      "  </ul>" +
+      "</nav>" +
+      "<br><br><br>" +
+      "<section id = 'principal'> <br>" + texto +
+      "</section>"
       );  
 }
