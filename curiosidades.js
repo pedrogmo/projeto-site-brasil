@@ -71,7 +71,9 @@ var arr = new Array(
 
 '34 – O principal exportador mundial de castanha-do-pará (também conhecida como castanha-do-brasil) é a Bolívia, e não o Brasil.',
 
-'35 – Mais de 1.000 línguas eram faladas no Brasil antes do descobrimento. Hoje, apenas 180 ainda sobrevivem e apenas 11 são faladas por mais de 5.000 pessoas.'
+'35 – Mais de 1.000 línguas eram faladas no Brasil antes do descobrimento. Hoje, apenas 180 ainda sobrevivem e apenas 11 são faladas por mais de 5.000 pessoas.',
+
+'36 - A viola é um instrumento exclusivamente brasileiro.'
 
 );
 var band = 'A bandeira atual da República Federativa do Brasil foi feita em 1889, durante a República Velha. A frase "Ordem e Progresso"'+
