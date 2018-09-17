@@ -102,7 +102,7 @@ function quizInicio()
     '</ul>'+
     '</nav>'+
     '<br><br><br>'+
-    '<section id = principal class = "quiz"> <br>'+ texto +
+    '<section id = principal> <br>'+ texto +
     '</section>'+
     '</body>');    
     }, 200);
