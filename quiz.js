@@ -1,3 +1,6 @@
+var acertos, erros, respostas, o, p, r, t;
+
+
 function quizInicio()
 {
   var texto = '';
@@ -6,19 +9,16 @@ function quizInicio()
   if (!confirmacao)
     texto += '<h2>Que pena, você não "quiz" participar...</h2>';
   else
-  {
-    var certo = "<b>Correto!</b>"; 
-    var errado = "<b style='color:red;'>Errado!</b>";
- 
-    var acertos=0;
-    var erros=0;
-    var respostas = new Array();
-    var o = new Array();
-    var p = new Array();
-    var r = new Array();
-    var t=10;
+  {     
+    acertos=0; //quantidade de acertos e erros
+    erros=0;
+    respostas = new Array(); //repostas do usuário
+    o = new Array();
+    p = new Array(); //perguntas
+    r = new Array(); //respostas certas
+    t = 10; //quantidade de perguntas
     
-    //perguntas:
+    //perguntas e respostas:
     p[1] = "Quantos animais de cada especie Moisés levou para a arca?";
     r[1] = '0';
     p[2] = "Se um triângulo retângulo tem lados 6 e 8, qual é o valor da sua hipotenusa?";
@@ -57,8 +57,9 @@ function quizInicio()
     } 
     for(var i=1;i<=t;i++)
     {
-      texto += '<p>' + p[o[i]] + '</p>';
-      var id = i = "";
+      var pergunta = '<p>' + p[o[i]] + '</p>';
+      texto += pergunta;
+      var id = i + '';
       texto += '<input type = "text" id = "' + id + '"></input>';
     }    
     }
@@ -86,66 +87,30 @@ function quizInicio()
       '</nav>' +
       '<br><br><br>' +
       '<section id = "principal"> <br>' + texto +
-      '<input type = "button" class = "fimquiz" onclick = "fim();"' +
+      '<br><br><input type = "button" class = "fimquiz" value = "Enviar" onclick = "fim();"' +
       '</section>'
       );  
     }, 200);
 } 
+
 function fim()
 {
+  var certo = "V"; 
+  var errado = "X";
+  var acertou = new Array();
   for(var i=1;i<=t;i++)
     {
       var id = i + "";
       respostas[o[i]] = document.getElementById(id).value;
       if(respostas[o[i]]==r[o[i]])
       {
-        respostas[o[i]]=certo;
+        acertou[o[i]] = certo;
         acertos++;
       }        
       else
       {
-        respostas[o[i]]=errado;
+        acertou[o[i]] = errado;
         erros++;
       }
-    }
-
-    texto = "<h1>Resultado do quiz</h1>";
-    texto += "<br><aside id = 'respondido'><ol>";
-    for(var i=1;i<=t;i++)     
-      texto += "<li>"+respostas[o[i]] + "</li>";      
-    texto += "</ol>";
-    texto += "<br><p>Total de acertos: "+acertos + "</p>";
-    texto += "<br><p>Total de erros: "+erros + "</p>";
-    texto += "<br><br><input class = 're' type = button value='Respostas' onclick = javascript:if(document.getElementById('certo').style.display=='none'){document.getElementById('certo').style.display='block';}else{document.getElementById('certo').style.display='none';}>";
-    texto += "</aside><br><article id='certo' style='display: none;'><ol class = 'certinho'>";
-    for(var i=1;i<=t;i++)     
-      texto += "<li>"+p[o[i]]+"<br>R:"+r[o[i]] + "</li>";
-    texto += "</ol></article>";
-
-    document.write("" +
-      "<html>" +
-      "<head>" +
-      "  <meta charset='utf-8'>" +
-      "  <title>Quiz do Brasil</title>" +
-      "  <link href='brasil.css' rel='stylesheet' type='text/css'/>" +
-      "  <script src='curiosidades.js'></script>" +
-      "  <script src='quiz.js'></script>" +
-      "</head>" +
-      "<body>" +
-      "<nav id = 'menuPrincipal'>" +
-      "  <ul>" +
-      "    <li onclick = 'bandeira();'><span class = 'logo'></span></li>" +
-      "    <li><a href = './inicio.html'>Início</a></li>" +
-      "    <li><a href = './mapa.html'>Mapa</a></li>" +
-      "    <li><a href = './historia.html'>História</a></li>" +
-      "    <li><a href = './governantes.html'>Governantes</a></li>" +
-      "    <li><a href = './noticias.html'>Notícias</a></li>" +
-      "    <li><a href = './quiz.html'>Quiz</a></li>" +
-      "    <li onclick = 'curiosidade();'><a>Curiosidades</a></li>" +
-      "  </ul>" +
-      "</nav>" +
-      "<br><br><br>" +
-      "<section id = 'principal'> <br>" + texto +
-      "</section>"
-      );  
+    } 
 }
