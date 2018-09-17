@@ -4,7 +4,7 @@
 	<title>Projeto Brasil | </title>
 	<meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="estilo-geral.css">
-    <link rel="stylesheet" type="text/css" href="home.css">
+    <link rel="stylesheet" type="text/css" href="quiz.css">
     <link rel="icon" type="image/gif" href="" sizes="16x16">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
@@ -25,10 +25,16 @@
     </nav>
 
     <center>
-        <div id="texto" style="width: 40%">
-            1. Quantos animais de cada especie Moisés levou para a arca?
-            <br>
-            <input type="text" id="r1">
+        <div id="texto">
+            <p class="titulo">Quiz</p>
+
+            <p id="pergunta">1. Quantos animais de cada especie Moisés levou para a arca?</p>
+
+            <input type="text" id="1" class="campo" placeholder="Resposta"> <img id="result" src="">
+
+            <p id="resposta">Resposta correta: 0</p>
+
+            <button id="submit">Exibir Resultado</button>
         </div>
     </center>
     
