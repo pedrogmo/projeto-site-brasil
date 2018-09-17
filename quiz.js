@@ -6,7 +6,7 @@ function quizInicio()
   if (!confirmacao)
     texto += '<h2>Que pena, você não "quiz" participar...</h2>';
   else
-  {	
+  {
     var certo = "<b>Correto!</b>"; 
     var errado = "<b style='color:red;'>Errado!</b>";
  
@@ -70,40 +70,76 @@ function quizInicio()
       }
     }
     
-    //fim do quiz
+
+    
+    }
+    document.write('' +
+      '<html>' +
+      '<head>' +
+      '  <meta charset="utf-8">' +
+      '  <title>História do Brasil</title>' +
+      '  <link href="brasil.css" rel="stylesheet" type="text/css"/>' +
+      '  <script src="curiosidades.js"></script>' +
+      '</head>' +
+      '<body>' +
+      '<nav id = "menuPrincipal">' +
+      '  <ul>' +
+      '    <li onclick = "bandeira();"><span class = "logo"></span></li>' +
+      '    <li><a href = "./inicio.html">Início</a></li>' +
+      '    <li><a href = "./mapa.html">Mapa</a></li>' +
+      '    <li><a href = "./historia.html">História</a></li>' +
+      '    <li><a href = "./governantes.html">Governantes</a></li>' +
+      '    <li><a href = "./noticias.html">Notícias</a></li>' +
+      '    <li><a href = "./quiz.html">Quiz</a></li>' +
+      '    <li onclick = "curiosidade();"><a>Curiosidades</a></li>' +
+      '  </ul>' +
+      '</nav>' +
+      '<br><br><br>' +
+      '<section id = "principal"> <br>' + texto +
+      '<input type = "button" class = "fimquiz" onclick = "fim();"' +
+      '</section>'
+      );  
+    }, 200);
+}
+function fim()
+{
+  //fim do quiz
     texto = "<h1>Resultado do quiz</h1>";
-    texto = "<br><aside id = 'respondido'><ol>";
-    for(var i=1;i<=t;i++)    	
+    texto += "<br><aside id = 'respondido'><ol>";
+    for(var i=1;i<=t;i++)     
       texto += "<li>"+respostas[o[i]] + "</li>";      
     texto += "</ol>";
     texto += "<br><p>Total de acertos: "+acertos + "</p>";
     texto += "<br><p>Total de erros: "+erros + "</p>";
     texto += "<br><br><input class = 're' type = button value='Respostas' onclick = javascript:if(document.getElementById('certo').style.display=='none'){document.getElementById('certo').style.display='block';}else{document.getElementById('certo').style.display='none';}>";
     texto += "</aside><br><article id='certo' style='display: none;'><ol class = 'certinho'>";
-    for(var i=1;i<=t;i++)    	
+    for(var i=1;i<=t;i++)     
       texto += "<li>"+p[o[i]]+"<br>R:"+r[o[i]] + "</li>";
     texto += "</ol></article>";
-    }
-    document.write('' + 
-    '<body onload = "quizInicio();">' +
-    '<link href="brasil.css" rel="stylesheet" type="text/css"/>' +
-    '<script src="curiosidades.js"></script>' +
-    '<script src="quiz.js"></script>' +
-    '<nav id = "menuPrincipal">'+
-    '<ul>'+
-    '<li onclick = "bandeira();"><span class = "logo"></span></li>' +
-    '<li><a href = "./inicio.html">Início</a></li>' +
-    '<li><a href = "./mapa.html">Mapa</a></li>' +
-    '<li><a href = "./historia.html">História</a></li>' +
-    '<li><a href = "./governantes.html">Governantes</a></li>' +
-    '<li><a href = "./noticias.html">Notícias</a></li>' +
-    '<li><a href = "./quiz.html">Quiz</a></li>' +
-    '<li onclick = "curiosidade();"><a>Curiosidades</a></li>' +
-    '</ul>'+
-    '</nav>'+
-    '<br><br><br>'+
-    '<section id = principal> <br>'+ texto +
-    '</section>'+
-    '</body>');    
-    }, 200);
+
+    document.write('' +
+      '<html>' +
+      '<head>' +
+      '  <meta charset="utf-8">' +
+      '  <title>História do Brasil</title>' +
+      '  <link href="brasil.css" rel="stylesheet" type="text/css"/>' +
+      '  <script src="curiosidades.js"></script>' +
+      '</head>' +
+      '<body>' +
+      '<nav id = "menuPrincipal">' +
+      '  <ul>' +
+      '    <li onclick = "bandeira();"><span class = "logo"></span></li>' +
+      '    <li><a href = "./inicio.html">Início</a></li>' +
+      '    <li><a href = "./mapa.html">Mapa</a></li>' +
+      '    <li><a href = "./historia.html">História</a></li>' +
+      '    <li><a href = "./governantes.html">Governantes</a></li>' +
+      '    <li><a href = "./noticias.html">Notícias</a></li>' +
+      '    <li><a href = "./quiz.html">Quiz</a></li>' +
+      '    <li onclick = "curiosidade();"><a>Curiosidades</a></li>' +
+      '  </ul>' +
+      '</nav>' +
+      '<br><br><br>' +
+      '<section id = "principal"> <br>' + texto +
+      '</section'
+      );  
 }

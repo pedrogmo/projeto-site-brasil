@@ -34,13 +34,6 @@ create table UsuarioPergunta
 	constraint fkPergunta foreign key(codPergunta) references Pergunta(codPergunta)
 )
 
-create table Curiosidade
-(
-	codCuriosidade int primary key,
-	texto ntext not null,
-	tipo varchar(15) not null
-)
-
 create table EraPolitica
 (
 	codEra int primary key,
