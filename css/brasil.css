@@ -9,6 +9,11 @@ hr.faixaAzul{
 	height: 5px;
 }
 
+#menu{
+	position: relative;
+	z-index: 10000;
+}
+
 #menu ul{
 	position         : fixed; 
 	padding          : 0px;
@@ -115,9 +120,11 @@ section#principal p.centro{
 }
 
 section#principal div#map{
+	position: relative;
 	width:1000px;
 	height:400px;
 	margin: auto;
+	z-index: 100;
 }
 
 section#principal select{
