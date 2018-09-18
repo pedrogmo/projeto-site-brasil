@@ -55,9 +55,6 @@ nav#menuPrincipal ul li a
 	color: #0000ff;
 	text-decoration: none;
 	transition: .3s;
-	/*background-color: #ffffff;
-	border:3px solid #ffffff;
-	border-radius: 20px;*/	
 }
 
 nav#menuPrincipal ul li a:hover
@@ -219,7 +216,7 @@ ul, ol{
 }
 
 section#principal.quiz{
-	height: 130%;
+	height: 150%;
 }
 
 section#principal .re{

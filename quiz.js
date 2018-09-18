@@ -1,4 +1,4 @@
-var acertos, erros, respostas, o, p, r, t;
+var acertos, erros, respostas, o, p, r, t, html;
 
 
 function quizInicio()
@@ -7,7 +7,7 @@ function quizInicio()
   setTimeout(function(){
   var confirmacao = confirm("Bem-vindo ao quiz do Brasil. Você deseja começar?");
   if (!confirmacao)
-    texto += '<h2>Que pena, você não "quiz" participar...</h2>';
+    alert('<h2>Que pena, você não "quiz" participar...</h2>');
   else
   {     
     acertos=0; //quantidade de acertos e erros
@@ -62,8 +62,61 @@ function quizInicio()
       var id = i + '';
       texto += '<input type = "text" id = "' + id + '"></input>';
     }    
+    html = window.open("", "_blank", 'height=800,width=1000');    
+    html.document.write('' +
+      '<html>' +
+      '<head>' +
+      '  <meta charset="utf-8">' +
+      '  <title>Quiz do Brasil</title>' +
+      '  <link href="brasil.css" rel="stylesheet" type="text/css"/>' +
+      '  <script src="curiosidades.js"></script>' +
+      '  <script src="quiz.js"></script>' +
+      '</head>' +
+      '<body>' +
+      '<br><br><br>' +
+      '<section id = "principal" class = "quiz"> <br>' + texto +
+      '<br><br><input type = "button" class = "fimquiz" value = "Enviar" onclick = "fim();"' +
+      '</section>'
+      );  
+    html.focus();
+  }
+    }, 200);
+} 
+
+function fim()
+{
+  html.document.close();
+  var certo = "Certo!"; 
+  var errado = "Errado!";
+  var acertou = new Array();
+  for(var i=1;i<=t;i++)
+  {
+    var id = i + "";
+    respostas[o[i]] = document.getElementById(id).value;
+    if(respostas[o[i]]==r[o[i]])
+    {
+      acertou[o[i]] = certo;
+      acertos++;
+    }        
+    else
+    {
+      acertou[o[i]] = errado;
+      erros++;
     }
-    document.write('' +
+  }
+  var texto2 = '<div id = "respondido"><ol>'
+  for(var i = 0; i < t; i++)
+    texto2 += '<ul>' + acertou[o[i]] + '</ul>';
+  texto2 += '</ol></div><br><br>'
+  texto2 += '<p>Acertos: ' + acertos + '</p><br>';
+  texto2 += '<p>Erros: ' + erros + '</p><br>';
+  texto2 += '<div id = "certo"><ol>';
+  for(var i = 0; i < t; i++)
+    texto2 += '<ul>P: '+p[o[i]]+'<br>R: '+r[o[i]]+'</ul>';
+  texto2 += '</ol></div><br><br>';
+  texto2 += '<input type = "button" class = "re" onclick = "botao();"></input>'
+
+  document.write('' +
       '<html>' +
       '<head>' +
       '  <meta charset="utf-8">' +
@@ -86,31 +139,17 @@ function quizInicio()
       '  </ul>' +
       '</nav>' +
       '<br><br><br>' +
-      '<section id = "principal"> <br>' + texto +
+      '<section id = "principal" class = "quiz"> <br>' + texto2 +
       '<br><br><input type = "button" class = "fimquiz" value = "Enviar" onclick = "fim();"' +
       '</section>'
-      );  
-    }, 200);
-} 
+      ); 
+}
 
-function fim()
+function  botao()
 {
-  var certo = "V"; 
-  var errado = "X";
-  var acertou = new Array();
-  for(var i=1;i<=t;i++)
-    {
-      var id = i + "";
-      respostas[o[i]] = document.getElementById(id).value;
-      if(respostas[o[i]]==r[o[i]])
-      {
-        acertou[o[i]] = certo;
-        acertos++;
-      }        
-      else
-      {
-        acertou[o[i]] = errado;
-        erros++;
-      }
-    } 
+  if (document.getElementById("certo").style.display == "none")
+    document.getElementById("certo").style.display == "block";
+  else
+  if (document.getElementById("certo").style.display == "block")
+    document.getElementById("certo").style.display == "none";
 }
