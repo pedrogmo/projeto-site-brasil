@@ -8,60 +8,88 @@ hr.faixaAzul{
 	margin: 0px;
 	height: 5px;
 }
-nav#menuPrincipal{
-	position: 	absolute;	
-	height:60px;
-	width: 100% - 30px;
-	background-image: linear-gradient(#00cc00, #ffff00);
-	padding:10px;
-	margin: auto;
-	position: fixed;
-	width: 100%;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	box-shadow: 0px 5px 5px rgba(0,0,0,0.2);
-	z-index: 10000;
+
+#menu ul{
+	position         : fixed; 
+	padding          : 0px;
+	margin           : 0px;
+	left             : 0px; 
+	right            : 0px; 
+	top              : 0px;
+	background-color : #002776; 
+	list-style       : none;
+	font-size        : 16pt; 
+	font-family      : 'Raleway';
+}
+#menu ul li { display : inline; }
+
+#menu ul li a{
+	padding          : 5px 10px; 
+	display          : inline-block; 
+	color            : white;
+	text-decoration  : none; 
+}
+#menu .menu{
+	text-align       : center;
+	position         : fixed;
+	top              : 80px; 
+	background-color : #009c3b; 
+	list-style       : none; 
+	box-shadow       : 0px 5px 10px rgba(0, 0, 0, 0.4); 
+}
+#menu .menu li a{
+	padding          : 5px 10px;
+	padding-bottom   : 3px; 
+	display          : inline-block; 
+	color            : white;
+	text-decoration  : none;
+	border-bottom    : 3px solid #009c3b;    
+}
+#menu .menu li #abas{
+	border-top       : 2px solid #009c3b;
+	margin-right     : 10px;
+	margin-left      : 10px;  
+	cursor           : pointer; 
+}
+#menu .menu li a:hover{
+	transition-timing-function : ease-in;
+	transition                 : 0.5s;
+	background-color           : rgba(0, 0, 0, 0.3); 
+	border-bottom              : 3px solid white;  
+	background-size            : 30px 60px; 
+}
+#menu .menu li #abas:hover{
+	transition-timing-function : ease-in;
+	transition                 : 0.5s; 
+	border-top                 : 2px solid rgba(0, 0, 0, 0.1); 
+	border-bottom              : 3px solid white;  
+	background-size            : 30px 60px; 
 }
 
-nav#menuPrincipal ul li{
-	display: inline;
-	margin-left: 30px;
-	position: relative;
-	top: -5px;
+.logo{
+	height : 70px;
+	width  : 120px; 
+	border-style: none; 
+}
+.home{
+	height : 20px;
+	width  : 20px;  
 }
 
-nav#menuPrincipal ul li .logo{
-	background: url(./Imagens/logo.jpg) no-repeat;
-	float: left;
-	width: 88px;
-	height: 50px;
-	position: relative;
-	top: -10px;
-}
-nav#menuPrincipal ul li .logo:hover{
-	transform: scale(1.2,1.2);
-	cursor: pointer;
-}
-
-
-nav#menuPrincipal ul li a 
-{
-	text-align: center;
-	font-family: Candara;
-	font-weight: bold;
-	padding: 2px 10px;
-	display: inline-block;
- 	font-size: 30px;	
-	color: #0000ff;
-	text-decoration: none;
-	transition: .3s;
-}
-
-nav#menuPrincipal ul li a:hover
-{
-	color: #ffffff;	
-	cursor: pointer;
-	transition: .3s;
+.footer{
+   	position         : relative;
+   	padding          : 0px;
+   	margin           : 0px;  
+   	left             : 0px;
+   	right            : 0px;    
+   	width            : 100%;
+   	padding-top      : 25px;  
+   	height           : 80px;
+   	background-color : #2b2c33; 
+   	text-align       : center;
+   	font-family      : 'Raleway';
+   	font-size        : 16px; 
+   	color            : #FFFFFF; 
 }
 
 section#principal{
@@ -69,7 +97,7 @@ section#principal{
 	width: 100%;
 	background: #1e21ff;
 	height: 100%;
-	margin-top: 0px;
+	margin-top: 50px;
 }
 
 div#branquinho{
@@ -122,7 +150,7 @@ section#principal .governantes td.cabecalho{
 	color: black;
 }
 
-img{
+section#principal .governantes td img{
 	border: solid 1px black;
 }
 
