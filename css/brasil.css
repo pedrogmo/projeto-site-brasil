@@ -12,6 +12,7 @@ hr.faixaAzul{
 #menu{
 	position: relative;
 	z-index: 10000;
+	width: 100%;
 }
 
 #menu ul{
@@ -78,7 +79,10 @@ hr.faixaAzul{
 }
 .home{
 	height : 20px;
-	width  : 20px;  
+	width  : 20px; 
+}
+.casinha{
+	float: left;
 }
 
 .footer{
@@ -102,7 +106,7 @@ section#principal{
 	width: 100%;
 	background: #1e21ff;
 	height: 100%;
-	margin-top: 50px;
+	padding-top: 50px;
 }
 
 div#branquinho{
@@ -121,7 +125,7 @@ section#principal p.centro{
 
 section#principal div#map{
 	position: relative;
-	width:1000px;
+	width:70%;
 	height:400px;
 	margin: auto;
 	z-index: 100;
