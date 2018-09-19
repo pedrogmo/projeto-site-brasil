@@ -113,7 +113,7 @@ div#branquinho{
 	background-color : white;
 	background-size  : contain;
 	border-radius    : 150px;
-	width            : 1300px;
+	width            : 81%;/*Mantem a proporção*/
 	margin:       auto;
 	padding: 30px;
 }
