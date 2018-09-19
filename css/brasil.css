@@ -3,11 +3,6 @@ body{
 	max-width: 100%;
 	font-family: Century Gothic;
 }
-hr.faixaAzul{
-	background: #0000ff;
-	margin: 0px;
-	height: 5px;
-}
 
 #menu{
 	position: relative;
