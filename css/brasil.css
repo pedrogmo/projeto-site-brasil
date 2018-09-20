@@ -81,6 +81,11 @@ body{
 	height : 55px;  
 }
 
+.logo-text:hover{
+	transition : 0.5s ease-in;
+	transform  : scale(1.05);  
+}
+
 .home{
 	height : 20px;
 	width  : 20px; 
@@ -108,30 +113,40 @@ body{
 section#principal{
 	margin: auto;
 	width: 100%;
-	background: #006400;
+	background: #fff8dc;
 	height: 100%;
 	padding-top: 50px;
 }
 
-div#branquinho{
-	background-color : white;
-	background-size  : contain;
-	/*border-radius    : 150px;*/
+section#principal div#texto a{
+	text-decoration : none; 
+	color           : #2bcaf2;
+}
+
+section#principal div#texto a:hover{
+	transition       : 0.5s ease-in;  
+	background-color : rgba(43, 202, 242, 0.25);
+	text-decoration  : underline;  
+}
+
+div#texto{
 	width            : 100%;/*Mantem a proporção*/
-	border-top: 4px solid #002776;
-	border-bottom: 4px solid #002776;
-	margin:       auto;
-	margin-left:  30px;	
+	text-align       : justify; 
+	padding-top      : 12pt;  
+	padding-bottom   : 12pt; 
+	/*margin:       auto;	*/
 }
 
 section#principal p.centro{
-	text-align: justify;
-	margin-left: 0px;	
+	text-align   : justify;
+	margin-left  : 80px;
+	margin-right : 80px; 	
 }
 
 section#principal div#map{
 	position: relative;
-	border: 2px solid black;
+	border: 4px solid #002776;
+	border-radius: 20px;
 	width:70%;
 	height:400px;
 	margin: auto;
@@ -139,9 +154,12 @@ section#principal div#map{
 }
 
 section#principal select{
-	font-size: 20px;
-	width:200px;
-	margin-left: 650px;
+	font-family   : 'Raleway';
+	font-size     : 16pt;
+	width         : 325px;
+	margin-left   : 625px;
+	border-radius : 25px;
+	padding       : 5px; 
 }
 
 section#principal .governantes{
@@ -238,7 +256,7 @@ h1{
 	font-size: 50px;
 	text-align: center;
 	font-weight: bold;
-	color: #ffff00;
+	color: #002276;
 	font-family: Candara;
 }
 
@@ -255,9 +273,10 @@ h3{
 }
 
 p{
-	text-align: left;
-	margin-left: 30px;
-	font-size: 25px;
+	text-align   : justify;
+	margin-left  : 80px;
+	margin-right : 80px; 
+	font-size    : 25px;
 }
 ul, ol{
 	text-align:left;
