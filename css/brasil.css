@@ -1,7 +1,7 @@
 body{
 	margin: auto;
 	max-width: 100%;
-	font-family: Century Gothic;
+	font-family:'Raleway';
 }
 
 #menu{
@@ -129,6 +129,7 @@ section#principal p.centro{
 
 section#principal div#map{
 	position: relative;
+	border: 2px solid black;
 	width:70%;
 	height:400px;
 	margin: auto;
