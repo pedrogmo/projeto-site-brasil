@@ -108,7 +108,7 @@ body{
 section#principal{
 	margin: auto;
 	width: 100%;
-	background: #1e21ff;
+	background: #006400;
 	height: 100%;
 	padding-top: 50px;
 }
@@ -116,14 +116,16 @@ section#principal{
 div#branquinho{
 	background-color : white;
 	background-size  : contain;
-	border-radius    : 150px;
-	width            : 81%;/*Mantem a proporção*/
+	/*border-radius    : 150px;*/
+	width            : 100%;/*Mantem a proporção*/
+	border-top: 4px solid #002776;
+	border-bottom: 4px solid #002776;
 	margin:       auto;
-	padding: 30px;
+	margin-left:  30px;	
 }
 
 section#principal p.centro{
-	text-align: center;
+	text-align: justify;
 	margin-left: 0px;	
 }
 
@@ -233,7 +235,7 @@ background: #D3D3D3
 }
 
 h1{
-	font-size: 35px;
+	font-size: 50px;
 	text-align: center;
 	font-weight: bold;
 	color: #ffff00;
@@ -243,6 +245,8 @@ h1{
 h2{
 	font-size: 30px;
 	text-align: center;
+	color: #002776;
+	font-weight: bold;
 }
 
 h3{
