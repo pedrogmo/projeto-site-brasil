@@ -114,7 +114,7 @@ section#principal{
 	margin: auto;
 	width: 100%;
 	background: #fff8dc;
-	height: 100%;
+	height: 100% - 80px;
 	padding-top: 50px;
 }
 
@@ -157,7 +157,8 @@ section#principal select{
 	font-family   : 'Raleway';
 	font-size     : 16pt;
 	width         : 325px;
-	margin-left   : 625px;
+	display: block;
+	margin: 0 auto;
 	border-radius : 25px;
 	padding       : 5px; 
 }
@@ -282,25 +283,10 @@ ul, ol{
 	text-align:left;
 }
 
-section#principal.quiz{
-	height: 150%;
-}
-
-section#principal .re{
-	margin-left: 100px;
-}
-
-section#principal aside#respondido{
-	margin-left: 10px;
-}
-
-section#principal article#certo{
-	position: absolute;
-	top: 80px;
-	left: 400px;
-	/*z-index: -10000;*/
-}
-
 section#principal ol li{
 	margin-left: 10px;
+}
+
+section#principal #resp{
+	visibility : 'hidden';
 }

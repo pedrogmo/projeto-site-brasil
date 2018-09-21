@@ -1,15 +1,7 @@
-var acertos, erros, respostas, o, p, r, t, html;
-
+var acertos, erros, respostas, o, p, r, t;
 
 function quizInicio()
-{
-  var texto = '';
-  setTimeout(function(){
-  var confirmacao = confirm("Bem-vindo ao quiz do Brasil. Você deseja começar?");
-  if (!confirmacao)
-    alert('<h2>Que pena, você não "quiz" participar...</h2>');
-  else
-  {     
+{  
     acertos=0; //quantidade de acertos e erros
     erros=0;
     respostas = new Array(); //repostas do usuário
@@ -57,41 +49,22 @@ function quizInicio()
     } 
     for(var i=1;i<=t;i++)
     {
-      var pergunta = '<p>' + p[o[i]] + '</p>';
-      texto += pergunta;
-      var id = i + '';
-      texto += '<input type = "text" id = "' + id + '"></input>';
-    }    
-    html = window.open("", "_blank", 'height=800,width=1000');    
-    html.document.write('' +
-      '<html>' +
-      '<head>' +
-      '  <meta charset="utf-8">' +
-      '  <title>Quiz do Brasil</title>' +
-      '  <link href="brasil.css" rel="stylesheet" type="text/css"/>' +
-      '  <script src="curiosidades.js"></script>' +
-      '  <script src="quiz.js"></script>' +
-      '</head>' +
-      '<body>' +
-      '<br><br><br>' +
-      '<section id = "principal" class = "quiz"> <br>' + texto +
-      '<br><br><input type = "button" class = "fimquiz" value = "Enviar" onclick = "fim();"' +
-      '</section>'
-      );  
-    html.focus();
-  }
-    }, 200);
-} 
+      var id = i + "";
+      document.getElementById(id).innerHTML = p[o[i]];
+    }
+}
 
-function fim()
+function fim(botao)
 {
-  html.document.close();
-  var certo = "Certo!"; 
-  var errado = "Errado!";
+  botao.style.visibility="hidden";
+  document.getElementById("resp").style.visibility="visible";
+
+  var certo = "<font color = 'lime'>Certo!</font>"; 
+  var errado = "<font color = 'red'>Errado!</font>";
   var acertou = new Array();
   for(var i=1;i<=t;i++)
   {
-    var id = i + "";
+    var id = 'r' + i;
     respostas[o[i]] = document.getElementById(id).value;
     if(respostas[o[i]]==r[o[i]])
     {
@@ -104,52 +77,22 @@ function fim()
       erros++;
     }
   }
-  var texto2 = '<div id = "respondido"><ol>'
-  for(var i = 0; i < t; i++)
-    texto2 += '<ul>' + acertou[o[i]] + '</ul>';
-  texto2 += '</ol></div><br><br>'
-  texto2 += '<p>Acertos: ' + acertos + '</p><br>';
-  texto2 += '<p>Erros: ' + erros + '</p><br>';
-  texto2 += '<div id = "certo"><ol>';
-  for(var i = 0; i < t; i++)
-    texto2 += '<ul>P: '+p[o[i]]+'<br>R: '+r[o[i]]+'</ul>';
-  texto2 += '</ol></div><br><br>';
-  texto2 += '<input type = "button" class = "re" onclick = "botao();"></input>'
-
-  document.write('' +
-      '<html>' +
-      '<head>' +
-      '  <meta charset="utf-8">' +
-      '  <title>Quiz do Brasil</title>' +
-      '  <link href="brasil.css" rel="stylesheet" type="text/css"/>' +
-      '  <script src="curiosidades.js"></script>' +
-      '  <script src="quiz.js"></script>' +
-      '</head>' +
-      '<body>' +
-      '<nav id = "menuPrincipal">' +
-      '  <ul>' +
-      '    <li onclick = "bandeira();"><span class = "logo"></span></li>' +
-      '    <li><a href = "./inicio.html">Início</a></li>' +
-      '    <li><a href = "./mapa.html">Mapa</a></li>' +
-      '    <li><a href = "./historia.html">História</a></li>' +
-      '    <li><a href = "./governantes.html">Governantes</a></li>' +
-      '    <li><a href = "./noticias.html">Notícias</a></li>' +
-      '    <li><a href = "./quiz.html">Quiz</a></li>' +
-      '    <li onclick = "curiosidade();"><a>Curiosidades</a></li>' +
-      '  </ul>' +
-      '</nav>' +
-      '<br><br><br>' +
-      '<section id = "principal" class = "quiz"> <br>' + texto2 +
-      '<br><br><input type = "button" class = "fimquiz" value = "Enviar" onclick = "fim();"' +
-      '</section>'
-      ); 
+  for(var i = 1; i <= t; i++)
+  {
+    var id = i + '';
+    document.getElementById(id).innerHTML += '    ' + acertou[o[i]];
+  }
+  document.getElementById('acertos').innerHTML = "Acertos: " + acertos;
+  document.getElementById('erros').innerHTML = "Erros: " + erros;
 }
 
-function  botao()
+function botaoRespostas()
 {
-  if (document.getElementById("certo").style.display == "none")
-    document.getElementById("certo").style.display == "block";
-  else
-  if (document.getElementById("certo").style.display == "block")
-    document.getElementById("certo").style.display == "none";
+  var texto = '<ol>';
+  for(var i = 1; i <= t; i++)
+  texto += '<ul>P: '+p[o[i]]+'<br>R: '+r[o[i]]+'</ul>';
+  texto += '</ol>';
+  var janela = window.open("", "_blank", 'height=800,width=1000');
+  janela.document.write(texto);
+  janela.focus();
 }
