@@ -1,0 +1,19 @@
+section#principal div#map{
+	position: relative;
+	border: 4px solid #002776;
+	border-radius: 20px;
+	width:70%;
+	height:400px;
+	margin: auto;
+	z-index: 100;
+}
+
+section#principal select{
+	font-family   : 'Raleway';
+	font-size     : 16pt;
+	width         : 325px;
+	display: block;
+	margin: 0 auto;
+	border-radius : 25px;
+	padding       : 5px; 
+}

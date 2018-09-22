@@ -1,0 +1,89 @@
+section#principal .governantes{
+	margin: auto;
+	border: 1px solid black;
+	font-size: 20px;
+	background: #ccccff;
+	border-collapse: collapse;
+}
+
+section#principal .governantes img.govern:hover{
+	cursor:pointer;
+}
+
+section#principal .governantes td{
+	padding: 30px;
+	border: 1px solid black;
+	text-align: center;
+}
+
+section#principal .governantes td.cabecalho{
+	font-weight: bold;
+	background-color: white;
+	color: black;
+}
+
+section#principal .governantes td img{
+	border: solid 1px black;
+}
+
+section#principal .governantes tr.imperio
+{
+	background: #F0E68C;
+}
+
+section#principal .governantes tr.r_velha
+{
+	background: #ccccff;
+}
+
+section#principal .governantes tr.era_vargas
+{
+	background: #FFA500
+}
+
+section#principal .governantes tr.r_popul
+{
+	background: #8FBC8F
+}
+
+section#principal .governantes tr.r_militar
+{
+	background: #A0522D
+}
+
+section#principal .governantes tr.r_nova
+{
+	background: #D3D3D3
+}
+
+
+section#principal .governantes_leg{
+	margin: auto;
+	border: 1px solid black;
+	font-size: 20px;
+	border-collapse: collapse;
+	background: white;
+}
+section#principal .governantes_leg td{
+	border: 1px solid black;
+	width: 50px;
+}
+
+section#principal .governantes_leg td.leg_imperio{
+background: #F0E68C;
+}
+section#principal .governantes_leg td.leg_rvelha{
+background: #ccccff;
+}
+section#principal .governantes_leg td.leg_vargas{
+background: #FFA500
+}
+section#principal .governantes_leg td.leg_popul{
+background: #8FBC8F
+}
+section#principal .governantes_leg td.leg_militar{
+background: #A0522D
+}
+section#principal .governantes_leg td.leg_nova{
+background: #D3D3D3
+}

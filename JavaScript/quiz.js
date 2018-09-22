@@ -1,7 +1,8 @@
 var acertos, erros, respostas, o, p, r, t;
 
 function quizInicio()
-{  
+{
+    document.getElementById("resp").style.visibility = "hidden";
     acertos=0; //quantidade de acertos e erros
     erros=0;
     respostas = new Array(); //repostas do usuário
@@ -97,7 +98,7 @@ function quizInicio()
 function fim(botao)
 {
   botao.style.visibility="hidden";
-  document.getElementById("resp").style.visibility="visible";
+  document.getElementById("resp").style.visibility = "visible";
 
   var certo = "<font color = 'lime'>Certo!</font>"; 
   var errado = "<font color = 'red'>Errado!</font>";
@@ -130,7 +131,7 @@ function botaoRespostas()
 {
   var texto = '<ol>';
   for(var i = 1; i <= t; i++)
-  texto += '<ul>P: '+p[o[i]]+'<br>R: '+r[o[i]]+'</ul>';
+  texto += '<ul>P: '+p[o[i]]+'<br>R: '+r[o[i]]+'</ul><br>';
   texto += '</ol>';
   var janela = window.open("", "_blank", 'height=800,width=1000');
   janela.document.write(texto);
