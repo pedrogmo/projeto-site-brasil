@@ -1,0 +1,147 @@
+﻿1 - P. Qual foi o presidente que governou por menos tempo?
+
+R.	Carlos Luz.
+
+
+2 - P. Qual foi o presidente que governou por mais tempo?
+
+R.	Getúlio Vargas.
+
+
+3 - P. Quanto durou o menor mandato presidencial brasileiro?
+
+R.	3 dias.
+
+
+4 - P. Quanto durou o maior mandato presidencial brasileiro?
+
+R. 	15 anos. 
+
+
+5 - P. Quanto tempo durou a Era Vargas? 
+
+R. 	15 anos e 3 meses.
+
+6 - P. Quantos anos Dom Pedro II governou o Brasil? 
+
+R.	58 anos.
+
+
+7 - P. Qual o estado brasileiro com menor número de menos habitantes?
+ 
+R.	Roraima
+
+
+8 - P. Qual o estado brasileiro com maior número de menos habitantes?
+
+R.	São Paulo
+
+
+9 - P. Qual o estado brasileiro com com menor densidade demografica?
+
+R.	Roraima
+
+
+10 - P. Qual unidade federativa brasileira com com maior densidade demografica?
+
+R.	Distrito Federal
+
+
+11 - P. Qual o estado brasileiro com com maior PIB?
+
+R.	São Paulo
+
+
+12 - P. Qual é o estado brasileiro com menor PIB?
+
+R.	Roraima
+
+
+13 - P. Qual é o estado com maior número de presidentes nascidos PIB?
+
+R.	Minas Gerais
+
+
+14 - P. Qual é o unico presidente do Brasil que não nasceu em solo brasileiro?
+
+R.	Itamar Franco
+
+
+15 - P. Qual presidente nasceu em 1882 mas na juventude, alterou alguns documentos, para fazer alterar o ano de nascimento para 1883?
+
+R. 	Getúlio Vargas
+
+
+16 - P. Qual foi o ano em que mais governantes nasceram?
+
+R. 	1905
+
+
+17 - P. Qual o estado brasileiro com menor PIB?
+
+R.	Roraima
+
+
+18 - P. Qual é o estado brasileiro com maior número de municípios?
+
+R.	Minas Gerais (853)
+
+
+19 - P. Qual é o estado brasileiro com menor número de municípios?
+
+R.	 Roraima (15 ashasuhaushuahs)
+
+
+20 - P. Qual é o menor estado brasileiro?
+
+R.	Sergipe
+
+
+21 - P. Qual é o maior estado brasileiro?
+
+R.	Amazonas
+
+
+22 - P. Qual o estado brasileiro com maior expectativa de vida?
+
+R.	Santa Catarina
+
+
+23 - P. Qual o estado brasileiro com menor expectativa de vida?
+
+R.	Maranhão
+
+
+24 - P. Como o Brasil foi chamado inicialmente quando "descoberto"?
+
+R.	Terra de Vera Cruz
+
+
+25 - P. Qual é a unidade federativa brasileira que tem maior IDH?
+
+R.	Distrito Federal
+
+
+26 - P. Qual é a unidade federativa brasileira que tem menor IDH?
+
+R.	Alagoas
+
+
+27 - P. Qual é a unidade federativa brasileira que tem menor mortalidade infantil?
+
+R.	São Paulo
+
+
+28 - P. Qual é a unidade federativa brasileira que tem maior mortalidade infantil?
+
+R.	Distrito Federal
+
+
+29 - P. Qual foi o primeiro presidente a sofrer um processo de impeachment?
+
+R.	Getúlio Vargas
+
+
+30 - P. Qual foi o presidente do brasil que entregou uma carta de renúncia, na esperança de que fosse negada, mas foi aceita?
+
+R. 	Jânio Quadros
