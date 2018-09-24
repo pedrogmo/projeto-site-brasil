@@ -13,21 +13,29 @@ section#principal ol li{
 	z-index     : -100; 
 }
 
+#quiz{
+	margin-left : 50px; 
+}
+
 .titulo{
 	font-family    : 'Raleway';
 	font-size      : 20pt;
 	padding-bottom : 14pt;   
 }
 
-#perguntas{
-	margin-bottom : 2.5px; 
+.perguntas{
+	margin-bottom : 8pt;
+	margin-left   : 0px;   
 }
 
 .campo{
 	font-family    : 'Raleway';
 	font-size      : 14pt; 
-	padding-left   : 5px; 
-	width          : 525px;   
+	padding        : 10px; 
+	width          : 525px;
+	border-radius  : 25px; 
+	border         : 1px solid gray;  
+	outline        : 0px; 
 }
 
 #resposta{

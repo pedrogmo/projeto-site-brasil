@@ -12,8 +12,8 @@ section#principal select{
 	font-family   : 'Raleway';
 	font-size     : 16pt;
 	width         : 325px;
-	display: block;
-	margin: 0 auto;
+	display       : block;
+	margin        : 0 auto;
 	border-radius : 25px;
 	padding       : 5px; 
 }
