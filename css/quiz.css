@@ -5,7 +5,7 @@ section#principal ol li{
 #texto{
 	position    : relative;
 	top         : 125px;  
-	text-align  : justify;
+	text-align  : center;
 	font-family : 'Raleway';
 	font-size   : 14pt; 
 	color       : black; 
@@ -14,7 +14,8 @@ section#principal ol li{
 }
 
 #quiz{
-	margin-left : 50px; 
+	width: 100%;
+	text-align: center;
 }
 
 .titulo{
@@ -25,17 +26,20 @@ section#principal ol li{
 
 .perguntas{
 	margin-bottom : 8pt;
-	margin-left   : 0px;   
+	margin-left   : 0px;
+	text-align    : center;
 }
 
 .campo{
 	font-family    : 'Raleway';
 	font-size      : 14pt; 
 	padding        : 10px; 
-	width          : 525px;
+	width          : 575px;
 	border-radius  : 25px; 
 	border         : 1px solid gray;  
 	outline        : 0px; 
+	margin-bottom  : 50px;
+	margin-left    : -70px;
 }
 
 #resposta{

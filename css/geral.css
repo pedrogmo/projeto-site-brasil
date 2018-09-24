@@ -113,7 +113,7 @@ body{
 section#principal{
 	margin: auto;
 	width: 100%;
-	background: #fff8dc;
+	background-color: #fff8dc;
 	height: 100% - 80px;
 	padding-top: 50px;
 }
