@@ -31,74 +31,75 @@
 <section id = principal>
     <h1>Quiz</h1>
     <h2>Teste seus conhecimentos!</h2><br>
-
-    <p id = "1"></p>
-    <input type="text" id="r1">
-    <p id = "2"></p>
-    <input type="text" id="r2">
-    <p id = "3"></p>
-    <input type="text" id="r3">
-    <p id = "4"></p>
-    <input type="text" id="r4">
-    <p id = "5"></p>
-    <input type="text" id="r5">
-    <p id = "6"></p>
-    <input type="text" id="r6">
-    <p id = "7"></p>
-    <input type="text" id="r7">
-    <p id = "8"></p>
-    <input type="text" id="r8">
-    <p id = "9"></p>
-    <input type="text" id="r9">
-    <p id = "10"></p>
-    <input type="text" id="r10">
-    <p id = "11"></p>
-    <input type="text" id="r11">
-    <p id = "12"></p>
-    <input type="text" id="r12">
-    <p id = "13"></p>
-    <input type="text" id="r13">
-    <p id = "14"></p>
-    <input type="text" id="r14">
-    <p id = "15"></p>
-    <input type="text" id="r15">
-    <p id = "16"></p>
-    <input type="text" id="r16">
-    <p id = "17"></p>
-    <input type="text" id="r17">
-    <p id = "18"></p>
-    <input type="text" id="r18">
-    <p id = "19"></p>
-    <input type="text" id="r19">
-    <p id = "20"></p>
-    <input type="text" id="r20">
-    <p id = "21"></p>
-    <input type="text" id="r21">
-    <p id = "22"></p>
-    <input type="text" id="r22">
-    <p id = "23"></p>
-    <input type="text" id="r23">
-    <p id = "24"></p>
-    <input type="text" id="r24">
-    <p id = "25"></p>
-    <input type="text" id="r25">
-    <p id = "26"></p>
-    <input type="text" id="r26">
-    <p id = "27"></p>
-    <input type="text" id="r27">
-    <p id = "28"></p>
-    <input type="text" id="r28">
-    <p id = "29"></p>
-    <input type="text" id="r29">
-    <p id = "30"></p>
-    <input type="text" id="r30">
-    <br><br>
-    <input type="button" value="Enviar" onclick = "fim(this);">
-    <br><br>
-    <p id = "acertos"></p>
-    <p id = "erros"></p>
-
-    <input type="button" value="Respostas" id = "resp" onclick = "botaoRespostas();">
+	<div id="quiz">
+	    <p id = "1" class="perguntas"></p>
+	    <input type="text" class="campo" id="r1" placeholder="Digite sua resposta">
+	    <p id = "2" class="perguntas"></p>
+	    <input type="text" class="campo" id="r2" placeholder="Digite sua resposta">
+	    <p id = "3" class="perguntas"></p>
+	    <input type="text" class="campo" id="r3" placeholder="Digite sua resposta">
+	    <p id = "4" class="perguntas"></p>
+	    <input type="text" class="campo" id="r4" placeholder="Digite sua resposta">
+	    <p id = "5" class="perguntas"></p>
+	    <input type="text" class="campo" id="r5" placeholder="Digite sua resposta">
+	    <p id = "6" class="perguntas"></p>
+	    <input type="text" class="campo" id="r6" placeholder="Digite sua resposta">
+	    <p id = "7" class="perguntas"></p>
+	    <input type="text" class="campo" id="r7" placeholder="Digite sua resposta">
+	    <p id = "8" class="perguntas"></p>
+	    <input type="text" class="campo" id="r8" placeholder="Digite sua resposta">
+	    <p id = "9" class="perguntas"></p>
+	    <input type="text" class="campo" id="r9" placeholder="Digite sua resposta">
+	    <p id = "10" class="perguntas"></p>
+	    <input type="text" class="campo" id="r10" placeholder="Digite sua resposta">
+	    <p id = "11" class="perguntas"></p>
+	    <input type="text" class="campo" id="r11" placeholder="Digite sua resposta">
+	    <p id = "12" class="perguntas"></p>
+	    <input type="text" class="campo" id="r12" placeholder="Digite sua resposta">
+	    <p id = "13" class="perguntas"></p>
+	    <input type="text" class="campo" id="r13" placeholder="Digite sua resposta">
+	    <p id = "14" class="perguntas"></p>
+	    <input type="text" class="campo" id="r14" placeholder="Digite sua resposta">
+	    <p id = "15" class="perguntas"></p>
+	    <input type="text" class="campo" id="r15" placeholder="Digite sua resposta">
+	    <p id = "16" class="perguntas"></p>
+	    <input type="text" class="campo" id="r16" placeholder="Digite sua resposta">
+	    <p id = "17" class="perguntas"></p>
+	    <input type="text" class="campo" id="r17" placeholder="Digite sua resposta">
+	    <p id = "18" class="perguntas"></p>
+	    <input type="text" class="campo" id="r18" placeholder="Digite sua resposta">
+	    <p id = "19" class="perguntas"></p>
+	    <input type="text" class="campo" id="r19" placeholder="Digite sua resposta">
+	    <p id = "20" class="perguntas"></p>
+	    <input type="text" class="campo" id="r20" placeholder="Digite sua resposta">
+	    <p id = "21" class="perguntas"></p>
+	    <input type="text" class="campo" id="r21" placeholder="Digite sua resposta">
+	    <p id = "22" class="perguntas"></p>
+	    <input type="text" class="campo" id="r22" placeholder="Digite sua resposta">
+	    <p id = "23" class="perguntas"></p>
+	    <input type="text" class="campo" id="r23" placeholder="Digite sua resposta">
+	    <p id = "24" class="perguntas"></p>
+	    <input type="text" class="campo" id="r24" placeholder="Digite sua resposta">
+	    <p id = "25" class="perguntas"></p>
+	    <input type="text" class="campo" id="r25" placeholder="Digite sua resposta">
+	    <p id = "26" class="perguntas"></p>
+	    <input type="text" class="campo" id="r26" placeholder="Digite sua resposta">
+	    <p id = "27" class="perguntas"></p>
+	    <input type="text" class="campo" id="r27" placeholder="Digite sua resposta">
+	    <p id = "28" class="perguntas"></p>
+	    <input type="text" class="campo" id="r28" placeholder="Digite sua resposta">
+	    <p id = "29" class="perguntas"></p>
+	    <input type="text" class="campo" id="r29" placeholder="Digite sua resposta">
+	    <p id = "30" class="perguntas"></p>
+	    <input type="text" class="campo" id="r30" placeholder="Digite sua resposta">
+	    <br><br>
+	    <input type="button" value="Enviar" onclick = "fim(this);">
+	    <br><br>
+	    <p id = "acertos"></p>
+	    <p id = "erros"></p>
+	
+	    <input type="button" value="Respostas" id = "resp" onclick = "botaoRespostas();">
+	</div>
 </section>
 
 	<footer class="footer">
