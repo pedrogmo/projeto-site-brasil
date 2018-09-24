@@ -2,10 +2,6 @@ section#principal ol li{
 	margin-left: 10px;
 }
 
-body{
-	background: url("./Imagens/KISS.jpeg");
-}
-
 #texto{
 	position    : relative;
 	top         : 125px;  
