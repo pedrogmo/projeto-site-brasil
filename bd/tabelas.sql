@@ -6,11 +6,15 @@ create table Estado
 	populacao varchar(10) not null,
 	pib varchar(15) not null,
 	outros ntext not null,
+	esperancaDeVida varchar(3) not null;
+	mortalidadeInfantil varchar(4) not null;
+	alfabetizacao varchar(4) not null,
+	idh varchar(4) not null,
 	regiao varchar(15) not null
 )
 
-insert into Estado values(1,'Acre','164.123,040km2','829.619','','','Norte')
-insert into Estado values(2,'Alagoas','27.848,140km2','3.375.823','','','Nordeste')
+insert into Estado values(1,'Acre','164.123,040km2','829.619','R$13.459.000.00','73,6','17,6‰','84,8%','0,663','Norte')
+insert into Estado values(2,'Alagoas','27.848,140km2','3.375.823','R$40.975.000.000','','Nordeste')
 insert into Estado values(3,'Amapá','142.828.521km2','807.810','','','Norte')
 insert into Estado values(4,'Amazonas','1.559.146,876km2','4.063.614','','','Norte')
 insert into Estado values(5,'Bahia','564.733,177km2','15.344.447','','','Nordeste')
