@@ -10,6 +10,34 @@ create table Estado
 	regiao varchar(15) not null
 )
 
+insert into Estado values(1,'Acre','',,'','','','Norte')
+insert into Estado values(2,'Alagoas','',,'','','','Nordeste')
+insert into Estado values(3,'Amapá','',,'','','','Norte')
+insert into Estado values(4,'Amazonas','',,'','','','Norte')
+insert into Estado values(5,'Bahia','',,'','','','Nordeste')
+insert into Estado values(6,'Ceará','',,'','','','Nordeste')
+insert into Estado values(7,'Distrito Federal','',,'','','','Centro-Oeste')
+insert into Estado values(8,'Espírito Santo','',,'','','','Sudeste')
+insert into Estado values(9,'Goiás','',,'','','','Centro-Oeste')
+insert into Estado values(10,'Maranhão','',,'','','','Nordeste')
+insert into Estado values(11,'Mato Grosso','',,'','','','Centro-Oeste')
+insert into Estado values(12,'Mato Grosso do Sul','',,'','','','Centro-Oeste')
+insert into Estado values(13,'Minas Gerais','',,'','','','Sudeste')
+insert into Estado values(14,'Pará','',,'','','','Norte')
+insert into Estado values(15,'Paraíba','',,'','','','Nordeste')
+insert into Estado values(16,'Paraná','',,'','','','Sul')
+insert into Estado values(17,'Pernambuco','',,'','','','Nordeste')
+insert into Estado values(18,'Piauí','',,'','','','Nordeste')
+insert into Estado values(19,'Rio de Janeiro','',,'','','','Sudeste')
+insert into Estado values(20,'Rio Grande do Norte','',,'','','','Nordeste')
+insert into Estado values(21,'Rio Grande do Sul','',,'','','','Sul')
+insert into Estado values(22,'Rondônia','',,'','','','Norte')
+insert into Estado values(23,'Roraima','',,'','','','Norte')
+insert into Estado values(24,'Santa Catarina','',,'','','','Sul')
+insert into Estado values(25,'São Paulo','',,'','','','Sudeste')
+insert into Estado values(26,'Sergipe','',,'','','','Nordeste')
+insert into Estado values(27,'Tocantins','',,'','','','Norte')
+
 create table Usuario
 (
 	codUsuario int primary key,
