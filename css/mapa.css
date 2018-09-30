@@ -16,4 +16,5 @@ section#principal select{
 	margin        : 0 auto;
 	border-radius : 25px;
 	padding       : 5px; 
+	outline       : none; 
 }
