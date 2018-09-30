@@ -29,9 +29,14 @@
     </nav>
 <br><br><br>
 <section id = principal>
-    <h1>Quiz</h1>
-    <h2>Teste seus conhecimentos!</h2><br>
+	<div id="login">
+		<img id="user" src="./img/eleicoes/capa.jpg">
+		<p id="nomeUser">Bolsonaro #17</p>
+	</div>
+
 	<div id="quiz">
+		<h1>Quiz</h1>
+    	<h2>Teste seus conhecimentos!</h2><br>
 	    <p id = "1" class="perguntas"></p>
 	    <input type="text" class="campo" id="r1" placeholder="Digite sua resposta">
 	    <p id = "2" class="perguntas"></p>
@@ -93,12 +98,10 @@
 	    <p id = "30" class="perguntas"></p>
 	    <input type="text" class="campo" id="r30" placeholder="Digite sua resposta">
 	    <br><br>
-	    <input type="button" value="Enviar" onclick = "fim(this);">
+	    <input id="btnEnviar" type="button" value="Enviar" onclick = "fim(this);">
 	    <br><br>
 	    <p id = "acertos"></p>
 	    <p id = "erros"></p>
-	
-	    <input type="button" value="Respostas" id = "resp" onclick = "botaoRespostas();">
 	</div>
 </section>
 

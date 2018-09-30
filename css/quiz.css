@@ -14,8 +14,10 @@ section#principal ol li{
 }
 
 #quiz{
-	width: 100%;
-	text-align: center;
+	position   : relative; 
+	width      : 50%;
+	text-align : center;
+	left       : 500px; 
 }
 
 .titulo{
@@ -51,19 +53,57 @@ section#principal ol li{
 	width  : 25px; 
 }
 
-#submit{
-	font-size        : 16pt; 
-	font-family      : 'Raleway'; 
-	color            : white; 
-	background-color : #2b2c33;
-	width            : 525px;
-	height           : 40pt; 
-	border-style     : none;
-	border-radius    : 45px;   
+#btnEnviar{
+	font-family      : 'Raleway';
+	font-size        : 14pt;  
+	padding          : 10px;
+	width            : 575px;
+	margin-left      : -70px;
+	border-radius    : 25px;
+	border           : none;
+	background-color : #1db954;
+	color            : white;
 }
 
-#submit:hover{
-	transition-timing-function : ease-in;
-	transition                 : 0.5s;
-	transform                  : scale(1.025);    
+#btnEnviar:hover{
+	transition       : 0.5s ease-in; 
+	background-color : #1ed760;   
+	cursor           : pointer; 
+}
+
+#login{
+	position         : fixed; 
+	width            : 325px;
+	background-color : #1db954; 
+	color            : white; 
+	height           : 100%;
+	box-shadow       : 5px 0px 10px rgba(0, 0, 0, 0.4);  
+}
+
+#user{
+	width         : 250px;
+	height        : 250px;
+	border-radius : 1000px;
+	position      : absolute;
+	left          : 30px;  
+	top           : 50px;
+	box-shadow    : 5px 5px 10px rgba(0, 0, 0, 0.4); 
+}
+
+#user:hover{
+	transition : 0.5s ease-in; 
+	filter     : brightness(75%); 
+	cursor     : pointer; 
+}
+
+#nomeUser{
+	position : absolute; 
+	top      : 315px; 
+}
+
+#nomeUser:hover{
+	transition      : 0.5s ease-in;
+	color           : #d0d0d0;
+	text-decoration : underline;   
+	cursor          : pointer; 
 }
