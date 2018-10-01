@@ -78,7 +78,7 @@ function quizInicio()
     
     for(var i=1;i<=10;i++)          
     {
-      var n=Math.round(t*(Math.random())); 
+      var n=Math.round(t*(Math.random()));
       var m=Math.round(t*(Math.random()));
       if(m==0)
         m++;

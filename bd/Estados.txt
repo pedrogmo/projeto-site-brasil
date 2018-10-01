@@ -53,7 +53,7 @@ População
  - Densidade		5,66 hab./km² (22º)
 
 Economia	
- - PIB			R$ 16.968 bilhões (25º)
+ - PIB			R$ 16.968.000.000
  - PIB per capita	R$ 13.105,24 (15º)
 
 Indicadores	
@@ -73,7 +73,7 @@ População	2017
  - Estimativa	4 063 614 hab. (13º)[2]
  - Densidade	2,61 hab./km² (26º)
 Economia	2015[3]
- - PIB	R$ 86.560 bilhões (15º)
+ - PIB	R$ 86.560.000.000 bilhões (15º)
  - PIB per capita	R$ 21.978,95 (12º)
 Indicadores	2010/2015[4][5]
  - Esper. de vida (2015)	71,7 anos (22º)
@@ -92,7 +92,7 @@ População	2017
  - Estimativa	15 344 447 hab. (4º)[4]
  - Densidade	27,17 hab./km² (15º)
 Economia	2015[5]
- - PIB	R$ 245 024 862 (7º)
+ - PIB	R$ 245.024.862 (7º)
  - PIB per capita	R$ 16 115,45 (22º)
 Indicadores	2010/2015[6][7]
  - Esper. de vida (2015)	73,2 anos (17º)
@@ -112,7 +112,7 @@ População	2017
  - Censo 2010	8 452 381 hab.
  - Densidade	60,57 hab./km² (11º)
 Economia	2014[3]
- - PIB	R$ 126,054 bilhões (12º)
+ - PIB	R$ 126.054.000.000(12º)
  - PIB per capita	R$ 14.255,05 (23º)
 Indicadores	2010/2015[4][5][6]
  - Esper. de vida (2015)	73,6 anos (14º)
@@ -131,7 +131,7 @@ População	2017
  - Censo 2010	2 562 963 hab.
  - Densidade	525,86 hab./km² (1º)
 Economia	2010
- - PIB	R$ 149 906 000 bilhões (8º)
+ - PIB	R$ 149.906.000.000 (8º)
  - PIB per capita	R$ 58 489 (1º)
 Indicadores	2010/2015[5][6]
  - Esper. de vida (2015)	77,8 anos (3º)
@@ -151,7 +151,7 @@ População	2016
  - Estimativa	3 973 697 hab. (15º)[2]
  - Densidade	86,21 hab./km² (7º)
 Economia	2014
- - PIB	R$ 128.784 bilhões (11º)
+ - PIB	R$ 128.784.000.000(11º)
  - PIB per capita	R$ 33.148,56 (5º)
 Indicadores	2010/2015[3][4]
  - Esper. de vida (2015)	77,9 anos (2º)
@@ -171,7 +171,7 @@ População	2016
  - Estimativa	6 730 848 hab. (12º)
  - Densidade	19,79 hab./km² (7º)
 Economia	2014[3]
- - PIB	R$ 75.015.000 (16º)
+ - PIB	R$ 75.015.000.000 (16º)
  - PIB per capita	R$ 12.516.22 (13º)
 Indicadores	2010/2015[4][5]
  - Esper. de vida (2015)	71,0 anos (11º)
@@ -191,7 +191,7 @@ População	2017
  - Estimativa	7 000 229 hab. (10º)[2]
  - Densidade	21,09 hab./km² (16º)
 Economia	2014[3]
- - PIB	R$ 76,842 bilhões (17º)
+ - PIB	R$ 76.842.000.000 (17º)
  - PIB per capita	R$ 11.216,37 (27º)
 Indicadores	2010/2015[4][5]
  - Esper. de vida (2015)	70,3 anos (27º)
@@ -211,7 +211,7 @@ População	2017
  - Estimativa	3 344 544 hab. (18º)[2]
  - Densidade	3,7 hab./km² (25º)
 Economia	2015
- - PIB	R$ 107,418 bilhões Aumento (14º)
+ - PIB	R$ 10.418.000.000 (14º)
  - PIB per capita	R$ 32,894 mil (7º)
 Indicadores	2010/2015[3][4]
  - Esper. de vida (2015)	74,0 anos (12º)
@@ -231,7 +231,7 @@ População	2017
  - Estimativa	2 713 147 hab. (21º)[2]
  - Densidade	7,6 hab./km² (19º)
 Economia	2014
- - PIB	R$ 78.950.000 (16º)
+ - PIB	R$ 78.950.000.000 (16º)
  - PIB per capita	R$ 29.778,57 (9º)
 Indicadores	2010/2015[3][4]
  - Esper. de vida (2015)	75,3 anos (10º)
@@ -251,7 +251,7 @@ População	2017
  - Estimativa	21 119 536 hab. (2º)[2]
  - Densidade	36,01 hab./km² (14º)
 Economia	2014[3]
- - PIB	R$ 516,083 bilhões (3º)
+ - PIB	R$ 516.083.000.000 (3º)
  - PIB per capita	R$ 17 931 (10º)
 Indicadores	2010/2015[4][5]
  - Esper. de vida (2015)	77,0 anos (6º)
@@ -271,7 +271,7 @@ População	2017
  - Estimativa	8 366 628 hab. (9º)[2]
  - Densidade	6,7 hab./km² (21º)
 Economia	2015[3]
- - PIB	R$ 130,883 bilhões (11º)
+ - PIB	R$ 130.883.000.000 bilhões (11º)
  - PIB per capita	R$ 16 009,98 (22º)
 Indicadores	2010/2015[4][5]
  - Esper. de vida (2015)	71,9 anos (21º)
@@ -311,7 +311,7 @@ População	2017
  - Estimativa	11 320 892 hab. (6º)[2]
  - Densidade	56,8 hab./km² (12º)
 Economia	2014
- - PIB	R$ 348.1 bilhões (5º)
+ - PIB	R$ 348.100.000.000 bilhões (5º)
  - PIB per capita	R$ 31.411 (7º)
 Indicadores	2010/2015[3][4]
  - Esper. de vida (2015)	76,8 anos (7º)
@@ -331,7 +331,7 @@ População	2017
  - Estimativa	9 473 266 hab. (7º)[2]
  - Densidade	96,52 hab./km² (6º)
 Economia	2014[3]
- - PIB	R$ 155,143 bilhões (10º)
+ - PIB	R$ 155.143.000.000 bilhões (10º)
  - PIB per capita	R$ 16.722,05 (19º)
 Indicadores	2010/2015[4][5]
  - Esper. de vida (2015)	73,5 anos (16º)
@@ -348,7 +348,7 @@ População	2015
  - Estimativa	3 204 028 hab. (19º)[2]
  - Densidade	12,74 hab./km² (18º)
 Economia	2014[3]
- - PIB	R$ 37,723 bilhões (21º)
+ - PIB	R$ 37.723.000.000 bilhões (21º)
  - PIB per capita	R$ 11 808,08 (26º)
 Indicadores	2010/2015[4][5]
  - Esper. de vida (2015)	70,9 anos (26º)
@@ -368,7 +368,7 @@ População	2017
  - Estimativa	16 718 956 hab. (3º)[2]
  - Densidade	381,88 hab./km² (2º)
 Economia	2013
- - PIB	R$ 626,320 bilhões[3] (2º)
+ - PIB	R$ 626.320.000.000 bilhões[3] (2º)
  - PIB per capita	R$ 31 064 (3º)
 Indicadores	2010/2015[4][5]
  - Esper. de vida (2015)	75,9 anos (8º)
@@ -409,7 +409,7 @@ População	2016
  - Censo 2010	10 693 929 hab.
  - Densidade	40,06 hab./km² (13º)
 Economia	2014
- - PIB	R$ 357,816 bilhões[4] (4º)
+ - PIB	R$ 357.816.000.000 bilhões[4] (4º)
  - PIB per capita	R$ 31.927,16 (6º)
 Indicadores	2010/2015[5][6]
  - Esper. de vida (2015)	77,5 anos (5º)

@@ -53,7 +53,7 @@ section#principal ol li{
 	width  : 25px; 
 }
 
-#btnEnviar{
+.botao{
 	font-family      : 'Raleway';
 	font-size        : 14pt;  
 	padding          : 10px;
@@ -63,9 +63,10 @@ section#principal ol li{
 	border           : none;
 	background-color : #1db954;
 	color            : white;
+	outline          : none;
 }
 
-#btnEnviar:hover{
+.botao:hover{
 	transition       : 0.5s ease-in; 
 	background-color : #1ed760;   
 	cursor           : pointer; 
