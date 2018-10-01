@@ -1,0 +1,9 @@
+Terminar até semana que vem:
+
+* Menu: botar ícones do facebook, twitter e gmail.
+
+* Noticia.html: fazer div notícia.
+
+* Votacao.js: Fazer javascript de votação.
+
+* Login.js: Fazer sistema de login do quiz.
