@@ -1,0 +1,3 @@
+function Votar(){
+	alert("façista!");
+}
