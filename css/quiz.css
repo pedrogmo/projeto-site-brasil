@@ -99,11 +99,12 @@ section#principal ol li{
 #nomeUser{
 	position : absolute; 
 	top      : 315px; 
+	left     : -15px;
 }
 
 #nomeUser:hover{
 	transition      : 0.5s ease-in;
-	color           : #d0d0d0;
+	filter          : brightness(85%); 
 	text-decoration : underline;   
 	cursor          : pointer; 
 }
