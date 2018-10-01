@@ -126,3 +126,11 @@ create table EraGovernante
 	constraint fkGovernante foreign key(codGovernante) references Governante(codGovernante),
 	constraint fkEra foreign key(codEra) references EraPolitica(codEra)
 )
+
+create table Candidato
+(
+	codCandidato int primary key,
+	nome varchar(30) not null,
+	partido varchar(50) not null,
+	votos int not null,
+)

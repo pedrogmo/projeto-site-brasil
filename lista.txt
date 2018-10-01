@@ -7,3 +7,21 @@ Terminar até semana que vem:
 * Votacao.js: Fazer javascript de votação.
 
 * Login.js: Fazer sistema de login do quiz.
+
+
+Ordem:
+marina Silva
+blsonaro
+haddad
+ciro
+alckmin
+alvaro dias
+meirelees
+amoeba
+boulos
+eymael
+daciolo
+joao goulart filho
+vera lucia
+
+
