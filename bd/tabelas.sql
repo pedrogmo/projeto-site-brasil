@@ -5,7 +5,6 @@ create table Estado
 	area varchar(20) not null,
 	populacao varchar(10) not null,
 	pib varchar(15) not null,
-	outros ntext not null,
 	esperancaDeVida varchar(3) not null;
 	mortalidadeInfantil varchar(4) not null;
 	alfabetizacao varchar(4) not null,
@@ -13,33 +12,33 @@ create table Estado
 	regiao varchar(15) not null
 )
 
-insert into Estado values(1,'Acre','164.123,040km2','829.619','R$13.459.000.00','73,6','17,6‰','84,8%','0,663','Norte')
-insert into Estado values(2,'Alagoas','27.848,140km2','3.375.823','R$40.975.000.000','','Nordeste')
-insert into Estado values(3,'Amapá','142.828.521km2','807.810','','','Norte')
-insert into Estado values(4,'Amazonas','1.559.146,876km2','4.063.614','','','Norte')
-insert into Estado values(5,'Bahia','564.733,177km2','15.344.447','','','Nordeste')
-insert into Estado values(6,'Ceará','148.920km2','9.020.460','','','Nordeste')
-insert into Estado values(7,'Distrito Federal','5.779,999km2','3.039.444','','','Centro-Oeste')
-insert into Estado values(8,'Espírito Santo','46.095,583km2','3.973.697','','','Sudeste')
-insert into Estado values(9,'Goiás','340.111,783km2','6.730.848','','','Centro-Oeste')
-insert into Estado values(10,'Maranhão','331.937,450km2','7.000.229','','','Nordeste')
-insert into Estado values(11,'Mato Grosso','903.378,292km2','3.344.544','','','Centro-Oeste')
-insert into Estado values(12,'Mato Grosso do Sul','357.145,532km2','2.713.147','','','Centro-Oeste')
-insert into Estado values(13,'Minas Gerais','586.522,122km2','21.119.536','','','Sudeste')
-insert into Estado values(14,'Pará','1.247.954,666km2','8.366.628','','','Norte')
-insert into Estado values(15,'Paraíba','56.469,778km2','4.025.558','','','Nordeste')
-insert into Estado values(16,'Paraná','199.307,922km2','11.320.892','','','Sul')
-insert into Estado values(17,'Pernambuco','98.149,119km2','9.473.266','','','Nordeste')
-insert into Estado values(18,'Piauí','251.577,738km2','3.204.028','','','Nordeste')
-insert into Estado values(19,'Rio de Janeiro','43.780,172km2','16.718.956','','','Sudeste')
-insert into Estado values(20,'Rio Grande do Norte','52.811,126km2','3.507.003','','','Nordeste')
-insert into Estado values(21,'Rio Grande do Sul','281.730,223km2','11.286.500','','','Sul')
-insert into Estado values(22,'Rondônia','237.590,543km2','1.787.279','','','Norte')
-insert into Estado values(23,'Roraima','224.300,506km2','522.636','','','Norte')
-insert into Estado values(24,'Santa Catarina','95.736,165km2','6.910.553','','','Sul')
-insert into Estado values(25,'São Paulo','248.222,362km2','45.094.866','','','Sudeste')
-insert into Estado values(26,'Sergipe','21.915,116km2','2.265.779','','','Nordeste')
-insert into Estado values(27,'Tocantins','277.620,914km2','1.550.194','','','Norte')
+insert into Estado values(1,'Acre','164.123,040km2','829.619','R$13.459.000.000','73,6','17,6‰','84,8%','0,663','Norte')
+insert into Estado values(2,'Alagoas','27.848,140km2','3.375.823','R$40.975.000.000','','','','','Nordeste')
+insert into Estado values(3,'Amapá','142.828.521km2','807.810','R$ 16.968.000.000','','','','','Norte')
+insert into Estado values(4,'Amazonas','1.559.146,876km2','4.063.614','R$ 86.560.000.000','','','','','Norte')
+insert into Estado values(5,'Bahia','564.733,177km2','15.344.447','R$ 245.024.862.000','','','','','Nordeste')
+insert into Estado values(6,'Ceará','148.920km2','9.020.460','R$ 126.054.000.000','','','','','Nordeste')
+insert into Estado values(7,'Distrito Federal','5.779,999km2','3.039.444','R$ 149.906.000.000','','','','','Centro-Oeste')
+insert into Estado values(8,'Espírito Santo','46.095,583km2','3.973.697','R$ 128.784.000.000','','','','','Sudeste')
+insert into Estado values(9,'Goiás','340.111,783km2','6.730.848','R$ 75.015.000.000','','','','','Centro-Oeste')
+insert into Estado values(10,'Maranhão','331.937,450km2','7.000.229','R$ 76.842.000.000','','','','','Nordeste')
+insert into Estado values(11,'Mato Grosso','903.378,292km2','3.344.544','R$ 10.418.000.000','','','','','Centro-Oeste')
+insert into Estado values(12,'Mato Grosso do Sul','357.145,532km2','2.713.147','R$ 78.950.000.000','','','','','Centro-Oeste')
+insert into Estado values(13,'Minas Gerais','586.522,122km2','21.119.536','R$ 516.083.000.000','','','','','Sudeste')
+insert into Estado values(14,'Pará','1.247.954,666km2','8.366.628','R$ 130.883.000.000','','','','','Norte')
+insert into Estado values(15,'Paraíba','56.469,778km2','4.025.558','R$ 38.731.000.000','','','','','Nordeste')
+insert into Estado values(16,'Paraná','199.307,922km2','11.320.892','R$ 348.100.000.000','','','','','Sul')
+insert into Estado values(17,'Pernambuco','98.149,119km2','9.473.266','R$ 155.143.000.000','','','','','Nordeste')
+insert into Estado values(18,'Piauí','251.577,738km2','3.204.028','R$ 37.723.000.000','','','','','Nordeste')
+insert into Estado values(19,'Rio de Janeiro','43.780,172km2','16.718.956','R$ 626.320.000.000','','','','','Sudeste')
+insert into Estado values(20,'Rio Grande do Norte','52.811,126km2','3.507.003','R$ 36.103.000.000','','','','','Nordeste')
+insert into Estado values(21,'Rio Grande do Sul','281.730,223km2','11.286.500','R$ 357.816.000.000','','','','','Sul')
+insert into Estado values(22,'Rondônia','237.590,543km2','1.787.279','R$ 34.031.000.000','','','','','Norte')
+insert into Estado values(23,'Roraima','224.300,506km2','522.636','R$ 9.744.000.000','','','','','Norte')
+insert into Estado values(24,'Santa Catarina','95.736,165km2','6.910.553','R$ 197.470.000.000','','','','','Sul')
+insert into Estado values(25,'São Paulo','248.222,362km2','45.094.866','R$ 1.858.000.000.000','','','','','Sudeste')
+insert into Estado values(26,'Sergipe','21.915,116km2','2.265.779','R$ 37.472.000.000','','','','','Nordeste')
+insert into Estado values(27,'Tocantins','277.620,914km2','1.550.194','R$ 28.930.000.000','','','','','Norte')
 
 create table Usuario
 (
