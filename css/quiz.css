@@ -103,6 +103,12 @@ section#principal ol li{
 	left     : -15px;
 }
 
+#senhaUser{
+	position : absolute; 
+	top      : 350px; 
+	left     : -15px;
+}
+
 #nomeUser:hover{
 	transition      : 0.5s ease-in;
 	filter          : brightness(85%); 
