@@ -160,6 +160,106 @@ p{
 	margin-right : 80px; 
 	font-size    : 25px;
 }
+
 ul, ol{
 	text-align:left;
+}
+
+#txtBusca{
+	position      : absolute;
+	top           : 25px; 
+	left          : 300px;  
+	width         : 650px; 
+	font-family   : 'Raleway'; 
+	font-size     : 12pt;  
+	padding       : 10px; 
+	border        : 1px solid gray;
+	border-radius : 5px; 
+	outline       : none; 
+}
+
+#btnBusca{
+	position                   : absolute;
+	top                        : 25px; 
+	left                       : 965px;  
+	padding                    : 10px; 
+	font-size                  : 12pt;
+	height                     : 41px;
+	width                      : 41px;  
+	color                      : #fff8dc; 
+	background-color           : #1db954;
+	border                     : 1px solid gray; 
+	border-top-right-radius    : 5px;
+	border-bottom-right-radius : 5px; 
+	outline                    : none;     
+}
+
+#btnBusca:hover{
+	cursor           : pointer;
+	transition       : 0.5s ease-in; 
+	background-color : #1ed760;
+}
+
+.instagram{
+    position        : absolute;
+    top             : 25px;
+    right           : 25px; 
+    width           : 35px;
+    height          : 35px;
+    background      : url("../img/icones/instagram_normal.png") no-repeat;
+    background-size : 35px 35px;   
+}
+
+.twitter{
+	position        : absolute;
+    top             : 25px;
+    right           : 70px; 
+    width           : 35px;
+    height          : 35px;
+    background      : url("../img/icones/twitter_normal.png") no-repeat;
+    background-size : 35px 35px; 	
+}
+
+.facebook{
+	position        : absolute;
+    top             : 25px;
+    right           : 115px; 
+    width           : 35px;
+    height          : 35px;
+    background      : url("../img/icones/facebook_normal.png") no-repeat;
+    background-size : 35px 35px; 	
+}
+
+.brasil{
+	position        : absolute;
+    top             : 25px;
+    right           : 160px; 
+    width           : 35px;
+    height          : 35px;
+    background      : url("../img/icones/brasil_normal.png") no-repeat;
+    background-size : 35px 35px;
+}
+
+.brasil:hover{
+	transition      : 0.5s ease-in; 
+	background      : url("../img/icones/brasil_hover.png"); 
+	background-size : 35px 35px; 
+}
+
+.facebook:hover{
+	transition      : 0.5s ease-in; 
+	background      : url("../img/icones/facebook_hover.png"); 
+	background-size : 35px 35px; 
+}
+
+.twitter:hover{
+	transition      : 0.5s ease-in; 
+	background      : url("../img/icones/twitter_hover.png"); 
+	background-size : 35px 35px; 
+}
+
+.instagram:hover{
+	transition      : 0.5s ease-in; 
+	background      : url("../img/icones/instagram_hover.png"); 
+	background-size : 35px 35px; 
 }
