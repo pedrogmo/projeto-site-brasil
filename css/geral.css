@@ -51,14 +51,15 @@ body{
 	border-top       : 2px solid #009c3b;
 	margin-right     : 10px;
 	margin-left      : 10px;  
-	cursor           : pointer; 
+	 
 }
 #menu .menu li a:hover{
 	transition-timing-function : ease-in;
 	transition                 : 0.5s;
 	background-color           : rgba(0, 0, 0, 0.3); 
 	border-bottom              : 3px solid white;  
-	background-size            : 30px 60px; 
+	background-size            : 30px 60px;
+	cursor                     : pointer;
 }
 #menu .menu li #abas:hover{
 	transition-timing-function : ease-in;
@@ -66,6 +67,7 @@ body{
 	border-top                 : 2px solid rgba(0, 0, 0, 0.1); 
 	border-bottom              : 3px solid white;  
 	background-size            : 30px 60px; 
+	cursor                     : pointer;
 }
 
 .logo{
@@ -270,7 +272,8 @@ ul, ol{
 .brasil:hover{
 	transition      : 0.5s ease-in; 
 	background      : url("../img/icones/brasil_hover.png"); 
-	background-size : 35px 35px; 
+	background-size : 35px 35px;
+	cursor          : pointer;
 }
 
 .facebook:hover{
