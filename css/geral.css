@@ -200,48 +200,71 @@ ul, ol{
 	background-color : #1ed760;
 }
 
+#btnLogin{
+	position         : absolute;
+	top              : 22.5px;
+	right            : 25px; 
+	float            : right;  
+	font-family      : 'Raleway';
+	font-size        : 14pt;
+	color            : white;
+	background-color : #1db954;
+	height           : 40px;  
+	width            : 100px;
+	border           : none; 
+	border-radius    : 5px;    
+	box-shadow       : 2px 2px 5px rgba(0, 0, 0, 1);
+	outline          : none;  
+}
+
+#btnLogin:hover{
+	transition       : 0.5s ease-in; 
+	background-color : #1ed760;
+	cursor           : pointer;  
+}
+
 .instagram{
     position        : absolute;
     top             : 25px;
-    right           : 25px; 
+    right           : 140px; 
     width           : 35px;
     height          : 35px;
     background      : url("../img/icones/instagram_normal.png") no-repeat;
     background-size : 35px 35px;
-    float: right;
+    float           : right;
 }
 
 .twitter{
 	position        : absolute;
     top             : 25px;
-    right           : 70px; 
+    right           : 185px; 
     width           : 35px;
     height          : 35px;
     background      : url("../img/icones/twitter_normal.png") no-repeat;
     background-size : 35px 35px; 
-    float: right;	
+    float           : right;	
 }
 
 .facebook{
 	position        : absolute;
     top             : 25px;
-    right           : 115px; 
+    right           : 230px; 
     width           : 35px;
     height          : 35px;
     background      : url("../img/icones/facebook_normal.png") no-repeat;
     background-size : 35px 35px;
-    float: right; 	
+    float           : right; 	
 }
 
 .brasil{
 	position        : absolute;
     top             : 25px;
-    right           : 160px; 
+    right           : 275px; 
     width           : 35px;
     height          : 35px;
     background      : url("../img/icones/brasil_normal.png") no-repeat;
     background-size : 35px 35px;
-    float: right;
+    float           : right;
 }
 
 .brasil:hover{
