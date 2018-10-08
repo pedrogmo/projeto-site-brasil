@@ -225,6 +225,38 @@ ul, ol{
 	cursor           : pointer;  
 }
 
+.modal{
+	display  : none;
+	position : fixed;
+	z-index  : 100000;
+	left     : 0px;
+	top      : 0px;
+	height   : 100%;
+	width    : 100%;
+	overflow : auto;
+	background-color : rgba(0, 0, 0, 0.5);       
+}
+
+.modal-content{
+	background-color : #fafafa;
+	margin           : 20% auto;
+	padding          : 20px;
+	width            : 70%;
+	box-shadow       : 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);    
+}
+
+.closeBtn{
+	color     : #fafafa;
+	float     : right;
+	font-size : 30px; 
+}
+
+.closeBtn:hover{
+	color           : #000000;
+	text-decoration : none; 
+	cursor          : pointer; 
+}
+
 .instagram{
     position        : absolute;
     top             : 25px;
