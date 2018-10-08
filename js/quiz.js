@@ -1,7 +1,15 @@
 var acertos, erros, respostas, o, p, r, t;
 
+var modal;
+var modalBtn;
+var closeBtn;
+
 function quizInicio()
 {
+    modal = document.getElementById('simpleModal');
+    modalBtn = document.getElementById('btnLogin');
+    closeBtn = document.getElementsByClassName('closeBtn')[0];
+    
     document.getElementById("resp").style.visibility = "hidden";
     acertos=0; //quantidade de acertos e erros
     erros=0;
@@ -138,17 +146,16 @@ function botaoRespostas()
   janela.focus();
 }
 
-var modal = document.getElementById('simpleModal');
-var modalBtn = document.getElementById('btnLogin');
-var closeBtn = document.getElementsByClassName('closeBtn')[0];
-
-modalBtn.addEventListener('click', openModal);
-closeBtn.addEventListener('click', closeModal);
-
-function openModal(){
+function abrirModal(){
   modal.style.display = 'block';
 }
 
-function closeBtn(){
+function fecharModal(){
   modal.style.display = 'none';
+}
+
+window.onclick = function(event){
+  if(event.target == modal){
+    modal.style.display = 'none';
+  }
 }
