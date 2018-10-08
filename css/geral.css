@@ -207,7 +207,8 @@ ul, ol{
     width           : 35px;
     height          : 35px;
     background      : url("../img/icones/instagram_normal.png") no-repeat;
-    background-size : 35px 35px;   
+    background-size : 35px 35px;
+    float: right;
 }
 
 .twitter{
@@ -217,7 +218,8 @@ ul, ol{
     width           : 35px;
     height          : 35px;
     background      : url("../img/icones/twitter_normal.png") no-repeat;
-    background-size : 35px 35px; 	
+    background-size : 35px 35px; 
+    float: right;	
 }
 
 .facebook{
@@ -227,7 +229,8 @@ ul, ol{
     width           : 35px;
     height          : 35px;
     background      : url("../img/icones/facebook_normal.png") no-repeat;
-    background-size : 35px 35px; 	
+    background-size : 35px 35px;
+    float: right; 	
 }
 
 .brasil{
@@ -238,6 +241,7 @@ ul, ol{
     height          : 35px;
     background      : url("../img/icones/brasil_normal.png") no-repeat;
     background-size : 35px 35px;
+    float: right;
 }
 
 .brasil:hover{
