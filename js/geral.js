@@ -1,3 +1,27 @@
+var modal;
+var modalBtn;
+var closeBtn;
+
+window.onload = function(){
+	modal = document.getElementById('simpleModal');
+	modalBtn  = document.getElementById('btnLogin');
+	closeBtn = document.getElementsByClassName('closeBtn')[0];
+}
+
+function abrirModal(){
+  modal.style.display = 'block';
+}
+
+function fecharModal(){
+  modal.style.display = 'none';
+}
+
+window.onclick = function(event){
+  if(event.target == modal){
+    modal.style.display = 'none';
+  }
+}
+
 var cont = 0;
 var arr = new Array('1– O nome oficial do Brasil é “República Federativa do Brasil”.',
 

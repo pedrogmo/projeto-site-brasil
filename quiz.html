@@ -11,7 +11,7 @@
     <script src="./js/geral.js"></script>
     <script src="./js/quiz.js"></script>
 </head>
-<body onload = "quizInicio();">
+<body>
 <nav id="menu">
         <ul id="barra">
             <a href="inicio.html"><img class="logo-text" src="./img/logotipos/logo-brasilee.png"></a>
@@ -33,20 +33,21 @@
             <li><a id="abas" href="quiz.html">QUIZ</a></li>
             <li><a id="abas" onclick="curiosidade();">CURIOSIDADES</a></li>
         </ul>
-    </nav>
+</nav>
+
+<div id="simpleModal" class="modal">
+		<div class="modal-content">
+			<span class="closeBtn" onclick="fecharModal();">&times;</span>
+			<p>Hello... I'm a modal. ;)</p>
+		</div>		
+</div>
+
 <br><br><br>
 <section id = principal>
 	<div id="login">
 		<img id="user" src="./img/eleicoes/marina.jpg">
 		<p id="nomeUser">Nome</p>
 		<p id="senhaUser">Senha</p>
-	</div>
-
-	<div id="simpleModal" class="modal">
-		<div class="modal-content">
-			<span class="closeBtn" onclick="fecharModal();">&times;</span>
-			<p>Hello... I'm a modal. ;)</p>
-		</div>		
 	</div>
 
 	<div id="quiz">

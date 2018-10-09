@@ -1,15 +1,7 @@
 var acertos, erros, respostas, o, p, r, t;
 
-var modal;
-var modalBtn;
-var closeBtn;
-
-function quizInicio()
-{
-    modal = document.getElementById('simpleModal');
-    modalBtn = document.getElementById('btnLogin');
-    closeBtn = document.getElementsByClassName('closeBtn')[0];
-    
+window.onload = function() //vai dar ruim
+{   
     document.getElementById("resp").style.visibility = "hidden";
     acertos=0; //quantidade de acertos e erros
     erros=0;
@@ -144,18 +136,4 @@ function botaoRespostas()
   var janela = window.open("", "_blank", 'height=800,width=1000');
   janela.document.write(texto);
   janela.focus();
-}
-
-function abrirModal(){
-  modal.style.display = 'block';
-}
-
-function fecharModal(){
-  modal.style.display = 'none';
-}
-
-window.onclick = function(event){
-  if(event.target == modal){
-    modal.style.display = 'none';
-  }
 }

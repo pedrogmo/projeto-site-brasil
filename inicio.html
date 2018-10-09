@@ -18,7 +18,7 @@
             <a href=""><div class="twitter"></div></a>
             <a href=""><div class="instagram"></div></a>
             <a><div class="brasil" onclick="bandeira();"></div></a>
-            <button id="btnLogin">LOGIN</button>
+            <button id="btnLogin" onclick = "abrirModal();">LOGIN</button>
             <input type="text" id="txtBusca" placeholder="O que você procura?">
             <input type="button" id="btnBusca" value="&#x1F50D;">
         </ul>
@@ -33,6 +33,14 @@
             <li><a id="abas" onclick="curiosidade();">CURIOSIDADES</a></li>
         </ul>
 </nav>
+
+<div id="simpleModal" class="modal">
+        <div class="modal-content">
+            <span class="closeBtn" onclick="fecharModal();">&times;</span>
+            <p>Hello... I'm a modal. ;)</p>
+        </div>      
+</div>
+
 <br><br><br>
 
 <section id = "principal"><br>   
