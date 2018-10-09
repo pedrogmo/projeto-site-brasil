@@ -36,8 +36,17 @@
 
 <div id="simpleModal" class="modal">
         <div class="modal-content">
-            <span class="closeBtn" onclick="fecharModal();">&times;</span>
-            <p>Hello... I'm a modal. ;)</p>
+            <div class="modal-header">
+                <span class="closeBtn" onclick="fecharModal();">&times;</span>
+                <p>Login</p>
+            </div>
+            <div class="modal-body">
+                <p><input type="email" id="txtCampos" placeholder="Email" required></p>
+                <p><input type="password" id="txtCampos" placeholder="Senha" required></p>
+            </div>
+            <div class="modal-footer">
+                <a><p>Esqueceu sua senha?</p></a>
+            </div>
         </div>      
 </div>
 
