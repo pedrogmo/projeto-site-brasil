@@ -127,7 +127,7 @@ function fim(botao)
   document.getElementById('erros').innerHTML = "Erros: " + erros;
 }
 
-function botaoRespostas()
+document.getElementById('resp').onclick = function()
 {
   var texto = '<ol>';
   for(var i = 1; i <= t; i++)

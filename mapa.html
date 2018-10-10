@@ -7,8 +7,7 @@
     <link rel="stylesheet" type="text/css" href="./css/geral.css">
     <link rel="stylesheet" type="text/css" href="./css/mapa.css">   
     <link rel="icon" href="./img/logotipos/logo-site.ico" type="image/gif" sizes="16x16">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <script src="./js/geral.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">    
 </head>
 <body>
 <nav id="menu">
@@ -17,8 +16,8 @@
             <a href=""><div class="facebook"></div></a>
             <a href=""><div class="twitter"></div></a>
             <a href=""><div class="instagram"></div></a>
-            <a><div class="brasil" onclick="bandeira();"></div></a>
-            <button id="btnLogin" onclick = "abrirModal();">LOGIN</button>
+            <a><div class="brasil" id = "bandeira"></div></a>
+            <button id="btnLogin">LOGIN</button>
             <input type="text" id="txtBusca" placeholder="O que você procura?">
             <input type="button" id="btnBusca" value="&#x1F50D;">
         </ul>
@@ -30,14 +29,14 @@
             <li><a id="abas" href="noticias.html">NOTÍCIAS</a></li>
             <li><a id="abas" href="eleicao.html">ELEIÇÃO</a></li>
             <li><a id="abas" href="quiz.html">QUIZ</a></li>
-            <li><a id="abas" onclick="curiosidade();">CURIOSIDADES</a></li>
+            <li><a id="curiosidade">CURIOSIDADES</a></li>
         </ul>
     </nav>
 <br><br><br>
 
 <div id="simpleModal" class="modal">
     <div class="modal-content">
-        <span class="closeBtn" onclick="fecharModal();">&times;</span>
+        <span class="closeBtn" id = "fechaModal">&times;</span>
         <h3>Login</h3>            
         <input type="email" id="txtCampos" placeholder="Email" required>
         <input type="password" id="txtCampos" placeholder="Senha" required>
@@ -53,7 +52,7 @@
     <form method = "POST">
     <div id = "map"></div><br><br>
     <h2>Selecione um estado</h2>
-    <select id = "cbxEstados" onchange="trocaEstado();">
+    <select id = "cbxEstados">
     	<option>Acre</option>
     	<option>Alagoas</option>
     	<option>Amapá</option>
@@ -91,6 +90,7 @@
         &copy;2018 Brasilee<br>
         Criado por Pedro Gomes Moreira, Samuel Gomes de Lima Dias e Gustavo Henrique Béra.   
 	</footer>
-
+<script src="./js/geral.js"></script>
+<script src="./js/mapa.js"></script>
 </body>
 </html>

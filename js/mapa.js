@@ -13,7 +13,7 @@ var estados = new Array("Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Cear�
 
 var info = new Array("");
 
-function trocaEstado(){
+document.getElementById('cbxEstados').onchange = function(){
 	var indice = document.getElementById("cbxEstados").selectedIndex;
 	alert('Você selecionou: ' + estados[indice] + info[indice]);
 }

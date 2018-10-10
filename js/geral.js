@@ -1,18 +1,12 @@
-var modal;
-var modalBtn;
-var closeBtn;
+var modal = document.getElementById('simpleModal');
+var modalBtn  = document.getElementById('btnLogin');
+var closeBtn = document.getElementsByClassName('closeBtn')[0];
 
-window.onload = function(){
-	modal = document.getElementById('simpleModal');
-	modalBtn  = document.getElementById('btnLogin');
-	closeBtn = document.getElementsByClassName('closeBtn')[0];
-}
-
-function abrirModal(){
+document.getElementById('btnLogin').onclick = function(){
   modal.style.display = 'block';
 }
 
-function fecharModal(){
+document.getElementById('fechaModal').onclick = function(){
   modal.style.display = 'none';
 }
 
@@ -104,7 +98,7 @@ var band = 'A bandeira atual da República Federativa do Brasil foi feita em 188
 'que as cores verde e amarelo tenham surgido da riqueza presente nas matas e dos metais preciosos (o outro). Contudo, historiadores afirmam que' +
  'a escolha dessas cores provém da união entre as famílias reais Bragança (Brasil) e Habsburgo (Áustria).';
 
-function curiosidade()
+document.getElementById("curiosidade").onclick = function()
 {
 	alert(arr[cont]);
 	cont++;
@@ -112,7 +106,7 @@ function curiosidade()
 		cont = 0;
 }
 
-function bandeira()
+document.getElementById('bandeira').onclick = function()
 {
 	alert(band);
 }
