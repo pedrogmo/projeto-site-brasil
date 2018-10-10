@@ -106,7 +106,7 @@ document.getElementById("curiosidade").onclick = function()
 		cont = 0;
 }
 
-document.getElementById('bandeira').onclick = function()
+document.getElementById("bandeira").onclick = function()
 {
 	alert(band);
 }

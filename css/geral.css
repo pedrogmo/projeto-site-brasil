@@ -47,15 +47,10 @@ body{
 	text-decoration  : none;
 	border-bottom    : 3px solid #009c3b;    
 }
-#menu .menu li #abas{
+#menu .menu li .abas{
 	border-top       : 2px solid #009c3b;
 	margin-right     : 10px;
 	margin-left      : 10px;   
-}
-#menu .menu li #curiosidade{
-  border-top       : 2px solid #009c3b;
-  margin-right     : 10px;
-  margin-left      : 10px;   
 }
 #menu .menu li a:hover{
 	transition-timing-function : ease-in;
@@ -65,7 +60,7 @@ body{
 	background-size            : 30px 60px;
 	cursor                     : pointer;
 }
-#menu .menu li #abas:hover{
+#menu .menu li .abas:hover{
 	transition-timing-function : ease-in;
 	transition                 : 0.5s; 
 	border-top                 : 2px solid rgba(0, 0, 0, 0.1); 
@@ -73,6 +68,7 @@ body{
 	background-size            : 30px 60px; 
 	cursor                     : pointer;
 }
+
 
 .logo{
 	height       : 85px;
