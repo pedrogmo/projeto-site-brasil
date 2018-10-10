@@ -38,13 +38,13 @@ execSQL('SELECT * FROM PERGUNTA', resposta);
 rota.get('/pergunta/:id?', (requisicao, resposta) => {
 let filtro = '';
 if (requisicao.params.id)
-	filtro = ' WHERE CODIGO =' + parseInt(requisicao.params.id);
-execSQL('SELECT * from ProdutoL1' + filtro, resposta);
+	filtro = ' WHERE CODPERGUNTA =' + parseInt(requisicao.params.id);
+execSQL('SELECT * from PERGUNTA' + filtro, resposta);
 })
 
-rota.post('/pergunta', (requisicao, resposta) =>{
+/*rota.post('/pergunta', (requisicao, resposta) =>{
 const codigo = parseInt(requisicao.body.codigo);
 const nome = requisicao.body.nome;
 const preco = parseFloat(requisicao.body.preco);
-execSQL(`INSERT INTO PRODUTOL1(codigo, nome, preco) VALUES(${codigo},'${nome}','${preco}')`, resposta);
-})
+execSQL(`INSERT INTO PERGUNTA(codigo, nome, preco) VALUES(${codigo},'${nome}','${preco}')`, resposta);
+})*/

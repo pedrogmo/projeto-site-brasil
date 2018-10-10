@@ -10,68 +10,24 @@ window.onload = function() //vai dar ruim
     p = new Array(); //perguntas
     r = new Array(); //respostas certas
     t = 30; //quantidade de perguntas
-    
-    //perguntas e respostas:
-    p[1] =  "";
-    r[1] =  "";
-    p[2] =  "";
-    r[2] =  "";
-    p[3] =  "";
-    r[3] =  "";
-    p[4] =  "";
-    r[4] =  "";
-    p[5] =  "";
-    r[5] =  "";
-    p[6] =  "";
-    r[6] =  "";
-    p[7] =  "";
-    r[7] =  "";
-    p[8] =  "";
-    r[8] =  "";
-    p[9] =  "";
-    r[9] =  "";
-    p[10] = "";
-    r[10] = "";
-    p[11] = "";
-    r[11] = "";
-    p[12] = "";
-    r[12] = "";
-    p[13] = "";
-    r[13] = "";
-    p[14] = "";
-    r[14] = "";
-    p[15] = "";
-    r[15] = "";
-    p[16] = "";
-    r[16] = "";
-    p[17] = "";
-    r[17] = "";
-    p[18] = "";
-    r[18] = "";
-    p[19] = "";
-    r[19] = "";
-    p[20] = "";
-    r[20] = "";
-    p[21] = "";
-    r[21] = "";
-    p[22] = "";
-    r[22] = "";
-    p[23] = "";
-    r[23] = "";
-    p[24] = "";
-    r[24] = "";
-    p[25] = "";
-    r[25] = "";
-    p[26] = "";
-    r[26] = "";
-    p[27] = "";
-    r[27] = "";
-    p[28] = "";
-    r[28] = "";
-    p[29] = "";
-    r[29] = "";
-    p[30] = "";
-    r[30] = "";
+
+    var xmlhttp = new XMLHttpRequest();
+    var url = "http://localhost:3000/pergunta";
+    xmlhttp.onreadystatechange=function()
+    {
+      if (this.readyState == 4 && this.status == 200)      
+      {
+        var arr = JSON.parse(this.responseText);
+        for(var i = 0; i < arr.length; i++)
+        {
+          alert(arr[i]);
+          p[i + 1] = arr[i].texto;
+          r[i + 1] = arr[i].resposta;
+        }       
+      }
+    }
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
      
     for(var i=1;i<=t;i++)
       o[i] = i;
