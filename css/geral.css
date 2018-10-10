@@ -239,42 +239,70 @@ ul, ol{
 
 .modal-content{
 	background-color : #fafafa;
-	margin           : 10% auto;
-	width            : 35%;
+	margin           : 5% auto;
+  padding          : 20px; 
+  padding-bottom   : 30px; 
+	width            : 30%;
+  border-radius    : 10px; 
 	box-shadow       : 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);    
   animation        : bounceInDown 0.5s; 
 }
 
-.modal-header p, .modal-footer p{
-  margin    : 0;
-  color     : #fff; 
+.modal-content h3{
+  text-align : center;
+  margin-bottom : 15px;  
 }
 
-.modal-header{ 
-  background-color : #009c3b;
-  color            : #fff;
-  padding          : 15px;   
+.modal-content p{
+  text-align : center;
+  font-size  : 12pt;  
 }
 
-.modal-body{
-  padding : 10px 20px; 
+.modal-content input{
+  margin-left   : 20px; 
+  margin-bottom : 30px; 
 }
 
-.modal-footer p{  
-  font-size: 12pt;
+.modal-content a{
+  font-size       : 14pt;
+  text-decoration : none; 
+  color           : #2bcaf2; 
+  cursor          : pointer;
+  margin-left     : 20px;   
 }
 
-.modal-footer{ 
-  background-color : #2b2c33;
-  padding          : 15px;
-  color            : #fff;
-  text-align       : center;    
+.modal-content a:hover{
+  transition       : 0.5s ease-in;  
+  background-color : rgba(43, 202, 242, 0.25);
+  text-decoration  : underline;
+}
+
+#btnEntrar{
+  margin-left      : 31.5px;
+  margin-top       : 0px; 
+  font-family      : 'Raleway';
+  font-size        : 14pt;
+  color            : white;
+  background-color : #1db954;
+  height           : 40px;  
+  width            : 87.5%;
+  border           : none; 
+  border-radius    : 5px;    
+  box-shadow       : 2px 2px 5px rgba(0, 0, 0, 0.25);
+  outline          : none;  
+}
+
+#btnEntrar:hover{
+  transition       : 0.5s ease-in; 
+  background-color : #1ed760;
+  cursor           : pointer;  
 }
 
 .closeBtn{
-	color     : #ccc;
-	float     : right;
-	font-size : 30px;  
+	color      : #ccc;
+  margin-top : -15px;
+	float      : right;
+	font-size  : 30px;  
 }
 
 .closeBtn:hover{	
@@ -288,7 +316,7 @@ ul, ol{
 	padding       : 10px;
 	font-family   : 'Raleway';
 	font-size     : 14pt;
-	width         : 100%; 
+	width         : 87.5%; 
 	background    : none;
 	border        : none; 
 	border-bottom : 3px solid lightgray;  
