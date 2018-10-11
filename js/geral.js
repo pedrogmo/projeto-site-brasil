@@ -17,9 +17,8 @@ xmlhttp.onreadystatechange=function()
     arr = JSON.parse(this.responseText);
     for(var i = 0; i < arr.length; i++)
     {
-      emails[i] = arr[i].texto;
-      senhas[i] = arr[i].resposta;
-      alert(emails[i] + senhas[i] + "");
+      emails[i] = arr[i].email;
+      senhas[i] = arr[i].senha;
     }       
   }
 }
@@ -51,7 +50,10 @@ document.getElementById('btnEntrar').onclick = function(){
 		indiceUsuario = -1;
 	}
 	else
+	{
 		logou = true;
+		alert ('Logado com sucesso');
+	}
 }
 
 window.onclick = function(event){
