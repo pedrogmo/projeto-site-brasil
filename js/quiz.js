@@ -10,6 +10,8 @@ window.onload = function() //vai dar ruim
     p = new Array(); //perguntas
     r = new Array(); //respostas certas
     t = 30; //quantidade de perguntas
+    p[0] = "";
+    r[0] = "";
 
     var xmlhttp = new XMLHttpRequest();
     var url = "http://localhost:3000/pergunta";
@@ -20,35 +22,15 @@ window.onload = function() //vai dar ruim
         var arr = JSON.parse(this.responseText);
         for(var i = 0; i < arr.length; i++)
         {
-          alert(arr[i]);
           p[i + 1] = arr[i].texto;
           r[i + 1] = arr[i].resposta;
+          var id = i + 1 + "";
+          document.getElementById(id).innerHTML = "P: " + p[i + 1];
         }       
       }
     }
     xmlhttp.open("GET", url, true);
-    xmlhttp.send();
-     
-    for(var i=1;i<=t;i++)
-      o[i] = i;
-    
-    for(var i=1;i<=10;i++)          
-    {
-      var n=Math.round(t*(Math.random()));
-      var m=Math.round(t*(Math.random()));
-      if(m==0)
-        m++;
-      if(n==0)
-        n++;     	
-      var aux = o[n];
-      o[n]=o[m];
-      o[m]=aux;
-    } 
-    for(var i=1;i<=t;i++)
-    {
-      var id = i + "";
-      document.getElementById(id).innerHTML = p[o[i]];
-    }
+    xmlhttp.send();    
 }
 
 function fim(botao)
@@ -62,22 +44,22 @@ function fim(botao)
   for(var i=1;i<=t;i++)
   {
     var id = 'r' + i;
-    respostas[o[i]] = document.getElementById(id).value;
-    if(respostas[o[i]]==r[o[i]])
+    respostas[i] = document.getElementById(id).value;
+    if(respostas[i]==r[i])
     {
-      acertou[o[i]] = certo;
+      acertou[i] = certo;
       acertos++;
     }        
     else
     {
-      acertou[o[i]] = errado;
+      acertou[i] = errado;
       erros++;
     }
   }
   for(var i = 1; i <= t; i++)
   {
     var id = i + '';
-    document.getElementById(id).innerHTML += '    ' + acertou[o[i]];
+    document.getElementById(id).innerHTML += '<br>' + acertou[i];
   }
   document.getElementById('acertos').innerHTML = "Acertos: " + acertos;
   document.getElementById('erros').innerHTML = "Erros: " + erros;
@@ -87,7 +69,7 @@ document.getElementById('resp').onclick = function()
 {
   var texto = '<ol>';
   for(var i = 1; i <= t; i++)
-  texto += '<ul>P: '+p[o[i]]+'<br>R: '+r[o[i]]+'</ul><br>';
+  texto += '<ul>P: '+p[i]+'<br>R: '+r[i]+'</ul><br>';
   texto += '</ol>';
   var janela = window.open("", "_blank", 'height=800,width=1000');
   janela.document.write(texto);
