@@ -23,6 +23,7 @@ body{
 	font-size        : 16pt; 
 	font-family      : 'Raleway';
 }
+
 #menu ul li { display : inline; }
 
 #menu ul li a{
@@ -152,8 +153,9 @@ h2{
 }
 
 h3{
-	font-size: 25px;
-	text-align: center;
+  font-weight : normal;  
+	font-size   : 25px;
+	text-align  : center;
 }
 
 p{
@@ -277,7 +279,7 @@ ul, ol{
   text-decoration  : underline;
 }
 
-#btnEntrar{
+.btnModal{
   margin-left      : 31.5px;
   margin-top       : 0px; 
   font-family      : 'Raleway';
@@ -292,7 +294,7 @@ ul, ol{
   outline          : none;  
 }
 
-#btnEntrar:hover{
+.btnModal:hover{
   transition       : 0.5s ease-in; 
   background-color : #1ed760;
   cursor           : pointer;  
@@ -312,7 +314,7 @@ ul, ol{
 	cursor           : pointer;
 }
 
-#txtCampos{
+.txtCampos{
 	padding       : 10px;
 	font-family   : 'Raleway';
 	font-size     : 14pt;
@@ -323,7 +325,7 @@ ul, ol{
 	outline       : none;   
 }
 
-#txtCampos:focus{
+.txtCampos:focus{
 	transition   : 0.25s ease-in; 
 	border-color : #009c3b;
 }
