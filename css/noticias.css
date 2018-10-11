@@ -1,0 +1,12 @@
+.noticia{
+	position         : relative; 
+	background-color : #fafafa;
+	width            : 20%;
+	height           : 40%;
+	border           : 1px solid lightgray; 
+	border-radius    : 5px;         
+}
+
+.image{
+	background-size : cover; 
+}
