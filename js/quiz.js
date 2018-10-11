@@ -1,17 +1,20 @@
-var acertos, erros, respostas, o, p, r, t;
+var acertos, erros, respostas, o, p, r, pontos, pontosUsuario, t;
 
 window.onload = function() //vai dar ruim
 {   
     document.getElementById("resp").style.visibility = "hidden";
     acertos=0; //quantidade de acertos e erros
     erros=0;
+    pontosUsuario = 0;
     respostas = new Array(); //repostas do usuário
     o = new Array();
     p = new Array(); //perguntas
     r = new Array(); //respostas certas
+    pontos = new Array();
     t = 30; //quantidade de perguntas
     p[0] = "";
     r[0] = "";
+    pontos[0] = 0;
 
     var xmlhttp = new XMLHttpRequest();
     var url = "http://localhost:3000/pergunta";
@@ -24,6 +27,7 @@ window.onload = function() //vai dar ruim
         {
           p[i + 1] = arr[i].texto;
           r[i + 1] = arr[i].resposta;
+          pontos[i + 1] = arr[i].pontos;
           var id = i + 1 + "";
           document.getElementById(id).innerHTML = "P: " + p[i + 1];
         }       
@@ -49,6 +53,7 @@ function fim(botao)
     {
       acertou[i] = certo;
       acertos++;
+      pontosUsuario += pontos[i];
     }        
     else
     {

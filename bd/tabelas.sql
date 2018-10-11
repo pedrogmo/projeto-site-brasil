@@ -43,12 +43,13 @@ insert into Estado values(27,'Tocantins','277.620,914km2','1.550.194','R$ 28.930
 create table Usuario
 (
 	codUsuario int primary key,
-	logUsuario varchar(30) not null,
+	nomeUsuario varchar(30) not null,
+	email varchar(100) not null,
 	senha varchar(30) not null,
-	codEstado int not null
-
-	constraint fkEstado foreign key(codEstado) references Estado(codEstado)
+	pontuacao int not null
 )
+
+insert into Usuario values(1,'pedro','pedro@gmail.com','taok',0)
 
 create table Pergunta
 (

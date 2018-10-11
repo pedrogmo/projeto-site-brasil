@@ -1,13 +1,57 @@
 var modal = document.getElementById('simpleModal');
 var modalBtn  = document.getElementById('btnLogin');
 var closeBtn = document.getElementsByClassName('closeBtn')[0];
+var logou;
+var indiceUsuario;
+
+var xmlhttp = new XMLHttpRequest();
+var url = "http://localhost:3000/usuario";
+var arr;
+var emails = new Array();
+var senhas = new Array();
+
+xmlhttp.onreadystatechange=function()
+{
+  if (this.readyState == 4 && this.status == 200)      
+  {
+    arr = JSON.parse(this.responseText);
+    for(var i = 0; i < arr.length; i++)
+    {
+      emails[i] = arr[i].texto;
+      senhas[i] = arr[i].resposta;
+      alert(emails[i] + senhas[i] + "");
+    }       
+  }
+}
+xmlhttp.open("GET", url, true);
+xmlhttp.send();    
 
 document.getElementById('btnLogin').onclick = function(){
-  modal.style.display = 'block';
+ 	 modal.style.display = 'block';
 }
 
 document.getElementById('fechaModal').onclick = function(){
-  modal.style.display = 'none';
+ 	 modal.style.display = 'none';
+}
+
+document.getElementById('btnEntrar').onclick = function(){
+	var email = document.getElementById('txtEmail').value;
+	var senha = document.getElementById('txtSenha').value;
+	var existe = false;
+	indiceUsuario = -1;
+	while(!existe && indiceUsuario < emails.length)
+	{
+		indiceUsuario++;
+		if (email == emails[indiceUsuario] && senha == senhas[indiceUsuario])
+			existe = true;		
+	}
+	if (!existe)
+	{
+		alert ('Email e/ou Senha incorreto(a)');
+		indiceUsuario = -1;
+	}
+	else
+		logou = true;
 }
 
 window.onclick = function(event){
@@ -17,7 +61,7 @@ window.onclick = function(event){
 }
 
 var cont = 0;
-var arr = new Array('1– O nome oficial do Brasil é “República Federativa do Brasil”.',
+var curiosidades = new Array('1– O nome oficial do Brasil é “República Federativa do Brasil”.',
 
 '2 – A palavra “Brasil”, que significa “vermelho como uma brasa”, vem de pau brasil, uma árvore que uma vez cresceu abundantemente ao longo da costa brasileira que produzia um corante vermelho.',
 
@@ -100,7 +144,7 @@ var band = 'A bandeira atual da República Federativa do Brasil foi feita em 188
 
 document.getElementById("curiosidade").onclick = function()
 {
-	alert(arr[cont]);
+	alert(curiosidades[cont]);
 	cont++;
 	if (cont >= 36)
 		cont = 0;

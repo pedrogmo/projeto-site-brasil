@@ -30,21 +30,23 @@ function execSQL(sql, resposta) {
 		.catch(erro => resposta.json(erro));
 }
 
-rota.get('/pergunta', (requisicao, resposta) =>{
-execSQL('SELECT * FROM PERGUNTA', resposta);
+rota.get('/usuario', (requisicao, resposta) =>{
+execSQL('SELECT * FROM USUARIO', resposta);
 })
 
 //o simbolo ? indica que id na rota abaixo é opcional
-rota.get('/pergunta/:id?', (requisicao, resposta) => {
+rota.get('/usuario/:id?', (requisicao, resposta) => {
 let filtro = '';
 if (requisicao.params.id)
-	filtro = ' WHERE CODPERGUNTA =' + parseInt(requisicao.params.id);
-execSQL('SELECT * from PERGUNTA' + filtro, resposta);
+	filtro = ' WHERE CODUSUARIO =' + parseInt(requisicao.params.id);
+execSQL('SELECT * from USUARIO' + filtro, resposta);
 })
 
-/*rota.post('/pergunta', (requisicao, resposta) =>{
+rota.post('/usuario', (requisicao, resposta) =>{
 const codigo = parseInt(requisicao.body.codigo);
 const nome = requisicao.body.nome;
-const preco = parseFloat(requisicao.body.preco);
-execSQL(`INSERT INTO PERGUNTA(codigo, nome, preco) VALUES(${codigo},'${nome}','${preco}')`, resposta);
-})*/
+const email = requisicao.body.email;
+const senha = requisicao.body.senha;
+const pontos = 0;
+execSQL(`INSERT INTO USUARIO(codUsario, nomeUsuario, email, senha, pontuacao) VALUES(${codigo}, '${nome}', ${email}','${senha}', '${pontos}')`, resposta);
+})
