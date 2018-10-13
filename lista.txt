@@ -1,10 +1,39 @@
-Terminar até semana que vem:
+Lista:
 
-* Menu: botar ícones do facebook, twitter e gmail.
+* Fazer página e código de cadastro, com rota post do BD.
 
-* Noticia.html: fazer div notícia.
 
-* Eleicao.html: deixar as imagens bonitas.
+* Fazer página de notícias.
+* Fazer atribuição de pontos ao usuário pelo quiz.
 
-* Login.js: Fazer sistema de login do quiz.
 
+* Fazer div lateral de verificação dos dados do usuário, incluindo foto de perfil.
+
+
+* Terminar código de login:  usuário ficar logado em todas as abas.
+
+
+* Inclusão do banco de dados de Estados na aba mapa.
+
+
+* Inclusão do banco de dados de Governantes e Eras Políticas, talvez incluir dados pelo banco.
+
+* Fazer código da aba de pesquisa
+
+
+
+
+Ideias e Sugestões
+:
+
+* Melhorar aba eleicao
+
+
+* Dividir a aba historia
+
+
+* Incluir vetor de curiosidades pelo banco de dados
+
+* Melhorar a legenda dos governantes
+
+* Botar width da barra em %
