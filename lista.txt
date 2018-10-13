@@ -1,41 +1,37 @@
-Lista:
+Design
 
-* Fazer página e código de cadastro, com rota post do BD.
-
-
-* Banco de Dados para página de noticias.
-
-
-* Fazer atribuição de pontos ao usuário pelo quiz.
-
-
+* Melhorar a legenda dos governantes
 * Fazer div lateral de verificação dos dados do usuário, incluindo foto de perfil.
 
 
-* Terminar código de login:  usuário ficar logado em todas as abas.
+
+Banco de Dados
+
+* Inserção de dados na tabela Noticia.
+* Inserção de dados na tabela Governante.
+* Inserção de dados na tabela EraPolitica.
 
 
-* Inclusão do banco de dados de Estados na aba mapa.
+JavaScript
 
-
-* Inclusão do banco de dados de Governantes e Eras Políticas, talvez incluir dados pelo banco.
-
-* Fazer código da aba de pesquisa
-
-
+* noticias.js + nodeNoticia.js: rota get de select para tabela Noticia
+* eleicao.js + nodeCandidato.js: rota post de update de votos de Candidato.
+* cadastro.js: rota post de insert de Usuario.
+* quiz.js + nodePergunta: rota post de update de pontos do Usuario no quiz
+* geral.js: usuário ficar logado em todas as abas.
+* geral.js: código da aba de pesquisa.
 
 
 Ideias e Sugestões
-:
-
-* Melhorar aba eleicao
 
 
+* Melhorar aba eleicao.
 * Dividir a aba historia
+.
+* Incluir vetor de curiosidades pelo banco de dados.
+* Botar width da barra em %.
+* WebStorage para guardar variáveis de login.
+* LocalStorage para gurdar variáveis das tabelas.
+* Barra de pesquisa procura usuários, mostra ranking de pontuação.
 
-
-* Incluir vetor de curiosidades pelo banco de dados
-
-* Melhorar a legenda dos governantes
-
-* Botar width da barra em %
+"o site ta quase pronto".

@@ -6,14 +6,37 @@ function initMap() {
   });
 }
 
-var estados = new Array("Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal",
-				"Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais",
-				"Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte",
-				"Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins");
+var arr;
+var xmlhttp = new XMLHttpRequest();
+var url = "http://localhost:3000/estado";
 
-var info = new Array("");
+var estados = new Array();
+var info = new Array();
+
+xmlhttp.onreadystatechange=function(){
+  if (this.readyState == 4 && this.status == 200)
+  {
+  	arr = JSON.parse(this.responseText);
+    var dados = "";
+  	for (var i = 0; i < arr.length; i++)
+  	{
+  		estados[i] = arr[i].nome;
+  		dados =  "Área: " + arr[i].area;
+      dados += "\nPopulação: " + arr[i].populacao;
+  		dados += "\nPIB: " + arr[i].pib;
+      dados += "\nEsperança de vida: " + arr[i].esperancaDeVida;
+      dados += "\nMoralidade infantil: " + arr[i].mortalidadeInfantil;
+      dados += "\nAlfabetização: " + arr[i].alfabetizacao;
+      dados += "\nIDH: " + arr[i].idh;
+      dados += "\nRegião: " + arr[i].regiao;
+  		info[i] = dados;
+  	}
+  }
+}
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
 
 document.getElementById('cbxEstados').onchange = function(){
 	var indice = document.getElementById("cbxEstados").selectedIndex;
-	alert('Você selecionou: ' + estados[indice] + info[indice]);
+	alert('Você selecionou: ' + estados[indice] + "\nDados:\n" + info[indice]);
 }
