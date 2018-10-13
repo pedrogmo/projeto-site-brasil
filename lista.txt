@@ -3,7 +3,9 @@ Lista:
 * Fazer página e código de cadastro, com rota post do BD.
 
 
-* Fazer página de notícias.
+* Banco de Dados para página de noticias.
+
+
 * Fazer atribuição de pontos ao usuário pelo quiz.
 
 
