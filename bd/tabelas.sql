@@ -1,14 +1,14 @@
 create table Estado
 (
 	codEstado int primary key,
-	nome varchar(15) not null,
+	nome varchar(20) not null,
 	area varchar(20) not null,
 	populacao varchar(10) not null,
-	pib varchar(15) not null,
-	esperancaDeVida char(4) not null;
-	mortalidadeInfantil varchar(5) not null;
-	alfabetizacao char(5) not null,
-	idh char(5) not null,
+	pib varchar(30) not null,
+	esperancaDeVida varchar(10) not null,
+	mortalidadeInfantil varchar(10) not null,
+	alfabetizacao varchar(10) not null,
+	idh varchar(10) not null,
 	regiao varchar(15) not null
 )
 
@@ -96,8 +96,8 @@ create table UsuarioPergunta
 	codPergunta int not null,
 	codUsuario int not null,
 
-	constraint fkUsuario foreign key(codUsuario) references Usuario(codUsuario),
-	constraint fkPergunta foreign key(codPergunta) references Pergunta(codPergunta)
+	constraint fkCodUsuario foreign key(codUsuario) references Usuario(codUsuario),
+	constraint fkCodPergunta foreign key(codPergunta) references Pergunta(codPergunta),
 )
 
 create table EraPolitica

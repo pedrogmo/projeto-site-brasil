@@ -1,9 +1,9 @@
-const express = require('express');
+﻿const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const porta = 3000; //prãrpotoada 
 const sql = require('mssql');
-const conexaoStr = "Server=regulus;Database=PR118174;User Id=PR118174;Password=PR118174;";
+const conexaoStr = "Server=regulus.cotuca.unicamp.br;Database=PR118174;User Id=PR118174;Password=PR118174;";
 
 //conexao com BD
 sql.connect(conexaoStr)
