@@ -1,12 +1,176 @@
-.noticia{
-	position         : relative; 
+.slider-noticias{
+	position : relative;
+	top      : -93.5px;  
+	width    : 70%; 
+}
+
+.noticia-texto{ 
+	width            : 93.5%;
+	height           : 165px;
+	margin-left      : 25px; 
+	margin-bottom    : 10px; 
+	padding          : 15px;     
+	background-color : #fafafa;	
+	border           : 1px solid lightgray; 
+	border-radius    : 5px;  
+	box-shadow       : 0px 0px 20px 2px rgba(0, 0, 0, 0.15);	
+}
+
+.noticia-texto:hover{
+	cursor     : pointer; 
+	transition : 0.5s ease-in; 
+	box-shadow : 0px 0px 20px 2px rgba(0, 0, 0, 0.3);
+}
+
+.slider div{
+	display : inline-block; 
+}
+
+.noticia-texto h1{
+	font-size      : 24pt;
+	color          : #2b2c33; 
+	margin         : 0px;
+	margin-bottom  : 25px;
+	padding-left   : 15px;  
+	text-align     : left;
+	border-left    : 5px solid #002776;     
+}
+
+.noticia-texto:hover h1{
+	transition : 0.5s ease-in; 
+	color      : #009c3b;
+}
+
+.noticia-texto h1:hover{
+	text-decoration : underline; 
+}
+
+.noticia-texto p{
+	position   : relative;
+	top        : -15px;  
+	font-size  : 16pt; 
+	width      : 90%;
+	margin     : 15px;
+	text-align : left;
+}
+
+.slider-container{ 
+	margin           : 25px;
+	width            : 25%;
+	height           : 25%;  
+	background-color : #fafafa;	
+	border           : 1px solid lightgray; 
+	border-radius    : 5px;  
+	box-shadow       : 0px 0px 20px 2px rgba(0, 0, 0, 0.15);
+}
+
+.slider-container:hover{
+	cursor : pointer; 
+}
+
+.slider-container:hover h1{
+	transition : 0.5s ease-in;
+	color      : #009c3b;  
+}
+
+.slider-container h1{
+	padding-left   : 15px;
+	border-left    : 3px solid #002776;
+}
+
+.slider-image{
+	border-top-left-radius  : 5px;
+	border-top-right-radius : 5px; 
+	width                   : 100%;
+	height                  : 315px;   
+}
+
+.slider-container:hover .slider-image{
+	transition : 0.5s ease-in; 
+	filter     : saturate(1.75);
+}
+
+.dots{
+	text-align : center;
+	width      : 100%;  
+}
+
+.dot{
+	position         : relative;
+	margin-bottom    : 5px;   
+ 	cursor           : pointer;
+ 	height           : 15px;
+ 	width            : 15px;
+ 	background-color : #bbb;
+ 	border-radius    : 50%;
+ 	display          : inline-block;
+ 	transition       : background-color 0.6s ease;
+}
+
+.dot:hover{
+	transition      : 0.5s ease-in; 
+	background-color: #717171;
+}
+
+.card-noticia h1, .slider-container h1{
+	position      : relative;
+	top           : -10px; 
+	left          : 15px;
+	text-align    : left;   
+	font-family   : 'Raleway';
+	font-size     : 14pt;
+	color         : #2b2c33;   
+}
+
+.noticias{
+	width      : 100%; 
+	text-align : center; 
+}
+
+.card-noticia{
+	position         : relative;
+	display          : inline-block;  
+	margin           : 25px;
+	margin-bottom    : 35px;  
 	background-color : #fafafa;
 	width            : 20%;
 	height           : 40%;
 	border           : 1px solid lightgray; 
-	border-radius    : 5px;         
+	border-radius    : 5px;  
+	box-shadow       : 0px 0px 20px 2px rgba(0, 0, 0, 0.15);       
 }
 
-.image{
-	background-size : cover; 
+.card-noticia:hover{
+	transition : 0.5s ease-in;
+	box-shadow : 0px 0px 20px 2px rgba(0, 0, 0, 0.3);
+	cursor     : pointer;
+}
+
+.card-noticia:hover .card-image{
+	transition : 0.5s ease-in; 
+	filter     : saturate(1.75); 
+}
+
+.card-noticia:hover h1{
+	transition : 0.5s ease-in;
+	color      : #009c3b;
+}
+
+.card-noticia h1:hover{
+	text-decoration : underline; 
+}
+
+.card-image{
+	border-top-left-radius  : 5px;
+	border-top-right-radius : 5px; 
+	width                   : 100%;    
+}
+
+.card-descricao{
+	position   : relative;
+	top        : -15px;  
+	font-size  : 12pt; 
+	width      : 80%;
+	margin     : 15px;
+	text-align : left;   
 }
