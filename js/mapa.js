@@ -38,5 +38,5 @@ xmlhttp.send();
 
 document.getElementById('cbxEstados').onchange = function(){
 	var indice = document.getElementById("cbxEstados").selectedIndex;
-	alert('Você selecionou: ' + estados[indice] + "\nDados:\n" + info[indice]);
+  setTimeout(function(){alert('Você selecionou: ' + estados[indice] + "\nDados:\n" + info[indice]);},100)	
 }
