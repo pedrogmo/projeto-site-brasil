@@ -15,24 +15,25 @@ var info = new Array();
 
 xmlhttp.onreadystatechange=function(){
   if (this.readyState == 4 && this.status == 200)
-  {
-  	arr = JSON.parse(this.responseText);
-    var dados = "";
-  	for (var i = 0; i < arr.length; i++)
-  	{
-  		estados[i] = arr[i].nome;
-  		dados =  "Área: " + arr[i].area;
-      dados += "\nPopulação: " + arr[i].populacao;
-  		dados += "\nPIB: " + arr[i].pib;
-      dados += "\nEsperança de vida: " + arr[i].esperancaDeVida;
-      dados += "\nMoralidade infantil: " + arr[i].mortalidadeInfantil;
-      dados += "\nAlfabetização: " + arr[i].alfabetizacao;
-      dados += "\nIDH: " + arr[i].idh;
-      dados += "\nRegião: " + arr[i].regiao;
-  		info[i] = dados;
-  	}
-  }
+    localStorage.setItem("vetor", this.responseText);	
 }
+
+arr = JSON.parse(this.localStorage.getItem("vetor"));
+var dados = "";
+for (var i = 0; i < arr.length; i++)
+{
+  estados[i] = arr[i].nome;
+	dados =  "Área: " + arr[i].area;
+  dados += "\nPopulação: " + arr[i].populacao;
+	dados += "\nPIB: " + arr[i].pib;
+  dados += "\nEsperança de vida: " + arr[i].esperancaDeVida;
+  dados += "\nMoralidade infantil: " + arr[i].mortalidadeInfantil;
+  dados += "\nAlfabetização: " + arr[i].alfabetizacao;
+  dados += "\nIDH: " + arr[i].idh;
+  dados += "\nRegião: " + arr[i].regiao;
+  info[i] = dados;
+}
+
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
 

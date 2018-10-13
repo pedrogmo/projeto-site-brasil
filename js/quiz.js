@@ -18,20 +18,19 @@ window.onload = function() //vai dar ruim
 
     var xmlhttp = new XMLHttpRequest();
     var url = "http://localhost:3000/pergunta";
-    xmlhttp.onreadystatechange=function()
+    xmlhttp.onreadystatechange=function(){
+      if (this.readyState == 4 && this.status == 200)
+        localStorage.setItem("vetor", this.responseText)   
+    }
+    
+    var arr = JSON.parse(localStorage.getItem("vetor"));
+    for(var i = 0; i < t; i++)
     {
-      if (this.readyState == 4 && this.status == 200)      
-      {
-        var arr = JSON.parse(this.responseText);
-        for(var i = 0; i < arr.length; i++)
-        {
-          p[i + 1] = arr[i].texto;
-          r[i + 1] = arr[i].resposta;
-          pontos[i + 1] = arr[i].pontos;
-          var id = i + 1 + "";
-          document.getElementById(id).innerHTML = "P: " + p[i + 1];
-        }       
-      }
+      p[i + 1] = arr[i].texto;
+      r[i + 1] = arr[i].resposta;
+      pontos[i + 1] = arr[i].pontos;
+      var id = i + 1 + "";
+      document.getElementById(id).innerHTML = "P: " + p[i + 1];
     }
     xmlhttp.open("GET", url, true);
     xmlhttp.send();    

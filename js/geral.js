@@ -2,7 +2,6 @@
 var modalBtn  = document.getElementById('btnLogin');
 var closeBtn = document.getElementsByClassName('closeBtn')[0];
 
-var logou;
 var usuario;
 var arr;
 var xmlhttp = new XMLHttpRequest();
@@ -10,8 +9,10 @@ var url = "http://localhost:3000/usuario";
 
 xmlhttp.onreadystatechange=function(){
   if (this.readyState == 4 && this.status == 200)      
-    arr = JSON.parse(this.responseText);     
+    localStorage.setItem("vetor", this.responseText);
 }
+
+arr = JSON.parse(localStorage.getItem("vetor"));
 xmlhttp.open("GET", url, true);
 xmlhttp.send();    
 
@@ -37,13 +38,15 @@ document.getElementById('btnEntrar').onclick = function(){
 		}
 	}
 	if (!existe)
-	{
-		alert ('Email e/ou Senha incorreto(a)');
-	}
+		alert ('Email e/ou Senha incorreto(a)');	
 	else
 	{
 		usuario = arr[i];
-		logou = true;
+		sessionStorage.setItem("nome", usuario.nomeUsuario);
+		sessionStorage.setItem("email", usuario.email);
+		sessionStorage.setItem("senha", usuario.senha);
+		sessionStorage.setItem("pontos", usuario.pontuacao);
+		sessionStorage.setItem("logou", "sim");
 		alert ('Logado com sucesso');
 	}
 }
