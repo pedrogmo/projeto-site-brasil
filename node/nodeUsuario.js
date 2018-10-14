@@ -43,10 +43,11 @@ execSQL('SELECT * from USUARIO' + filtro, resposta);
 })
 
 rota.post('/usuario', (requisicao, resposta) =>{
-const codigo = parseInt(requisicao.body.codigo);
 const nome = requisicao.body.nome;
 const email = requisicao.body.email;
 const senha = requisicao.body.senha;
 const pontos = 0;
-execSQL(`INSERT INTO USUARIO(codUsario, nomeUsuario, email, senha, pontuacao) VALUES(${codigo}, '${nome}', ${email}','${senha}', '${pontos}')`, resposta);
+const aniversario = requisicao.body.aniversario;
+const pais = requisicao.body.pais;
+execSQL(`INSERT INTO USUARIO(nomeUsuario, email, senha, pontuacao, dataAniversario, nacionalidade) VALUES('${nome}', '${email}','${senha}', ${pontos}, '${aniversario}', '${pais}')`, resposta);
 })

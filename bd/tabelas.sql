@@ -42,14 +42,14 @@ insert into Estado values(27,'Tocantins','277.620,914km2','1.550.194','R$28.930.
 
 create table Usuario
 (
-	codUsuario int primary key,
+	codUsuario int identity(1,1) primary key,
 	nomeUsuario varchar(30) not null,
 	email varchar(100) not null,
 	senha varchar(30) not null,
-	pontuacao int not null
+	pontuacao int not null,
+	dataAniversario varchar(10) not null,
+	nacionalidade varchar(30) not null
 )
-
-insert into Usuario values(1,'pedro','pedro@gmail.com','taok',0)
 
 create table Pergunta
 (

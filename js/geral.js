@@ -20,6 +20,10 @@ document.getElementById('btnLogin').onclick = function(){
  	 modal.style.display = 'block';
 }
 
+document.getElementById('btnCadastrar').onclick = function(){
+	location.href = "cadastro.html";
+}
+
 document.getElementById('fechaModal').onclick = function(){
  	 modal.style.display = 'none';
 }
@@ -30,7 +34,7 @@ document.getElementById('btnEntrar').onclick = function(){
 	var existe = false;
 	{
 		var i = -1;
-		while(!existe && i < arr.length)
+		while(!existe && i < arr.length - 1)
 		{
 			i++;
 			if (email == arr[i].email && senha == arr[i].senha)
@@ -46,6 +50,8 @@ document.getElementById('btnEntrar').onclick = function(){
 		sessionStorage.setItem("email", usuario.email);
 		sessionStorage.setItem("senha", usuario.senha);
 		sessionStorage.setItem("pontos", usuario.pontuacao);
+		sessionStorage.setItem("aniversario", usuario.dataAniversario);
+		sessionStorage.setItem("pais", usuario.nacionalidade);
 		sessionStorage.setItem("logou", "sim");
 		alert ('Logado com sucesso');
 	}

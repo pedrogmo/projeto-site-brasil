@@ -51,32 +51,33 @@
 <section id = "principal"><br>   
 	<h1>Cadastro</h1><br>
 <br>
-<form class="formulario">
+<form action="http://localhost:3000/usuario" method="post" class="formulario">
 	<div>
 		<i class="fas fa-user" id="icones"></i>
-		<input type="text" class="textBoxes" required>
+		<input name = "nome" type="text" class="textBoxes" required>
 		<label class="labels">Nome</label>
 	</div>
 	<div>
 		<i class="fas fa-envelope" id="icones"></i>
-		<input type="email" class="textBoxes" required>
+		<input name = "email" type="email" class="textBoxes" required>
 		<label class="labels">Email</label>
 	</div>
 	<div>
 		<i class="fas fa-key" id="icones"></i>
-		<input type="password" class="textBoxes" required>
+		<input name = "senha" type="password" class="textBoxes" required>
 		<label class="labels">Senha</label>
 	</div>
 	<div>
 		<i class="fas fa-birthday-cake" id="icones"></i>
-		<input type="text" class="textBoxes" required title="dd/mm/aaaa">
+		<input name = "aniversario" type="date" class="textBoxes" required>
 		<label class="labels">Data de Aniversário</label>
 	</div>
 	<div>
 		<i class="fas fa-globe-americas" id="icones"></i>
-		<input type="text" class="textBoxes" required>
+		<input name = "pais" type="text" class="textBoxes" required>
 		<label class="labels">País</label>
 	</div>
+    <input type = "submit" value = "Criar conta"></input>
 </form>
 </section>
 

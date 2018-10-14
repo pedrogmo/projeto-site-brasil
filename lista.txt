@@ -3,6 +3,7 @@ Design
 * Melhorar a legenda dos governantes
 * Fazer div lateral de verificação dos dados do usuário, incluindo foto de perfil.
 
+* cadastro.html: consertar erros nos textboxes
 
 
 Banco de Dados
@@ -16,9 +17,7 @@ JavaScript
 
 * noticias.js + nodeNoticia.js: rota get de select para tabela Noticia
 * eleicao.js + nodeCandidato.js: rota post de update de votos de Candidato.
-* cadastro.js: rota post de insert de Usuario.
 * quiz.js + nodePergunta: rota post de update de pontos do Usuario no quiz
-* geral.js: usuário ficar logado em todas as abas.
 * geral.js: código da aba de pesquisa.
 
 
@@ -30,8 +29,6 @@ Ideias e Sugestões
 .
 * Incluir vetor de curiosidades pelo banco de dados.
 * Botar width da barra em %.
-* WebStorage para guardar variáveis de login.
-* LocalStorage para gurdar variáveis das tabelas.
 * Barra de pesquisa procura usuários, mostra ranking de pontuação.
 
 "o site ta quase pronto".
