@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>Brasilee | Cadastro</title>    
+    <link rel="stylesheet" type="text/css" href="./css/geral.css">	    
+    <link rel="stylesheet" type="text/css" href="./css/cadastro.css">
+    <link rel="icon" href="./img/logotipos/logo-site.ico" type="image/gif" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">    
+</head>
+<body>
+<nav id="menu">
+        <ul id="barra">
+            <a href="inicio.html"><img class="logo-text" src="./img/logotipos/logo-brasilee.png"></a>
+            <a href=""><div class="facebook"></div></a>
+            <a href=""><div class="twitter"></div></a>
+            <a href=""><div class="instagram"></div></a>
+            <a><div class="brasil" id = "bandeira"></div></a>
+            <button id="btnLogin">LOGIN</button>
+            <input type="text" id="txtBusca" placeholder="O que você procura?">
+            <input type="button" id="btnBusca" value="&#x1F50D;">
+        </ul>
+        <ul class="menu">
+            <li class = "casinha"><a href="inicio.html"><img class="home" src="./img/icones/home.png"></a></li>
+            <li><a class="abas" href="historia.html">HISTÓRIA</a></li>
+            <li><a class="abas" href="mapa.html">MAPA</a></li>
+            <li><a class="abas" href="governantes.html">GOVERNANTES</a></li>
+            <li><a class="abas" href="noticias.html">NOTÍCIAS</a></li>
+            <li><a class="abas" href="eleicao.html">ELEIÇÃO</a></li>
+            <li><a class="abas" href="quiz.html">QUIZ</a></li>
+            <li><a class="abas" id = "curiosidade">CURIOSIDADES</a></li>
+        </ul>
+</nav>
+
+<div id="simpleModal" class="modal">
+    <div class="modal-content">
+        <span class="closeBtn" id = "fechaModal">&times;</span>
+        <h3>LOGIN</h3>            
+        <input type="email" class = "txtCampos" id="txtEmail" placeholder="Email" required>
+        <input type="password" class = "txtCampos" id="txtSenha" placeholder="Senha" required>
+        <button class="btnModal" id="btnEntrar">Entrar</button>
+        <p>OU</p>
+        <button class="btnModal" id="btnCadastrar">Cadastrar-se</button>
+    </div>      
+</div>
+
+<br><br><br>
+
+<section id = "principal"><br>   
+	<h1>Cadastro</h1><br>
+<br>
+<form class="formulario">
+	<div>
+		<i class="fas fa-user" id="icones"></i>
+		<input type="text" class="textBoxes" required>
+		<label class="labels">Nome</label>
+	</div>
+	<div>
+		<i class="fas fa-envelope" id="icones"></i>
+		<input type="email" class="textBoxes" required>
+		<label class="labels">Email</label>
+	</div>
+	<div>
+		<i class="fas fa-key" id="icones"></i>
+		<input type="password" class="textBoxes" required>
+		<label class="labels">Senha</label>
+	</div>
+	<div>
+		<i class="fas fa-birthday-cake" id="icones"></i>
+		<input type="text" class="textBoxes" required title="dd/mm/aaaa">
+		<label class="labels">Data de Aniversário</label>
+	</div>
+	<div>
+		<i class="fas fa-globe-americas" id="icones"></i>
+		<input type="text" class="textBoxes" required>
+		<label class="labels">País</label>
+	</div>
+</form>
+</section>
+
+	<footer class="footer">
+        &copy;2018 Brasilee<br>
+        Criado por Pedro Gomes Moreira, Samuel Gomes de Lima Dias e Gustavo Henrique Béra.   
+	</footer> 
+<script src="./js/geral.js"></script>
+</body>
+</html>

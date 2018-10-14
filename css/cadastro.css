@@ -1,0 +1,50 @@
+.formulario{
+	position      : relative;
+	width         : 75%;
+	left          : 25%; 
+	margin-bottom : 100px;      
+}
+
+.textBoxes{
+	font-family   : 'Raleway'; 
+	font-size     : 16pt; 
+	width         : 60%; 
+	background    : none;
+	border        : none;
+	border-bottom : 3px solid lightgray; 
+	padding       : 10px;
+	outline       : none; 
+	margin-bottom : 40px;
+	margin-left   : 15px;   
+}
+
+.textBoxes:focus, .textBoxes:valid{
+	transition   : 0.5s ease-in;  
+	border-color : #009c3b; 
+}
+
+.textBoxes:focus ~ label, .textBoxes:valid ~ label{
+	color      : #009c3b;  
+	top        : -26px;  
+}
+
+.labels{
+	position       : relative;
+	right          : 61%;    
+	font-family    : 'Raleway';
+	font-size      : 16pt; 
+	color          : lightgray; 
+	user-select    : none; 
+	pointer-events : none;
+	transition     : 0.5s;   
+}
+
+#icones{
+	user-select : none; 
+	color       : #002776;  
+	font-size   : 16pt; 
+}
+
+form div{
+	user-select : none; 
+}
