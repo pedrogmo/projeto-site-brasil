@@ -326,7 +326,7 @@ ul, ol{
 	outline       : none;   
 }
 
-.txtCampos:focus{
+.txtCampos:focus, .txtCampos:valid{
 	transition   : 0.25s ease-in; 
 	border-color : #009c3b;
 }
