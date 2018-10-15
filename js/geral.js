@@ -12,9 +12,9 @@ xmlhttp.onreadystatechange=function(){
     localStorage.setItem("vetor", this.responseText);
 }
 
-arr = JSON.parse(localStorage.getItem("vetor"));
 xmlhttp.open("GET", url, true);
-xmlhttp.send();    
+xmlhttp.send();
+arr = JSON.parse(localStorage.getItem("vetor"));    
 
 document.getElementById('btnLogin').onclick = function(){
  	 modal.style.display = 'block';
@@ -54,7 +54,10 @@ document.getElementById('btnEntrar').onclick = function(){
 		sessionStorage.setItem("pais", usuario.nacionalidade);
 		sessionStorage.setItem("logou", "sim");
 		alert ('Logado com sucesso');
+		modal.style.display = 'none';
 	}
+		document.getElementById("txtEmail").value = "";
+		document.getElementById("txtSenha").value = "";
 }
 
 window.onclick = function(event){

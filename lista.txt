@@ -2,7 +2,6 @@ Design
 
 * Melhorar a legenda dos governantes
 * Fazer div lateral de verificação dos dados do usuário, incluindo foto de perfil.
-
 * cadastro.html: consertar erros nos textboxes
 
 

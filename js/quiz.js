@@ -20,9 +20,11 @@ window.onload = function() //vai dar ruim
     var url = "http://localhost:3000/pergunta";
     xmlhttp.onreadystatechange=function(){
       if (this.readyState == 4 && this.status == 200)
-        localStorage.setItem("vetor", this.responseText)   
+        localStorage.setItem("vetor", this.responseText);
     }
-    
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+
     var arr = JSON.parse(localStorage.getItem("vetor"));
     for(var i = 0; i < t; i++)
     {
@@ -32,8 +34,7 @@ window.onload = function() //vai dar ruim
       var id = i + 1 + "";
       document.getElementById(id).innerHTML = "P: " + p[i + 1];
     }
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();    
+     
 }
 
 function fim(botao)

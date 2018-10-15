@@ -18,6 +18,8 @@ xmlhttp.onreadystatechange=function(){
     localStorage.setItem("vetor", this.responseText);	
 }
 
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
 arr = JSON.parse(this.localStorage.getItem("vetor"));
 var dados = "";
 for (var i = 0; i < arr.length; i++)
@@ -33,9 +35,6 @@ for (var i = 0; i < arr.length; i++)
   dados += "\nRegião: " + arr[i].regiao;
   info[i] = dados;
 }
-
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
 
 document.getElementById('cbxEstados').onchange = function(){
 	var indice = document.getElementById("cbxEstados").selectedIndex;
