@@ -29,7 +29,7 @@ window.onload = function() //vai dar ruim
     for(var i = 0; i < t; i++)
     {
       p[i + 1] = arr[i].texto;
-      r[i + 1] = arr[i].resposta;
+      r[i + 1] = arr[i].resposta.toUpperCase();
       pontos[i + 1] = arr[i].pontos;
       var id = i + 1 + "";
       document.getElementById(id).innerHTML = "P: " + p[i + 1];
@@ -48,7 +48,7 @@ function fim(botao)
   for(var i=1;i<=t;i++)
   {
     var id = 'r' + i;
-    respostas[i] = document.getElementById(id).value;
+    respostas[i] = document.getElementById(id).value.toUpperCase();
     if(respostas[i]==r[i])
     {
       acertou[i] = certo;
