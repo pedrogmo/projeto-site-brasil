@@ -64,9 +64,10 @@ section#principal .governantes_leg{
 	border-collapse: collapse;
 	background: white;
 }
-section#principal .governantes_leg td{
-	border: 1px solid black;
-	width: 100px;
+section#principal .governantes_leg td#leg{
+	border  : 1px solid black;
+	width   : 45px;
+	padding : 7.5px; 
 }
 
 section#principal .governantes_leg td.leg_imperio{
