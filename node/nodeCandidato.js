@@ -1,4 +1,4 @@
-﻿const express = require('express');
+const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const porta = 3000; //prãrpotoada 
@@ -30,33 +30,23 @@ function execSQL(sql, resposta) {
 		.catch(erro => resposta.json(erro));
 }
 
-rota.get('/usuario', (requisicao, resposta) =>{
-execSQL('SELECT * FROM USUARIO', resposta);
+rota.get('/candidato', (requisicao, resposta) =>{
+execSQL('SELECT * FROM CANDIDATO', resposta);
 })
 
 //o simbolo ? indica que id na rota abaixo é opcional
-rota.get('/usuario/:id?', (requisicao, resposta) => {
+rota.get('/candidato/:id?', (requisicao, resposta) => {
 let filtro = '';
 if (requisicao.params.id)
-	filtro = ' WHERE CODUSUARIO =' + parseInt(requisicao.params.id);
-execSQL('SELECT * from USUARIO' + filtro, resposta);
-})
-
-rota.post('/usuario', (requisicao, resposta) =>{
-const nome = requisicao.body.nome;
-const email = requisicao.body.email;
-const senha = requisicao.body.senha;
-const pontos = 0;
-const aniversario = requisicao.body.aniversario;
-const pais = requisicao.body.pais;
-execSQL(`INSERT INTO USUARIO(nomeUsuario, email, senha, pontuacao, dataAniversario, nacionalidade) VALUES('${nome}', '${email}','${senha}', ${pontos}, '${aniversario}', '${pais}')`, resposta);
+	filtro = ' WHERE CODCANDIDATO =' + parseInt(requisicao.params.id);
+execSQL('SELECT * from CANDIDATO' + filtro, resposta);
 })
 
 /*
-rota.post('/usuario:id?/novosPontos?', (requisicao, resposta) =>{
+rota.post('/candidato:id?/votos?', (requisicao, resposta) =>{
 let filtro = '';
 if (requisicao.params.id)
-	filtro = ' WHERE CODUSUARIO =' + parseInt(requisicao.params.id);
-execSQL('UPDATE USUARIO SET PONTOS = ' + requisicao.params.novosPontos + filtro, resposta);
+	filtro = ' WHERE CODCANDIDATO =' + parseInt(requisicao.params.id);
+execSQL('UPDATE USUARIO SET VOTOS = ' + requisicao.params.votos + filtro, resposta);
 })
 */

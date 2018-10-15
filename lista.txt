@@ -25,8 +25,9 @@ Ideias e Sugestões
 
 
 * Melhorar aba eleicao.
+* Melhorar aba inicio, adicionar imagens.
 * Dividir a aba historia
-.
+ e melhorá-la com imagens.
 * Incluir vetor de curiosidades pelo banco de dados.
 * Botar width da barra em %.
 * Barra de pesquisa procura usuários, mostra ranking de pontuação.

@@ -118,6 +118,47 @@ create table Governante
 	partido varchar(30) not null
 )
 
+insert into Governante values(1)
+insert into Governante values(2)
+insert into Governante values(3)
+insert into Governante values(4)
+insert into Governante values(5)
+insert into Governante values(6)
+insert into Governante values(7)
+insert into Governante values(8)
+insert into Governante values(9)
+insert into Governante values(10)
+insert into Governante values(11)
+insert into Governante values(12)
+insert into Governante values(13)
+insert into Governante values(14)
+insert into Governante values(15)
+insert into Governante values(16)
+insert into Governante values(17)
+insert into Governante values(18)
+insert into Governante values(19)
+insert into Governante values(20)
+insert into Governante values(21)
+insert into Governante values(22)
+insert into Governante values(23)
+insert into Governante values(24)
+insert into Governante values(25)
+insert into Governante values(26)
+insert into Governante values(27)
+insert into Governante values(28)
+insert into Governante values(29)
+insert into Governante values(30)
+insert into Governante values(31)
+insert into Governante values(32)
+insert into Governante values(33)
+insert into Governante values(34)
+insert into Governante values(35)
+insert into Governante values(36)
+insert into Governante values(37)
+insert into Governante values(38)
+insert into Governante values(39)
+
+
 create table EraGovernante
 (
 	codigo int primary key,
@@ -134,4 +175,27 @@ create table Candidato
 	nome varchar(30) not null,
 	partido varchar(50) not null,
 	votos int not null,
+)
+
+insert into Candidato values(1)
+insert into Candidato values(2)
+insert into Candidato values(3)
+insert into Candidato values(4)
+insert into Candidato values(5)
+insert into Candidato values(6)
+insert into Candidato values(7)
+insert into Candidato values(8)
+insert into Candidato values(9)
+insert into Candidato values(10)
+insert into Candidato values(11)
+insert into Candidato values(12)
+insert into Candidato values(13)
+
+create table Noticia
+(
+	codNoticia int primary key,
+	titulo varchar(50) not null,
+	subtitulo varchar(50) not null,
+	urlImagem varchar(50) not null,
+	link varchar(50) not null
 )
