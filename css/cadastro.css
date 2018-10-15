@@ -39,6 +39,36 @@
 	transition     : 0.5s;   
 }
 
+.btnCriar{ 
+	background-color : #1db954;
+	color            : #fff; 
+	font-family      : 'Raleway';
+	font-size        : 16pt;  
+	width            : 60%; 
+	padding          : 10px;
+	border           : none; 
+	border-radius    : 5px; 
+	box-shadow       : 2px 2px 5px rgba(0, 0, 0, 0.25);
+	outline          : none; 
+}
+
+.btnCriar:hover{
+	transition       : 0.5s ease-in;
+	background-color : #1ed760;
+	cursor           : pointer;
+}
+
+#enviar{
+	user-select    : none; 
+	color          : #fff;  
+	font-size      : 16pt; 
+	position       : relative;
+	top            : 2.5px; 
+	left           : 60%; 
+	margin-right   : 25px;
+	pointer-events : none;   
+}
+
 #icones{
 	user-select : none; 
 	color       : #002776;  
