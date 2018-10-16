@@ -50,6 +50,7 @@ create table Usuario
 	dataAniversario varchar(10) not null,
 	nacionalidade varchar(30) not null
 )
+select * from Usuario
 
 create table Pergunta
 (

@@ -38,7 +38,7 @@ function inicioQuiz(){
     for(var i = 0; i < t; i++)
     {
       p[i + 1] = arr[i].texto;
-      r[i + 1] = arr[i].resposta.toUpperCase();
+      r[i + 1] = arr[i].resposta;
       pontos[i + 1] = arr[i].pontos;
       var id = i + 1 + "";
       document.getElementById(id).innerHTML = "P: " + p[i + 1];
@@ -56,8 +56,8 @@ document.getElementById("enviar").onclick = function()
   for(var i=1;i<=t;i++)
   {
     var id = 'r' + i;
-    respostas[i] = document.getElementById(id).value.toUpperCase();
-    if(respostas[i]==r[i])
+    respostas[i] = document.getElementById(id).value.toUpperCase().trim();
+    if(respostas[i]==r[i].toUpperCase())
     {
       acertou[i] = certo;
       acertos++;
@@ -76,7 +76,7 @@ document.getElementById("enviar").onclick = function()
   }
   document.getElementById('acertos').innerHTML = "Acertos: " + acertos;
   document.getElementById('erros').innerHTML = "Erros: " + erros;
-  var fim = 'Fim do Quiz.' + '\nUsuário: ' + sessionStorage.getItem("nome") + '\nPontos: ' + pontosUsuario + '\nHighscore: ' + sessionStorage.getItem("pontos");
+  var fim = 'Fim do Quiz.' + '\nUsuário: ' + sessionStorage.getItem("nome") + '\nAcertos: ' + acertos + '\nPontos: ' + pontosUsuario + '\nHighscore: ' + sessionStorage.getItem("pontos");
   if (pontosUsuario > parseInt(sessionStorage.getItem("pontos")))
   {
     fim += '\nHighscore atualizado!';

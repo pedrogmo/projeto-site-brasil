@@ -1,3 +1,3 @@
 document.getElementById("cadastro").onsubmit = function(){
-	location.href = "inicio.html";
+	window.location.href = "inicio.html" // não funciona
 }
