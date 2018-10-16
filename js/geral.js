@@ -9,12 +9,12 @@ var url = "http://localhost:3000/usuario";
 
 xmlhttp.onreadystatechange=function(){
   if (this.readyState == 4 && this.status == 200)      
-    localStorage.setItem("vetor", this.responseText);
+    localStorage.setItem("usuarioGeral", this.responseText);
 }
 
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
-arr = JSON.parse(localStorage.getItem("vetor"));    
+arr = JSON.parse(localStorage.getItem("usuarioGeral"));    
 
 document.getElementById('btnLogin').onclick = function(){
  	 modal.style.display = 'block';

@@ -15,12 +15,12 @@ var info = new Array();
 
 xmlhttp.onreadystatechange=function(){
   if (this.readyState == 4 && this.status == 200)
-    localStorage.setItem("vetor", this.responseText);	
+    localStorage.setItem("estadoMapa", this.responseText);	
 }
 
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
-arr = JSON.parse(this.localStorage.getItem("vetor"));
+arr = JSON.parse(this.localStorage.getItem("estadoMapa"));
 var dados = "";
 for (var i = 0; i < arr.length; i++)
 {

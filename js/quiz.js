@@ -1,7 +1,15 @@
 var acertos, erros, respostas, o, p, r, pontos, pontosUsuario, t;
 
 window.onload = function() //vai dar ruim
-{   
+{
+    document.getElementById("resp").style.visibility = "hidden";
+    if (sessionStorage.getItem("logou") == "sim")
+      inicioQuiz();
+    else
+      alert('Você não está logado')
+}
+
+function inicioQuiz(){
     document.getElementById("resp").style.visibility = "hidden";
     acertos=0; //quantidade de acertos e erros
     erros=0;
@@ -20,12 +28,12 @@ window.onload = function() //vai dar ruim
     var url = "http://localhost:3000/pergunta";
     xmlhttp.onreadystatechange=function(){
       if (this.readyState == 4 && this.status == 200)
-        localStorage.setItem("vetor", this.responseText);
+        localStorage.setItem("perguntaQuiz", this.responseText);
     }
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 
-    var arr = JSON.parse(localStorage.getItem("vetor"));
+    var arr = JSON.parse(localStorage.getItem("perguntaQuiz"));
     for(var i = 0; i < t; i++)
     {
       p[i + 1] = arr[i].texto;
@@ -34,7 +42,6 @@ window.onload = function() //vai dar ruim
       var id = i + 1 + "";
       document.getElementById(id).innerHTML = "P: " + p[i + 1];
     }
-     
 }
 
 function fim(botao)
