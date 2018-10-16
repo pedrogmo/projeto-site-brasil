@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+</head>
+<body style="width: 99%;">
+	<button id="cu">Teste SideBar Menu</button>
+	<div class="sideBar" id="cusao">
+		Olá, vai se ser legal! 
+		<i class="icones fas fa-times" id="minimize"></i>
+	</div>
+</body>
+<style>
+	.icones{
+		position  : relative;
+		float     : right;
+		top       : 15px; 
+		right     : 20px;  
+		color     : #009c3b;
+		font-size : 18pt; 
+		filter    : brightness(70%);    
+	}
+
+	.icones:hover{
+		cursor : pointer;
+		filter : brightness(60%);  
+	}
+
+	.sideBar{
+		position   : absolute; 
+		background : #009c3b; 
+		width      : 25%; 
+		height     : 100%;
+		float      : right;   
+		top        : 0px;
+		right      : -25%;  
+		margin     : 0px;
+		transition : 0.5s;
+		display    : none;  
+	}
+
+	h1{
+		font-family : Century Gothic;
+		color       : rgb(43, 44, 51);  
+	}
+
+	h1:hover{
+		cursor          : pointer;
+		text-decoration : underline; 
+	}
+</style>
+
+<script>
+	document.getElementById('cu').onclick =  function(){
+		document.getElementById('cusao').style.display = "block";
+		setTimeout(function(){document.getElementById('cusao').style.right = "0%";}, 200);
+	};
+
+	document.getElementById('minimize').onclick = function(){
+		document.getElementById('cusao').style.right = "-35%";
+		setTimeout(function(){document.getElementById('cusao').style.display = "none";}, 200);
+	};
+</script>
+</html>

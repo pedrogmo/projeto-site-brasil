@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="./css/quiz.css">   
     <link rel="icon" href="./img/logotipos/logo-site.ico" type="image/gif" sizes="16x16">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>   
 </head>
 <body>
@@ -49,15 +50,16 @@
 <br><br><br>
 <section id = principal>
 	<div id="login">
+		<i class="closeSB fas fa-times" id="fechaSB"></i>
 		<img id="user" src="./img/usuario.jpg">
 		<p id="nomeUser">Nome</p>
 		<p id="senhaUser">Senha</p>
 	</div>
 
-	<div id="quiz">
-		<h1>Quiz</h1>
-    	<h2>Teste seus conhecimentos!</h2><br>
+	<h1>Quiz</h1>
+    <h2>Teste seus conhecimentos!</h2><br>
 
+	<div id="quiz">
 	    <p id = "1" class="perguntas"></p>
 	    <input type="text" class="campo" id="r1" placeholder="Digite sua resposta">
 	    <p id = "2" class="perguntas"></p>

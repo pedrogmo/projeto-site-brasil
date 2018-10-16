@@ -2,22 +2,11 @@ section#principal ol li{
 	margin-left: 10px;
 }
 
-#texto{
-	position    : relative;
-	top         : 125px;  
-	text-align  : center;
-	font-family : 'Raleway';
-	font-size   : 14pt; 
-	color       : black; 
-	width       : 40%;   
-	z-index     : -100; 
-}
-
 #quiz{
 	position   : relative; 
 	width      : 50%;
 	text-align : center;
-	left       : 500px; 
+	left       : 28.5%; 
 }
 
 .titulo{
@@ -27,10 +16,10 @@ section#principal ol li{
 }
 
 .perguntas{
-	width         : 85%; 
+	width         : 89%; 
 	margin-bottom : 8pt;
 	margin-left   : 0px;
-	text-align    : center;
+	text-align    : justify;
 }
 
 .campo{
@@ -81,21 +70,36 @@ section#principal ol li{
 
 #login{
 	position         : fixed; 
-	width            : 325px;
+	top              : 0px; 
+	width            : 25%;
 	background-color : #1db954; 
 	color            : white; 
 	height           : 100%;
-	box-shadow       : 5px 0px 10px rgba(0, 0, 0, 0.4);  
+	left             : -30%;
+	box-shadow       : 5px 0px 10px rgba(0, 0, 0, 0.4); 
+	transition       : 0.5s;
+	z-index          : 1000000;   
 }
 
-#user{
-	width         : 250px;
-	height        : 250px;
-	border-radius : 1000px;
-	position      : absolute;
-	left          : 30px;  
-	top           : 50px;
-	box-shadow    : 5px 5px 10px rgba(0, 0, 0, 0.4); 
+.closeSB{
+	position  : relative; 
+	font-size : 20pt;
+	color     : #009c3b; 
+	float     : right;
+	margin    : 20px;  
+	filter    : brightness(80%); 
+	z-index   : 1000; 
+}
+
+.closeSB:hover{
+	transition : 0.5s ease-in; 
+	cursor     : pointer;
+	filter     : brightness(60%);  
+}
+
+#user{ 
+	width           : 100%;
+	position        : absolute;   
 }
 
 #user:hover{

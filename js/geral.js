@@ -1,6 +1,7 @@
 ﻿var modal = document.getElementById('simpleModal');
 var modalBtn  = document.getElementById('btnLogin');
 var closeBtn = document.getElementsByClassName('closeBtn')[0];
+var sideBar = document.getElementById('login');
 
 var usuario;
 var arr;
@@ -17,11 +18,19 @@ xmlhttp.send();
 arr = JSON.parse(localStorage.getItem("usuarioGeral"));    
 
 document.getElementById('btnLogin').onclick = function(){
- 	 modal.style.display = 'block';
+	if(sessionStorage.getItem("logou") == "sim")
+		login.style.left = '0%';
+	else
+ 	 	modal.style.display = 'block';
+ 	 
 }
 
 document.getElementById('btnCadastrar').onclick = function(){
 	location.href = "cadastro.html";
+}
+
+document.getElementById('fechaSB').onclick = function(){
+ 	 login.style.left = "-30%";
 }
 
 document.getElementById('fechaModal').onclick = function(){
@@ -63,6 +72,7 @@ document.getElementById('btnEntrar').onclick = function(){
 window.onclick = function(event){
   if(event.target == modal){
     modal.style.display = 'none';
+    sideBar.style.left = '-35%';
   }
 }
 
