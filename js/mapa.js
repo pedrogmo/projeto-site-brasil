@@ -37,5 +37,5 @@ for (var i = 0; i < arr.length; i++)
 
 document.getElementById('cbxEstados').onchange = function(){
 	var indice = document.getElementById("cbxEstados").selectedIndex;
-  setTimeout(function(){alert('Você selecionou: ' + estados[indice] + "\nDados:\n" + info[indice]);},100)	
+  setTimeout(function(){alert('Você selecionou: ' + estados[indice] + "\nDados:\n" + info[indice]);},100);
 }
