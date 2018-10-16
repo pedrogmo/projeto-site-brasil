@@ -1,7 +1,6 @@
 
 Design
 
-* Melhorar a legenda dos governantes
 * Fazer div lateral de verificação dos dados do usuário, incluindo foto de perfil.
 
 
@@ -14,9 +13,9 @@ Banco de Dados
 
 JavaScript
 
-* noticias.js + nodeNoticia.js: rota get de select para tabela Noticia
-* eleicao.js + nodeCandidato.js: rota post de update de votos de Candidato.
-* quiz.js + nodePergunta: rota post de update de pontos do Usuario no quiz
+* noticias.js: rota get de select para tabela Noticia
+* eleicao.js: rota post de update de votos de Candidato.
+* quiz.js: rota post de update de pontos do Usuario no quiz
 * geral.js: código da aba de pesquisa.
 
 
