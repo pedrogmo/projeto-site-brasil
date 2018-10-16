@@ -2,15 +2,16 @@ var acertos, erros, respostas, o, p, r, pontos, pontosUsuario, t;
 
 window.onload = function() //vai dar ruim
 {
+    document.getElementById("enviar").style.visibility = "hidden";
     document.getElementById("resp").style.visibility = "hidden";
     if (sessionStorage.getItem("logou") == "sim")
       inicioQuiz();
     else
-      alert('Você não está logado')
+      alert('Você não está logado');
 }
 
 function inicioQuiz(){
-    document.getElementById("resp").style.visibility = "hidden";
+    document.getElementById("enviar").style.visibility = "visible";
     acertos=0; //quantidade de acertos e erros
     erros=0;
     pontosUsuario = 0;
@@ -44,9 +45,9 @@ function inicioQuiz(){
     }
 }
 
-function fim(botao)
+document.getElementById("enviar").onclick = function()
 {
-  botao.style.visibility="hidden";
+  document.getElementById("enviar").style.visibility = "hidden";
   document.getElementById("resp").style.visibility = "visible";
 
   var certo = "<font color = 'lime'>Certo!</font>"; 
@@ -75,6 +76,13 @@ function fim(botao)
   }
   document.getElementById('acertos').innerHTML = "Acertos: " + acertos;
   document.getElementById('erros').innerHTML = "Erros: " + erros;
+  var fim = 'Fim do Quiz.' + '\nUsuário: ' + sessionStorage.getItem("nome") + '\nPontos: ' + pontosUsuario + '\nHighscore: ' + sessionStorage.getItem("pontos");
+  if (pontosUsuario > parseInt(sessionStorage.getItem("pontos")))
+  {
+    fim += '\nHighscore atualizado!';
+    //update dos pontos do usuário
+  }
+  alert(fim);
 }
 
 document.getElementById('resp').onclick = function()
