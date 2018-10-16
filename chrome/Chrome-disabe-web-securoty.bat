@@ -1,1 +1,0 @@
-"c:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --user-data-dir="Z:\projeto-site-brasil\chrome" --disable-web-security
