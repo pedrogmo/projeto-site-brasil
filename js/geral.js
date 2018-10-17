@@ -68,8 +68,8 @@ document.getElementById('btnEntrar').onclick = function(){
 		document.getElementById("txtEmail").value = "";
 		document.getElementById("txtSenha").value = "";
 		//não da certo:
-		document.getElementById("nomeUser").innerHMTL = "Nome: " + sessionStorage.getItem("nome");
-		document.getElementById("emailUser").innerHMTL = "Email: " + sessionStorage.getItem("email");
+		document.getElementById("nomeUser").innerHMTL += sessionStorage.getItem("nome");
+		document.getElementById("emailUser").innerHMTL += sessionStorage.getItem("email");
 		//document.getElementById('highscore').innerHMTL = "Pontos: " + sessionStorage.getItem("pontos");
 }
 
