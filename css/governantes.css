@@ -1,8 +1,10 @@
+section#principal table.governantes{
+	border-radius : 50%; 
+}
 section#principal .governantes{
 	margin: auto;
 	border: none;
 	font-size: 20px;
-	/*background: #ccccff;*/
 	border-collapse: collapse;
 }
 
@@ -26,6 +28,11 @@ section#principal .governantes td img{
 	border-radius : 5px; 
 	width         : 200px;
 	height        : 250px;  
+}
+
+section#principal .governantes td img:hover{
+	transition : 0.5s ease-in;
+	filter     : brightness(75%);    
 }
 
 section#principal .governantes tr.imperio
@@ -64,6 +71,7 @@ section#principal .governantes_leg{
 	font-size: 20px;
 	border-collapse: collapse;
 }
+
 section#principal .governantes_leg td#leg{
 	border-radius : 5px; 
 	width   : 15px;
@@ -99,4 +107,9 @@ section#principal .governantes_leg td.leg_militar{
 section#principal .governantes_leg td.leg_nova{
 	background : #D3D3D3;
 	cursor     : pointer; 
+}
+
+section#principal .governantes_leg td#leg:hover{
+	transition : 0.5s ease-in;  
+	filter     : brightness(90%); 
 }
