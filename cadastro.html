@@ -56,27 +56,27 @@
 <form action = "http://localhost:3000/usuario" method = "post" id = "cadastro" class="formulario">
 	<div>
 		<i class="fas fa-user" id="icones"></i>
-		<input name = "nome" type="text" class="textBoxes" required>
+		<input name = "nome" type="text" class="textBoxes" required maxlength="30">
 		<label class="labels">Nome</label>
 	</div>
 	<div>
 		<i class="fas fa-envelope" id="icones"></i>
-		<input id = "email" name = "email" type="email" class="textBoxes" required>
+		<input id = "email" name = "email" type="email" class="textBoxes" required maxlength="30">
 		<label class="labels">Email</label>
 	</div>
 	<div>
 		<i class="fas fa-key" id="icones"></i>
-		<input name = "senha" type="password" class="textBoxes" required>
+		<input name = "senha" type="password" class="textBoxes" required maxlength="30">
 		<label class="labels">Senha</label>
 	</div>
 	<div>
 		<i class="fas fa-birthday-cake" id="icones"></i>
-		<input id = "data" name = "aniversario" type="text" class="textBoxes" required title = "dd/mm/aaaa" pattern = "[0-3][0-9]/[0-1][0-9]/[0-2][0-9][0-9][0-9]">
+		<input id = "data" name = "aniversario" type="text" class="textBoxes" required title = "dd/mm/aaaa" maxlength="10">
 		<label class="labels">Data de Aniversário</label>
 	</div>
 	<div>
 		<i class="fas fa-globe-americas" id="icones"></i>
-		<input name = "pais" type="text" class="textBoxes" required>
+		<input name = "pais" type="text" class="textBoxes" required maxlength="30">
 		<label class="labels">País</label>
 	</div>
     <div>

@@ -44,12 +44,13 @@ create table Usuario
 (
 	codUsuario int identity(1,1) primary key,
 	nomeUsuario varchar(30) not null,
-	email varchar(100) not null,
+	email varchar(30) not null,
 	senha varchar(30) not null,
 	pontuacao int not null,
 	dataAniversario varchar(10) not null,
 	nacionalidade varchar(30) not null
 )
+
 select * from Usuario
 
 create table Pergunta
