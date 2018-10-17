@@ -35,9 +35,9 @@ section#principal ol li{
 	margin-left      : -70px;
 }
 
-.campo:focus{
+.campo:focus, .campo:valid{
 	transition   : 0.5s ease-in;
-	border-color : #009c3b; 
+	border-color : #002776; 
 }
 
 #resposta{

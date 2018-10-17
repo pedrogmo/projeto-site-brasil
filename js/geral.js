@@ -18,8 +18,10 @@ xmlhttp.send();
 arr = JSON.parse(localStorage.getItem("usuarioGeral"));    
 
 document.getElementById('btnLogin').onclick = function(){
-	if(sessionStorage.getItem("logou") == "sim")
+	if(sessionStorage.getItem("logou") == "sim"){
+		fundoSB.style.display = 'block';
 		login.style.left = '0%';
+	}
 	else
  	 	modal.style.display = 'block';
  	 
@@ -27,10 +29,6 @@ document.getElementById('btnLogin').onclick = function(){
 
 document.getElementById('btnCadastrar').onclick = function(){
 	location.href = "cadastro.html";
-}
-
-document.getElementById('fechaSB').onclick = function(){
- 	 login.style.left = "-30%";
 }
 
 document.getElementById('fechaModal').onclick = function(){
@@ -72,7 +70,15 @@ document.getElementById('btnEntrar').onclick = function(){
 window.onclick = function(event){
   if(event.target == modal){
     modal.style.display = 'none';
-    sideBar.style.left = '-35%';
+  }
+}
+
+var fundoSB = document.getElementById("fundoSideBar");
+
+window.onclick = function(event){
+  if(event.target == fundoSB){
+  	fundoSB.style.display = 'none';
+    login.style.left = '-35%';
   }
 }
 

@@ -32,6 +32,7 @@ body{
 	color            : white;
 	text-decoration  : none; 
 }
+
 #menu .menu{
 	text-align       : center;
 	position         : fixed;
@@ -40,6 +41,7 @@ body{
 	list-style       : none; 
 	box-shadow       : 0px 5px 10px rgba(0, 0, 0, 0.4); 
 }
+
 #menu .menu li a{
 	padding          : 5px 10px;
 	padding-bottom   : 3px; 
@@ -48,11 +50,13 @@ body{
 	text-decoration  : none;
 	border-bottom    : 3px solid #009c3b;    
 }
+
 #menu .menu li .abas{
 	border-top       : 2px solid #009c3b;
 	margin-right     : 10px;
 	margin-left      : 10px;   
 }
+
 #menu .menu li a:hover{
 	transition-timing-function : ease-in;
 	transition                 : 0.5s;
@@ -61,6 +65,7 @@ body{
 	background-size            : 30px 60px;
 	cursor                     : pointer;
 }
+
 #menu .menu li .abas:hover{
 	transition-timing-function : ease-in;
 	transition                 : 0.5s; 
@@ -69,7 +74,6 @@ body{
 	background-size            : 30px 60px; 
 	cursor                     : pointer;
 }
-
 
 .logo{
 	height       : 85px;
@@ -94,6 +98,7 @@ body{
 	height : 20px;
 	width  : 20px; 
 }
+
 .casinha{
 	float       : left; 
 	padding-top : 2px; 
@@ -124,11 +129,10 @@ section#principal{
 }
 
 div#texto{
-	width            : 100%;/*Mantem a proporção*/
+	width            : 100%;
 	text-align       : justify; 
 	padding-top      : 12pt;  
-	padding-bottom   : 12pt; 
-	/*margin:       auto;	*/
+	padding-bottom   : 12pt;
 }
 
 section#principal div#texto p.centro{
@@ -252,8 +256,11 @@ ul, ol{
 }
 
 .modal-content h3{
-  text-align : center;
-  margin-bottom : 15px;  
+  text-align     : center;
+  text-transform : uppercase; 
+  font-weight    : normal;  
+  font-size      : 25px;
+  margin-bottom  : 15px;  
 }
 
 .modal-content p{
@@ -331,12 +338,24 @@ ul, ol{
 	border-color : #009c3b;
 }
 
+#fundoSideBar{
+  display  : none;
+  position : fixed;
+  z-index  : 100000;
+  left     : 0px;
+  top      : 0px;
+  height   : 100%;
+  width    : 100%;
+  overflow : auto; 
+  background-color : rgba(0, 0, 0, 0.5);   
+}
+
 #login{
   position         : fixed; 
   top              : 0px; 
   width            : 25%;
-  background-color : #1db954; 
-  color            : white; 
+  background-color : #fff;
+  color            : #2b2c33; 
   height           : 100%;
   left             : -30%;
   box-shadow       : 5px 0px 10px rgba(0, 0, 0, 0.4); 
@@ -344,48 +363,60 @@ ul, ol{
   z-index          : 1000000;   
 }
 
-.closeSB{
-  position  : relative; 
-  font-size : 20pt;
-  color     : #009c3b; 
-  float     : right;
-  margin    : 20px;  
-  filter    : brightness(80%); 
-  z-index   : 1000000; 
+#login div.opcoesUser p{
+  font-family    : 'Raleway';
+  font-size      : 14pt;  
+  position       : relative; 
+  float          : left;  
+  margin         : 0px;
+  margin-top     : 5px; 
+  padding-top    : 10px;
+  padding-bottom : 10px;  
+  width          : 100%;   
 }
 
-.closeSB:hover{
-  transition : 0.5s ease-in; 
-  cursor     : pointer;
-  filter     : brightness(60%);  
+#login div.opcoesUser p i{
+  color : #6f6f6f; 
 }
 
-#user{ 
+#login div.opcoesUser p:hover{
+  background-color : #f2f2f2; 
+  cursor           : pointer; 
+}
+
+.infoUser{
+  height : 30%; 
+}
+
+#fundoUser{ 
   width           : 100%;
-  height          : 40%;  
-  position        : absolute;   
+  height          : 100%;   
+  position        : relative;
+  top             : 0px;
+  margin          : 0px;
+  cursor          : pointer;       
 }
 
-#user:hover{
-  transition : 0.5s ease-in; 
-  filter     : brightness(75%); 
-  cursor     : pointer; 
+#imgUser{
+  position      : relative;
+  top           : -180px;
+  margin        : 25px;   
+  height        : 75px;
+  width         : 75px; 
+  border-radius : 100%; 
+  cursor        : pointer; 
 }
 
-#nomeUser{
-  font-family : 'Raleway';
-  font-size   : 20pt; 
-  position    : absolute; 
-  top         : 315px; 
-  left        : -15px;
-}
-
-#emailUser{
-  font-family : 'Raleway';
-  font-size   : 14pt; 
-  position    : absolute; 
-  top         : 350px; 
-  left        : -15px;
+div.infoUser p{
+  position      : relative;
+  top           : -195px;  
+  margin        : 0px; 
+  margin-bottom : 5px;
+  margin-left   : 25px;  
+  font-family   : 'Raleway';
+  font-size     : 14pt;
+  color         : #fff; 
+  cursor        : pointer; 
 }
 
 @charset "UTF-8";
