@@ -70,7 +70,7 @@ document.getElementById('btnEntrar').onclick = function(){
 		//não da certo:
 		document.getElementById("nomeUser").innerHMTL += sessionStorage.getItem("nome");
 		document.getElementById("emailUser").innerHMTL += sessionStorage.getItem("email");
-		//document.getElementById('highscore').innerHMTL = "Pontos: " + sessionStorage.getItem("pontos");
+		document.getElementById('highScore').innerHMTL += sessionStorage.getItem("pontos");
 }
 
 window.onclick = function(event){

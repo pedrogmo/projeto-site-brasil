@@ -9,6 +9,10 @@ document.getElementById("cadastro").onsubmit = function(){
 		alert('Data inválida');
 		return false;
 	}
+	else if (email.indexOf("@") == -1 || email.indexOf(".com") == -1){
+		alert('Email inválido');
+		return false;
+	}
 	else{
 		var emailJaExiste = false;
 		arr = JSON.parse(localStorage.getItem("usuarioGeral"));
