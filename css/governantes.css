@@ -1,8 +1,8 @@
 section#principal .governantes{
 	margin: auto;
-	border: 1px solid black;
+	border: none;
 	font-size: 20px;
-	background: #ccccff;
+	/*background: #ccccff;*/
 	border-collapse: collapse;
 }
 
@@ -23,7 +23,9 @@ section#principal .governantes td.cabecalho{
 }
 
 section#principal .governantes td img{
-	border: solid 1px black;
+	border-radius : 5px; 
+	width         : 200px;
+	height        : 250px;  
 }
 
 section#principal .governantes tr.imperio
@@ -59,32 +61,42 @@ section#principal .governantes tr.r_nova
 
 section#principal .governantes_leg{
 	margin: auto;
-	border: 1px solid black;
 	font-size: 20px;
 	border-collapse: collapse;
-	background: white;
 }
 section#principal .governantes_leg td#leg{
-	border  : 1px solid black;
-	width   : 45px;
-	padding : 7.5px; 
+	border-radius : 5px; 
+	width   : 15px;
+	height  : 15px; 
+	padding : 7.5px;  
 }
 
 section#principal .governantes_leg td.leg_imperio{
-background: #F0E68C;
+	background : #F0E68C;
+	cursor     : pointer; 
 }
+
 section#principal .governantes_leg td.leg_rvelha{
-background: #ccccff;
+	background : #ccccff;
+	cursor     : pointer; 
 }
+
 section#principal .governantes_leg td.leg_vargas{
-background: #FFA500
+	background : #FFA500;
+	cursor     : pointer; 
 }
+
 section#principal .governantes_leg td.leg_popul{
-background: #8FBC8F
+	background : #8FBC8F;
+	cursor     : pointer; 
 }
+
 section#principal .governantes_leg td.leg_militar{
-background: #A0522D
+	background : #A0522D;
+	cursor     : pointer; 
 }
+
 section#principal .governantes_leg td.leg_nova{
-background: #D3D3D3
+	background : #D3D3D3;
+	cursor     : pointer; 
 }
