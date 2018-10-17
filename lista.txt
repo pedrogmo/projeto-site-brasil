@@ -1,6 +1,8 @@
 Design
 
 * Fazer div lateral de verificação dos dados do usuário, incluindo foto de perfil.
+* Melhorar cadastro.html
+* seta maxlenght para textboxes do cadastro.html
 
 
 Banco de Dados

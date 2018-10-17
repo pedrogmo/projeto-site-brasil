@@ -17,7 +17,7 @@ xmlhttp.onreadystatechange=function(){
 
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
-arr = JSON.parse(localStorage.getItem("usuarioGeral"));    
+arr = JSON.parse(localStorage.getItem("usuarioGeral"));
 
 document.getElementById('btnLogin').onclick = function(){
 	if(sessionStorage.getItem("logou") == "sim"){				
