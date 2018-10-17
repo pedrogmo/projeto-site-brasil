@@ -28,5 +28,6 @@ Ideias e Sugestões
 * Incluir vetor de curiosidades pelo banco de dados.
 * Botar width da barra em %.
 * Barra de pesquisa procura usuários, mostra ranking de pontuação.
+* Modal para exibir informações da bandeira.
 
 "o site ta quase pronto".

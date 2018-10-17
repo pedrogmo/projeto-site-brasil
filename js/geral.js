@@ -8,6 +8,8 @@ var arr;
 var xmlhttp = new XMLHttpRequest();
 var url = "http://localhost:3000/usuario";
 
+
+
 xmlhttp.onreadystatechange=function(){
   if (this.readyState == 4 && this.status == 200)      
     localStorage.setItem("usuarioGeral", this.responseText);
@@ -18,14 +20,14 @@ xmlhttp.send();
 arr = JSON.parse(localStorage.getItem("usuarioGeral"));    
 
 document.getElementById('btnLogin').onclick = function(){
-	if(sessionStorage.getItem("logou") == "sim"){
+	if(sessionStorage.getItem("logou") == "sim"){				
 		fundoSB.style.display = 'block';
 		login.style.left = '0%';
 	}
 	else
- 	 	modal.style.display = 'block';
- 	 
+ 	 	modal.style.display = 'block'; 
 }
+
 
 document.getElementById('btnCadastrar').onclick = function(){
 	location.href = "cadastro.html";
@@ -65,6 +67,10 @@ document.getElementById('btnEntrar').onclick = function(){
 	}
 		document.getElementById("txtEmail").value = "";
 		document.getElementById("txtSenha").value = "";
+		//não da certo:
+		document.getElementById("nomeUser").innerHMTL = "Nome: " + sessionStorage.getItem("nome");
+		document.getElementById("emailUser").innerHMTL = "Email: " + sessionStorage.getItem("email");
+		//document.getElementById('highscore').innerHMTL = "Pontos: " + sessionStorage.getItem("pontos");
 }
 
 window.onclick = function(event){
