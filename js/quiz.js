@@ -76,7 +76,8 @@ document.getElementById("enviar").onclick = function()
   }
   document.getElementById('acertos').innerHTML = "Acertos: " + acertos;
   document.getElementById('erros').innerHTML = "Erros: " + erros;
-  var fim = 'Fim do Quiz.' + '\nUsuário: ' + sessionStorage.getItem("nome") + '\nAcertos: ' + acertos + '\nPontos: ' + pontosUsuario + '\nHighscore: ' + sessionStorage.getItem("pontos");
+  usuario = JSON.parse(sessionStorage.getItem("usuario"));
+  var fim = 'Fim do Quiz.' + '\nUsuário: ' + usuario.nomeUsuario + '\nAcertos: ' + acertos + '\nPontos: ' + pontosUsuario + '\nHighscore: ' + usuario.pontuacao;
   if (pontosUsuario > parseInt(sessionStorage.getItem("pontos")))
   {
     fim += '\nHighscore atualizado!';

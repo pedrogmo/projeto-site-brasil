@@ -2,12 +2,20 @@
 var modalBtn  = document.getElementById('btnLogin');
 var closeBtn = document.getElementsByClassName('closeBtn')[0];
 var sideBar = document.getElementById('login');
+var logou;
 
 var usuario;
 var arr;
 var xmlhttp = new XMLHttpRequest();
 var url = "http://localhost:3000/usuario";
 
+if (sessionStorage.getItem("logou") == "sim"){
+	logou = true;
+	usuario = JSON.parse(sessionStorage.getItem("usuario"));
+	document.getElementById("nomeUser").innerHTML = usuario.nomeUsuario;
+	document.getElementById("emailUser").innerHTML = usuario.email;
+	document.getElementById('highScore').innerHTML += usuario.pontuacao;
+} else logou = false;
 
 xmlhttp.onreadystatechange=function(){
   if (this.readyState == 4 && this.status == 200)      
@@ -20,21 +28,13 @@ arr = JSON.parse(localStorage.getItem("usuarioGeral"));
 
 var nome,email,pontos;
 document.getElementById('btnLogin').onclick = function(){
-	if(sessionStorage.getItem("logou") == "sim"){				
+	if(logou){				
 		fundoSB.style.display = 'block';
 		login.style.left = '0%';		
 	}
 	else
  	 	modal.style.display = 'block'; 
 }
-
-if (sessionStorage.getItem("logou") == "sim"){
-	document.getElementById("nomeUser").innerHTML = sessionStorage.getItem("nome");
-	document.getElementById("emailUser").innerHTML = sessionStorage.getItem("email");
-	document.getElementById('highScore').innerHTML += sessionStorage.getItem("pontos");
-	alert(document.getElementById("nomeUser").innerHTML);
-}
-
 
 document.getElementById('btnCadastrar').onclick = function(){
 	location.href = "cadastro.html";
@@ -62,15 +62,14 @@ document.getElementById('btnEntrar').onclick = function(){
 	else
 	{
 		usuario = arr[i];
-		sessionStorage.setItem("nome", usuario.nomeUsuario);
-		sessionStorage.setItem("email", usuario.email);
-		sessionStorage.setItem("senha", usuario.senha);
-		sessionStorage.setItem("pontos", usuario.pontuacao);
-		sessionStorage.setItem("aniversario", usuario.dataAniversario);
-		sessionStorage.setItem("pais", usuario.nacionalidade);
+		sessionStorage.setItem("usuario", JSON.stringify(usuario));		
 		sessionStorage.setItem("logou", "sim");
+		logou = true;
 		alert ('Logado com sucesso');
 		modal.style.display = 'none';
+		document.getElementById("nomeUser").innerHTML = usuario.nomeUsuario;
+		document.getElementById("emailUser").innerHTML = usuario.email;
+		document.getElementById('highScore').innerHTML += usuario.pontuacao;
 	}
 		document.getElementById("txtEmail").value = "";
 		document.getElementById("txtSenha").value = "";		
@@ -89,6 +88,7 @@ window.onclick = function(event){
 
 document.getElementById("sair").onclick = function(){
 	sessionStorage.removeItem("logou");
+	sessionStorage.removeItem("usuario");
 	alert('Você foi deslogado');
 	location.reload();
 }
