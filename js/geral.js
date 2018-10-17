@@ -9,7 +9,6 @@ var xmlhttp = new XMLHttpRequest();
 var url = "http://localhost:3000/usuario";
 
 
-
 xmlhttp.onreadystatechange=function(){
   if (this.readyState == 4 && this.status == 200)      
     localStorage.setItem("usuarioGeral", this.responseText);
@@ -19,17 +18,21 @@ xmlhttp.open("GET", url, true);
 xmlhttp.send();
 arr = JSON.parse(localStorage.getItem("usuarioGeral"));
 
+var nome,email,pontos;
 document.getElementById('btnLogin').onclick = function(){
 	if(sessionStorage.getItem("logou") == "sim"){				
 		fundoSB.style.display = 'block';
-		login.style.left = '0%';
-		document.getElementById("nomeUser").innerHMTL = sessionStorage.getItem("nome");
-		document.getElementById("emailUser").innerHMTL += sessionStorage.getItem("email");
-		document.getElementById('highScore').innerHMTL += sessionStorage.getItem("pontos");
-		alert(document.getElementById("nomeUser").innerHMTL);
+		login.style.left = '0%';		
 	}
 	else
  	 	modal.style.display = 'block'; 
+}
+
+if (sessionStorage.getItem("logou") == "sim"){
+	document.getElementById("nomeUser").innerHTML = sessionStorage.getItem("nome");
+	document.getElementById("emailUser").innerHTML = sessionStorage.getItem("email");
+	document.getElementById('highScore').innerHTML += sessionStorage.getItem("pontos");
+	alert(document.getElementById("nomeUser").innerHTML);
 }
 
 
@@ -73,19 +76,25 @@ document.getElementById('btnEntrar').onclick = function(){
 		document.getElementById("txtSenha").value = "";		
 }
 
+var fundoSB = document.getElementById("fundoSideBar");
 window.onclick = function(event){
   if(event.target == modal){
     modal.style.display = 'none';
-  }
-}
-
-var fundoSB = document.getElementById("fundoSideBar");
-
-window.onclick = function(event){
+  }else
   if(event.target == fundoSB){
   	fundoSB.style.display = 'none';
     login.style.left = '-35%';
   }
+}
+
+document.getElementById("sair").onclick = function(){
+	sessionStorage.removeItem("logou");
+	alert('Você foi deslogado');
+	location.reload();
+}
+
+document.getElementById("perfil").onclick = function(){
+	location.href = "perfil.html"
 }
 
 var cont = 0;
