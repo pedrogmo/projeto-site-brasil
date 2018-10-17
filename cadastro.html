@@ -53,7 +53,7 @@
 <section id = "principal"><br>     
 	<h1>Cadastro</h1><br>
 <br>
-<form id = "cadastro" class="formulario">
+<form action = "http://localhost:3000/usuario" method = "post" id = "cadastro" class="formulario">
 	<div>
 		<i class="fas fa-user" id="icones"></i>
 		<input name = "nome" type="text" class="textBoxes" required>
@@ -81,7 +81,7 @@
 	</div>
     <div>
         <i class="large material-icons" id="enviar">send</i>
-        <button id = "criarConta" class="btnCriar">Criar Conta</button>
+        <input type = "submit" id = "criarConta" class="btnCriar" value = "Criar Conta">
     </div>
 </form>
 </section>
