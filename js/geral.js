@@ -23,6 +23,10 @@ document.getElementById('btnLogin').onclick = function(){
 	if(sessionStorage.getItem("logou") == "sim"){				
 		fundoSB.style.display = 'block';
 		login.style.left = '0%';
+		document.getElementById("nomeUser").innerHMTL = sessionStorage.getItem("nome");
+		document.getElementById("emailUser").innerHMTL += sessionStorage.getItem("email");
+		document.getElementById('highScore').innerHMTL += sessionStorage.getItem("pontos");
+		alert(document.getElementById("nomeUser").innerHMTL);
 	}
 	else
  	 	modal.style.display = 'block'; 
@@ -66,11 +70,7 @@ document.getElementById('btnEntrar').onclick = function(){
 		modal.style.display = 'none';
 	}
 		document.getElementById("txtEmail").value = "";
-		document.getElementById("txtSenha").value = "";
-		//não da certo:
-		document.getElementById("nomeUser").innerHMTL += sessionStorage.getItem("nome");
-		document.getElementById("emailUser").innerHMTL += sessionStorage.getItem("email");
-		document.getElementById('highScore').innerHMTL += sessionStorage.getItem("pontos");
+		document.getElementById("txtSenha").value = "";		
 }
 
 window.onclick = function(event){

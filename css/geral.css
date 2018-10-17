@@ -309,15 +309,15 @@ ul, ol{
 }
 
 .closeBtn{
-	color      : #ccc;
-  margin-top : -15px;
-	float      : right;
-	font-size  : 30px;  
+	color        : #ccc;
+  margin-right : 5px; 
+	float        : right;
+	font-size    : 30px;  
 }
 
 .closeBtn:hover{	
 	transition       : 0.25s ease-in;
-	color            : #000;
+	filter           : brightness(80%); 
 	text-decoration  : none; 
 	cursor           : pointer;
 }
@@ -419,6 +419,7 @@ div.infoUser p{
   font-size     : 14pt;
   color         : #fff; 
   cursor        : pointer; 
+  z-index       : 1000000; 
 }
 
 @charset "UTF-8";
