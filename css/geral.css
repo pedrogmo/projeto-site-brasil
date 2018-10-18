@@ -142,32 +142,38 @@ section#principal div#texto p.centro{
 }
 
 h1{
-	font-size: 50px;
+  font-family: 'Raleway';
+	font-size: 36pt;
 	text-align: center;
-	font-weight: bold;
+	font-weight: 800;
 	color: #002276;
-	font-family: Candara;
 }
 
 h2{
-	font-size: 30px;
+  font-family: 'Raleway';
+	font-size: 24pt;
 	text-align: center;
 	color: #002776;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 h3{
+  font-family : 'Raleway';
   font-weight : normal;  
-	font-size   : 25px;
+	font-size   : 20pt;
+  color       : #2b2c33; 
 	text-align  : center;
-  font-weight: bold;
+  font-weight : 700;
+  font-style  : italic; 
 }
 
 p{
+  font-family  : 'Raleway';
 	text-align   : justify;
 	margin-left  : 80px;
 	margin-right : 80px; 
 	font-size    : 25px;
+  font-weight  : 300; 
 }
 
 ul, ol{
