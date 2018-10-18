@@ -41,7 +41,7 @@ function inicioQuiz(){
       r[i + 1] = arr[i].resposta;
       pontos[i + 1] = arr[i].pontos;
       var id = i + 1 + "";
-      document.getElementById(id).innerHTML = "P: " + p[i + 1];
+      document.getElementById(id).innerHTML = "<font color='#002776'>" + (i + 1) + ". </font>" + p[i + 1];
     }
 }
 
@@ -50,29 +50,32 @@ document.getElementById("enviar").onclick = function()
   document.getElementById("enviar").style.visibility = "hidden";
   document.getElementById("resp").style.visibility = "visible";
 
-  var certo = "<font color = 'lime'>Certo!</font>"; 
-  var errado = "<font color = 'red'>Errado!</font>";
+  var certo = 'acertos fas fa-check'; 
+  var errado = 'erros fas fa-times';
   var acertou = new Array();
   for(var i=1;i<=t;i++)
   {
     var id = 'r' + i;
+    var campo = document.getElementById(id);
     respostas[i] = document.getElementById(id).value.toUpperCase().trim();
     if(respostas[i]==r[i].toUpperCase())
     {
       acertou[i] = certo;
       acertos++;
       pontosUsuario += pontos[i];
+      campo.style.borderColor = "#1db954";
     }        
     else
     {
       acertou[i] = errado;
       erros++;
+      campo.style.borderColor = "#fe2020";
     }
   }
   for(var i = 1; i <= t; i++)
   {
-    var id = i + '';
-    document.getElementById(id).innerHTML += '<br>' + acertou[i];
+    var id = 'a' + i;
+    document.getElementById(id).className = acertou[i];
   }
   document.getElementById('acertos').innerHTML = "Acertos: " + acertos;
   document.getElementById('erros').innerHTML = "Erros: " + erros;

@@ -23,14 +23,16 @@
 	border-color : #009c3b; 
 }
 
-.textBoxes:focus ~ label, .textBoxes:valid ~ label{
+.textBoxes:focus ~ label, .textBoxes:valid ~ label{  
 	color      : #009c3b;  
-	top        : -26px;  
+	top        : -26px; 
+	font-size  : 12pt; 
 }
 
 .labels{
 	position       : relative;
-	right          : 61%;    
+	top            : 0px; 
+	right          : 61.5%;    
 	font-family    : 'Raleway';
 	font-size      : 16pt; 
 	color          : lightgray; 
