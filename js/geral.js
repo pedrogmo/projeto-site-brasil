@@ -44,6 +44,21 @@ document.getElementById('fechaModal').onclick = function(){
  	 modal.style.display = 'none';
 }
 
+document.onkeydown = function(event){
+	if(modal.style.display == 'block')
+    	if (event.keyCode === 13)
+        		$("#btnEntrar").click();    
+}
+
+var exibirSenha = true;
+document.getElementById("btnExibirSenha").onclick = function(){
+	exibirSenha	= !exibirSenha;
+	if (exibirSenha)
+		$('#txtSenha').attr('type', 'password');
+	else
+		$('#txtSenha').attr('type', 'text');
+}
+
 document.getElementById('btnEntrar').onclick = function(){
 	var email = document.getElementById('txtEmail').value;
 	var senha = document.getElementById('txtSenha').value;
