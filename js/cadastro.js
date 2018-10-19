@@ -4,13 +4,23 @@ document.getElementById("cadastro").onsubmit = function(){
 	var dia = parseInt(data.substring(0,2));
 	var mes = parseInt(data.substring(3,5));
 	var ano = parseInt(data.substring(6,10));
-	if (dia > 31 || mes > 12 || ano > 2018 || ano < 1890)
+	var senha = document.getElementById("senha").value;
+	var senha2 = document.getElementById("confirmarSenha").value;
+	if (isNaN(dia) || isNaN(mes) || isNaN(ano) || dia > 31 || mes > 12 || ano > 2018 || ano < 1890)
 	{
 		alert('Data inválida');
+		document.getElementById("data").value = "";
 		return false;
 	}
 	else if (email.indexOf("@") == -1 || email.indexOf(".com") == -1){
 		alert('Email inválido');
+		document.getElementById("email").value = "";
+		return false;
+	}
+	else if (senha != senha2)
+	{
+		alert("As senhas não estão iguais");
+		document.getElementById("senha").value = document.getElementById("confirmarSenha").value = "";
 		return false;
 	}
 	else{
@@ -21,6 +31,7 @@ document.getElementById("cadastro").onsubmit = function(){
 			{
 				alert('Email já existente no site');
 				emailJaExiste = true;
+				document.getElementById("email").value = "";
 				return false;
 				break;
 			}
@@ -31,16 +42,3 @@ document.getElementById("cadastro").onsubmit = function(){
 		}
 	}
 }
-
-/*cadastrar = function(form){
-	$.post( "http://localhost:3000/usuario", form.serialize()).done(function(data){
-		
-		if (!data.erro) {
-			alert('Chegou quio');
-			form.each(function(data){
-			location.href = "inicio.html";
-		});
-		}
-		alert(data.mensagem);
-	});
-};*/
