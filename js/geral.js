@@ -54,9 +54,15 @@ var exibirSenha = true;
 document.getElementById("btnExibirSenha").onclick = function(){
 	exibirSenha	= !exibirSenha;
 	if (exibirSenha)
+	{
 		$('#txtSenha').attr('type', 'password');
+		document.getElementById("btnExibirSenha").className = "exibirSenha fas fa-eye";
+	}
 	else
+	{
 		$('#txtSenha').attr('type', 'text');
+		document.getElementById("btnExibirSenha").className = "exibirSenha fas fa-eye-slash";
+	}
 }
 
 document.getElementById('btnEntrar').onclick = function(){

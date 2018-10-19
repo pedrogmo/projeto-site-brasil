@@ -261,12 +261,12 @@ ul, ol{
   animation        : bounceInDown 0.5s; 
 }
 
-.modal-content h3{
-  text-align     : center;
-  text-transform : uppercase; 
-  font-weight    : normal;  
-  font-size      : 25px;
-  margin-bottom  : 15px;  
+.modal-logo{
+  position : relative; 
+  left     : 20.5%;
+  height   : 70px;
+  width    : 250px;  
+  margin-bottom : 45px;  
 }
 
 .modal-content p{
@@ -342,6 +342,24 @@ ul, ol{
 .txtCampos:focus, .txtCampos:valid{
 	transition   : 0.25s ease-in; 
 	border-color : #009c3b;
+}
+
+.campoSenha{
+  font-size: 14pt;
+}
+
+.campoSenha i{
+  position : relative;
+  float    : right;
+  top      : 30px;
+  right    : 3%; 
+  color    : #2b2c33;   
+}
+
+.campoSenha i:hover{
+  transition : 0.5s; 
+  color      : #009c3b;
+  cursor     : pointer;  
 }
 
 #fundoSideBar{

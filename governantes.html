@@ -39,9 +39,12 @@
 <div id="simpleModal" class="modal">
     <div class="modal-content">
         <span class="closeBtn fas fa-times" id = "fechaModal"></span>
-        <h3>Login</h3>            
+        <img src="./img/logotipos/logo-brasilee-modal.png" class="modal-logo">         
         <input type="email" class = "txtCampos" id="txtEmail" placeholder="Email" required>
-        <input type="password" class = "txtCampos" id="txtSenha" placeholder="Senha" required>
+        <div class="campoSenha">
+            <i class="exibirSenha fas fa-eye" id="btnExibirSenha"></i>
+            <input type="password" class = "txtCampos" id="txtSenha" placeholder="Senha" required>
+        </div>
         <button class="btnModal" id="btnEntrar">Entrar</button>
         <p>OU</p>
         <button class="btnModal" id="btnCadastrar">Cadastrar-se</button>
