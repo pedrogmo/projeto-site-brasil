@@ -4,7 +4,7 @@ document.getElementById("cadastro").onsubmit = function(){
 	var dia = parseInt(data.substring(0,2));
 	var mes = parseInt(data.substring(3,5));
 	var ano = parseInt(data.substring(6,10));
-	if (dia > 31 || mes > 12 || ano > 2018)
+	if (dia > 31 || mes > 12 || ano > 2018 || ano < 1890)
 	{
 		alert('Data inválida');
 		return false;
