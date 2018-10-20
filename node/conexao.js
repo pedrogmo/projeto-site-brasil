@@ -85,19 +85,19 @@ const pontos = 0;
 const aniversario = requisicao.body.aniversario;
 const pais = requisicao.body.pais;
 execSQL(`INSERT INTO USUARIO(nomeUsuario, email, senha, pontuacao, dataAniversario, nacionalidade) VALUES('${nome}', '${email}','${senha}', ${pontos}, '${aniversario}', '${pais}')`, resposta);
-resposta.end(resposta.json({ mensagem: 'Incluído!'}));
+// resposta.end(resposta.json({ mensagem: 'Incluído!'}));
 })
 
 rota.patch('/usuario/:id', (requisicao, resposta) =>{	
 	const id = parseInt(requisicao.params.id);
 	const highscore = parseInt(requisicao.body.pontosNovos);
 	execSQL(`UPDATE Usuario SET pontuacao = ${highscore} WHERE ID=${id}`, resposta); 
-	resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
+	// resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
 })
 
 rota.delete('/usuario/:id', (requisicao, resposta) =>{ 
 	execSQL('DELETE USUARIO WHERE ID=' + parseInt(requisicao.params.id), resposta); 
-	resposta.end(resposta.json({ mensagem: 'Deletado!'})); 
+	// resposta.end(resposta.json({ mensagem: 'Deletado!'})); 
 })
 
 /////////////////////////////////////////////////////////////////////////////////
