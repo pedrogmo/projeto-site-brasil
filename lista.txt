@@ -1,7 +1,7 @@
 Design
 
-* Fazer div lateral de verificação dos dados do usuário, incluindo foto de perfil.
-
+* inicio.html
+* perfil.html
 
 Banco de Dados
 

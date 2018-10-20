@@ -88,14 +88,14 @@ execSQL(`INSERT INTO USUARIO(nomeUsuario, email, senha, pontuacao, dataAniversar
 resposta.end(resposta.json({ mensagem: 'Incluído!'}));
 })
 
-rota.patch('/usuario/:id?', (requisicao, resposta) =>{ 
-	const id = parseInt(requisicao.params.id); 
-	const pontosNovos = parseInt(requisicao.body.pontos);
-	execSQL(`UPDATE Usuario SET pontuacao = ${pontosNovos} WHERE ID=${id}`, resposta); 
+rota.patch('/usuario/:id', (requisicao, resposta) =>{	
+	const id = parseInt(requisicao.params.id);
+	const highscore = parseInt(requisicao.body.pontosNovos);
+	execSQL(`UPDATE Usuario SET pontuacao = ${highscore} WHERE ID=${id}`, resposta); 
 	resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
 })
 
-rota.delete('/usuario/:id?', (requisicao, resposta) =>{ 
+rota.delete('/usuario/:id', (requisicao, resposta) =>{ 
 	execSQL('DELETE USUARIO WHERE ID=' + parseInt(requisicao.params.id), resposta); 
 	resposta.end(resposta.json({ mensagem: 'Deletado!'})); 
 })

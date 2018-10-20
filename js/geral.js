@@ -88,9 +88,7 @@ document.getElementById('btnEntrar').onclick = function(){
 		logou = true;
 		alert ('Logado com sucesso');
 		modal.style.display = 'none';
-		document.getElementById("nomeUser").innerHTML = usuario.nomeUsuario;
-		document.getElementById("emailUser").innerHTML = usuario.email;
-		document.getElementById('highScore').innerHTML += usuario.pontuacao;
+		location.reload();
 	}
 		document.getElementById("txtEmail").value = "";
 		document.getElementById("txtSenha").value = "";

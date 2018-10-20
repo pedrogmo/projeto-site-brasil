@@ -1,7 +1,8 @@
-var acertos, erros, respostas, o, p, r, pontos, pontosUsuario, t;
+var acertos, erros, respostas, o, p, r, pontos, pontosUsuario, t, usuario;
 
 window.onload = function() //vai dar ruim
 {
+    document.getElementById("pontos").style.visibility = "hidden";
     document.getElementById("enviar").style.visibility = "hidden";
     document.getElementById("resp").style.visibility = "hidden";
     if (sessionStorage.getItem("logou") == "sim")
@@ -47,55 +48,60 @@ function inicioQuiz(){
 
 document.getElementById("enviar").onclick = function()
 {
-  document.getElementById("enviar").style.visibility = "hidden";
-  document.getElementById("resp").style.visibility = "visible";
+    document.getElementById("enviar").style.visibility = "hidden";
+    document.getElementById("resp").style.visibility = "visible";
 
-  var certo = 'acertos fas fa-check'; 
-  var errado = 'erros fas fa-times';
-  var acertou = new Array();
-  for(var i=1;i<=t;i++)
-  {
-    var id = 'r' + i;
-    var campo = document.getElementById(id);
-    respostas[i] = document.getElementById(id).value.toUpperCase().trim();
-    if(respostas[i]==r[i].toUpperCase())
+    var certo = 'acertos fas fa-check'; 
+    var errado = 'erros fas fa-times';
+    var acertou = new Array();
+    for(var i=1;i<=t;i++)
     {
-      acertou[i] = certo;
-      acertos++;
-      pontosUsuario += pontos[i];
-      campo.style.borderColor = "#1db954";
-    }        
-    else
-    {
-      acertou[i] = errado;
-      erros++;
-      campo.style.borderColor = "#fe2020";
+      var id = 'r' + i;
+      var campo = document.getElementById(id);
+      respostas[i] = document.getElementById(id).value.toUpperCase().trim();
+      if(respostas[i]==r[i].toUpperCase())
+      {
+        acertou[i] = certo;
+        acertos++;
+        pontosUsuario += pontos[i];
+        campo.style.borderColor = "#1db954";
+      }        
+      else
+      {
+        acertou[i] = errado;
+        erros++;
+        campo.style.borderColor = "#fe2020";
+      }
     }
-  }
-  for(var i = 1; i <= t; i++)
-  {
-    var id = 'a' + i;
-    document.getElementById(id).className = acertou[i];
-  }
-  document.getElementById('acertos').innerHTML = "Acertos: " + acertos;
-  document.getElementById('erros').innerHTML = "Erros: " + erros;
-  usuario = JSON.parse(sessionStorage.getItem("usuario"));
-  var fim = 'Fim do Quiz.' + '\nUsuário: ' + usuario.nomeUsuario + '\nAcertos: ' + acertos + '\nPontos: ' + pontosUsuario + '\nHighscore: ' + usuario.pontuacao;
-  if (pontosUsuario > parseInt(sessionStorage.getItem("pontos")))
-  {
-    fim += '\nHighscore atualizado!';
-    //update dos pontos do usuário
-  }
-  alert(fim);
+    for(var i = 1; i <= t; i++)
+    {
+      var id = 'a' + i;
+      document.getElementById(id).className = acertou[i];
+    }
+    document.getElementById('acertos').innerHTML = "Acertos: " + acertos;
+    document.getElementById('erros').innerHTML = "Erros: " + erros;
+    usuario = JSON.parse(sessionStorage.getItem("usuario"));
+    var fim = 'Fim do Quiz.' + '\nUsuário: ' + usuario.nomeUsuario + '\nAcertos: ' + acertos + '\nPontos: ' + pontosUsuario + '\nHighscore: ' + usuario.pontuacao;
+    if (pontosUsuario > usuario.pontuacao)
+    {
+      fim += '\nHighscore atualizado!';
+      document.getElementById("pontos").value = pontosUsuario + "";
+      alert(document.getElementById("pontos").value);
+      var xmlhttpp = new XMLHttpRequest();
+      var urll = "http://localhost:3000/usuario/" + usuario.codUsuario;
+      xmlhttpp.open("PATCH", urll, true);
+      xmlhttpp.send();
+    }
+    alert(fim);
 }
 
 document.getElementById('resp').onclick = function()
 {
-  var texto = '<ol>';
-  for(var i = 1; i <= t; i++)
-  texto += '<ul>P: '+p[i]+'<br>R: '+r[i]+'</ul><br>';
-  texto += '</ol>';
-  var janela = window.open("", "_blank", 'height=800,width=1000');
-  janela.document.write(texto);
-  janela.focus();
+    var texto = '<ol>';
+    for(var i = 1; i <= t; i++)
+    texto += '<ul>P: '+p[i]+'<br>R: '+r[i]+'</ul><br>';
+    texto += '</ol>';
+    var janela = window.open("", "_blank", 'height=800,width=1000');
+    janela.document.write(texto);
+    janela.focus();
 }
