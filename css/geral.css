@@ -1,9 +1,16 @@
+@font-face{
+  font-family: 'FlowerPower';
+  src: url('../fonts/Flower Power Personal Use.ttf');
+}
+
 body{
 	margin: auto;
 	max-width: 100%;
-	font-family:'Raleway';
-	background-color: #fff8dc; 
+	font-family:'Raleway'; 
+  user-select: none;
 }
+
+/*MENU E FOOTER*/
 
 #menu{
 	position: relative;
@@ -18,7 +25,8 @@ body{
 	left             : 0px; 
 	right            : 0px; 
 	top              : 0px;
-	background-color : #002776; 
+	background       : rgba(0, 0, 0, 0.75); 
+  box-shadow       : 0 5px 10px rgba(0, 0, 0, 0.25); 
 	list-style       : none;
 	font-size        : 16pt; 
 	font-family      : 'Raleway';
@@ -27,52 +35,52 @@ body{
 #menu ul li { display : inline; }
 
 #menu ul li a{
-	padding          : 5px 10px; 
-	display          : inline-block; 
-	color            : white;
-	text-decoration  : none; 
+  padding          : 5px 10px; 
+  display          : inline-block; 
+  color            : white;
+  text-decoration  : none; 
 }
 
 #menu .menu{
-	text-align       : center;
-	position         : fixed;
-	top              : 80px; 
-	background-color : #009c3b; 
-	list-style       : none; 
-	box-shadow       : 0px 5px 10px rgba(0, 0, 0, 0.4); 
+  text-align       : center;
+  position         : fixed;
+  top              : 80px; 
+  background-color : #009c3b; 
+  list-style       : none; 
+  box-shadow       : 0px 5px 10px rgba(0, 0, 0, 0.4); 
 }
 
 #menu .menu li a{
-	padding          : 5px 10px;
-	padding-bottom   : 3px; 
-	display          : inline-block; 
-	color            : white;
-	text-decoration  : none;
-	border-bottom    : 3px solid #009c3b;    
+  padding          : 5px 10px;
+  padding-bottom   : 3px; 
+  display          : inline-block; 
+  color            : white;
+  text-decoration  : none;
+  border-bottom    : 3px solid #009c3b;    
 }
 
 #menu .menu li .abas{
-	border-top       : 2px solid #009c3b;
-	margin-right     : 10px;
-	margin-left      : 10px;   
+  border-top       : 2px solid #009c3b;
+  margin-right     : 10px;
+  margin-left      : 10px;   
 }
 
 #menu .menu li a:hover{
-	transition-timing-function : ease-in;
-	transition                 : 0.5s;
-	background-color           : rgba(0, 0, 0, 0.3); 
-	border-bottom              : 3px solid white;  
-	background-size            : 30px 60px;
-	cursor                     : pointer;
+  transition-timing-function : ease-in;
+  transition                 : 0.5s;
+  background-color           : rgba(0, 0, 0, 0.3); 
+  border-bottom              : 3px solid white;  
+  background-size            : 30px 60px;
+  cursor                     : pointer;
 }
 
 #menu .menu li .abas:hover{
-	transition-timing-function : ease-in;
-	transition                 : 0.5s; 
-	border-top                 : 2px solid rgba(0, 0, 0, 0.1); 
-	border-bottom              : 3px solid white;  
-	background-size            : 30px 60px; 
-	cursor                     : pointer;
+  transition-timing-function : ease-in;
+  transition                 : 0.5s; 
+  border-top                 : 2px solid rgba(0, 0, 0, 0.1); 
+  border-bottom              : 3px solid white;  
+  background-size            : 30px 60px; 
+  cursor                     : pointer;
 }
 
 .logo{
@@ -94,59 +102,233 @@ body{
 	transform  : scale(1.05);  
 }
 
-.home{
-	height : 20px;
-	width  : 20px; 
+#txtBusca{
+  position      : absolute;
+  top           : 25px; 
+  left          : 300px;  
+  width         : 650px; 
+  font-family   : 'Raleway'; 
+  font-size     : 12pt;  
+  padding       : 10px; 
+  border        : 1px solid gray;
+  border-radius : 5px; 
+  outline       : none; 
 }
 
-.casinha{
-	float       : left; 
-	padding-top : 2px; 
+#btnBusca{
+  position                   : absolute;
+  top                        : 25px; 
+  left                       : 965px;  
+  padding                    : 10px; 
+  font-size                  : 12pt;
+  height                     : 41px;
+  width                      : 41px;  
+  color                      : #fff8dc; 
+  background-color           : #1db954;
+  border                     : 1px solid gray; 
+  border-top-right-radius    : 5px;
+  border-bottom-right-radius : 5px; 
+  outline                    : none;     
+}
+
+#btnBusca:hover{
+  cursor           : pointer;
+  transition       : 0.5s ease-in; 
+  background-color : #1ed760;
+}
+
+#btnLogin{
+  position         : absolute;
+  top              : 22.5px;
+  right            : 25px; 
+  float            : right;  
+  font-family      : 'Raleway';
+  font-size        : 14pt;
+  color            : white;
+  background-color : #1db954;
+  height           : 40px;  
+  width            : 100px;
+  border           : none; 
+  border-radius    : 5px;    
+  box-shadow       : 2px 2px 5px rgba(0, 0, 0, 1);
+  outline          : none;  
+}
+
+#btnLogin:hover{
+  transition       : 0.5s ease-in; 
+  background-color : #1ed760;
+  cursor           : pointer;  
 }
 
 .footer{
-   	position         : relative;
-   	padding          : 0px;
-   	margin           : 0px;  
-   	left             : 0px;
-   	right            : 0px;    
-   	width            : 100%;
-   	padding-top      : 25px;  
-   	height           : 80px;
-   	background-color : #2b2c33; 
-   	text-align       : center;
-   	font-family      : 'Raleway';
-   	font-size        : 16px; 
-   	color            : #FFFFFF; 
+    position         : relative;
+    padding          : 0px;
+    margin           : 0px;  
+    left             : 0px;
+    right            : 0px;    
+    width            : 100%;
+    padding-top      : 25px;  
+    height           : 80px;
+    background-color : #009c3b; 
+    text-align       : center;
+    font-family      : 'Raleway';
+    font-size        : 16px; 
+    color            : #FFFFFF; 
 }
 
-section#principal{
-	margin: auto;
-	width: 100%;
-	background-color: #fff8dc;
-	height: 100% - 80px;
-	padding-top: 50px;
+/*PÁGINA DE INÍCIO*/
+
+.welcome-thumbnail{
+  position: relative;
+  top: -100px;
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/fundoUsers/1.png);
+  background-size: 100%;
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  padding-top: 20%;
+  padding-bottom: 20%;
 }
 
-div#texto{
-	width            : 100%;
-	text-align       : justify; 
-	padding-top      : 12pt;  
-	padding-bottom   : 12pt;
+.welcome-thumbnail h1,
+.historia-thumbnail h1,
+.mapa-thumbnail h1,
+.governantes-thumbnail h1,
+.noticias-thumbnail h1, 
+.eleicoes-thumbnail h1,
+.quiz-thumbnail h1{
+  font-family: 'FlowerPower';
+  font-size: 72pt;
+  font-weight: normal;
+  color: #fff;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.85);
 }
 
-section#principal div#texto p.centro{
-	text-align   : justify;
-	margin-left  : 80px;
-	margin-right : 80px; 	
+.welcome-thumbnail h2{
+  position: relative;
+  top: -85px;
+  font-family: 'FlowerPower';
+  font-size: 32pt;
+  font-weight: normal;
+  color: #009c3b;  
 }
+
+.textos{
+  padding-bottom : 10%; 
+}
+
+.descricao{
+  padding-top    : 5%; 
+  padding-bottom : 5%; 
+}
+
+#principal{
+  background-color: white;
+  color: #2b2c33;
+}
+
+.historia-thumbnail{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/fotos/historia.jpg);
+  background-size: 100%;
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+
+.mapa-thumbnail{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/fotos/mapa.jpg);
+  background-size: 100%;
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+
+.governantes-thumbnail{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/fotos/governantes.jpg);
+  background-size: 100%;
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+
+.noticias-thumbnail{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/34191275170102.jpg);
+  background-size: 100%;
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+
+.eleicoes-thumbnail{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/fotos/eleicoes.jpg);
+  background-size: 100%;
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+
+.quiz-thumbnail{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/fotos/quiz.jpg);
+  background-size: 100%;
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+
+.historia-thumbnail h1,
+.mapa-thumbnail h1,
+.governantes-thumbnail h1,
+.noticias-thumbnail h1,
+.eleicoes-thumbnail h1,
+.quiz-thumbnail h1{
+  width      : 97.5%;
+  text-align : center; 
+}
+
+.historia-thumbnail h1:hover,
+.mapa-thumbnail h1:hover,
+.governantes-thumbnail h1:hover,
+.noticias-thumbnail h1:hover,
+.eleicoes-thumbnail h1:hover,
+.quiz-thumbnail h1:hover{
+  transition       : 0.5s ease-in;
+  transform        : scale(1.05);      
+  cursor           : pointer; 
+}
+
+/*CONFIGURAÇÃO DAS FONTES*/
 
 h1{
   font-family: 'Raleway';
-	font-size: 36pt;
+	font-size: 42pt;
 	text-align: center;
-	font-weight: 800;
-	color: #002276;
+	font-weight: normal;
+	color: #009c3b;
 }
 
 h2{
@@ -173,70 +355,18 @@ p{
 	margin-left  : 80px;
 	margin-right : 80px; 
 	font-size    : 25px;
-  font-weight  : 300; 
+  font-weight  : 300;  
+}
+
+a{
+  text-decoration: none;
 }
 
 ul, ol{
 	text-align:left;
 }
 
-#txtBusca{
-	position      : absolute;
-	top           : 25px; 
-	left          : 300px;  
-	width         : 650px; 
-	font-family   : 'Raleway'; 
-	font-size     : 12pt;  
-	padding       : 10px; 
-	border        : 1px solid gray;
-	border-radius : 5px; 
-	outline       : none; 
-}
-
-#btnBusca{
-	position                   : absolute;
-	top                        : 25px; 
-	left                       : 965px;  
-	padding                    : 10px; 
-	font-size                  : 12pt;
-	height                     : 41px;
-	width                      : 41px;  
-	color                      : #fff8dc; 
-	background-color           : #1db954;
-	border                     : 1px solid gray; 
-	border-top-right-radius    : 5px;
-	border-bottom-right-radius : 5px; 
-	outline                    : none;     
-}
-
-#btnBusca:hover{
-	cursor           : pointer;
-	transition       : 0.5s ease-in; 
-	background-color : #1ed760;
-}
-
-#btnLogin{
-	position         : absolute;
-	top              : 22.5px;
-	right            : 25px; 
-	float            : right;  
-	font-family      : 'Raleway';
-	font-size        : 14pt;
-	color            : white;
-	background-color : #1db954;
-	height           : 40px;  
-	width            : 100px;
-	border           : none; 
-	border-radius    : 5px;    
-	box-shadow       : 2px 2px 5px rgba(0, 0, 0, 1);
-	outline          : none;  
-}
-
-#btnLogin:hover{
-	transition       : 0.5s ease-in; 
-	background-color : #1ed760;
-	cursor           : pointer;  
-}
+/*MODAL DE LOGIN*/
 
 .modal{
 	display  : none;
@@ -246,7 +376,6 @@ ul, ol{
 	top      : 0px;
 	height   : 100%;
 	width    : 100%;
-	overflow : auto;
 	background-color : rgba(0, 0, 0, 0.5);       
 }
 
@@ -349,11 +478,10 @@ ul, ol{
 }
 
 .campoSenha i{
-  position : relative;
-  float    : right;
-  top      : 30px;
-  right    : 3%; 
-  color    : #2b2c33;   
+  position      : relative;
+  float         : right; 
+  right         : 3%; 
+  color         : #2b2c33;   
 }
 
 .campoSenha i:hover{
@@ -361,6 +489,8 @@ ul, ol{
   color      : #009c3b;
   cursor     : pointer;  
 }
+
+/*CUSTOMIZAÇÃO DA SIDEBAR*/
 
 #fundoSideBar{
   display  : none;
@@ -445,6 +575,89 @@ div.infoUser p{
   cursor        : pointer; 
   z-index       : 1000000; 
 }
+
+/*ÍCONES*/
+
+.home{
+  height : 20px;
+  width  : 20px; 
+}
+
+.casinha{
+  float       : left; 
+  padding-top : 2px; 
+}
+
+.instagram{
+    position        : absolute;
+    top             : 25px;
+    right           : 140px; 
+    width           : 35px;
+    height          : 35px;
+    background      : url("../img/icones/instagram_normal.png") no-repeat;
+    background-size : 35px 35px;
+    float           : right;
+}
+
+.twitter{
+  position        : absolute;
+    top             : 25px;
+    right           : 185px; 
+    width           : 35px;
+    height          : 35px;
+    background      : url("../img/icones/twitter_normal.png") no-repeat;
+    background-size : 35px 35px; 
+    float           : right;  
+}
+
+.facebook{
+  position        : absolute;
+    top             : 25px;
+    right           : 230px; 
+    width           : 35px;
+    height          : 35px;
+    background      : url("../img/icones/facebook_normal.png") no-repeat;
+    background-size : 35px 35px;
+    float           : right;  
+}
+
+.brasil{
+  position        : absolute;
+    top             : 25px;
+    right           : 275px; 
+    width           : 35px;
+    height          : 35px;
+    background      : url("../img/icones/brasil_normal.png") no-repeat;
+    background-size : 35px 35px;
+    float           : right;
+}
+
+.brasil:hover{
+  transition      : 0.5s ease-in; 
+  background      : url("../img/icones/brasil_hover.png"); 
+  background-size : 35px 35px;
+  cursor          : pointer;
+}
+
+.facebook:hover{
+  transition      : 0.5s ease-in; 
+  background      : url("../img/icones/facebook_hover.png"); 
+  background-size : 35px 35px; 
+}
+
+.twitter:hover{
+  transition      : 0.5s ease-in; 
+  background      : url("../img/icones/twitter_hover.png"); 
+  background-size : 35px 35px; 
+}
+
+.instagram:hover{
+  transition      : 0.5s ease-in; 
+  background      : url("../img/icones/instagram_hover.png"); 
+  background-size : 35px 35px; 
+}
+
+/*ANIMAÇÕES*/
 
 @charset "UTF-8";
 
@@ -4068,73 +4281,4 @@ div.infoUser p{
     -webkit-transition: none !important;
     transition: none !important;
   }
-}
-
-.instagram{
-    position        : absolute;
-    top             : 25px;
-    right           : 140px; 
-    width           : 35px;
-    height          : 35px;
-    background      : url("../img/icones/instagram_normal.png") no-repeat;
-    background-size : 35px 35px;
-    float           : right;
-}
-
-.twitter{
-	position        : absolute;
-    top             : 25px;
-    right           : 185px; 
-    width           : 35px;
-    height          : 35px;
-    background      : url("../img/icones/twitter_normal.png") no-repeat;
-    background-size : 35px 35px; 
-    float           : right;	
-}
-
-.facebook{
-	position        : absolute;
-    top             : 25px;
-    right           : 230px; 
-    width           : 35px;
-    height          : 35px;
-    background      : url("../img/icones/facebook_normal.png") no-repeat;
-    background-size : 35px 35px;
-    float           : right; 	
-}
-
-.brasil{
-	position        : absolute;
-    top             : 25px;
-    right           : 275px; 
-    width           : 35px;
-    height          : 35px;
-    background      : url("../img/icones/brasil_normal.png") no-repeat;
-    background-size : 35px 35px;
-    float           : right;
-}
-
-.brasil:hover{
-	transition      : 0.5s ease-in; 
-	background      : url("../img/icones/brasil_hover.png"); 
-	background-size : 35px 35px;
-	cursor          : pointer;
-}
-
-.facebook:hover{
-	transition      : 0.5s ease-in; 
-	background      : url("../img/icones/facebook_hover.png"); 
-	background-size : 35px 35px; 
-}
-
-.twitter:hover{
-	transition      : 0.5s ease-in; 
-	background      : url("../img/icones/twitter_hover.png"); 
-	background-size : 35px 35px; 
-}
-
-.instagram:hover{
-	transition      : 0.5s ease-in; 
-	background      : url("../img/icones/instagram_hover.png"); 
-	background-size : 35px 35px; 
 }
