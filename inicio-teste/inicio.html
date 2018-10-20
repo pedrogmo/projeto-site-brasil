@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>Brasilee | Início</title>    
+    <link rel="stylesheet" type="text/css" href="./geral.css">	    
+    <link rel="icon" href="../img/logotipos/logo-site.ico" type="image/gif" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<nav id="menu">
+        <ul id="barra">
+            <a href="inicio.html"><img class="logo-text" src="../img/logotipos/logo-brasilee.png"></a>
+            <a href=""><div class="facebook"></div></a>
+            <a href=""><div class="twitter"></div></a>
+            <a href=""><div class="instagram"></div></a>
+            <a><div class="brasil" id = "bandeira"></div></a>
+            <button id="btnLogin">LOGIN</button>
+        </ul>
+</nav>
+
+<div id="simpleModal" class="modal">
+    <div class="modal-content">
+        <span class="closeBtn fas fa-times" id = "fechaModal"></span>
+        <img src="../img/logotipos/logo-brasilee-modal.png" class="modal-logo">          
+        <input type="email" class = "txtCampos" id="txtEmail" placeholder="Email" required>
+        <div class="campoSenha">
+            <i class="exibirSenha fas fa-eye" id="btnExibirSenha"></i>
+            <input type="password" class = "txtCampos" id="txtSenha" placeholder="Senha" required>
+        </div>
+        <button class="btnModal" id="btnEntrar">Entrar</button>
+        <p>OU</p>
+        <button class="btnModal" id="btnCadastrar">Cadastrar-se</button>
+    </div>      
+</div>
+
+<section id = "principal">  
+    <div id="fundoSideBar"></div>
+    <div id="login">
+        <div class="infoUser">
+            <img id="fundoUser" src="../img/fundoUsers/1.png">
+            <img id="imgUser" src="../img/usuario.jpeg">
+            <p id= "nomeUser">Nome</p>
+            <p id= "emailUser">Email</p>
+        </div>
+        <div class="opcoesUser">
+            <p id = "perfil">&nbsp;&nbsp;&nbsp;<i class="fas fa-users-cog"></i>&nbsp;&nbsp;&nbsp;Perfil</p>           
+            <p id="highScore">&nbsp;&nbsp;&nbsp;<i class="fas fa-trophy"></i>&nbsp;&nbsp;&nbsp;Highscore do quiz: </p>
+            <p id = "sair">&nbsp;&nbsp;&nbsp;<i class="fas fa-sign-out-alt"></i>&nbsp;&nbsp;&nbsp;Sair</p>
+        </div>
+    </div>
+    
+    <div class="welcome-thumbnail">    
+        <h1>Bem-vindo ao Brasilee</h1>
+    </div>
+	
+    <div class="textos">  
+        <h1>Um pouco sobre nós</h1>
+        <i><p class="centro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O Brasilee é um site com o objetivo de ensinar a história do Brasil para as pessoas, 
+        principalmente para os próprios brasileiros.
+    	O site conta com vários recursos para mostrar curiosidades e fatos importantes sobre o Brasil. 
+    	Temos uma página que fala um pouco da História do Brasil, uma Lista dos seus Governantes e das 
+    	Eras Políticas em que eles se encontravam. Também temos um Mapa Interativo, onde o usuário pode
+    	conhecer algumas curiosidades sobre o estado onde ele mora. E, para quando o usuário terminar 
+    	sua leitura, temos um quiz para testar seus conhecimentos, e ajudá-lo a aprender ainda mais.   
+    	</p>
+
+    	<p class = "centro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O Site foi desenvolvido por Pedro Gomes Moreira, Samuel Gomes de Lima Dias e Gustavo Henrique Béra, três estudantes
+    	de informática no Colégio Técnico de Campinas (COTUCA) como trabalho avaliativo da
+    	matéria de Pratica Profissional I, no ano de 2018.</p></i>
+    </div>
+
+    <div class="eleicoes-thumbnail">
+        <h1>Eleições</h1>        
+    </div>
+
+    <div class="textos">
+        <p>No menu Inserir, as galerias incluem itens que são projetados para corresponder à aparência geral do documento. Você pode usar essas galerias para inserir tabelas, cabeçalhos, rodapés, listas, folhas de rosto e outros blocos de construção do documento. Quando você cria imagens, gráficos ou diagramas, esses elementos também são coordenados com a aparência atual do documento. Você pode alterar facilmente a formatação do texto selecionado no documento escolhendo uma aparência para o texto selecionado na galeria Estilos Rápidos, na guia Página Inicial. Você também pode formatar texto diretamente usando os outros controles na guia Página Inicial.</p>
+    </div>
+</section>
+
+	<footer class="footer">
+        &copy;2018 Brasilee<br>
+        Criado por Pedro Gomes Moreira, Samuel Gomes de Lima Dias e Gustavo Henrique Béra.   
+	</footer> 
+<script src="../js/geral.js"></script>
+</body>
+</html>
