@@ -83,7 +83,7 @@ document.getElementById('btnEntrar').onclick = function(){
 	else
 	{
 		usuario = arr[i];
-		sessionStorage.setItem("usuario", JSON.stringify(usuario));		
+		sessionStorage.setItem("usuario", JSON.stringify(usuario));
 		sessionStorage.setItem("logou", "sim");
 		logou = true;
 		alert ('Logado com sucesso');
@@ -93,7 +93,7 @@ document.getElementById('btnEntrar').onclick = function(){
 		document.getElementById('highScore').innerHTML += usuario.pontuacao;
 	}
 		document.getElementById("txtEmail").value = "";
-		document.getElementById("txtSenha").value = "";		
+		document.getElementById("txtSenha").value = "";
 }
 
 var fundoSB = document.getElementById("fundoSideBar");
@@ -123,7 +123,7 @@ var cont = 0;
 document.getElementById("curiosidade").onclick = function(){
 	alert(curiosidades[cont]);
 	cont++;
-	if (cont >= 36)
+	if (cont > 36)
 		cont = 0;
 }
 
