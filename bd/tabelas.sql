@@ -50,6 +50,8 @@ create table Usuario
 	dataAniversario varchar(10) not null,
 	nacionalidade varchar(30) not null
 )
+delete from Usuario
+select * from usuario
 
 select * from Usuario
 
