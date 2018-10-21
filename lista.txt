@@ -1,6 +1,5 @@
 Design
 
-* inicio.html
 * perfil.html
 
 Banco de Dados
@@ -22,7 +21,6 @@ Ideias e Sugestões
 
 
 * Melhorar aba eleicao.
-* Melhorar aba inicio, adicionar imagens.
 * Dividir a aba historia
  e melhorá-la com imagens.
 * Incluir vetor de curiosidades pelo banco de dados.
