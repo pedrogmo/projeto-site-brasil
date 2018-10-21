@@ -4,6 +4,10 @@ h2#curiosidade:hover{
   cursor: pointer;
 }
 
+section#principal{
+  margin-top: 0px;
+}
+
 .welcome-thumbnail{
   position: relative;
   top: -100px;
