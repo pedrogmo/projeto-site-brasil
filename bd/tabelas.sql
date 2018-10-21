@@ -52,8 +52,6 @@ create table Usuario
 )
 select * from usuario
 
-select * from Usuario
-
 create table Pergunta
 (
 	codPergunta int primary key,
@@ -62,36 +60,36 @@ create table Pergunta
 	pontos int not null
 )
 
-insert into Pergunta values(1,'Qual foi o presidente que governou por menos tempo?','Carlos Luz',10)
+insert into Pergunta values(1,'Em qual ano o Brasil se tornou independente de Portugal?','1822',5)
 insert into Pergunta values(2,'Qual foi o presidente que governou por mais tempo?','Getúlio Vargas',5)
-insert into Pergunta values(3,'Quanto durou o menor mandato presidencial brasileiro?','3 dias',10)
+insert into Pergunta values(3,'Em qual ano os escravos brasileiros foram libertos?','1888',5)
 insert into Pergunta values(4,'Quanto durou o maior mandato presidencial brasileiro?','15 anos',5)
-insert into Pergunta values(5,'Quanto tempo durou a Era Vargas?','15 anos e 3 meses',5)
-insert into Pergunta values(6,'Quantos anos Dom Pedro II governou o Brasil?','58 anos',10)
-insert into Pergunta values(7,'Qual o estado brasileiro com menor número de habitantes?','Roraima',15)
+insert into Pergunta values(5,'Qual é a unidade federativa brasileira que tem maior IDH?','Distrito Federal',10)
+insert into Pergunta values(6,'Por quanto tempo Dom Pedro II governou o Brasil?','58 anos',10)
+insert into Pergunta values(7,'Qual foi a sigla dada à Revolução Constitucionalista em São Paulo?','MMDC',15)
 insert into Pergunta values(8,'Qual o estado brasileiro com maior número de habitantes?','São Paulo',5)
-insert into Pergunta values(9,'Qual o estado brasileiro com com menor densidade demografica?','Roraima',15)
+insert into Pergunta values(9,'Qual o estado brasileiro com com menor densidade demografica?','Roraima',10)
 insert into Pergunta values(10,'Qual unidade federativa brasileira com com maior densidade demografica?','Distrito Federal',10)
 insert into Pergunta values(11,'Qual o estado brasileiro com com maior PIB?','São Paulo',5)
 insert into Pergunta values(12,'Qual é o estado brasileiro com menor PIB?','Roraima',10)
-insert into Pergunta values(13,'Qual é o estado com maior número de presidentes nascidos?','Minas Gerais',10)
-insert into Pergunta values(14,'Qual é o unico presidente do Brasil que não nasceu em solo brasileiro?','Itamar Franco',10)
-insert into Pergunta values(15,'Qual presidente nasceu em 1882 mas na juventude, alterou alguns documentos, para fazer alterar o ano de nascimento para 1883?','Getúlio Vargas',10)
-insert into Pergunta values(16,'Qual foi o ano em que mais governantes nasceram?','1905',20)
-insert into Pergunta values(17,'Qual é o estado brasileiro com maior número de municípios?','Minas Gerais',10)
-insert into Pergunta values(18,'Qual é o estado brasileiro com menor número de municípios?','Roraima',10)
+insert into Pergunta values(13,'Quem foi o principal atuante do movimento tenentista?','Luís Carlos Prestes',15)
+insert into Pergunta values(14,'Quem foi o jornalista opositor de Getúlio Vargas?','Carlos Lacerda',15)
+insert into Pergunta values(15,'Qual presidente se suicidou como estratégia política?','Getúlio Vargas',5)
+insert into Pergunta values(16,'Qual foi o primeiro pressidente a assumir após a redemocratização?','José Sarney',5)
+insert into Pergunta values(17,'Qual foi o rei português que veio ao Brasil em 1808?','Dom João VI',5)
+insert into Pergunta values(18,'Qual foi o nome do movimento do qual Tiradentes fez parte?','Inconfidência Mineira',15)
 insert into Pergunta values(19,'Qual é o menor estado brasileiro?','Sergipe',10)
 insert into Pergunta values(20,'Qual é o maior estado brasileiro?','Amazonas',5)
 insert into Pergunta values(21,'Qual o estado brasileiro com maior expectativa de vida?','Santa Catarina',10)
 insert into Pergunta values(22,'Qual o estado brasileiro com menor expectativa de vida?','Maranhão',10)
 insert into Pergunta values(23,'Como o Brasil foi chamado inicialmente quando "descoberto"?','Terra de Vera Cruz',10)
-insert into Pergunta values(24,'Qual é a unidade federativa brasileira que tem maior IDH?','Distrito Federal',10)
+insert into Pergunta values(24,'Qual foi o presidente que, acusado de ser comunista, sofreu um golpe?','João Goulart',5)
 insert into Pergunta values(25,'Qual é a unidade federativa brasileira que tem menor IDH?','Alagoas',10)
 insert into Pergunta values(26,'Qual é a unidade federativa brasileira que tem menor mortalidade infantil?','São Paulo',5)
-insert into Pergunta values(27,'Qual é a unidade federativa brasileira que tem maior mortalidade infantil?','Distrito Federal',10)
-insert into Pergunta values(28,'Qual foi o primeiro presidente a sofrer um processo de impeachment?','Getúlio Vargas',5)
+insert into Pergunta values(27,'Qual é a unidade federativa brasileira que tem maior mortalidade infantil?','Amapá',10)
+insert into Pergunta values(28,'Qual foi o primeiro presidente a sofrer um processo de impeachment?','Fernando Collor',5)
 insert into Pergunta values(29,'Qual foi o presidente do brasil que entregou uma carta de renúncia, na esperança de que fosse negada, mas foi aceita?','Jânio Quadros',5)
-insert into Pergunta values(30,'Qual foi o nome dado ao Brasil após o Golpe da República?','Estados Unidos do Brasil',5)
+insert into Pergunta values(30,'Qual foi o nome dado ao Brasil após o Golpe da República?','Estados Unidos do Brasil',10)
 
 create table UsuarioPergunta
 (
