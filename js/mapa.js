@@ -24,18 +24,18 @@ var dados = "";
 for (var i = 0; i < arr.length; i++)
 {
   estados[i] = arr[i].nome;
-	dados =  "Área: " + arr[i].area;
+	dados =  "Região: " + arr[i].regiao;
   dados += "\nPopulação: " + arr[i].populacao;
 	dados += "\nPIB: " + arr[i].pib;
   dados += "\nEsperança de vida: " + arr[i].esperancaDeVida;
-  dados += "\nMoralidade infantil: " + arr[i].mortalidadeInfantil;
+  dados += "\nMortalidade infantil: " + arr[i].mortalidadeInfantil;
   dados += "\nAlfabetização: " + arr[i].alfabetizacao;
   dados += "\nIDH: " + arr[i].idh;
-  dados += "\nRegião: " + arr[i].regiao;
+  dados += "\nÁrea: " + arr[i].area;
   info[i] = dados;
 }
 
 document.getElementById('cbxEstados').onchange = function(){
 	var indice = document.getElementById("cbxEstados").selectedIndex;
-  setTimeout(function(){alert('Você selecionou: ' + estados[indice] + "\nDados:\n" + info[indice]);},100);
+  setTimeout(  function(){alert('Você selecionou: ' + estados[indice] + "\n" + info[indice]);}  , 100);
 }
