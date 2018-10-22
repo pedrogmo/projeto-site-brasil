@@ -1,4 +1,4 @@
-const express = require('express'); 
+﻿const express = require('express'); 
 const app = express(); 
 const bodyParser = require('body-parser'); 
 const porta = 3000; //porta padrão 
@@ -44,11 +44,10 @@ rota.get('/candidato', (requisicao, resposta) =>{
 execSQL('SELECT * FROM CANDIDATO', resposta);
 })
 
-rota.patch('/candidato/:id', (requisicao, resposta) =>{ 
+rota.patch('/candidato/:id?', (requisicao, resposta) =>{ 
 	const id = parseInt(requisicao.params.id); 
 	const votosNovos = parseInt(requisicao.body.votos);
 	execSQL(`UPDATE Candidato SET votos = ${votosNovos} WHERE ID=${id}`, resposta); 
-	resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
 })
 
 /*
@@ -88,15 +87,17 @@ execSQL(`INSERT INTO USUARIO(nomeUsuario, email, senha, pontuacao, dataAniversar
 // resposta.end(resposta.json({ mensagem: 'Incluído!'}));
 })
 
-rota.patch('/usuario/:id', (requisicao, resposta) =>{	
-	const id = parseInt(requisicao.params.id);
-	const highscore = parseInt(requisicao.body.pontosNovos);
-	execSQL(`UPDATE Usuario SET pontuacao = ${highscore} WHERE ID=${id}`, resposta); 
+rota.patch('/usuario/:id?/:p?', (requisicao, resposta) =>{	
+	const id = parseInt(requisicao.params.id); 
+	console.log(id);
+	const highscore = parseInt(requisicao.params.p);
+	console.log(highscore);
+	execSQL(`UPDATE Usuario SET pontuacao = ${highscore} WHERE codUsuario=${id}`, resposta); 
 	// resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
 })
 
-rota.delete('/usuario/:id', (requisicao, resposta) =>{ 
-	execSQL('DELETE USUARIO WHERE ID=' + parseInt(requisicao.params.id), resposta); 
+rota.delete('/usuario/:id?', (requisicao, resposta) =>{ 
+	execSQL('DELETE USUARIO WHERE codUsuario=' + parseInt(requisicao.params.id), resposta); 
 	// resposta.end(resposta.json({ mensagem: 'Deletado!'})); 
 })
 
@@ -147,3 +148,10 @@ if (requisicao.params.id)
 	filtro = ' WHERE CODPERGUNTA =' + parseInt(requisicao.params.id);
 execSQL('SELECT * from PERGUNTA' + filtro, resposta);
 })*/
+
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+
+rota.get('/curiosidade', (requisicao, resposta) =>{
+execSQL('SELECT * FROM CURIOSIDADE', resposta);
+})

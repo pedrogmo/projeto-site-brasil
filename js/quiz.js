@@ -85,12 +85,13 @@ document.getElementById("enviar").onclick = function()
     if (pontosUsuario > usuario.pontuacao)
     {
       fim += '\nHighscore atualizado!';
-      document.getElementById("pontos").value = pontosUsuario + "";
+      document.getElementById("pontos").value = sessionStorage.getItem("pontos");
       alert(document.getElementById("pontos").value);
       var xmlhttpp = new XMLHttpRequest();
-      var urll = "http://localhost:3000/usuario/" + usuario.codUsuario;
-      xmlhttpp.open("PATCH", urll, true);
+      var urll = "http://localhost:3000/usuario/" + usuario.codUsuario + "/" + pontosUsuario;
+      xmlhttpp.open('PATCH', urll, true);
       xmlhttpp.send();
+
     }
     alert(fim);
 }
