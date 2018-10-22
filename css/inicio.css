@@ -37,8 +37,9 @@ section#principal{
   font-family: 'Raleway';
   font-size: 20pt;
   font-weight: 600;
-  color: #009c3b;  
+  color: #ffeb3b;  
   margin : 50px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .textos{
