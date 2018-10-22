@@ -87,9 +87,11 @@ insert into Pergunta values(24,'Qual foi o presidente que, acusado de ser comuni
 insert into Pergunta values(25,'Qual é a unidade federativa brasileira que tem menor IDH?','Alagoas',10)
 insert into Pergunta values(26,'Qual é a unidade federativa brasileira que tem menor mortalidade infantil?','São Paulo',5)
 insert into Pergunta values(27,'Qual é a unidade federativa brasileira que tem maior mortalidade infantil?','Amapá',10)
-insert into Pergunta values(28,'Qual foi o primeiro presidente a sofrer um processo de impeachment?','Fernando Collor',5)
+insert into Pergunta values(28,'Qual foi o primeiro presidente a sofrer um pedido de impeachment?','Getúlio Vargas',5)
 insert into Pergunta values(29,'Qual foi o presidente do brasil que entregou uma carta de renúncia, na esperança de que fosse negada, mas foi aceita?','Jânio Quadros',5)
 insert into Pergunta values(30,'Qual foi o nome dado ao Brasil após o Golpe da República?','Estados Unidos do Brasil',10)
+
+drop table Pergunta
 
 create table UsuarioPergunta
 (

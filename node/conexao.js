@@ -1,4 +1,4 @@
-const express = require('express'); 
+﻿st express = require('express'); 
 const app = express(); 
 const bodyParser = require('body-parser'); 
 const porta = 3000; //porta padrão 
@@ -48,7 +48,6 @@ rota.patch('/candidato/:id', (requisicao, resposta) =>{
 	const id = parseInt(requisicao.params.id); 
 	const votosNovos = parseInt(requisicao.body.votos);
 	execSQL(`UPDATE Candidato SET votos = ${votosNovos} WHERE ID=${id}`, resposta); 
-	resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
 })
 
 /*
