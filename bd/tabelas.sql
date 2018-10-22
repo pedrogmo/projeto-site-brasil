@@ -200,3 +200,47 @@ create table Noticia
 	urlImagem varchar(50) not null,
 	link varchar(50) not null
 )
+
+create table Curiosidade
+(
+	codCuriosidade int primary key,
+	texto ntext not null
+)
+
+insert into Curiosidade values(1  , 'O nome oficial do Brasil é “República Federativa do Brasil”.')
+insert into Curiosidade values(2  , 'A palavra “Brasil”, que significa “vermelho como uma brasa”, vem de pau brasil, uma árvore que uma vez cresceu abundantemente ao longo da costa brasileira que produzia um corante vermelho.')
+insert into Curiosidade values(3  , 'Os portugueses nomearam oficialmente o que hoje conhecemos como Terra do Santa Cruz, mas os comerciantes chamaram-na simplesmente Terra do Brasil.')
+insert into Curiosidade values(4  , 'O ponto mais alto do Brasil é o Pico da Neblina, com 2.994 m.')
+insert into Curiosidade values(5  , 'O Brasil é o quinto maior país do mundo por população: 201.009.622 pessoas.')
+insert into Curiosidade values(6  , 'O Brasil é o quinto maior país por massa terrestre no mundo, com 8,45 milhões de quilômetros quadrados.')
+insert into Curiosidade values(7  , 'O prato nacional brasileiro é a feijoada.')
+insert into Curiosidade values(8  , 'O Brasil tornou-se o primeiro país da América do Sul a aceitar mulheres em suas forças armadas, nos anos 80.')
+insert into Curiosidade values(9  , 'A bebida nacional brasileira é a caipirinha (mistura de cana-de-açúcar, misturada com um copo de açúcar, gelo e fatias de limão esmagada).')
+insert into Curiosidade values(10 , 'A canção assinatura da bossa nova brasileira é “A Garota de Ipanema”. A mulher que inspirou a canção é Heloísa Pinheiro.')
+insert into Curiosidade values(11 , 'Os primeiros turistas oficiais chegaram ao Brasil em 1º de janeiro de 1502, como parte de uma viagem exploratória portuguesa liderada por André Gonçalves, que nomeou a baía onde desembarcaram no Rio de Janeiro.')
+insert into Curiosidade values(12 , 'O Brasil é o maior produtor de café do mundo.')
+insert into Curiosidade values(13 , '12 das 30 cidades mais violentas do mundo estão no Brasil.')
+insert into Curiosidade values(14 , 'Brasil é o país com o maior índice de desmatamento do mundo.')
+insert into Curiosidade values(15 , 'A primeira vitória brasileira em Mundiais foi na Copa de 1930 contra a Bolívia. O Brasil ganhou de 4 x 0.')
+insert into Curiosidade values(16 , 'O primeiro título brasileiro só veio em 1958 durante a Copa da Suécia. Foi, aliás, nessa Copa que o mundo conheceu o jovem jogador Edson Arantes do Nascimento, o Pelé.')
+insert into Curiosidade values(17 , 'Das 20 frutas mais consumidas no Brasil, apenas 3 são originárias do país. São elas: o abacaxi, a goiaba e o maracujá.')
+insert into Curiosidade values(18 , 'A árvore mais velha do Brasil é um jequitibá-rosa com 3.020 anos, que se encontra no Parque Estadual de Vassununga, em Santa Rita do Passa Quatro, em São Paulo.')
+insert into Curiosidade values(19 , 'O Rio de Janeiro já foi a capital de Portugal, o que faz da cidade a primeira e única capital européia fora da própria Europa.')
+insert into Curiosidade values(20 , 'A maior comunidade japonesa fora do Japão está no Brasil.')
+insert into Curiosidade values(21 , 'O Brasil tem o segundo maior número de aeroportos do mundo (2.498), atrás apenas dos Estados Unidos.')
+insert into Curiosidade values(22 , 'O Brasil é um dos únicos países do mundo que oferece a cirurgia de mudança de sexo gratuitamente, pelo SUS, desde 2008.')
+insert into Curiosidade values(23 , 'Nas prisões federais no Brasil, os presos podem reduzir até 4 dias no tempo de sentença a cada livro que lerem, com um máximo de 12 obras por ano.')
+insert into Curiosidade values(24 , 'Na prisão de Santa Rita do Sapucaí, no sul de Minas, os detentos podem pedalar em bicicleta fixas, que geram energia para a cidade. Em troca, a cada 3 dias pedalando, a pena é reduzida em 1 dia.')
+insert into Curiosidade values(25 , 'Das 12 cidades-sede da Copa de 2014, 7 figuravam no ranking das 50 cidades mais violentas do mundo.')
+insert into Curiosidade values(26 , 'Mais de 90% dos carros novos produzidos no Brasil usam etanol. É o único país do mundo onde o combustível é oferecido em 100% dos postos.')
+insert into Curiosidade values(27 , 'Um porta-aviões da Marinha chamado Minas Gerais já foi colocado à venda no eBay, mas o anúncio foi removido por ferir as políticas do site.')
+insert into Curiosidade values(28 , 'Com mais de 123 milhões de fiéis, o Brasil ainda é o país com o maior número de católicos do mundo, à frente do México, com 96,4 milhões.')
+insert into Curiosidade values(29 , 'O Brasil foi o primeiro país do mundo a banir as câmaras de bronzeamento.')
+insert into Curiosidade values(30 , 'Em 2001, cientistas descobriram um rio subterrâneo que corre abaixo do rio Amazonas. Batizado de rio Hamza, ele tem 6 mil Km de comprimento e está a 4 mil metros de profundidade. Sua vazão é de 3 mil m3/s, maior que a do Rio São Francisco, que corta Minas e o Nordeste.')
+insert into Curiosidade values(31 , 'O Brasil importou 4,8 milhões de escravos da África, quase metade do total de escravos de todo continente americano. Só na cidade do Rio de Janeiro foram cerca de 2 milhões.')
+insert into Curiosidade values(32 , 'O povo indígena Bororo é o único grupo do mundo onde todas as pessoas têm sangue do tipo “O”.')
+insert into Curiosidade values(33 , 'A Marinha proibiu o desembarque na Ilha da Queimada Grande, no litoral de São Paulo, por causa do grande número de cobras na região: 5 cobras por metro quadrado.')
+insert into Curiosidade values(34 , 'O principal exportador mundial de castanha-do-pará (também conhecida como castanha-do-brasil) é a Bolívia, e não o Brasil.')
+insert into Curiosidade values(35 , 'Mais de 1.000 línguas eram faladas no Brasil antes do descobrimento. Hoje, apenas 180 ainda sobrevivem e apenas 11 são faladas por mais de 5.000 pessoas.')
+insert into Curiosidade values(36 , 'A viola é um instrumento exclusivamente brasileiro.')
+insert into Curiosidade values(37 , 'Segundo uma pesquisa da USP de 2009, 19,3% de todos os homens da cidade do Rio de Janeiro são gays ou bissexuais.')
