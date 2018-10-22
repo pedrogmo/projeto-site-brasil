@@ -1,4 +1,4 @@
-﻿st express = require('express'); 
+﻿const express = require('express'); 
 const app = express(); 
 const bodyParser = require('body-parser'); 
 const porta = 3000; //porta padrão 
@@ -87,16 +87,17 @@ execSQL(`INSERT INTO USUARIO(nomeUsuario, email, senha, pontuacao, dataAniversar
 // resposta.end(resposta.json({ mensagem: 'Incluído!'}));
 })
 
-rota.patch('/usuario/:id?', (requisicao, resposta) =>{	
+rota.patch('/usuario/:id?/:p?', (requisicao, resposta) =>{	
 	const id = parseInt(requisicao.params.id); 
-	const highscore = parseInt(requisicao.body.pontosNovos);
+	console.log(id);
+	const highscore = parseInt(requisicao.params.p);
 	console.log(highscore);
-	execSQL("UPDATE Usuario SET pontuacao = " + highscore + " WHERE ID=" + id, resposta); 
+	execSQL(`UPDATE Usuario SET pontuacao = ${highscore} WHERE codUsuario=${id}`, resposta); 
 	// resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
 })
 
 rota.delete('/usuario/:id?', (requisicao, resposta) =>{ 
-	execSQL('DELETE USUARIO WHERE ID=' + parseInt(requisicao.params.id), resposta); 
+	execSQL('DELETE USUARIO WHERE codUsuario=' + parseInt(requisicao.params.id), resposta); 
 	// resposta.end(resposta.json({ mensagem: 'Deletado!'})); 
 })
 
