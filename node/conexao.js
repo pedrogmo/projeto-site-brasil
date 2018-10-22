@@ -146,3 +146,10 @@ if (requisicao.params.id)
 	filtro = ' WHERE CODPERGUNTA =' + parseInt(requisicao.params.id);
 execSQL('SELECT * from PERGUNTA' + filtro, resposta);
 })*/
+
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+
+rota.get('/curiosidade', (requisicao, resposta) =>{
+execSQL('SELECT * FROM CURIOSIDADE', resposta);
+})
