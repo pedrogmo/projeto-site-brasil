@@ -87,11 +87,9 @@ insert into Pergunta values(24,'Qual foi o presidente que, acusado de ser comuni
 insert into Pergunta values(25,'Qual é a unidade federativa brasileira que tem menor IDH?','Alagoas',10)
 insert into Pergunta values(26,'Qual é a unidade federativa brasileira que tem menor mortalidade infantil?','São Paulo',5)
 insert into Pergunta values(27,'Qual é a unidade federativa brasileira que tem maior mortalidade infantil?','Amapá',10)
-insert into Pergunta values(28,'Qual foi o primeiro presidente a sofrer um pedido de impeachment?','Getúlio Vargas',5)
+insert into Pergunta values(28,'Qual foi o primeiro presidente a sofrer um processo de impeachment?','Fernando Collor',5)
 insert into Pergunta values(29,'Qual foi o presidente do brasil que entregou uma carta de renúncia, na esperança de que fosse negada, mas foi aceita?','Jânio Quadros',5)
 insert into Pergunta values(30,'Qual foi o nome dado ao Brasil após o Golpe da República?','Estados Unidos do Brasil',10)
-
-drop table Pergunta
 
 create table UsuarioPergunta
 (
@@ -197,11 +195,26 @@ insert into Candidato values(13)
 create table Noticia
 (
 	codNoticia int primary key,
-	titulo varchar(50) not null,
-	subtitulo varchar(50) not null,
-	urlImagem varchar(50) not null,
-	link varchar(50) not null
+	titulo ntext not null,
+	subtitulo ntext not null,
+	urlImagem varchar(30) not null,
+	link  ntext not null
 )
+select * from Noticia
+insert into Noticia values(1, 'Veja as propostas de Paulo Guedes, assessor econômico da campanha de Jair Bolsonaro', 'Entre as propostas, economista fala em mudar as regras do orçamento da União, instituir o sistema de capitalização para a Previdência e avançar na agenda de privatizações.', './img/noticias/01.jpg', 'https://g1.globo.com/politica/eleicoes/2018/noticia/2018/10/21/veja-as-propostas-de-paulo-guedes-assessor-economico-da-campanha-de-jair-bolsonaro.ghtml')
+insert into Noticia values(2)
+insert into Noticia values(3)
+insert into Noticia values(4)
+insert into Noticia values(5)
+insert into Noticia values(6)
+insert into Noticia values(7)
+insert into Noticia values(8)
+insert into Noticia values(9)
+insert into Noticia values(10)
+insert into Noticia values(11)
+insert into Noticia values(12)
+insert into Noticia values(13)
+insert into Noticia values(14)
 
 create table Curiosidade
 (
