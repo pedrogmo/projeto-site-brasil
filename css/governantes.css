@@ -1,3 +1,6 @@
+html{
+	scroll-behavior: smooth;
+}
 section#principal table.governantes{
 	border-radius : 50%; 
 }
