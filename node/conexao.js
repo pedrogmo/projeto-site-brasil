@@ -44,9 +44,9 @@ rota.get('/candidato', (requisicao, resposta) =>{
 execSQL('SELECT * FROM CANDIDATO', resposta);
 })
 
-rota.patch('/candidato/:id?', (requisicao, resposta) =>{ 
+rota.patch('/candidato/:id?/:v?', (requisicao, resposta) =>{ 
 	const id = parseInt(requisicao.params.id); 
-	const votosNovos = parseInt(requisicao.body.votos);
+	const votosNovos = parseInt(requisicao.params.v);
 	execSQL(`UPDATE Candidato SET votos = ${votosNovos} WHERE ID=${id}`, resposta); 
 })
 
@@ -93,7 +93,7 @@ rota.patch('/usuario/:id?/:p?', (requisicao, resposta) =>{
 	const highscore = parseInt(requisicao.params.p);
 	console.log(highscore);
 	execSQL(`UPDATE Usuario SET pontuacao = ${highscore} WHERE codUsuario=${id}`, resposta); 
-	// resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
+	resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
 })
 
 rota.delete('/usuario/:id?', (requisicao, resposta) =>{ 
