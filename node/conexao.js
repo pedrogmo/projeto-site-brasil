@@ -68,13 +68,12 @@ rota.get('/usuario', (requisicao, resposta) =>{
 execSQL('SELECT * FROM USUARIO', resposta);
 })
 
-/*
 rota.get('/usuario/:id?', (requisicao, resposta) => {
 let filtro = '';
 if (requisicao.params.id)
 	filtro = ' WHERE CODUSUARIO =' + parseInt(requisicao.params.id);
 execSQL('SELECT * from USUARIO' + filtro, resposta);
-})*/
+})
 
 rota.post('/usuario', (requisicao, resposta) =>{
 const nome = requisicao.body.nome;

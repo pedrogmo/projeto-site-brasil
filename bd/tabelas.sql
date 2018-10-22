@@ -51,6 +51,7 @@ create table Usuario
 	nacionalidade varchar(30) not null
 )
 select * from usuario
+update usuario set pontuacao = 0 where codUsuario = 1
 
 create table Pergunta
 (
@@ -90,7 +91,7 @@ insert into Pergunta values(27,'Qual é a unidade federativa brasileira que tem m
 insert into Pergunta values(28,'Qual foi o primeiro presidente a sofrer um processo de impeachment?','Fernando Collor',5)
 insert into Pergunta values(29,'Qual foi o presidente do brasil que entregou uma carta de renúncia, na esperança de que fosse negada, mas foi aceita?','Jânio Quadros',5)
 insert into Pergunta values(30,'Qual foi o nome dado ao Brasil após o Golpe da República?','Estados Unidos do Brasil',10)
-
+select * from Pergunta
 create table UsuarioPergunta
 (
 	codigo int primary key,

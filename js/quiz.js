@@ -86,10 +86,11 @@ document.getElementById("enviar").onclick = function()
     {
       fim += '\nHighscore atualizado!';
       var xmlhttpp = new XMLHttpRequest();
-      var urll = "http://localhost:3000/usuario/" + usuario.codUsuario + "/" + pontosUsuario;
-      xmlhttpp.open('PATCH', urll, true);
+      var urll = "http://localhost:3000/usuario" + "/" + usuario.codUsuario;
+      xmlhttpp.open('PATCH', urll + "/" + pontosUsuario, true);
       xmlhttpp.send();
-
+      usuario.pontuacao = pontosUsuario;
+      sessionStorage.setItem("usuario", JSON.stringify(usuario));
     }
     alert(fim);
 }
@@ -98,7 +99,7 @@ document.getElementById('resp').onclick = function()
 {
     var texto = '<ol>';
     for(var i = 1; i <= t; i++)
-    texto += '<ul>P: '+p[i]+'<br>R: '+r[i]+'</ul><br>';
+      texto += '<ul>P: '+p[i]+'<br>R: '+r[i]+'</ul><br>';
     texto += '</ol>';
     var janela = window.open("", "_blank", 'height=800,width=1000');
     janela.document.write(texto);

@@ -18,7 +18,7 @@ if (sessionStorage.getItem("logou") == "sim"){
 } else logou = false;
 
 xmlhttp.onreadystatechange=function(){
-  if (this.readyState == 4 && this.status == 200)      
+  if (this.readyState == 4 && this.status == 200)    
     localStorage.setItem("usuarioGeral", this.responseText);
 }
 
