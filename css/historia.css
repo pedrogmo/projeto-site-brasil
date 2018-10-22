@@ -74,7 +74,7 @@
 
 .historia-container .card-historia .content-historia h2{
 	font-family: 'Raleway';
-	font-size: 20pt;
+	font-size: 16pt;
 	font-weight: 600;
 	color: #fff;
 	margin: 0 0 10px;
@@ -83,7 +83,7 @@
 
 .historia-container .card-historia .content-historia span{
 	font-family: 'Raleway';
-	font-size: 18pt;
+	font-size: 14pt;
 	font-weight: 600; 
 	color: #ffeb3b; 
 
@@ -94,7 +94,7 @@
 	padding: 0;
 	padding-top: 10px;
 	color: #fff;
-	font-size: 14pt;
+	font-size: 12pt;
 }
 
 .historia-container .card-historia .content-historia ul{
