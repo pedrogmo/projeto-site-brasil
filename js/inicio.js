@@ -11,5 +11,5 @@ xmlhttp.send();
 window.onload = function(){
 	curiosidades = JSON.parse(localStorage.getItem("vetorCuriosidade"));
 	var indice = Math.floor(Math.random() * curiosidades.length - 1);
-	document.getElementById("curiosidade").innerHTML = curiosidades[indice].texto + "";
+	document.getElementById("curiosidade").innerHTML = '"' + curiosidades[indice].texto + '"';
 }

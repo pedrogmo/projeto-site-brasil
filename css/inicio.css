@@ -34,10 +34,11 @@ section#principal{
 .welcome-thumbnail h2{
   position: relative;
   top: -85px;
-  font-family: 'FlowerPower';
-  font-size: 32pt;
-  font-weight: normal;
+  font-family: 'Raleway';
+  font-size: 20pt;
+  font-weight: 600;
   color: #009c3b;  
+  margin : 50px;
 }
 
 .textos{

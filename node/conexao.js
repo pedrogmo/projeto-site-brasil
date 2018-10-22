@@ -44,7 +44,7 @@ rota.get('/candidato', (requisicao, resposta) =>{
 execSQL('SELECT * FROM CANDIDATO', resposta);
 })
 
-rota.patch('/candidato/:id', (requisicao, resposta) =>{ 
+rota.patch('/candidato/:id?', (requisicao, resposta) =>{ 
 	const id = parseInt(requisicao.params.id); 
 	const votosNovos = parseInt(requisicao.body.votos);
 	execSQL(`UPDATE Candidato SET votos = ${votosNovos} WHERE ID=${id}`, resposta); 
@@ -88,14 +88,15 @@ execSQL(`INSERT INTO USUARIO(nomeUsuario, email, senha, pontuacao, dataAniversar
 // resposta.end(resposta.json({ mensagem: 'Incluído!'}));
 })
 
-rota.patch('/usuario/:id', (requisicao, resposta) =>{	
-	const id = parseInt(requisicao.params.id);
+rota.patch('/usuario/:id?', (requisicao, resposta) =>{	
+	const id = parseInt(requisicao.params.id); 
 	const highscore = parseInt(requisicao.body.pontosNovos);
-	execSQL(`UPDATE Usuario SET pontuacao = ${highscore} WHERE ID=${id}`, resposta); 
+	console.log(highscore);
+	execSQL("UPDATE Usuario SET pontuacao = " + highscore + " WHERE ID=" + id, resposta); 
 	// resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
 })
 
-rota.delete('/usuario/:id', (requisicao, resposta) =>{ 
+rota.delete('/usuario/:id?', (requisicao, resposta) =>{ 
 	execSQL('DELETE USUARIO WHERE ID=' + parseInt(requisicao.params.id), resposta); 
 	// resposta.end(resposta.json({ mensagem: 'Deletado!'})); 
 })
