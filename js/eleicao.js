@@ -41,3 +41,23 @@ function votar(cand){
   	updateVotos.open('PATCH', urlCand + "/" + candidatos[cand - 1].codCandidato + "/" + votosNovos, true);
   	updateVotos.send();
 }
+
+function info(cand){
+	var link = "";
+	switch(cand){
+		case 1: link = "https://pt.wikipedia.org/wiki/Marina_Silva";break;
+		case 2: link = "https://pt.wikipedia.org/wiki/Jair_Bolsonaro";break;
+		case 3: link = "https://pt.wikipedia.org/wiki/Fernando_Haddad";break;
+		case 4: link = "https://pt.wikipedia.org/wiki/Ciro_Gomes";break;
+		case 5: link = "https://pt.wikipedia.org/wiki/Geraldo_Alckmin";break;
+		case 6: link = "https://pt.wikipedia.org/wiki/Alvaro_Dias";break;
+		case 7: link = "https://pt.wikipedia.org/wiki/Henrique_Meirelles";break;
+		case 8: link = "https://pt.wikipedia.org/wiki/Jo%C3%A3o_Amo%C3%AAdo";break;
+		case 9: link = "https://pt.wikipedia.org/wiki/Guilherme_Boulos";break;
+		case 10: link = "https://pt.wikipedia.org/wiki/Jos%C3%A9_Maria_Eymael";break;
+		case 11: link = "https://pt.wikipedia.org/wiki/Cabo_Daciolo";break;
+		case 12: link = "https://pt.wikipedia.org/wiki/Jo%C3%A3o_Goulart_Filho";break;
+		case 13: link = "https://pt.wikipedia.org/wiki/Vera_L%C3%BAcia_Salgado";break;		
+	}
+	location.href = link;
+}
