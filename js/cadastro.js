@@ -25,9 +25,9 @@ document.getElementById("cadastro").onsubmit = function(){
 	}
 	else{
 		var emailJaExiste = false;
-		arr = JSON.parse(localStorage.getItem("usuarioGeral"));
-		for(var i=0; i<arr.length; i++)
-			if(email == arr[i].email)
+		var usuarios = JSON.parse(localStorage.getItem("usuarioGeral"));
+		for(var i=0; i<usuarios.length; i++)
+			if(email == usuarios[i].email)
 			{
 				alert('Email já existente no site');
 				emailJaExiste = true;

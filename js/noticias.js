@@ -5,16 +5,16 @@ function trocarImagem(img){
 }
 
 var arr;
-var xmlhttp = new XMLHttpRequest();
-var url = "http://localhost:3000/noticia";
+var xmlNoticias = new XMLHttpRequest();
+var urlNoticias = "http://localhost:3000/noticia";
 
-xmlhttp.onreadystatechange=function(){
+xmlNoticias.onreadystatechange=function(){
   if (this.readyState == 4 && this.status == 200)
     localStorage.setItem("noticias", this.responseText);	
 }
 arr = JSON.parse(this.localStorage.getItem("noticias"));
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
+xmlNoticias.open("GET", urlNoticias, true);
+xmlNoticias.send();
 
 
 for(var i = 0; i < arr.length; i++)

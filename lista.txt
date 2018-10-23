@@ -2,6 +2,7 @@ Design
 
 * perfil.html
 
+
 Banco de Dados
 
 * Inserção de dados na tabela Noticia.
@@ -11,19 +12,15 @@ Banco de Dados
 
 JavaScript
 
-* noticias.js: rota get de select para tabela Noticia
-* eleicao.js: rota post de update de votos de Candidato.
-* quiz.js: rota post de update de pontos do Usuario no quiz
 * geral.js: código da aba de pesquisa.
+* perfil.js: rota delete de conta.
+* perfil.js: rota update de senha.
 
 
 Ideias e Sugestões
 
 
 * Melhorar aba eleicao.
-* Dividir a aba historia
- e melhorá-la com imagens.
-* Incluir vetor de curiosidades pelo banco de dados.
 * Botar width da barra em %.
 * Barra de pesquisa procura usuários, mostra ranking de pontuação.
 * Modal para exibir informações da bandeira.

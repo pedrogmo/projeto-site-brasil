@@ -26,21 +26,21 @@ function inicioQuiz(){
     r[0] = "";
     pontos[0] = 0;
 
-    var xmlhttp = new XMLHttpRequest();
-    var url = "http://localhost:3000/pergunta";
-    xmlhttp.onreadystatechange=function(){
+    var xmlPerguntas = new XMLHttpRequest();
+    var urlPerguntas = "http://localhost:3000/pergunta";
+    xmlPerguntas.onreadystatechange=function(){
       if (this.readyState == 4 && this.status == 200)
         localStorage.setItem("perguntaQuiz", this.responseText);
     }
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
+    xmlPerguntas.open("GET", urlPerguntas, true);
+    xmlPerguntas.send();
 
-    var arr = JSON.parse(localStorage.getItem("perguntaQuiz"));
+    var vetPerguntas = JSON.parse(localStorage.getItem("perguntaQuiz"));
     for(var i = 0; i < t; i++)
     {
-      p[i + 1] = arr[i].texto;
-      r[i + 1] = arr[i].resposta;
-      pontos[i + 1] = arr[i].pontos;
+      p[i + 1] = vetPerguntas[i].texto;
+      r[i + 1] = vetPerguntas[i].resposta;
+      pontos[i + 1] = vetPerguntas[i].pontos;
       var id = i + 1 + "";
       document.getElementById(id).innerHTML = "<font color='#002776'>" + (i + 1) + ". </font>" + p[i + 1];
     }
@@ -85,12 +85,13 @@ document.getElementById("enviar").onclick = function()
     if (pontosUsuario > usuario.pontuacao)
     {
       fim += '\nHighscore atualizado!';
-      var xmlhttpp = new XMLHttpRequest();
-      var urll = "http://localhost:3000/usuario" + "/" + usuario.codUsuario;
-      xmlhttpp.open('PATCH', urll + "/" + pontosUsuario, true);
-      xmlhttpp.send();
+      var updatePontos = new XMLHttpRequest();
+      var urlUsuarios = "http://localhost:3000/usuario" + "/" + usuario.codUsuario;
+      updatePontos.open('PATCH', urlUsuarios + "/" + pontosUsuario, true);
+      updatePontos.send();
       usuario.pontuacao = pontosUsuario;
       sessionStorage.setItem("usuario", JSON.stringify(usuario));
+      document.getElementById('highScore').innerHTML = "&nbsp;&nbsp;&nbsp;<i class='fas fa-trophy'></i>&nbsp;&nbsp;&nbsp;Highscore do quiz: " + usuario.pontuacao;
     }
     alert(fim);
 }

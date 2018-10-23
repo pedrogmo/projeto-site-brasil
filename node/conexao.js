@@ -47,16 +47,17 @@ execSQL('SELECT * FROM CANDIDATO', resposta);
 rota.patch('/candidato/:id?/:v?', (requisicao, resposta) =>{ 
 	const id = parseInt(requisicao.params.id); 
 	const votosNovos = parseInt(requisicao.params.v);
-	execSQL(`UPDATE Candidato SET votos = ${votosNovos} WHERE ID=${id}`, resposta); 
+	console.log(id);
+	console.log(votosNovos);
+	execSQL(`UPDATE Candidato SET votos = ${votosNovos} WHERE CODCANDIDATO=${id}`, resposta); 
 })
 
-/*
 rota.get('/candidato/:id?', (requisicao, resposta) => {
 let filtro = '';
 if (requisicao.params.id)
 	filtro = ' WHERE CODCANDIDATO =' + parseInt(requisicao.params.id);
 execSQL('SELECT * from CANDIDATO' + filtro, resposta);
-})*/
+})
 
 
 

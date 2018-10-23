@@ -1,5 +1,5 @@
 var usuario;
-
+var urlMudanca = "http://localhost:3000/usuario/" + usuario.codUsuario;
 window.onload = function(){
 	usuario = JSON.parse(sessionStorage.getItem("usuario"));
 	document.getElementById("nomeUsuario").innerHTML = usuario.nomeUsuario;
@@ -10,15 +10,13 @@ window.onload = function(){
 }
 
 document.getElementById("trocarSenha").onclick = function(){
-	var xmlhttpp = new XMLHttpRequest();
-    var urll = "http://localhost:3000/usuario/" + usuario.codUsuario;
-    xmlhttpp.open("PATCH", urll, true);
-    xmlhttpp.send();
+	var updateSenha = new XMLHttpRequest();
+    updateSenha.open("PATCH", urlMudanca, true);
+    updateSenha.send();
 }
 
 document.getElementById("excluirConta").onclick = function(){
 	var xmlhttp = new XMLHttpRequest();
-    var url = "http://localhost:3000/usuario/" + usuario.codUsuario;
-    xmlhttp.open("DELETE", url, true);
+    xmlhttp.open("DELETE", urlMudanca, true);
     xmlhttp.send();
 }

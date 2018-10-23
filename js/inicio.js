@@ -1,12 +1,12 @@
 var curiosidades;
-var xmlhttp = new XMLHttpRequest();
-var url = "http://localhost:3000/curiosidade";
-xmlhttp.onreadystatechange=function(){
+var xmlCuriosiades = new XMLHttpRequest();
+var urlCuriosiades = "http://localhost:3000/curiosidade";
+xmlCuriosiades.onreadystatechange=function(){
   if (this.readyState == 4 && this.status == 200)      
     localStorage.setItem("vetorCuriosidade", this.responseText);
 }
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
+xmlCuriosiades.open("GET", urlCuriosiades, true);
+xmlCuriosiades.send();
 
 window.onload = function(){
 	curiosidades = JSON.parse(localStorage.getItem("vetorCuriosidade"));
