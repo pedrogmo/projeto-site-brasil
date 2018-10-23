@@ -65,11 +65,13 @@
     </div>
 
     <h2>Mapa do Brasil</h2>
-	<p class = "centro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bem-vindo à aba Mapa, onde é possível explorar o Brasil e selecionar seu estado para saber algumas curiosidades a mais sobre ele.</p> 
+	<p class = "centro">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bem-vindo à aba Mapa, onde é possível explorar o Brasil e selecionar seu estado para saber algumas curiosidades a mais sobre ele.</p>
+    <br> 
     <form method = "POST">
     <div id = "map"></div><br><br>
     <h2>Selecione um estado</h2>
-    <select id = "cbxEstados">
+    <select id = "cbxEstados" required>
+        <option selected disabled>Selecione um Estado</option>
     	<option>Acre</option>
     	<option>Alagoas</option>
     	<option>Amapá</option>

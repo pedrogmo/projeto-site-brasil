@@ -1,3 +1,17 @@
+body{
+	user-select: text;
+}
+
+.links{
+	color: rgb(37, 204, 247);
+}
+
+.links:hover{
+	transition: 0.5s;
+	background: rgb(37, 204, 247, 0.2);
+	text-decoration: underline;
+}
+
 .historia-container{
 	position: relative;
 	width: 90%;
