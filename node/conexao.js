@@ -93,7 +93,8 @@ rota.patch('/usuario/:id?/:p?', (requisicao, resposta) =>{
 })
 
 rota.delete('/usuario/:id?', (requisicao, resposta) =>{ 
-	execSQL('DELETE USUARIO WHERE codUsuario=' + parseInt(requisicao.params.id), resposta); 
+	const codigo = parseInt(requisicao.params.id);
+	execSQL(`DELETE USUARIO WHERE codUsuario = ${codigo}`, resposta); 
 	// resposta.end(resposta.json({ mensagem: 'Deletado!'})); 
 })
 

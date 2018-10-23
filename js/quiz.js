@@ -1,4 +1,4 @@
-var acertos, erros, respostas, o, p, r, pontos, pontosUsuario, t, usuario;
+var acertos, erros, respostas, o, p, r, pontos, pontosUsuario, t, usuarioQuiz;
 
 window.onload = function() //vai dar ruim
 {
@@ -79,17 +79,17 @@ document.getElementById("enviar").onclick = function()
     }
     document.getElementById('acertos').innerHTML = "Acertos: " + acertos;
     document.getElementById('erros').innerHTML = "Erros: " + erros;
-    usuario = JSON.parse(sessionStorage.getItem("usuario"));
-    var fim = 'Fim do Quiz.' + '\nUsuário: ' + usuario.nomeUsuario + '\nAcertos: ' + acertos + '\nPontos: ' + pontosUsuario + '\nHighscore: ' + usuario.pontuacao;
-    if (pontosUsuario > usuario.pontuacao)
+    usuarioQuiz = JSON.parse(sessionStorage.getItem("usuario"));
+    var fim = 'Fim do Quiz.' + '\nUsuário: ' + usuarioQuiz.nomeUsuario + '\nAcertos: ' + acertos + '\nPontos: ' + pontosUsuario + '\nHighscore: ' + usuarioQuiz.pontuacao;
+    if (pontosUsuario > usuarioQuiz.pontuacao)
     {
       fim += '\nHighscore atualizado!';
       var updatePontos = new XMLHttpRequest();
-      var urlUsuarios = "http://localhost:3000/usuario" + "/" + usuario.codUsuario;
+      var urlUsuarios = "http://localhost:3000/usuario" + "/" + usuarioQuiz.codUsuario;
       updatePontos.open('PATCH', urlUsuarios + "/" + pontosUsuario, true);
       updatePontos.send();
-      usuario.pontuacao = pontosUsuario;
-      sessionStorage.setItem("usuario", JSON.stringify(usuario));
+      usuarioQuiz.pontuacao = pontosUsuario;
+      sessionStorage.setItem("usuario", JSON.stringify(usuarioQuiz));
       document.getElementById('highScore').innerHTML = "&nbsp;&nbsp;&nbsp;<i class='fas fa-trophy'></i>&nbsp;&nbsp;&nbsp;Highscore do quiz: " + usuario.pontuacao;
     }
     alert(fim);

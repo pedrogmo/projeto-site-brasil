@@ -50,8 +50,8 @@ create table Usuario
 	dataAniversario varchar(10) not null,
 	nacionalidade varchar(30) not null
 )
+
 select * from usuario
-update usuario set pontuacao = 0 where codUsuario = 1
 
 create table Pergunta
 (

@@ -12,6 +12,7 @@ var url = "http://localhost:3000/usuario";
 if (sessionStorage.getItem("logou") == "sim"){
 	logou = true;
 	usuario = JSON.parse(sessionStorage.getItem("usuario"));
+	document.getElementById("btnLogin").innerHTML = "CONTA";
 	document.getElementById("nomeUser").innerHTML = usuario.nomeUsuario;
 	document.getElementById("emailUser").innerHTML = usuario.email;
 	document.getElementById('highScore').innerHTML += usuario.pontuacao;

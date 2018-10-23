@@ -37,7 +37,7 @@ document.getElementById("cadastro").onsubmit = function(){
 			}
 		if(!emailJaExiste)
 		{
-			alert('Conta criada');
+			alert('Conta criada');			
 			return true;
 		}
 	}
