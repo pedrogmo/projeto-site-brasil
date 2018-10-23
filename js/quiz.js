@@ -2,7 +2,6 @@ var acertos, erros, respostas, o, p, r, pontos, pontosUsuario, t, usuario;
 
 window.onload = function() //vai dar ruim
 {
-    document.getElementById("pontos").style.visibility = "hidden";
     document.getElementById("enviar").style.visibility = "hidden";
     document.getElementById("resp").style.visibility = "hidden";
     if (sessionStorage.getItem("logou") == "sim")

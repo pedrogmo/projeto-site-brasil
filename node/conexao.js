@@ -47,8 +47,6 @@ execSQL('SELECT * FROM CANDIDATO', resposta);
 rota.patch('/candidato/:id?/:v?', (requisicao, resposta) =>{ 
 	const id = parseInt(requisicao.params.id); 
 	const votosNovos = parseInt(requisicao.params.v);
-	console.log(id);
-	console.log(votosNovos);
 	execSQL(`UPDATE Candidato SET votos = ${votosNovos} WHERE CODCANDIDATO=${id}`, resposta); 
 })
 
@@ -89,11 +87,9 @@ execSQL(`INSERT INTO USUARIO(nomeUsuario, email, senha, pontuacao, dataAniversar
 
 rota.patch('/usuario/:id?/:p?', (requisicao, resposta) =>{	
 	const id = parseInt(requisicao.params.id); 
-	console.log(id);
 	const highscore = parseInt(requisicao.params.p);
-	console.log(highscore);
 	execSQL(`UPDATE Usuario SET pontuacao = ${highscore} WHERE codUsuario=${id}`, resposta); 
-	resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
+	// resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
 })
 
 rota.delete('/usuario/:id?', (requisicao, resposta) =>{ 
@@ -109,13 +105,13 @@ rota.get('/estado', (requisicao, resposta) =>{
 execSQL('SELECT * FROM ESTADO', resposta);
 })
 
-/*
+
 rota.get('/estado/:id?', (requisicao, resposta) => {
 let filtro = '';
 if (requisicao.params.id)
 	filtro = ' WHERE CODESTADO =' + parseInt(requisicao.params.id);
 execSQL('SELECT * from ESTADO' + filtro, resposta);
-})*/
+})
 
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -126,13 +122,13 @@ rota.get('/noticia', (requisicao, resposta) =>{
 execSQL('SELECT * FROM NOTICIA', resposta);
 })
 
-/*
+
 rota.get('/noticia/:id?', (requisicao, resposta) => {
 let filtro = '';
 if (requisicao.params.id)
 	filtro = ' WHERE CODNOTICIA =' + parseInt(requisicao.params.id);
 execSQL('SELECT * from NOTICIA' + filtro, resposta);
-})*/
+})
 
 /////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
@@ -141,13 +137,13 @@ rota.get('/pergunta', (requisicao, resposta) =>{
 execSQL('SELECT * FROM PERGUNTA', resposta);
 })
 
-/*
+
 rota.get('/pergunta/:id?', (requisicao, resposta) => {
 let filtro = '';
 if (requisicao.params.id)
 	filtro = ' WHERE CODPERGUNTA =' + parseInt(requisicao.params.id);
 execSQL('SELECT * from PERGUNTA' + filtro, resposta);
-})*/
+})
 
 /////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
