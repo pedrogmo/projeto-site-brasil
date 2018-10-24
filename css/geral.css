@@ -324,13 +324,15 @@ ul, ol{
 }
 
 .campoSenha{
+  position : relative; 
   font-size: 14pt;
 }
 
 .campoSenha i{
-  position      : relative;
-  float         : right; 
-  right         : 3%; 
+  position      : absolute;
+  float         : right;
+  top           : 20%;  
+  right         : 5%; 
   color         : #2b2c33;   
 }
 
