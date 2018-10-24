@@ -1,6 +1,8 @@
 Design
 
-* perfil.html
+* historia.html: ajustar imagens.
+* eleicoes.html: ajustar div candidato.
+* noticias.html: fazer slider de principais notícias e divs dos sites.
 
 
 Banco de Dados
@@ -13,7 +15,6 @@ Banco de Dados
 JavaScript
 
 * geral.js: código da aba de pesquisa.
-* perfil.js: rota delete de conta.
 * perfil.js: rota update de senha.
 
 
