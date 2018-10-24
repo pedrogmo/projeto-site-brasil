@@ -13,12 +13,12 @@ window.onload = function(){
 	document.getElementById("pontuacaoUsuario").value = usuarioPerfil.pontuacao;
 }
 
-document.getElementById("trocarSenha").onclick = function(){
-	/*
+document.getElementById("salvarAlteracoes").onclick = function(){
+	
 	var updateSenha = new XMLHttpRequest();
     updateSenha.open("PATCH", urlMudanca, true);
     updateSenha.send();
-    */
+    
 }
 
 document.getElementById("excluirConta").onclick = function(){
@@ -53,4 +53,8 @@ function readURL(input)
 		};
 		reader.readAsDataURL(input.files[0]);
 	}
+}
+
+document.getElementById("mudarSenha").onclick = function(){
+	document.getElementById("novaSenha").style.visibility = "visible";
 }

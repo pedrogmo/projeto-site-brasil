@@ -3,6 +3,10 @@
   src: url('../fonts/Flower Power Personal Use.ttf');
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
 	margin: auto;
 	max-width: 100%;
@@ -93,7 +97,8 @@ body{
 .logo-text{
 	margin : 15px; 
 	width  : 196px;
-	height : 55px;  
+	height : 55px; 
+  cursor : pointer;  
 }
 
 .logo-text:hover{
@@ -320,21 +325,19 @@ ul, ol{
 
 .campoSenha{
   font-size: 14pt;
-  position      : relative;
 }
 
 .campoSenha i{
-  position      : absolute;
+  position      : relative;
   float         : right; 
-  right         : 5%; 
-  color         : #2b2c33; 
-  top           : 20%;  
+  right         : 3%; 
+  color         : #2b2c33;   
 }
 
 .campoSenha i:hover{
   transition : 0.5s; 
   color      : #009c3b;
-  cursor     : pointer;
+  cursor     : pointer;  
 }
 
 /*CUSTOMIZAÇÃO DA SIDEBAR*/

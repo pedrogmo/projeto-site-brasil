@@ -8,7 +8,9 @@
 	width         : 70%;  
 	padding-top   : 25px;
 	padding-left  : 25px;
-	padding-right : 25px;   
+	padding-right : 25px; 
+	overflow      : hidden;
+	height        : 775px;     
 }
 
 .container-photo{
@@ -84,7 +86,7 @@
 	position : relative;
 	top      : 0; 
 	left     : 40%;
-	transform: translateY(-62.5%); 
+	transform: translateY(-52.5%); 
 	width    : 50%; 
 }
 
@@ -102,6 +104,18 @@
 	color: #2b2c33;
 }
 
+.input-container a{
+	font-family: 'Raleway';
+	font-size: 12pt;
+	margin: 5px;
+	color: #2b2c33;
+}
+
+.input-container a:hover{
+	cursor: pointer;
+	text-decoration: underline;  
+}
+
 .input-container input{
 	font-family: 'Raleway';
 	font-size: 12pt; 
@@ -116,11 +130,11 @@
 
 .botoes{
 	position  : absolute;
-	transform : translate(25%, 200%); 
+	transform : translate(25%, 100%); 
 	width     : 100%; 
 }
 
-#trocarSenha{
+#salvarAlteracoes{
 	font-family      : 'Raleway';
 	font-size        : 14pt;
 	color            : white;
@@ -136,7 +150,7 @@
 	cursor           : pointer
 }
 
-#trocarSenha:hover{
+#salvarAlteracoes:hover{
 	background-color : #1ed760; 
 }
 
@@ -158,4 +172,13 @@
 
 #excluirConta:hover{
 	background-color : #ee5253;
+}
+
+#novaSenha{
+	visibility: hidden;
+}
+
+.separator{
+	position: absolute;
+	/*bottom: */
 }
