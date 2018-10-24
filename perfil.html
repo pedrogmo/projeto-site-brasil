@@ -4,7 +4,8 @@
 	<meta name="viewport" content="initial-scale=1.0">
 	<meta charset="utf-8">
 	<title>Brasilee | Perfil</title>    
-    <link rel="stylesheet" type="text/css" href="./css/geral.css">	    
+    <link rel="stylesheet" type="text/css" href="./css/geral.css">	 
+    <link rel="stylesheet" type="text/css" href="./css/perfil.css">   
     <link rel="icon" href="./img/logotipos/logo-site.ico" type="image/gif" sizes="16x16">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -65,15 +66,45 @@
     </div>
     
     <div id = "usuario">
-	    <img id = "imagemUsuario" src="">
-	    <p id = "nomeUsuario"></p>
-	    <p id = "emailUsuario"></p>
-	    <p id = "aniversarioUsuario"></p>
-	    <p id = "paisUsuario"></p>
-	    <p id = "pontuacaoUsuario"></p>
-	    <button id = "trocarSenha">Trocar Senha</button>
-	    <button id = "excluirConta">Excluir conta</button>
-	</div>	
+    	<div class="container-photo">
+    		<i class="fas fa-images" id="btn-choose"></i>
+    		<img class="user-photo" id="user-photo" src="./img/usuario.jpeg">
+    		<label class="lb-choose">MUDAR <br> FOTO</label>
+    		<div class="front-photo">
+    			<input type="file" id="choose-photo" onchange="readURL(this);">
+    		</div>
+    	</div>
+    	<div class="container-data">
+	    	<div class="input-container">
+	    		<span>NOME</span>
+	    		<input type="text" id="nomeUsuario">
+	    	</div>
+	    	<div class="input-container">
+	    		<span>EMAIL</span>
+	    		<input type="email" id="emailUsuario">
+	    	</div>
+	    	<div class="input-container">
+	    		<span>SENHA</span>
+	    		<input type="password" id="senhaUsuario">
+	    	</div>
+	    	<div class="input-container">
+	    		<span>ANIVERSÁRIO</span>
+	    		<input type="text" id="aniversarioUsuario">
+	    	</div>
+	    	<div class="input-container">
+	    		<span>PAÍS</span>
+	    		<input type="text" id="paisUsuario">
+	    	</div>
+	    	<div class="input-container">
+	    		<span>PONTUAÇÃO</span>
+	    		<input type="text" id="pontuacaoUsuario">
+	    	</div>
+	    	<div class="botoes">
+		    	<button id="trocarSenha">Trocar senha</button>
+			    <button id="excluirConta">Excluir conta</button>
+	    	</div>		    
+		</div>	
+	</div>
 </section><br><br><br>
 
 	<footer class="footer">

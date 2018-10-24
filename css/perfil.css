@@ -1,0 +1,161 @@
+#usuario{
+	position      : relative;
+	top           : 0;
+	left          : 50%;
+	transform     : translate(-50%, 5%); 
+	border-radius : 5px;
+	box-shadow    : 0 5px 15px rgba(0, 0, 0, 0.5);
+	width         : 70%;  
+	padding-top   : 25px;
+	padding-left  : 25px;
+	padding-right : 25px;   
+}
+
+.container-photo{
+	position : relative;
+	width    : 25%;
+	height   : 25%;
+	margin   : 5%;  
+}
+
+.container-photo:hover #btn-choose{
+	transition : 0.5s; 
+	visibility : visible;  
+}
+
+.container-photo i{
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 3%;
+	padding: 10px;
+	font-size: 18pt;
+	background: #1db954;
+	color: #fff;
+	border-radius: 50%;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.container-photo i:hover{
+	transition: 0.5s;
+	transform: scale(1.1);
+	background: #1ed760;
+	cursor: pointer;
+}
+
+.user-photo{
+	position      : relative; 
+	top           : 0;
+	left          : 0; 
+	width         : 100%;
+	height        : 100%;  
+	border-radius : 5px;
+	box-shadow    : 0 5px 15px rgba(0, 0, 0, 0.25); 
+	z-index       : -1; 
+}
+
+#choose-photo{ 
+	visibility : hidden; 
+}
+
+.container-photo i:hover + .user-photo{
+	transition: 1s;
+	filter: brightness(65%);
+}
+
+.lb-choose{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Raleway';
+	font-size: 16pt;
+	font-weight: 900;
+	text-align: center;
+	color: #fff;
+	visibility: hidden;
+}
+
+.container-photo i:hover ~ .lb-choose{
+	visibility: visible;
+}
+
+.container-data{
+	position : relative;
+	top      : 0; 
+	left     : 40%;
+	transform: translateY(-62.5%); 
+	width    : 50%; 
+}
+
+.input-container{
+	position: relative;
+	width: 100%;
+	margin-bottom: 20px; 
+}
+
+.input-container span{
+	font-family: 'Raleway';
+	font-size: 12pt;
+	font-weight: 800;
+	margin: 5px;
+	color: #2b2c33;
+}
+
+.input-container input{
+	font-family: 'Raleway';
+	font-size: 12pt; 
+	width: 100%;
+	background: #fff;
+	padding: 10px;
+	box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.15);
+	border: none;
+	border-radius: 5px;
+	outline: none; 
+}
+
+.botoes{
+	position  : absolute;
+	transform : translate(25%, 200%); 
+	width     : 100%; 
+}
+
+#trocarSenha{
+	font-family      : 'Raleway';
+	font-size        : 14pt;
+	color            : white;
+	background-color : #1db954;
+	padding          : 10px;
+	margin-left      : 20px;    
+	width            : 35%;
+	border           : none; 
+	border-radius    : 5px;    
+	box-shadow       : 2px 2px 5px rgba(0, 0, 0, 0.5);
+	outline          : none;
+	transition       : 0.5s;
+	cursor           : pointer
+}
+
+#trocarSenha:hover{
+	background-color : #1ed760; 
+}
+
+#excluirConta{
+	font-family      : 'Raleway';
+	font-size        : 14pt;
+	color            : white;
+	background-color : #ff6b6b;
+	padding          : 10px;
+	margin-left      : 20px;    
+	width            : 35%;
+	border           : none; 
+	border-radius    : 5px;    
+	box-shadow       : 2px 2px 5px rgba(0, 0, 0, 0.5);
+	outline          : none;
+	transition       : 0.5s;
+	cursor           : pointer 
+}
+
+#excluirConta:hover{
+	background-color : #ee5253;
+}
