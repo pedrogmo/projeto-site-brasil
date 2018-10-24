@@ -1,14 +1,12 @@
 html{
 	scroll-behavior: smooth;
 }
-section#principal table.governantes{
-	border-radius : 50%; 
-}
+
 section#principal .governantes{
 	margin: auto;
-	border: none;
 	font-size: 20px;
 	border-collapse: collapse;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
 }
 
 section#principal .governantes img.govern:hover{
@@ -16,15 +14,20 @@ section#principal .governantes img.govern:hover{
 }
 
 section#principal .governantes td{
-	padding: 30px;
-	border: 1px solid black;
+	border: 1px solid rgba(0, 0, 0, 0.15);
 	text-align: center;
+	padding: 30px;
 }
 
 section#principal .governantes td.cabecalho{
-	font-weight: bold;
-	background-color: white;
-	color: black;
+	padding: 10px;
+}
+
+section#principal .governantes tr.cabecalho-tabela{
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	color: black; 
+	font-size: 18pt;
 }
 
 section#principal .governantes td img{
@@ -40,32 +43,36 @@ section#principal .governantes td img:hover{
 
 section#principal .governantes tr.imperio
 {
-	background: #F0E68C;
+	background: #fed330;
 }
 
 section#principal .governantes tr.r_velha
 {
-	background: #ccccff;
+	background: #45aaf2;
+	color: #fff;
 }
 
 section#principal .governantes tr.era_vargas
 {
-	background: #FFA500
+	background: #fd9644;
+	color: #fff;
 }
 
 section#principal .governantes tr.r_popul
 {
-	background: #8FBC8F
+	background: #20bf6b;
+	color: #fff;
 }
 
 section#principal .governantes tr.r_militar
 {
-	background: #A0522D
+	background: #e74c3c;
+	color: #fff;
 }
 
 section#principal .governantes tr.r_nova
 {
-	background: #D3D3D3
+	background: #d1d8e0;
 }
 
 
@@ -83,32 +90,32 @@ section#principal .governantes_leg td#leg{
 }
 
 section#principal .governantes_leg td.leg_imperio{
-	background : #F0E68C;
+	background : #fed330;
 	cursor     : pointer; 
 }
 
 section#principal .governantes_leg td.leg_rvelha{
-	background : #ccccff;
+	background : #45aaf2;
 	cursor     : pointer; 
 }
 
 section#principal .governantes_leg td.leg_vargas{
-	background : #FFA500;
+	background : #fd9644;
 	cursor     : pointer; 
 }
 
 section#principal .governantes_leg td.leg_popul{
-	background : #8FBC8F;
+	background : #20bf6b;
 	cursor     : pointer; 
 }
 
 section#principal .governantes_leg td.leg_militar{
-	background : #A0522D;
+	background : #e74c3c;
 	cursor     : pointer; 
 }
 
 section#principal .governantes_leg td.leg_nova{
-	background : #D3D3D3;
+	background : #d1d8e0;
 	cursor     : pointer; 
 }
 

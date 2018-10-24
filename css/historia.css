@@ -2,11 +2,11 @@ body{
 	user-select: text;
 }
 
-.links{
+a.links{
 	color: rgb(37, 204, 247);
 }
 
-.links:hover{
+a.links:hover{
 	transition: 0.5s;
 	background: rgb(37, 204, 247, 0.2);
 	text-decoration: underline;
@@ -14,13 +14,13 @@ body{
 
 .historia-container{
 	position: relative;
-	width: 90%;
+	width: 95%;
 	margin: 150px auto 0;
 	height: auto;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: 440px;
-	grid-gap: 40px;
+	grid-gap: 20px;
 }
 
 .historia-container .card-historia{

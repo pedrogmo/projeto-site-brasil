@@ -40,6 +40,7 @@ function votar(cand){
 	var updateVotos = new XMLHttpRequest();
   	updateVotos.open('PATCH', urlCand + "/" + candidatos[cand - 1].codCandidato + "/" + votosNovos, true);
   	updateVotos.send();
+  	location.reload();
 }
 
 function info(cand){

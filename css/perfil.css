@@ -13,8 +13,8 @@
 
 .container-photo{
 	position : relative;
-	width    : 25%;
-	height   : 25%;
+	width    : 250px;
+	height   : 250px;
 	margin   : 5%;  
 }
 
@@ -47,8 +47,8 @@
 	position      : relative; 
 	top           : 0;
 	left          : 0; 
-	width         : 100%;
-	height        : 100%;  
+	max-width     : 100%;
+	max-height    : 100%;  
 	border-radius : 5px;
 	box-shadow    : 0 5px 15px rgba(0, 0, 0, 0.25); 
 	z-index       : -1; 
@@ -109,7 +109,7 @@
 	background: #fff;
 	padding: 10px;
 	box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.15);
-	border: none;
+	border: 1px solid lightgray;
 	border-radius: 5px;
 	outline: none; 
 }
