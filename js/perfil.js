@@ -6,11 +6,11 @@ window.onload = function(){
 	// 	location.href = "inicio.html";
 	usuarioPerfil = JSON.parse(sessionStorage.getItem("usuario"));
 	urlMudanca = "http://localhost:3000/usuario/" + usuarioPerfil.codUsuario;
-	document.getElementById("nomeUsuario").innerHTML = usuarioPerfil.nomeUsuario;
-	document.getElementById("emailUsuario").innerHTML = usuarioPerfil.email;
-	document.getElementById("aniversarioUsuario").innerHTML = usuarioPerfil.dataAniversario;
-	document.getElementById("paisUsuario").innerHTML = usuarioPerfil.nacionalidade;
-	document.getElementById("pontuacaoUsuario").innerHTML = usuarioPerfil.pontuacao;
+	document.getElementById("nomeUsuario").value = usuarioPerfil.nomeUsuario;
+	document.getElementById("emailUsuario").value = usuarioPerfil.email;
+	document.getElementById("aniversarioUsuario").value = usuarioPerfil.dataAniversario;
+	document.getElementById("paisUsuario").value = usuarioPerfil.nacionalidade;
+	document.getElementById("pontuacaoUsuario").value = usuarioPerfil.pontuacao;
 }
 
 document.getElementById("trocarSenha").onclick = function(){

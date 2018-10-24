@@ -48,7 +48,7 @@ create table Usuario
 	senha varchar(30) not null,
 	pontuacao int not null,
 	dataAniversario varchar(10) not null,
-	nacionalidade varchar(30) not null
+	nacionalidade varchar(30) not null,
 )
 
 select * from usuario
