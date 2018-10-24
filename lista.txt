@@ -1,6 +1,5 @@
 Design
 
-* historia.html: descrição de períodos históricos + imagens.
 * eleicoes.html: ajustar div candidato.
 * noticias.html: fazer slider de principais notícias e divs dos sites.
 
@@ -20,10 +19,6 @@ JavaScript
 
 Ideias e Sugestões
 
-
-* Melhorar aba eleicao.
 * Botar width da barra em %.
 * Barra de pesquisa procura usuários, mostra ranking de pontuação.
 * Modal para exibir informações da bandeira.
-
-"o site ta quase pronto".

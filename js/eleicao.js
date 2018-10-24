@@ -1,3 +1,4 @@
+var pegouBD = false;;
 var candidatos;
 var xmlCandidatos = new XMLHttpRequest();
 var urlCand = "http://localhost:3000/candidato";
@@ -15,6 +16,9 @@ if (sessionStorage.getItem("logou") != "sim")
 	$('button.btnVotar').css('filter', 'brightness(60%)');
 	alert('Logue no site para votar');
 }
+
+if (localStorage.setItem("candidatos") != null)
+	pegouBD = true;
 
 for(var i = 0; i < candidatos.length; i++)
 {
@@ -44,21 +48,23 @@ function votar(cand){
 }
 
 function info(cand){
-	var link = "";
-	switch(cand){
-		case 1: link = "https://pt.wikipedia.org/wiki/Marina_Silva";break;
-		case 2: link = "https://pt.wikipedia.org/wiki/Jair_Bolsonaro";break;
-		case 3: link = "https://pt.wikipedia.org/wiki/Fernando_Haddad";break;
-		case 4: link = "https://pt.wikipedia.org/wiki/Ciro_Gomes";break;
-		case 5: link = "https://pt.wikipedia.org/wiki/Geraldo_Alckmin";break;
-		case 6: link = "https://pt.wikipedia.org/wiki/Alvaro_Dias";break;
-		case 7: link = "https://pt.wikipedia.org/wiki/Henrique_Meirelles";break;
-		case 8: link = "https://pt.wikipedia.org/wiki/Jo%C3%A3o_Amo%C3%AAdo";break;
-		case 9: link = "https://pt.wikipedia.org/wiki/Guilherme_Boulos";break;
-		case 10: link = "https://pt.wikipedia.org/wiki/Jos%C3%A9_Maria_Eymael";break;
-		case 11: link = "https://pt.wikipedia.org/wiki/Cabo_Daciolo";break;
-		case 12: link = "https://pt.wikipedia.org/wiki/Jo%C3%A3o_Goulart_Filho";break;
-		case 13: link = "https://pt.wikipedia.org/wiki/Vera_L%C3%BAcia_Salgado";break;		
+	if (pegouBD){
+		var link = "";
+		switch(cand){
+			case 1: link = "https://pt.wikipedia.org/wiki/Marina_Silva";break;
+			case 2: link = "https://pt.wikipedia.org/wiki/Jair_Bolsonaro";break;
+			case 3: link = "https://pt.wikipedia.org/wiki/Fernando_Haddad";break;
+			case 4: link = "https://pt.wikipedia.org/wiki/Ciro_Gomes";break;
+			case 5: link = "https://pt.wikipedia.org/wiki/Geraldo_Alckmin";break;
+			case 6: link = "https://pt.wikipedia.org/wiki/Alvaro_Dias";break;
+			case 7: link = "https://pt.wikipedia.org/wiki/Henrique_Meirelles";break;
+			case 8: link = "https://pt.wikipedia.org/wiki/Jo%C3%A3o_Amo%C3%AAdo";break;
+			case 9: link = "https://pt.wikipedia.org/wiki/Guilherme_Boulos";break;
+			case 10: link = "https://pt.wikipedia.org/wiki/Jos%C3%A9_Maria_Eymael";break;
+			case 11: link = "https://pt.wikipedia.org/wiki/Cabo_Daciolo";break;
+			case 12: link = "https://pt.wikipedia.org/wiki/Jo%C3%A3o_Goulart_Filho";break;
+			case 13: link = "https://pt.wikipedia.org/wiki/Vera_L%C3%BAcia_Salgado";break;		
+		}
+		location.href = link;
 	}
-	location.href = link;
 }

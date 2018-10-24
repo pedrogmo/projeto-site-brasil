@@ -65,10 +65,10 @@
         </div>
     </div>
 	<h1>Cadastro</h1>
-<form action = "http://localhost:3000/usuario" method = "post" id = "cadastro" class="formulario">
+<form id = "cadastro" class="formulario">
 	<div>
 		<i class="fas fa-user" id="icones"></i>
-		<input name = "nome" type="text" class="textBoxes" required maxlength="30">
+		<input name = "nome" type="text" class="textBoxes" id = "nome" required maxlength="30">
 		<label class="labels">Nome</label>
 	</div>
 	<div>
@@ -93,12 +93,12 @@
 	</div>
 	<div>
 		<i class="fas fa-globe-americas" id="icones"></i>
-		<input name = "pais" type="text" class="textBoxes" required maxlength="30" aria-label="País">
+		<input name = "pais" type="text" id = "nacionalidade"     class="textBoxes" required maxlength="30" aria-label="País">
 		<label class="labels">País</label>
 	</div>
     <div>
         <i class="large material-icons" id="enviar">send</i>
-        <input type = "submit" id = "criarConta" class="btnCriar" value = "Criar Conta">
+        <input type = "button" id = "criarConta" class="btnCriar" value = "Criar Conta">
     </div>
 </form>
 </section>

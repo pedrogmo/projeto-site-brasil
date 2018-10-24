@@ -81,7 +81,7 @@ const senha = requisicao.body.senha;
 const pontos = 0;
 const aniversario = requisicao.body.aniversario;
 const pais = requisicao.body.pais;
-execSQL(`INSERT INTO USUARIO(nomeUsuario, email, senha, pontuacao, dataAniversario, nacionalidade) VALUES('${nome}', '${email}','${senha}', ${pontos}, '${aniversario}', '${pais}')`, resposta);
+execSQL(`INSERT INTO USUARIO VALUES('${nome}', '${email}','${senha}', ${pontos}, '${aniversario}', '${pais}')`, resposta);
 // resposta.end(resposta.json({ mensagem: 'Incluído!'}));
 })
 
