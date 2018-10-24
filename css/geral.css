@@ -320,19 +320,21 @@ ul, ol{
 
 .campoSenha{
   font-size: 14pt;
+  position      : relative;
 }
 
 .campoSenha i{
-  position      : relative;
+  position      : absolute;
   float         : right; 
-  right         : 3%; 
-  color         : #2b2c33;   
+  right         : 5%; 
+  color         : #2b2c33; 
+  top           : 20%;  
 }
 
 .campoSenha i:hover{
   transition : 0.5s; 
   color      : #009c3b;
-  cursor     : pointer;  
+  cursor     : pointer;
 }
 
 /*CUSTOMIZAÇÃO DA SIDEBAR*/
