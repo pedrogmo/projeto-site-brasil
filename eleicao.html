@@ -67,97 +67,163 @@
 	<h1>Eleição Presidencial 2018</h1>
     <h2>Candidatos</h2>
 
-	<div id = "candidato">
-        <p class="title" id = "nome1"></p>
-        <img class="foto" id = "imgCand1" onclick = "info(1)">
-        <p class="descricao" id = "desc1"></p>
-        <img class="partido" id = "imgPart1">
-        <button class="btnVotar" id = "btn1" onclick="votar(1)">Votar Nesse Candidato</button>        
-    </div>
-    <div id = "candidato">
-        <p class="title" id = "nome2"></p>
-        <img class="foto" id = "imgCand2" onclick = "info(2)">
-        <p class="descricao" id = "desc2"></p>
-        <img class="partido" id = "imgPart2">
-        <button class="btnVotar" id = "btn2" onclick="votar(2)">Votar Nesse Candidato</button>        
-    </div>
-    <div id = "candidato">
-        <p class="title" id = "nome3"></p>
-        <img class="foto" id = "imgCand3" onclick = "info(3)">
-        <p class="descricao" id = "desc3"></p>
-        <img class="partido" id = "imgPart3">
-        <button class="btnVotar" id = "btn3" onclick="votar(3)">Votar Nesse Candidato</button>        
-    </div>
-    <div id = "candidato">
-        <p class="title" id = "nome4"></p>
-        <img class="foto" id = "imgCand4" onclick = "info(4)">
-        <p class="descricao" id = "desc4"></p>
-        <img class="partido" id = "imgPart4">
-        <button class="btnVotar" id = "btn4" onclick="votar(4)">Votar Nesse Candidato</button>        
-    </div>
-    <div id = "candidato">
-        <p class="title" id = "nome5"></p>
-        <img class="foto" id = "imgCand5" onclick = "info(5)">
-        <p class="descricao" id = "desc5"></p>
-        <img class="partido" id = "imgPart5">
-        <button class="btnVotar" id = "btn5" onclick="votar(5)">Votar Nesse Candidato</button>        
-    </div>
-    <div id = "candidato">
-        <p class="title" id = "nome6"></p>
-        <img class="foto" id = "imgCand6" onclick = "info(6)">
-        <p class="descricao" id = "desc6"></p>
-        <img class="partido" id = "imgPart6">
-        <button class="btnVotar" id = "btn6" onclick="votar(6)">Votar Nesse Candidato</button>        
-    </div>
-    <div id = "candidato">
-        <p class="title" id = "nome7"></p>
-        <img class="foto" id = "imgCand7" onclick = "info(7)">
-        <p class="descricao" id = "desc7"></p>
-        <img class="partido" id = "imgPart7">
-        <button class="btnVotar" id = "btn7" onclick="votar(7)">Votar Nesse Candidato</button>        
-    </div>
-    <div id = "candidato">
-        <p class="title" id = "nome8"></p>
-        <img class="foto" id = "imgCand8" onclick = "info(8)">
-        <p class="descricao" id = "desc8"></p>
-        <img class="partido" id = "imgPart8">
-        <button class="btnVotar" id = "btn8" onclick="votar(8)">Votar Nesse Candidato</button>        
-    </div>
-    <div id = "candidato">
-        <p class="title" id = "nome9"></p>
-        <img class="foto" id = "imgCand9" onclick = "info(9)">
-        <p class="descricao" id = "desc9"></p>
-        <img class="partido" id = "imgPart9">
-        <button class="btnVotar" id = "btn9" onclick="votar(9)">Votar Nesse Candidato</button>        
-    </div>
-    <div id = "candidato">
-        <p class="title" id = "nome10"></p>
-        <img class="foto" id = "imgCand10" onclick = "info(10)">
-        <p class="descricao" id = "desc10"></p>
-        <img class="partido" id = "imgPart10">
-        <button class="btnVotar" id = "btn10" onclick="votar(10)">Votar Nesse Candidato</button>        
-    </div>
-    <div id = "candidato">
-        <p class="title" id = "nome11"></p>
-        <img class="foto" id = "imgCand11" onclick = "info(11)">
-        <p class="descricao" id = "desc11"></p>
-        <img class="partido" id = "imgPart11">
-        <button class="btnVotar" id = "btn11" onclick="votar(11)">Votar Nesse Candidato</button>        
-    </div>
-    <div id = "candidato">
-        <p class="title" id = "nome12"></p>
-        <img class="foto" id = "imgCand12" onclick = "info(12)">
-        <p class="descricao" id = "desc12"></p>
-        <img class="partido" id = "imgPart12">
-        <button class="btnVotar" id = "btn12" onclick="votar(12)">Votar Nesse Candidato</button>        
-    </div>
-    <div id = "candidato">
-        <p class="title" id = "nome13"></p>
-        <img class="foto" id = "imgCand13" onclick = "info(13)">
-        <p class="descricao" id = "desc13"></p>
-        <img class="partido" id = "imgPart13">
-        <button class="btnVotar" id = "btn13" onclick="votar(13)">Votar Nesse Candidato</button>        
-    </div>	
+    <section class="candidato-container">
+        <div class="image-container">
+            <h2 id="nome1"></h2>
+            <img id="imgCand1" onclick="info(1);">
+        </div>
+        <div class="info-container">
+            <p id="desc1"></p>
+            <img id="imgPart1">
+            <button class="btnVotar" id="btn1" onclick="votar(1);">Votar neste candidato</button>
+        </div>
+    </section>
+
+    <section class="candidato-container">
+        <div class="image-container">
+            <h2 id="nome2"></h2>
+            <img id="imgCand2" onclick="info(2);">
+        </div>
+        <div class="info-container">
+            <p id="desc2"></p>
+            <img id="imgPart2">
+            <button class="btnVotar" id="btn2" onclick="votar(2);">Votar neste candidato</button>
+        </div>
+    </section>
+
+    <section class="candidato-container">
+        <div class="image-container">
+            <h2 id="nome3"></h2>
+            <img id="imgCand3" onclick="info(3);">
+        </div>
+        <div class="info-container">
+            <p id="desc3"></p>
+            <img id="imgPart3">
+            <button class="btnVotar" id="btn3" onclick="votar(3);">Votar neste candidato</button>
+        </div>
+    </section>
+
+    <section class="candidato-container">
+        <div class="image-container">
+            <h2 id="nome4"></h2>
+            <img id="imgCand4" onclick="info(4);">
+        </div>
+        <div class="info-container">
+            <p id="desc4"></p>
+            <img id="imgPart4">
+            <button class="btnVotar" id="btn4" onclick="votar(4);">Votar neste candidato</button>
+        </div>
+    </section>
+
+    <section class="candidato-container">
+        <div class="image-container">
+            <h2 id="nome5"></h2>
+            <img id="imgCand5" onclick="info(5);">
+        </div>
+        <div class="info-container">
+            <p id="desc5"></p>
+            <img id="imgPart5">
+            <button class="btnVotar" id="btn5" onclick="votar(5);">Votar neste candidato</button>
+        </div>
+    </section>
+
+    <section class="candidato-container">
+        <div class="image-container">
+            <h2 id="nome6"></h2>
+            <img id="imgCand6" onclick="info(6);">
+        </div>
+        <div class="info-container">
+            <p id="desc6"></p>
+            <img id="imgPart6">
+            <button class="btnVotar" id="btn6" onclick="votar(6);">Votar neste candidato</button>
+        </div>
+    </section>
+
+    <section class="candidato-container">
+        <div class="image-container">
+            <h2 id="nome7"></h2>
+            <img id="imgCand7" onclick="info(7);">
+        </div>
+        <div class="info-container">
+            <p id="desc7"></p>
+            <img id="imgPart7">
+            <button class="btnVotar" id="btn7" onclick="votar(7);">Votar neste candidato</button>
+        </div>
+    </section>
+
+    <section class="candidato-container">
+        <div class="image-container">
+            <h2 id="nome8"></h2>
+            <img id="imgCand8" onclick="info(8);">
+        </div>
+        <div class="info-container">
+            <p id="desc8"></p>
+            <img id="imgPart8">
+            <button class="btnVotar" id="btn8" onclick="votar(8);">Votar neste candidato</button>
+        </div>
+    </section>
+
+    <section class="candidato-container">
+        <div class="image-container">
+            <h2 id="nome9"></h2>
+            <img id="imgCand9" onclick="info(9);">
+        </div>
+        <div class="info-container">
+            <p id="desc9"></p>
+            <img id="imgPart9">
+            <button class="btnVotar" id="btn9" onclick="votar(9);">Votar neste candidato</button>
+        </div>
+    </section>
+
+    <section class="candidato-container">
+        <div class="image-container">
+            <h2 id="nome10"></h2>
+            <img id="imgCand10" onclick="info(10);">
+        </div>
+        <div class="info-container">
+            <p id="desc10"></p>
+            <img id="imgPart10">
+            <button class="btnVotar" id="btn10" onclick="votar(10);">Votar neste candidato</button>
+        </div>
+    </section>
+
+    <section class="candidato-container">
+        <div class="image-container">
+            <h2 id="nome11"></h2>
+            <img id="imgCand11" onclick="info(11);">
+        </div>
+        <div class="info-container">
+            <p id="desc11"></p>
+            <img id="imgPart11">
+            <button class="btnVotar" id="btn11" onclick="votar(11);">Votar neste candidato</button>
+        </div>
+    </section>
+
+    <section class="candidato-container">
+        <div class="image-container">
+            <h2 id="nome12"></h2>
+            <img id="imgCand12" onclick="info(12);">
+        </div>
+        <div class="info-container">
+            <p id="desc12"></p>
+            <img id="imgPart12">
+            <button class="btnVotar" id="btn12" onclick="votar(12);">Votar neste candidato</button>
+        </div>
+    </section>
+
+    <section class="candidato-container">
+        <div class="image-container">
+            <h2 id="nome13"></h2>
+            <img id="imgCand13" onclick="info(13);">
+        </div>
+        <div class="info-container">
+            <p id="desc13"></p>
+            <img id="imgPart13">
+            <button class="btnVotar" id="btn13" onclick="votar(13);">Votar neste candidato</button>
+        </div>
+    </section>
+
+    
 </section>
 <br><br><br>
 
