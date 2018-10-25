@@ -1,3 +1,4 @@
+
 var candidatos;
 var eleitor;
 var xmlCandidatos = new XMLHttpRequest();
@@ -46,6 +47,9 @@ function votar(cand){
 	alert('Você votou em ' + candidatos[cand].nome);
 	eleitor.jaVotou = 1;
 	sessionStorage.setItem("usuario", JSON.stringify(eleitor));
+	var updateEleitor = new XMLHttpRequest();
+	updateEleitor.open('PATCH', "http://localhost:3000/eleitor/" + eleitor.codUsuario, true);
+  	updateEleitor.send();
 	candidatos[cand].votos++;
 	var votosNovos = candidatos[cand].votos;
 	var updateVotos = new XMLHttpRequest();

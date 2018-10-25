@@ -99,6 +99,12 @@ rota.delete('/usuario/:id?', (requisicao, resposta) =>{
 	// resposta.end(resposta.json({ mensagem: 'Deletado!'})); 
 })
 
+rota.patch('/eleitor/:id?', (requisicao, resposta) =>{	
+	const id = parseInt(requisicao.params.id); 
+	execSQL(`UPDATE Usuario SET jaVotou = 1 WHERE codUsuario=${id}`, resposta); 
+	// resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
+})
+
 /////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
 

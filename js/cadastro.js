@@ -39,6 +39,7 @@ document.getElementById("criarConta").onclick = function(){
 			user.senha = senha;
 			user.email = email;
 			user.aniversario = data;
+			user.pais = $("#nacionalidade").val();
 			$.post('http://localhost:3000/usuario', user);
 			location.href = "inicio.html";
 		}
