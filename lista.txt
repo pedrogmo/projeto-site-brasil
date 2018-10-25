@@ -7,7 +7,6 @@ Design
 Banco de Dados
 
 * Inserção de dados na tabela Noticia.
-* Inserção de dados na tabela Governante.
 * Inserção de dados na tabela EraPolitica.
 
 
