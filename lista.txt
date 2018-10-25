@@ -1,7 +1,6 @@
 Design
 
 * noticias.html : fazer slider de principais notícias e divs dos sites.
-* inicio.html   : descrição da aba Notícias.
 * historia.html : descrição dos períodos históricos.
 
 
