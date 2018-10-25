@@ -87,7 +87,7 @@
 
 .slider-image:hover{
 	transition : 0.5s ease-in; 
-	filter     : saturate(1.75);
+	filter     : saturate(1.45);
 }
 
 .dots{
@@ -148,7 +148,7 @@
 
 .card-noticia:hover .card-image{
 	transition : 0.5s ease-in; 
-	filter     : saturate(1.75); 
+	filter     : saturate(1.45); 
 }
 
 .card-noticia:hover h1{
