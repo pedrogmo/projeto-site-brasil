@@ -266,3 +266,7 @@ insert into Curiosidade values(34 , 'O principal exportador mundial de castanha-
 insert into Curiosidade values(35 , 'Mais de 1.000 línguas eram faladas no Brasil antes do descobrimento. Hoje, apenas 180 ainda sobrevivem e apenas 11 são faladas por mais de 5.000 pessoas.')
 insert into Curiosidade values(36 , 'A viola é um instrumento exclusivamente brasileiro.')
 insert into Curiosidade values(37 , 'Segundo uma pesquisa da USP de 2009, 19,3% de todos os homens da cidade do Rio de Janeiro são gays ou bissexuais.')
+
+update Usuario set senha = 1233 where codUsuario = 1
+
+select * from usuario
