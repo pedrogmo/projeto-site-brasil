@@ -1,24 +1,32 @@
 var usuarioPerfil;
 var urlMudanca;
+var novaSenhaUsuario;
 
 window.onload = function(){
 	// if (sessionStorage.getItem("logou") != "sim")
 	// 	location.href = "inicio.html";
 	usuarioPerfil = JSON.parse(sessionStorage.getItem("usuario"));
-	urlMudanca = "http://localhost:3000/usuario/" + usuarioPerfil.codUsuario;
+	urlMudanca = "http://localhost:3000/usuario/" + usuarioPerfil.codUsuario + '/';
 	document.getElementById("nomeUsuario").value = usuarioPerfil.nomeUsuario;
 	document.getElementById("emailUsuario").value = usuarioPerfil.email;
 	document.getElementById("aniversarioUsuario").value = usuarioPerfil.dataAniversario;
 	document.getElementById("paisUsuario").value = usuarioPerfil.nacionalidade;
 	document.getElementById("pontuacaoUsuario").value = usuarioPerfil.pontuacao;
+	document.getElementById("senhaUsuario").value = usuarioPerfil.senha;
 }
 
 document.getElementById("salvarAlteracoes").onclick = function(){
 	
+	novaSenhaUsuario = document.getElementById("novaSenhaUsuario").value;
 	var updateSenha = new XMLHttpRequest();
-    updateSenha.open("PATCH", urlMudanca, true);
+    updateSenha.open("PATCH", "http://localhost:3000/senha/" + usuarioPerfil.codUsuario + '/' + novaSenhaUsuario, true);
     updateSenha.send();
-    
+    document.getElementById("salvarAlteracoes").hidden = true;
+    document.getElementById("novaSenha").style.visibility = "hidden";
+    usuarioPerfil.senha = novaSenhaUsuario;
+    sessionStorage.setItem("usuario", JSON.stringify(usuarioPerfil));
+	alert("Senha Alterada!");
+	location.reload();
 }
 
 document.getElementById("excluirConta").onclick = function(){
@@ -57,4 +65,7 @@ function readURL(input)
 
 document.getElementById("mudarSenha").onclick = function(){
 	document.getElementById("novaSenha").style.visibility = "visible";
+	document.getElementById("salvarAlteracoes").hidden = false;
+
 }
+

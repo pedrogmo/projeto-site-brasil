@@ -109,6 +109,20 @@ rota.patch('/eleitor/:id?', (requisicao, resposta) =>{
 /////////////////////////////////////////////////////////////////////////////////
 
 
+rota.patch('/senha/:id?/:senha?', (requisicao, resposta) =>{	
+	const id = parseInt(requisicao.params.id); 
+	console.log(id);
+	const senha = requisicao.params.senha;
+	console.log(senha);
+	execSQL(`UPDATE Usuario SET senha = '${senha}' WHERE codUsuario=${id}`, resposta); 
+	console.log("executou");
+	// resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
+})
+
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+
+
 rota.get('/estado', (requisicao, resposta) =>{
 execSQL('SELECT * FROM ESTADO', resposta);
 })
@@ -159,3 +173,7 @@ execSQL('SELECT * from PERGUNTA' + filtro, resposta);
 rota.get('/curiosidade', (requisicao, resposta) =>{
 execSQL('SELECT * FROM CURIOSIDADE', resposta);
 })
+
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+
