@@ -23,8 +23,10 @@ for(var i = 0; i < arr.length; i++)
 	var titulo = "titulo" + (i+1);
 	var subtitulo = "sub" + (i+1);
 	var imagem = "img" + (i+1);
+	var tema = "tema" + (i+1);
 	document.getElementById(titulo).innerHTML = arr[i].titulo;
 	document.getElementById(subtitulo).innerHTML = arr[i].subtitulo;
+	document.getElementById(tema).innerHTML = arr[i].tema;
 	document.getElementById(imagem).src = arr[i].urlImagem;
 	var link = arr[i].link;
 	document.getElementById(noticia).onclick=function(){location.href = link}

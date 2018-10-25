@@ -4,8 +4,13 @@ document.getElementById("criarConta").onclick = function(){
 	var dia = parseInt(data.substring(0,2));
 	var mes = parseInt(data.substring(3,5));
 	var ano = parseInt(data.substring(6,10));
-	var senha = document.getElementById("senha").value;
-	var senha2 = document.getElementById("confirmarSenha").value;
+	var senha = document.getElementById("senha").value.trim();
+	var senha2 = document.getElementById("confirmarSenha").value.trim();
+	if (senha == "")
+	{
+		alert("Senha inválida");
+		document.getElementById("senha").value = document.getElementById("confirmarSenha").value = "";	
+	}
 	if (isNaN(dia) || isNaN(mes) || isNaN(ano) || dia > 31 || mes > 12 || ano > 2018 || ano < 1890 || dia < 1 || mes < 1)
 	{
 		alert('Data inválida');
