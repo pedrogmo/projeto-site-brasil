@@ -58,6 +58,7 @@ function readURL(input)
 			.attr('src', e.target.result)
 			.height('100%')
 			.width('100%');
+			// alert(e.target.result.length);
 		};
 		reader.readAsDataURL(input.files[0]);
 	}

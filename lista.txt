@@ -10,8 +10,8 @@ Banco de Dados
 
 JavaScript
 
-* geral.js: código da aba de pesquisa.
-
+* geral.js  : código da aba de pesquisa.
+* perfil.js : trocar foto de perfil do usuário.
 
 Ideias e Sugestões
 

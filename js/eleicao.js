@@ -14,10 +14,10 @@ candidatos = JSON.parse(localStorage.getItem("candidatos"));
 
 window.onload = function(){
 	if (sessionStorage.getItem("logou") != "sim")
-	{	
+	{
 		$('button.btnVotar').prop('disabled', true);
 		$('button.btnVotar').css('filter', 'brightness(60%)');
-		alert('Logue no site para votar');
+		setTimeout(  function(){alert('Logue no site para votar');}  , 100);		
 	}
 	else
 	{
