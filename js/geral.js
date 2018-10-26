@@ -12,6 +12,12 @@ $(window).bind('mousewheel DOMMouseScroll', function (event) {
        }
 });
 
+//Ir para topo da página no clique do logo:
+
+document.getElementById("topo").onclick = function(){
+	window.scrollTo(0, 0);
+}
+
 //Variáveis a serem usadas:
 
 var modal = document.getElementById('simpleModal');
