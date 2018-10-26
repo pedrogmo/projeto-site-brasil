@@ -111,11 +111,8 @@ rota.patch('/eleitor/:id?', (requisicao, resposta) =>{
 
 rota.patch('/senha/:id?/:senha?', (requisicao, resposta) =>{	
 	const id = parseInt(requisicao.params.id); 
-	console.log(id);
 	const senha = requisicao.params.senha;
-	console.log(senha);
 	execSQL(`UPDATE Usuario SET senha = '${senha}' WHERE codUsuario=${id}`, resposta); 
-	console.log("executou");
 	// resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
 })
 
