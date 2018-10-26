@@ -119,6 +119,17 @@ rota.patch('/senha/:id?/:senha?', (requisicao, resposta) =>{
 /////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
 
+rota.patch('/foto/:id?/:foto?', (requisicao, resposta) =>{	
+	const id = parseInt(requisicao.params.id); 
+	const foto = requisicao.body.foto;
+	execSQL(`UPDATE Usuario SET foto = '${foto}' WHERE codUsuario=${id}`, resposta); 
+	// resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
+})
+
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+
+
 
 rota.get('/estado', (requisicao, resposta) =>{
 execSQL('SELECT * FROM ESTADO', resposta);
