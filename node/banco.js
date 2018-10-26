@@ -11,8 +11,8 @@ sql.connect(conexaoStr)
 .catch(erro => console.log(erro)); 
 
 // configurando o body parser para pegar POSTS mais tarde 
-app.use(bodyParser.urlencoded({ extended: true}));
-app.use(bodyParser.json()); //acrescentando informacoes de cabecalho para suportar o CORS 
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
+app.use(bodyParser.json({limit: '50mb', extended: true}));
 app.use(function(req, res, next) { 
 	res.header("Access-Control-Allow-Origin", "*"); 
 	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept"); 
