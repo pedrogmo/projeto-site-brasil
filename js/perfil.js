@@ -1,4 +1,4 @@
-var usuarioPerfil;
+﻿var usuarioPerfil;
 var urlMudanca;
 var novaSenhaUsuario;
 
@@ -60,6 +60,14 @@ function readURL(input)
 			.width('100%');
 			// alert(e.target.result.length);
 		};
+		var aleatorio = new Object();
+        	aleatorio.outraCoisaAleatoria = e.target.result;
+        	.ajax({
+                    	url: "http://localhost:3000/foto/" + usuarioPerfil.codUsuario,
+                    	type: 'patch',
+                    	data: aleatorio
+        	})
+
 		reader.readAsDataURL(input.files[0]);
 	}
 }
