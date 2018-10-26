@@ -101,16 +101,17 @@ create table EraHistorica
 	nome varchar(30) not null,
 	inicio varchar(10) not null,
 	fim varchar(10) not null,
+	desricao ntext not null
 )
 
-insert into EraHistorica values(1, 'Brasil Pré-Colonial', '1500', '1530')
-insert into EraHistorica values(2, 'Brasil Colonial', '1530', '1822')
-insert into EraHistorica values(3, 'Brasil Império', '1822', '1889')
-insert into EraHistorica values(4, 'República Velha', '1889', '1930')
-insert into EraHistorica values(5, 'Era Vargas', '1930', '1945')
-insert into EraHistorica values(6, 'República Populista', '1945', '1964')
-insert into EraHistorica values(7, 'Regime Militar', '1964', '1985')
-insert into EraHistorica values(8, 'República Nova', '1985', '-')
+insert into EraHistorica values(1, 'Brasil Pré-Colonial', '1500', '1530', 'O Brasil ainda território das muitas tribos nativas indígenas e que se surpreendeu com o que viria a ser o processo de colonização da coroa portuguesa.')
+insert into EraHistorica values(2, 'Brasil Colonial', '1530', '1822', 'Um Brasil de primeiras divisões e autoridades engajado no processo catequético de indígenas e na expansão territorial para o corte do Pau Brasil e a busca de metais preciosos.')
+insert into EraHistorica values(3, 'Brasil Império', '1822', '1889', 'O Brasil, dessa vez, independente, sob o governo monárquico dos Pedros pai (Dom Pedro I) e filho (Dom Pedro II) até conflito que gerou a república.')
+insert into EraHistorica values(4, 'República Velha', '1889', '1930', 'O Brasil dos primeiros (e interesseiros) presidentes coronelistas e adeptos da política do café com leite, que foi barrada pela Era Vargas.')
+insert into EraHistorica values(5, 'Era Vargas', '1930', '1945', 'O Brasil em seu maior governo, o conhecido por ser marcado com nacionalismo e notas do que pode ser tido como fascismo.')
+insert into EraHistorica values(6, 'República Populista', '1945', '1964', 'Um Brasil de recomposição da Era Vargas, com presidentes reconhecidos pelas atitudes polêmicas e que viriam a ser espantados pelos militares.')
+insert into EraHistorica values(7, 'Regime Militar', '1964', '1985', 'O Brasil dos 21 anos nas mãos de patentes do Exército. Um pedaço da História nacional que mostra sequelas políticas até os dias atuais.')
+insert into EraHistorica values(8, 'República Nova', '1985', '-', 'Um Brasil da renovação presidencial e com seus governos vidrados em planos de foco econômico. P.S: estamos nele até hoje!')
 
 create table Governante
 (

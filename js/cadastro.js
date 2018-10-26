@@ -1,3 +1,5 @@
+var patternNome = /^[a-zA-Z ]+$/;
+
 document.getElementById("criarConta").onclick = function(){
 	var senha = document.getElementById("senha").value.trim();
 	var senha2 = document.getElementById("confirmarSenha").value.trim();
@@ -13,7 +15,7 @@ document.getElementById("criarConta").onclick = function(){
 		alert("Senha inválida");
 		document.getElementById("senha").value = document.getElementById("confirmarSenha").value = "";	
 	}
-	else if (nome == "" || /^[a-zA-Z ]+$/.test(nome) == false)
+	else if (nome == "" || patternNome.test(nome) == false)
 	{
 		alert("Nome inválido");
 		document.getElementById("nome").value = "";
@@ -49,8 +51,7 @@ document.getElementById("criarConta").onclick = function(){
 				break;
 			}
 		if(!emailJaExiste)
-		{
-			alert('Conta criada');
+		{			
 			var user = new Object();
 			user.nome = nome;
 			user.senha = senha;
@@ -58,6 +59,7 @@ document.getElementById("criarConta").onclick = function(){
 			user.aniversario = data;
 			user.pais = pais;
 			$.post('http://localhost:3000/usuario', user);
+			alert('Conta criada');
 			location.href = "inicio.html";
 		}
 	}

@@ -1,8 +1,7 @@
 Design
 
 * noticias.html : fazer slider de principais notícias e divs dos sites.
-* historia.html : descrição dos períodos históricos.
-
+* eleicoes.html : gráfico dos resultados, votos no Brasilee.
 
 Banco de Dados
 
@@ -19,4 +18,3 @@ Ideias e Sugestões
 * Criar página do facebook, twitter e instagram.
 * Botar width da barra em %.
 * Barra de pesquisa procura usuários, mostra ranking de pontuação.
-* Modal para exibir informações da bandeira.

@@ -1,11 +1,9 @@
-﻿$(document).keydown(function(event) {
+﻿//Desabilita mudança de zoom da página:
+
+$(document).keydown(function(event) {
 if (event.ctrlKey==true && (event.which == '61' || event.which == '107' || event.which == '173' || event.which == '109'  || event.which == '187'  || event.which == '189'  ) ) {
         event.preventDefault();
      }
-    // 107 Num Key  +
-    // 109 Num Key  -
-    // 173 Min Key  hyphen/underscor Hey
-    // 61 Plus key  +/= key
 });
 
 $(window).bind('mousewheel DOMMouseScroll', function (event) {
@@ -14,36 +12,23 @@ $(window).bind('mousewheel DOMMouseScroll', function (event) {
        }
 });
 
+//Variáveis a serem usadas:
+
 var modal = document.getElementById('simpleModal');
 var modalBtn  = document.getElementById('btnLogin');
 var closeBtn = document.getElementsByClassName('closeBtn')[0];
 var sideBar = document.getElementById('login');
 var logou;
-
 var usuario;
 var arr;
 var xmlhttp = new XMLHttpRequest();
 var url = "http://localhost:3000/usuario";
-
-if (sessionStorage.getItem("logou") == "sim"){
-	logou = true;
-	usuario = JSON.parse(sessionStorage.getItem("usuario"));
-	document.getElementById("btnLogin").innerHTML = "CONTA";
-	document.getElementById("nomeUser").innerHTML = usuario.nomeUsuario;
-	document.getElementById("emailUser").innerHTML = usuario.email;
-	document.getElementById('highScore').innerHTML += usuario.pontuacao;
-} else logou = false;
-
-xmlhttp.onreadystatechange=function(){
-  if (this.readyState == 4 && this.status == 200)    
-    localStorage.setItem("usuarioGeral", this.responseText);
-}
-
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
-arr = JSON.parse(localStorage.getItem("usuarioGeral"));
-
 var nome,email,pontos;
+var exibirSenha = true;
+var fundoSB = document.getElementById("fundoSideBar");
+
+//Modal de login:
+
 document.getElementById('btnLogin').onclick = function(){
 	if(logou){				
 		fundoSB.style.display = 'block';
@@ -51,6 +36,22 @@ document.getElementById('btnLogin').onclick = function(){
 	}
 	else
  	 	modal.style.display = 'block'; 
+}
+
+document.onkeydown = function(event){
+	if(modal.style.display == 'block')
+    	if (event.keyCode === 13)
+        		$("#btnEntrar").click();    
+}
+
+window.onclick = function(event){
+  if(event.target == modal){
+    modal.style.display = 'none';
+  }else
+  if(event.target == fundoSB){
+  	fundoSB.style.display = 'none';
+    login.style.left = '-35%';
+  }
 }
 
 document.getElementById('btnCadastrar').onclick = function(){
@@ -61,13 +62,6 @@ document.getElementById('fechaModal').onclick = function(){
  	 modal.style.display = 'none';
 }
 
-document.onkeydown = function(event){
-	if(modal.style.display == 'block')
-    	if (event.keyCode === 13)
-        		$("#btnEntrar").click();    
-}
-
-var exibirSenha = true;
 document.getElementById("btnExibirSenha").onclick = function(){
 	exibirSenha	= !exibirSenha;
 	if (exibirSenha)
@@ -111,16 +105,7 @@ document.getElementById('btnEntrar').onclick = function(){
 		document.getElementById("txtSenha").value = "";
 }
 
-var fundoSB = document.getElementById("fundoSideBar");
-window.onclick = function(event){
-  if(event.target == modal){
-    modal.style.display = 'none';
-  }else
-  if(event.target == fundoSB){
-  	fundoSB.style.display = 'none';
-    login.style.left = '-35%';
-  }
-}
+//Modal de Conta:
 
 document.getElementById("sair").onclick = function(){
 	sessionStorage.removeItem("logou");
@@ -132,6 +117,28 @@ document.getElementById("sair").onclick = function(){
 document.getElementById("perfil").onclick = function(){
 	location.href = "perfil.html"
 }
+
+//Banco de dados e usuário
+
+if (sessionStorage.getItem("logou") == "sim"){
+	logou = true;
+	usuario = JSON.parse(sessionStorage.getItem("usuario"));
+	document.getElementById("btnLogin").innerHTML = "CONTA";
+	document.getElementById("nomeUser").innerHTML = usuario.nomeUsuario;
+	document.getElementById("emailUser").innerHTML = usuario.email;
+	document.getElementById('highScore').innerHTML += usuario.pontuacao;
+} else logou = false;
+
+xmlhttp.onreadystatechange=function(){
+  if (this.readyState == 4 && this.status == 200)    
+    localStorage.setItem("usuarioGeral", this.responseText);
+}
+
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+arr = JSON.parse(localStorage.getItem("usuarioGeral"));
+
+//Alert da Bandeira:
 
 document.getElementById("bandeira").onclick = function(){ alert(band); }
 

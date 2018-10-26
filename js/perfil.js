@@ -3,8 +3,8 @@ var urlMudanca;
 var novaSenhaUsuario;
 
 window.onload = function(){
-	// if (sessionStorage.getItem("logou") != "sim")
-	// 	location.href = "inicio.html";
+	if (sessionStorage.getItem("logou") != "sim")
+		location.href = "inicio.html";
 	usuarioPerfil = JSON.parse(sessionStorage.getItem("usuario"));
 	urlMudanca = "http://localhost:3000/usuario/" + usuarioPerfil.codUsuario + '/';
 	document.getElementById("nomeUsuario").value = usuarioPerfil.nomeUsuario;
