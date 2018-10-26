@@ -191,14 +191,16 @@ insert into Candidato values(13, 'Vera Lúcia', 'Vera Lúcia Pereira da Silva Salg
 create table Noticia
 (
 	codNoticia int primary key,
-	titulo ntext not null,
-	subtitulo ntext not null,
 	tema varchar(20) not null,
+	titulo ntext not null,
+	subtitulo ntext not null,	
 	urlImagem varchar(30) not null,
-	link  ntext not null
+	link  ntext not null,
+	siteFonte varchar(20) not null,
+	dataPublicacao varchar(10) not null
 )
 select * from Noticia
-insert into Noticia values(1, 'Veja as propostas de Paulo Guedes, assessor econômico da campanha de Jair Bolsonaro', 'Entre as propostas, economista fala em mudar as regras do orçamento da União, instituir o sistema de capitalização para a Previdência e avançar na agenda de privatizações.', 'Política', './img/noticias/01.jpg', 'https://g1.globo.com/politica/eleicoes/2018/noticia/2018/10/21/veja-as-propostas-de-paulo-guedes-assessor-economico-da-campanha-de-jair-bolsonaro.ghtml')
+insert into Noticia values(1, 'Política' , 'Veja as propostas de Paulo Guedes, assessor econômico da campanha de Jair Bolsonaro', 'Entre as propostas, economista fala em mudar as regras do orçamento da União, instituir o sistema de capitalização para a Previdência e avançar na agenda de privatizações.', './img/noticias/01.jpg', 'https://g1.globo.com/politica/eleicoes/2018/noticia/2018/10/21/veja-as-propostas-de-paulo-guedes-assessor-economico-da-campanha-de-jair-bolsonaro.ghtml', 'G1', '25/10/2018')
 insert into Noticia values(2)
 insert into Noticia values(3)
 insert into Noticia values(4)
