@@ -7,7 +7,7 @@ window.onload = function() //vai dar ruim
     if (sessionStorage.getItem("logou") == "sim")
       inicioQuiz();
     else
-      alert('Você não está logado, faça login para começar o quiz');
+      alert('Você não está logado, faça login para começar o quiz!');
 }
 
 function inicioQuiz(){

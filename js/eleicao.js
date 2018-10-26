@@ -17,7 +17,7 @@ window.onload = function(){
 	{
 		$('button.btnVotar').prop('disabled', true);
 		$('button.btnVotar').css('filter', 'brightness(60%)');
-		setTimeout(  function(){alert('Logue no site para votar');}  , 100);		
+		setTimeout(  function(){alert('Logue no site para votar!');}  , 100);		
 	}
 	else
 	{
@@ -44,7 +44,7 @@ window.onload = function(){
 
 function votar(cand){
 	cand--;
-	alert('Você votou em ' + candidatos[cand].nome);
+	alert('Você votou em ' + candidatos[cand].nome + '!');
 	eleitor.jaVotou = 1;
 	sessionStorage.setItem("usuario", JSON.stringify(eleitor));
 	var updateEleitor = new XMLHttpRequest();

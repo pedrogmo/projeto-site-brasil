@@ -96,14 +96,14 @@ document.getElementById('btnEntrar').onclick = function(){
 		}
 	}
 	if (!existe)
-		alert ('Email e/ou Senha incorreto(a)');	
+		alert ('Email e/ou Senha incorreto(a)!');	
 	else
 	{
 		usuario = arr[i];
 		sessionStorage.setItem("usuario", JSON.stringify(usuario));
 		sessionStorage.setItem("logou", "sim");
 		logou = true;
-		alert ('Logado com sucesso');
+		alert ('Logado com sucesso!');
 		modal.style.display = 'none';
 		location.reload();
 	}
@@ -116,7 +116,7 @@ document.getElementById('btnEntrar').onclick = function(){
 document.getElementById("sair").onclick = function(){
 	sessionStorage.removeItem("logou");
 	sessionStorage.removeItem("usuario");
-	alert('Você foi deslogado');
+	alert('Você foi deslogado!');
 	location.reload();
 }
 

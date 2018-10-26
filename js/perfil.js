@@ -37,7 +37,7 @@ document.getElementById("excluirConta").onclick = function(){
 	    excluirConta.send();
 	    sessionStorage.removeItem("usuario");
 	    sessionStorage.removeItem("logou");
-	    alert('Sua conta foi excluída do Brasilee');
+	    alert('Sua conta foi excluída do Brasilee!');
 	    location.href = "inicio.html";
 	}
 }
