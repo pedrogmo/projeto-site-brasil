@@ -7,7 +7,6 @@ Design
 Banco de Dados
 
 * Inserção de dados na tabela Noticia.
-* Inserção de dados na tabela EraPolitica.
 
 
 JavaScript
@@ -17,6 +16,7 @@ JavaScript
 
 Ideias e Sugestões
 
+* Criar página do facebook, twitter e instagram.
 * Botar width da barra em %.
 * Barra de pesquisa procura usuários, mostra ranking de pontuação.
 * Modal para exibir informações da bandeira.

@@ -95,24 +95,22 @@ insert into Pergunta values(30,'Qual foi o nome dado ao Brasil após o Golpe da R
 
 select * from Pergunta
 
-create table UsuarioPergunta
-(
-	codigo int primary key,
-	codPergunta int not null,
-	codUsuario int not null,
-
-	constraint fkCodUsuario foreign key(codUsuario) references Usuario(codUsuario),
-	constraint fkCodPergunta foreign key(codPergunta) references Pergunta(codPergunta),
-)
-
-create table EraPolitica
+create table EraHistorica
 (
 	codEra int primary key,
 	nome varchar(30) not null,
-	inicio dateTime not null,
-	fim dateTime not null,
-	textoHistoria ntext not null,
+	inicio varchar(10) not null,
+	fim varchar(10) not null,
 )
+
+insert into EraHistorica values(1, 'Brasil Pré-Colonial', '1500', '1530')
+insert into EraHistorica values(2, 'Brasil Colonial', '1530', '1822')
+insert into EraHistorica values(3, 'Brasil Império', '1822', '1889')
+insert into EraHistorica values(4, 'República Velha', '1889', '1930')
+insert into EraHistorica values(5, 'Era Vargas', '1930', '1945')
+insert into EraHistorica values(6, 'República Populista', '1945', '1964')
+insert into EraHistorica values(7, 'Regime Militar', '1964', '1985')
+insert into EraHistorica values(8, 'República Nova', '1985', '-')
 
 create table Governante
 (
@@ -162,17 +160,6 @@ insert into Governante values(36, 'Fernando Henrique Cardoso', '1995', '2003', '
 insert into Governante values(37, 'Luiz Inácio Lula da Silva', '2003', '2011', 'PT')
 insert into Governante values(38, 'Dilma Rousseff', '2011', '2016', 'PT')
 insert into Governante values(39, 'Michel Temer', '2016', '2019', 'PMDB')
-
-
-create table EraGovernante
-(
-	codigo int primary key,
-	codGovernante int not null,
-	codEra int not null
-
-	constraint fkGovernante foreign key(codGovernante) references Governante(codGovernante),
-	constraint fkEra foreign key(codEra) references EraPolitica(codEra)
-)
 
 create table Candidato
 (
@@ -269,6 +256,25 @@ insert into Curiosidade values(35 , 'Mais de 1.000 línguas eram faladas no Brasi
 insert into Curiosidade values(36 , 'A viola é um instrumento exclusivamente brasileiro.')
 insert into Curiosidade values(37 , 'Segundo uma pesquisa da USP de 2009, 19,3% de todos os homens da cidade do Rio de Janeiro são gays ou bissexuais.')
 
-update Usuario set senha = 1233 where codUsuario = 1
 
-select * from usuario
+/*
+create table EraGovernante
+(
+	codigo int primary key,
+	codGovernante int not null,
+	codEra int not null
+
+	constraint fkGovernante foreign key(codGovernante) references Governante(codGovernante),
+	constraint fkEra foreign key(codEra) references EraPolitica(codEra)
+)
+
+create table UsuarioPergunta
+(
+	codigo int primary key,
+	codPergunta int not null,
+	codUsuario int not null,
+
+	constraint fkCodUsuario foreign key(codUsuario) references Usuario(codUsuario),
+	constraint fkCodPergunta foreign key(codPergunta) references Pergunta(codPergunta),
+)
+*/
