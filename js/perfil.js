@@ -13,6 +13,10 @@ window.onload = function(){
 	document.getElementById("paisUsuario").value = usuarioPerfil.nacionalidade;
 	document.getElementById("pontuacaoUsuario").value = usuarioPerfil.pontuacao;
 	document.getElementById("senhaUsuario").value = usuarioPerfil.senha;
+	$('#user-photo')
+		.attr('src', usuarioPerfil.foto)		
+		.height('100%')
+		.width('100%');
 }
 
 document.getElementById("salvarAlteracoes").onclick = function(){
@@ -53,28 +57,29 @@ function readURL(input)
 	{
 		var reader = new FileReader();
 		reader.onload = function(e)
-		{
+		{						
 			$('#user-photo')
-			.attr('src', e.target.result)
-			.height('100%')
-			.width('100%');
-			// alert(e.target.result.length);
+				.attr('src', e.target.result)
+				.height('100%')
+				.width('100%');
+			sessionStorage.setItem("urlFotoPerfil", e.target.result);
 		};
-		var aleatorio = new Object();
-        	aleatorio.outraCoisaAleatoria = e.target.result;
-        	.ajax({
-                    	url: "http://localhost:3000/foto/" + usuarioPerfil.codUsuario,
-                    	type: 'patch',
-                    	data: aleatorio
-        	})
-
 		reader.readAsDataURL(input.files[0]);
+		var objPerfil = new Object();
+        objPerfil.urlImagem = sessionStorage.getItem("urlFotoPerfil");
+        var urlFotoPerfil = "http://localhost:3000/foto/" + usuarioPerfil.codUsuario;
+    	$.ajax({
+            url: urlFotoPerfil,
+            type: 'PATCH',
+            data: objPerfil
+    	})
+    	usuarioPerfil.foto = sessionStorage.getItem("urlFotoPerfil");
+    	sessionStorage.setItem("usuario", JSON.stringify(usuarioPerfil));
+    	setTimeout(  function(){alert('Foto de perfil alterada');}  , 100);
 	}
 }
 
 document.getElementById("mudarSenha").onclick = function(){
 	document.getElementById("novaSenha").style.visibility = "visible";
 	document.getElementById("salvarAlteracoes").hidden = false;
-
 }
-

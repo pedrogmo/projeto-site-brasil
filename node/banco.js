@@ -82,7 +82,8 @@ const pontos = 0;
 const aniversario = requisicao.body.aniversario;
 const pais = requisicao.body.pais;
 const jaVotou = 0;
-execSQL(`INSERT INTO USUARIO VALUES('${nome}', '${email}','${senha}', ${pontos}, '${aniversario}', '${pais}', ${jaVotou})`, resposta);
+const imagemPerfil = "./img/usuario.jpeg";
+execSQL(`INSERT INTO USUARIO VALUES('${nome}', '${email}','${senha}', ${pontos}, '${aniversario}', '${pais}', ${jaVotou}, '${imagemPerfil}')`, resposta);
 // resposta.end(resposta.json({ mensagem: 'Incluído!'}));
 })
 
@@ -119,9 +120,9 @@ rota.patch('/senha/:id?/:senha?', (requisicao, resposta) =>{
 /////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
 
-rota.patch('/foto/:id?, (requisicao, resposta) =>{	
+rota.patch('/foto/:id?', (requisicao, resposta) =>{	
 	const id = parseInt(requisicao.params.id); 
-	const foto = requisicao.body.outraCoisaAleatoria;
+	const foto = requisicao.body.urlImagem;
 	execSQL(`UPDATE Usuario SET foto = '${foto}' WHERE codUsuario=${id}`, resposta); 
 	// resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
 })

@@ -4,7 +4,7 @@ function trocarImagem(img){
 	imagem.src = img;
 }
 
-var arr;
+var vetNoticias;
 var xmlNoticias = new XMLHttpRequest();
 var urlNoticias = "http://localhost:3000/noticia";
 
@@ -12,27 +12,36 @@ xmlNoticias.onreadystatechange=function(){
   if (this.readyState == 4 && this.status == 200)
     localStorage.setItem("noticias", this.responseText);	
 }
-arr = JSON.parse(this.localStorage.getItem("noticias"));
+vetNoticias = JSON.parse(this.localStorage.getItem("noticias"));
 xmlNoticias.open("GET", urlNoticias, true);
 xmlNoticias.send();
 
 
-for(var i = 0; i < arr.length; i++)
+for(var i = 0; i < vetNoticias.length; i++)
 {
-	var noticia = "not" + (i+1);
-	var titulo = "titulo" + (i+1);
-	var subtitulo = "sub" + (i+1);
-	var imagem = "img" + (i+1);
-	var tema = "tema" + (i+1);
-	var data = "dataNoticia" + (i+1);
-	var site = "siteOrigem" + (i+1);
-	document.getElementById(titulo).innerHTML = arr[i].titulo;
-	document.getElementById(subtitulo).innerHTML = arr[i].subtitulo;
-	document.getElementById(data).innerHTML += arr[i].dataPublicacao;
-	document.getElementById(site).innerHTML += arr[i].siteFonte;
-	document.getElementById(tema).innerHTML = arr[i].tema;
-	document.getElementById(imagem).src = arr[i].urlImagem;
-	var link = arr[i].link;
+	var noticia, titulo, subtitulo;
+	if (i > 3){
+		noticia = "not" + (i+1);
+		titulo = "titulo" + (i+1);
+		subtitulo = "sub" + (i+1);
+		var imagem = "img" + (i+1);
+		var tema = "tema" + (i+1);
+		var data = "dataNoticia" + (i+1);
+		var site = "siteOrigem" + (i+1);
+		document.getElementById(data).innerHTML += vetNoticias[i].dataPublicacao;
+		document.getElementById(site).innerHTML += vetNoticias[i].siteFonte;
+		document.getElementById(tema).innerHTML = vetNoticias[i].tema;
+		document.getElementById(imagem).src = vetNoticias[i].urlImagem;
+	}
+	else{
+		noticia = "destaque" + (i+1);
+		titulo = "desTitulo" + (i+1);
+		subtitulo = "desDesc" + (i+1);
+		document.getElementById(noticia).style.backgroundImage = vetNoticias[i].urlImagem;
+	}	
+	document.getElementById(titulo).innerHTML = vetNoticias[i].titulo;
+	document.getElementById(subtitulo).innerHTML = vetNoticias[i].subtitulo;	
+	var link = vetNoticias[i].link;
 	document.getElementById(noticia).onclick=function(){location.href = link}
 }
 

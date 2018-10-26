@@ -1,4 +1,3 @@
-
 var candidatos;
 var eleitor;
 var xmlCandidatos = new XMLHttpRequest();
@@ -17,7 +16,7 @@ window.onload = function(){
 	{
 		$('button.btnVotar').prop('disabled', true);
 		$('button.btnVotar').css('filter', 'brightness(60%)');
-		setTimeout(  function(){alert('Logue no site para votar!');}  , 100);		
+		setTimeout(  function(){alert('Logue no site para votar!');}  , 100);
 	}
 	else
 	{

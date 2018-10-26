@@ -1,6 +1,5 @@
 Design
 
-* noticias.html : fazer slider de principais notícias e divs dos sites.
 * eleicoes.html : gráfico dos resultados, votos no Brasilee.
 
 Banco de Dados
@@ -11,7 +10,6 @@ Banco de Dados
 JavaScript
 
 * geral.js  : código da aba de pesquisa.
-* perfil.js : trocar foto de perfil do usuário.
 
 Ideias e Sugestões
 

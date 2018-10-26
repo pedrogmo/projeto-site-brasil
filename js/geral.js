@@ -33,6 +33,31 @@ var nome,email,pontos;
 var exibirSenha = true;
 var fundoSB = document.getElementById("fundoSideBar");
 
+//Banco de dados e usuário
+
+if (sessionStorage.getItem("logou") == "sim"){
+	logou = true;
+	usuario = JSON.parse(sessionStorage.getItem("usuario"));
+	document.getElementById("btnLogin").innerHTML = "CONTA";
+	document.getElementById("nomeUser").innerHTML = usuario.nomeUsuario;
+	document.getElementById("emailUser").innerHTML = usuario.email;
+	document.getElementById('highScore').innerHTML += usuario.pontuacao;
+	document.getElementById("imgUser").src = usuario.foto;
+	/*$('#imgUser')
+		.attr('src', usuario.foto)		
+		.height('100%')
+		.width('100%');*/
+} else logou = false;
+
+xmlhttp.onreadystatechange=function(){
+  if (this.readyState == 4 && this.status == 200)    
+    localStorage.setItem("usuarioGeral", this.responseText);
+}
+
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+arr = JSON.parse(localStorage.getItem("usuarioGeral"));
+
 //Modal de login:
 
 document.getElementById('btnLogin').onclick = function(){
@@ -123,26 +148,6 @@ document.getElementById("sair").onclick = function(){
 document.getElementById("perfil").onclick = function(){
 	location.href = "perfil.html"
 }
-
-//Banco de dados e usuário
-
-if (sessionStorage.getItem("logou") == "sim"){
-	logou = true;
-	usuario = JSON.parse(sessionStorage.getItem("usuario"));
-	document.getElementById("btnLogin").innerHTML = "CONTA";
-	document.getElementById("nomeUser").innerHTML = usuario.nomeUsuario;
-	document.getElementById("emailUser").innerHTML = usuario.email;
-	document.getElementById('highScore').innerHTML += usuario.pontuacao;
-} else logou = false;
-
-xmlhttp.onreadystatechange=function(){
-  if (this.readyState == 4 && this.status == 200)    
-    localStorage.setItem("usuarioGeral", this.responseText);
-}
-
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
-arr = JSON.parse(localStorage.getItem("usuarioGeral"));
 
 //Alert da Bandeira:
 
