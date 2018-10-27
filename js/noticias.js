@@ -37,7 +37,7 @@ for(var i = 0; i < vetNoticias.length; i++)
 		noticia = "destaque" + (i+1);
 		titulo = "desTitulo" + (i+1);
 		subtitulo = "desDesc" + (i+1);
-		document.getElementById(noticia).style.backgroundImage = vetNoticias[i].urlImagem;
+		document.getElementById(noticia).style.backgroundImage = 'url(' + vetNoticias[i].urlImagem + ')';
 	}	
 	document.getElementById(titulo).innerHTML = vetNoticias[i].titulo;
 	document.getElementById(subtitulo).innerHTML = vetNoticias[i].subtitulo;	

@@ -54,7 +54,7 @@ document.getElementById("btn-choose").onclick = function(){
 function readURL(input)
 {
 	if(input.files && input.files[0])
-	{
+	{		
 		var reader = new FileReader();
 		reader.onload = function(e)
 		{						
@@ -62,20 +62,20 @@ function readURL(input)
 				.attr('src', e.target.result)
 				.height('100%')
 				.width('100%');
-			sessionStorage.setItem("urlFotoPerfil", e.target.result);
+
+	    	var objPerfil = new Object();
+	        objPerfil.urlImagem = $('#user-photo').attr('src');
+	        var urlFotoPerfil = "http://localhost:3000/foto/" + usuarioPerfil.codUsuario;
+	    	$.ajax({
+	            url: urlFotoPerfil,
+	            type: 'PATCH',
+	            data: objPerfil
+	    	})
+	    	usuarioPerfil.foto = objPerfil.urlImagem;
+	    	sessionStorage.setItem("usuario", JSON.stringify(usuarioPerfil));
+	    	setTimeout(  function(){alert('Foto de perfil alterada'); location.reload();}  , 100);
 		};
-		reader.readAsDataURL(input.files[0]);
-		var objPerfil = new Object();
-        objPerfil.urlImagem = sessionStorage.getItem("urlFotoPerfil");
-        var urlFotoPerfil = "http://localhost:3000/foto/" + usuarioPerfil.codUsuario;
-    	$.ajax({
-            url: urlFotoPerfil,
-            type: 'PATCH',
-            data: objPerfil
-    	})
-    	usuarioPerfil.foto = sessionStorage.getItem("urlFotoPerfil");
-    	sessionStorage.setItem("usuario", JSON.stringify(usuarioPerfil));
-    	setTimeout(  function(){alert('Foto de perfil alterada');}  , 100);
+		reader.readAsDataURL(input.files[0]);    	    
 	}
 }
 

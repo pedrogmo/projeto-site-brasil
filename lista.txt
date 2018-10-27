@@ -9,7 +9,8 @@ Banco de Dados
 
 JavaScript
 
-* geral.js  : código da aba de pesquisa.
+* geral.js   : código da aba de pesquisa.
+*cadastro.js : pattern Nome.
 
 Ideias e Sugestões
 
