@@ -62,7 +62,7 @@ window.onload = function(){
 		var cor = candOrd[i].cor;
 		document.getElementById(cand).style.borderColor = cor;
 		document.getElementById(graf).style.borderColor = cor;
-		document.getElementById(barra).style.backColor = cor;
+		document.getElementById(barra).style.backgroundColor = cor;
 		document.getElementById(cand).src = candOrd[i].urlCand;
 		if (votosTotais == 0){
 			document.getElementById(votos).innerHTML = '0%';
