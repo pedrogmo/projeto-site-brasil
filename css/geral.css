@@ -403,8 +403,7 @@ ul, ol{
   height          : 100%;   
   position        : relative;
   top             : 0px;
-  margin          : 0px;
-  cursor          : pointer;       
+  margin          : 0px;     
 }
 
 #imgUser{
@@ -427,8 +426,13 @@ div.infoUser p{
   font-family   : 'Raleway';
   font-size     : 14pt;
   color         : #fff; 
-  cursor        : pointer; 
   z-index       : 1000000; 
+}
+
+div.infoUser p:hover{
+  transition    : 0.5s ease-in; 
+  cursor        : pointer; 
+  color         : blue;
 }
 
 /*ÍCONES*/

@@ -145,9 +145,12 @@ document.getElementById("sair").onclick = function(){
 	location.reload();
 }
 
-document.getElementById("perfil").onclick = function(){
-	location.href = "perfil.html"
-}
+document.getElementById("perfil").onclick = function(){i()};
+document.getElementById("imgUser").onclick = function(){i()};
+document.getElementById("nomeUser").onclick = function(){i()};
+document.getElementById("emailUser").onclick = function(){i()};
+
+function i(){location.href = "perfil.html";}
 
 //Alert da Bandeira:
 
