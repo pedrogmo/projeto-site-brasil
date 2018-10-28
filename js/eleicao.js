@@ -27,6 +27,7 @@ window.onload = function(){
 			$('button.btnVotar').css('filter', 'brightness(60%)');
 		}
 	}
+	var votosTotais = 0;
 	for(var i = 0; i < candidatos.length; i++)
 	{
 		var nome = "nome" + (i+1);
@@ -38,7 +39,27 @@ window.onload = function(){
 		document.getElementById(desc).innerHTML = candidatos[i].descricao;
 		document.getElementById(imgCand).src = candidatos[i].urlCand;
 		document.getElementById(imgPart).src = candidatos[i].urlPart;
+		var cand = "cand" + (i+1);
+		document.getElementById(cand).src = candidatos[i].urlCand;
+		votosTotais += candidatos[i].votos;
 	}
+	if (votosTotais == 0)
+		for (var i = 0; i < candidatos.length; i++)
+		{
+			var votos = "votos" + (i+1);
+			var barra = "bar" + (i+1);
+			document.getElementById(votos).innerHTML = '0%';
+			document.getElementById(barra).style.width = '0%';
+		}
+	else
+		for (var i = 0; i < candidatos.length; i++){
+			var votos = "votos" + (i+1);
+			var barra = "bar" + (i+1);
+			var porcentagemVotos = parseFloat(candidatos[i].votos / votosTotais);
+			porcentagemVotos = 100 * (porcentagemVotos.toFixed(2));
+			document.getElementById(votos).innerHTML = porcentagemVotos + '%';
+			document.getElementById(barra).style.width = porcentagemVotos + '%';
+		}
 }
 
 function votar(cand){

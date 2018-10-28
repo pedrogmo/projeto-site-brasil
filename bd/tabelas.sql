@@ -174,6 +174,7 @@ create table Candidato
 )
 
 select * from Candidato
+update Candidato set votos = 0
 
 insert into Candidato values(1 , 'Marina Silva', 'Marina Osmarina da Silva Vaz de Lima, nascida Maria Osmarina da Silva é uma historiadora, professora, psicopedagoga, ambientalista e política brasileira filiada à Rede Sustentabilidade.', './img/eleicoes/marina.jpg', './img/partidos/rede.png', 0)
 insert into Candidato values(2 , 'Jair Bolsonaro', 'Jair Messias Bolsonaro é um militar da reserva e político brasileiro, filiado ao Partido Social Liberal. É deputado federal desde 1991, atualmente em seu sétimo mandato, eleito pelo Partido Progressista.', './img/eleicoes/bolsonaro.jpg', './img/partidos/psl.png', 0)

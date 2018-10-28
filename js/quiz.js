@@ -90,7 +90,7 @@ document.getElementById("enviar").onclick = function()
       updatePontos.send();
       usuarioQuiz.pontuacao = pontosUsuario;
       sessionStorage.setItem("usuario", JSON.stringify(usuarioQuiz));
-      document.getElementById('highScore').innerHTML = "&nbsp;&nbsp;&nbsp;<i class='fas fa-trophy'></i>&nbsp;&nbsp;&nbsp;Highscore do quiz: " + usuario.pontuacao;
+      document.getElementById('highScore').innerHTML = "&nbsp;&nbsp;&nbsp;<i class='fas fa-trophy'></i>&nbsp;&nbsp;&nbsp;Highscore do quiz: " + usuarioQuiz.pontuacao;
     }
     alert(fim);
 }
