@@ -28,6 +28,7 @@ window.onload = function(){
 		}
 	}
 	var votosTotais = 0;
+	const precisao = 2;
 	for(var i = 0; i < candidatos.length; i++)
 	{
 		var nome = "nome" + (i+1);
@@ -56,7 +57,7 @@ window.onload = function(){
 			var votos = "votos" + (i+1);
 			var barra = "bar" + (i+1);
 			var porcentagemVotos = parseFloat(candidatos[i].votos / votosTotais);
-			porcentagemVotos = 100 * (porcentagemVotos.toFixed(2));
+			porcentagemVotos = 100 * (porcentagemVotos.toFixed(precisao));
 			document.getElementById(votos).innerHTML = porcentagemVotos + '%';
 			document.getElementById(barra).style.width = porcentagemVotos + '%';
 		}
