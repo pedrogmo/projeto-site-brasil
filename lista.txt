@@ -1,7 +1,3 @@
-Design
-
-* eleicoes.html : gráfico dos resultados, votos no Brasilee.
-
 Banco de Dados
 
 * Inserção de dados na tabela Noticia.
@@ -10,7 +6,8 @@ Banco de Dados
 JavaScript
 
 * geral.js   : código da aba de pesquisa.
-*cadastro.js : pattern Nome.
+* inicio.js(?) : exibir apuração dos votos no gráfico.
+* cadastro.js : pattern Nome.
 
 Ideias e Sugestões
 
