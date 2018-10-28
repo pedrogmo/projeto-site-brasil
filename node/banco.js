@@ -37,7 +37,7 @@ function execSQL(sql, resposta) {
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
+// Candidato
 
 
 rota.get('/candidato', (requisicao, resposta) =>{
@@ -57,10 +57,12 @@ if (requisicao.params.id)
 execSQL('SELECT * from CANDIDATO' + filtro, resposta);
 })
 
-
+rota.get('/votos', (requisicao, resposta) =>{
+execSQL('select * from Candidato order by votos desc', resposta);
+})
 
 /////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
+// Usuário
 
 
 rota.get('/usuario', (requisicao, resposta) =>{
@@ -82,33 +84,25 @@ const pontos = 0;
 const aniversario = requisicao.body.aniversario;
 const pais = requisicao.body.pais;
 const jaVotou = 0;
-const imagemPerfil = "./img/usuario.jpeg";
-execSQL(`INSERT INTO USUARIO VALUES('${nome}', '${email}','${senha}', ${pontos}, '${aniversario}', '${pais}', ${jaVotou}, '${imagemPerfil}')`, resposta);
-// resposta.end(resposta.json({ mensagem: 'Incluído!'}));
+const imagemPerfil = "./img/usuario.jpg";
+execSQL(`INSERT INTO USUARIO VALUES('${nome}', '${email}','${senha}', ${pontos}, '${aniversario}', '${pais}', ${jaVotou}, '${imagemPerfil}')`, resposta)
 })
 
 rota.patch('/usuario/:id?/:p?', (requisicao, resposta) =>{	
 	const id = parseInt(requisicao.params.id); 
 	const highscore = parseInt(requisicao.params.p);
-	execSQL(`UPDATE Usuario SET pontuacao = ${highscore} WHERE codUsuario=${id}`, resposta); 
-	// resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
+	execSQL(`UPDATE Usuario SET pontuacao = ${highscore} WHERE codUsuario=${id}`, resposta);
 })
 
 rota.delete('/usuario/:id?', (requisicao, resposta) =>{ 
 	const codigo = parseInt(requisicao.params.id);
-	execSQL(`DELETE USUARIO WHERE codUsuario = ${codigo}`, resposta); 
-	// resposta.end(resposta.json({ mensagem: 'Deletado!'})); 
+	execSQL(`DELETE USUARIO WHERE codUsuario = ${codigo}`, resposta);
 })
 
 rota.patch('/eleitor/:id?', (requisicao, resposta) =>{	
 	const id = parseInt(requisicao.params.id); 
-	execSQL(`UPDATE Usuario SET jaVotou = 1 WHERE codUsuario=${id}`, resposta); 
-	// resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
+	execSQL(`UPDATE Usuario SET jaVotou = 1 WHERE codUsuario=${id}`, resposta);
 })
-
-/////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
-
 
 rota.patch('/senha/:id?/:senha?', (requisicao, resposta) =>{	
 	const id = parseInt(requisicao.params.id); 
@@ -116,9 +110,6 @@ rota.patch('/senha/:id?/:senha?', (requisicao, resposta) =>{
 	execSQL(`UPDATE Usuario SET senha = '${senha}' WHERE codUsuario=${id}`, resposta); 
 	// resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
 })
-
-/////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
 
 rota.patch('/foto/:id?', (requisicao, resposta) =>{	
 	const id = parseInt(requisicao.params.id); 
@@ -128,9 +119,7 @@ rota.patch('/foto/:id?', (requisicao, resposta) =>{
 })
 
 /////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
-
-
+// Estado
 
 rota.get('/estado', (requisicao, resposta) =>{
 execSQL('SELECT * FROM ESTADO', resposta);
@@ -146,7 +135,7 @@ execSQL('SELECT * from ESTADO' + filtro, resposta);
 
 
 /////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
+// Notícia
 
 
 rota.get('/noticia', (requisicao, resposta) =>{
@@ -162,7 +151,7 @@ execSQL('SELECT * from NOTICIA' + filtro, resposta);
 })
 
 /////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
+// Pergunta
 
 rota.get('/pergunta', (requisicao, resposta) =>{
 execSQL('SELECT * FROM PERGUNTA', resposta);
@@ -177,12 +166,8 @@ execSQL('SELECT * from PERGUNTA' + filtro, resposta);
 })
 
 /////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
+// Curiosidade
 
 rota.get('/curiosidade', (requisicao, resposta) =>{
 execSQL('SELECT * FROM CURIOSIDADE', resposta);
 })
-
-/////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
-

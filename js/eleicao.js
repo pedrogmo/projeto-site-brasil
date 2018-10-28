@@ -39,13 +39,27 @@ window.onload = function(){
 		document.getElementById(nome).innerHTML = candidatos[i].nome;
 		document.getElementById(desc).innerHTML = candidatos[i].descricao;
 		document.getElementById(imgCand).src = candidatos[i].urlCand;
-		document.getElementById(imgPart).src = candidatos[i].urlPart;
-		var cand = "cand" + (i+1);
-		document.getElementById(cand).src = candidatos[i].urlCand;
+		document.getElementById(imgPart).src = candidatos[i].urlPart;		
 		votosTotais += candidatos[i].votos;
 	}
+
+	var xmlCandOrd = new XMLHttpRequest();
+	var urlCandOrd = "http://localhost:3000/votos";
+	xmlCandOrd.onreadystatechange=function(){
+	  if (this.readyState == 4 && this.status == 200)
+	    localStorage.setItem("candOrd", this.responseText);
+	}
+	xmlCandOrd.open("GET", urlCandOrd, true);
+	xmlCandOrd.send();
+	var candOrd = JSON.parse(localStorage.getItem("candOrd"));
+
+	for(var i = 0; i < candOrd.length; i++)
+	{
+		var cand = "cand" + (i+1);
+		document.getElementById(cand).src = candOrd[i].urlCand;
+	}
 	if (votosTotais == 0)
-		for (var i = 0; i < candidatos.length; i++)
+		for (var i = 0; i < candOrd.length; i++)
 		{
 			var votos = "votos" + (i+1);
 			var barra = "bar" + (i+1);
@@ -53,10 +67,10 @@ window.onload = function(){
 			document.getElementById(barra).style.width = '0%';
 		}
 	else
-		for (var i = 0; i < candidatos.length; i++){
+		for (var i = 0; i < candOrd.length; i++){
 			var votos = "votos" + (i+1);
 			var barra = "bar" + (i+1);
-			var porcentagemVotos = parseFloat(candidatos[i].votos / votosTotais);
+			var porcentagemVotos = parseFloat(candOrd[i].votos / votosTotais);
 			porcentagemVotos = 100 * (porcentagemVotos.toFixed(precisao));
 			document.getElementById(votos).innerHTML = porcentagemVotos + '%';
 			document.getElementById(barra).style.width = porcentagemVotos + '%';
