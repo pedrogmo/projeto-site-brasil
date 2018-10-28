@@ -1,4 +1,4 @@
-var candidatos;
+﻿var candidatos;
 var eleitor;
 var xmlCandidatos = new XMLHttpRequest();
 var urlCand = "http://localhost:3000/candidato";
@@ -28,7 +28,7 @@ window.onload = function(){
 		}
 	}
 	var votosTotais = 0;
-	const precisao = 2;
+	const precisao = 4;
 	for(var i = 0; i < candidatos.length; i++)
 	{
 		var nome = "nome" + (i+1);
@@ -53,28 +53,28 @@ window.onload = function(){
 	xmlCandOrd.send();
 	var candOrd = JSON.parse(localStorage.getItem("candOrd"));
 
-	for(var i = 0; i < candOrd.length; i++)
+	for (var i = 0; i < candOrd.length; i++)
 	{
+		var votos = "votos" + (i+1);
+		var barra = "bar" + (i+1);
 		var cand = "cand" + (i+1);
+		var graf = "graf" + (i+1);
+		var cor = candOrd[i].cor;
+		document.getElementById(cand).style.borderColor = cor;
+		document.getElementById(graf).style.borderColor = cor;
+		document.getElementById(barra).style.backColor = cor;
 		document.getElementById(cand).src = candOrd[i].urlCand;
-	}
-	if (votosTotais == 0)
-		for (var i = 0; i < candOrd.length; i++)
-		{
-			var votos = "votos" + (i+1);
-			var barra = "bar" + (i+1);
+		if (votosTotais == 0){
 			document.getElementById(votos).innerHTML = '0%';
 			document.getElementById(barra).style.width = '0%';
 		}
-	else
-		for (var i = 0; i < candOrd.length; i++){
-			var votos = "votos" + (i+1);
-			var barra = "bar" + (i+1);
+		else{
 			var porcentagemVotos = parseFloat(candOrd[i].votos / votosTotais);
 			porcentagemVotos = 100 * (porcentagemVotos.toFixed(precisao));
 			document.getElementById(votos).innerHTML = porcentagemVotos + '%';
 			document.getElementById(barra).style.width = porcentagemVotos + '%';
 		}
+	}
 }
 
 function votar(cand){
