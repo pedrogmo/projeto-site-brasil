@@ -1,3 +1,7 @@
+.center-graphic{  
+  overflow-y: scroll; 
+}
+
 .candidato-container{
 	position: relative;
 	left: 50%;
