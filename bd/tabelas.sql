@@ -201,20 +201,18 @@ create table Noticia
 	dataPublicacao varchar(10) not null
 )
 select * from Noticia
-insert into Noticia values(1, 'Política' , 'Veja as propostas de Paulo Guedes, assessor econômico da campanha de Jair Bolsonaro', 'Entre as propostas, economista fala em mudar as regras do orçamento da União, instituir o sistema de capitalização para a Previdência e avançar na agenda de privatizações.', './img/noticias/01.jpg', 'https://g1.globo.com/politica/eleicoes/2018/noticia/2018/10/21/veja-as-propostas-de-paulo-guedes-assessor-economico-da-campanha-de-jair-bolsonaro.ghtml', 'G1', '25/10/2018')
-insert into Noticia values(2)
-insert into Noticia values(3)
-insert into Noticia values(4)
-insert into Noticia values(5)
-insert into Noticia values(6)
-insert into Noticia values(7)
-insert into Noticia values(8)
-insert into Noticia values(9)
-insert into Noticia values(10)
-insert into Noticia values(11)
-insert into Noticia values(12)
-insert into Noticia values(13)
-insert into Noticia values(14)
+insert into Noticia values(1,  '', '', '', '', '', '', '')
+insert into Noticia values(2,  '', '', '', '', '', '', '')
+insert into Noticia values(3,  '', '', '', '', '', '', '')
+insert into Noticia values(4,  '', '', '', '', '', '', '')
+insert into Noticia values(5,  'Política' , 'Veja as propostas de Paulo Guedes, assessor econômico da campanha de Jair Bolsonaro', 'Entre as propostas, economista fala em mudar as regras do orçamento da União, instituir o sistema de capitalização para a Previdência e avançar na agenda de privatizações.', './img/noticias/01.jpg', 'https://g1.globo.com/politica/eleicoes/2018/noticia/2018/10/21/veja-as-propostas-de-paulo-guedes-assessor-economico-da-campanha-de-jair-bolsonaro.ghtml', 'G1', '25/10/2018')
+insert into Noticia values(6,  '', '', '', '', '', '', '')
+insert into Noticia values(7,  '', '', '', '', '', '', '')
+insert into Noticia values(8,  '', '', '', '', '', '', '')
+insert into Noticia values(9,  '', '', '', '', '', '', '')
+insert into Noticia values(10, '', '', '', '', '', '', '')
+insert into Noticia values(11, '', '', '', '', '', '', '')
+insert into Noticia values(12, '', '', '', '', '', '', '')
 
 create table Curiosidade
 (

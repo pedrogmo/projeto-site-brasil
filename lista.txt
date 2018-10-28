@@ -1,3 +1,9 @@
+Design
+
+* inicio.html  : gráfico do primeiro turno.
+* inicio.html  : gráfico do segundo turno.
+* eleicao.html : gráfico da votação do site.
+
 Banco de Dados
 
 * Inserção de dados na tabela Noticia.
@@ -5,9 +11,9 @@ Banco de Dados
 
 JavaScript
 
-* geral.js   : código da aba de pesquisa.
-* inicio.js(?) : exibir apuração dos votos no gráfico.
-* cadastro.js : pattern Nome.
+* geral.js    : código da aba de pesquisa.
+* eleicao.js  : código do gráfico.
+
 
 Ideias e Sugestões
 

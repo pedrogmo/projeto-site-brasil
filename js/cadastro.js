@@ -1,6 +1,4 @@
-// /^[A-Z][a-z]*(?: (?:[A-Z]|[a-z])[a-z]*)*$/
-// /^[\\p{L}\\. \'-]+$/
-var patternNome = new RegExp('^[A-Z][a-z]*(?: (?:[A-Z]|[a-z])[a-z]*)*$' , 'u');
+var patternNome = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/;
 
 document.getElementById("criarConta").onclick = function(){
 	var senha = document.getElementById("senha").value.trim();
