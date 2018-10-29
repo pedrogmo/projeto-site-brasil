@@ -36,6 +36,7 @@ body{
 	list-style       : none;
 	font-size        : 16pt; 
 	font-family      : 'Raleway';
+  display          : flex;
 }
 
 #menu ul li { display : inline; }
@@ -109,39 +110,40 @@ body{
 	transform  : scale(1.05);  
 }
 
-#txtBusca{
+.busca-container{
+  position: relative;
+  width: 15%;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.5s;
+}
+
+.busca-container.active{
+  width: 30%;
+}
+
+.busca-container i{
+  position: absolute;
+  margin: 10px; 
+  color: #ccc;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.busca-container #txtBusca{
   position      : absolute;
-  top           : 25px; 
-  left          : 300px;  
-  width         : 650px; 
+  width         : 90%; 
   font-family   : 'Raleway'; 
   font-size     : 12pt;  
-  padding       : 10px; 
-  border        : 1px solid gray;
-  border-radius : 5px; 
+  padding       : 10px;  
+  padding-left  : 40px; 
+  border        : 1px solid gray; 
+  border-radius : 5px;
   outline       : none; 
 }
 
-#btnBusca{
-  position                   : absolute;
-  top                        : 25px; 
-  left                       : 965px;  
-  padding                    : 10px; 
-  font-size                  : 12pt;
-  height                     : 41px;
-  width                      : 41px;  
-  color                      : #fff8dc; 
-  background-color           : #1db954;
-  border                     : 1px solid gray; 
-  border-top-right-radius    : 5px;
-  border-bottom-right-radius : 5px; 
-  outline                    : none;     
-}
-
-#btnBusca:hover{
-  cursor           : pointer;
-  transition       : 0.5s ease-in; 
-  background-color : #1ed760;
+.busca-container #txtBusca:focus ~ i{
+  color: #009c3b;
 }
 
 #btnLogin{
