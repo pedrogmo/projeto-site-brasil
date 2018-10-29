@@ -19,11 +19,11 @@ xmlNoticias.send();
 
 for(var i = 0; i < vetNoticias.length; i++)
 {
-	var noticia, titulo, lide;
+	var noticia, titulo, subtitulo;
 	if (i > 3){
 		noticia = "not" + (i+1);
 		titulo = "titulo" + (i+1);
-		lide = "lide" + (i+1);
+		subtitulo = "sub" + (i+1);
 		var imagem = "img" + (i+1);
 		var tema = "tema" + (i+1);
 		var data = "dataNoticia" + (i+1);
@@ -36,18 +36,17 @@ for(var i = 0; i < vetNoticias.length; i++)
 	else{
 		noticia = "destaque" + (i+1);
 		titulo = "desTitulo" + (i+1);
-		lide = "desDesc" + (i+1);
+		subtitulo = "desDesc" + (i+1);
 		document.getElementById(noticia).style.backgroundImage = 'url(' + vetNoticias[i].urlImagem + ')';
 	}	
 	document.getElementById(titulo).innerHTML = vetNoticias[i].titulo;
-	document.getElementById(lide).innerHTML = vetNoticias[i].lide;	
-	var link = vetNoticias[i].link;
-	document.getElementById(noticia).onclick=function(){location.href = link}
+	document.getElementById(subtitulo).innerHTML = vetNoticias[i].subtitulo;
 }
 
 document.getElementById("destaqueRep").style.backgroundImage = 'url(' + vetNoticias[0].urlImagem + ')';
 document.getElementById("desTituloRep").innerHTML = vetNoticias[0].titulo;
-document.getElementById("desDescRep").innerHTML = vetNoticias[0].lide;	
-var link = vetNoticias[0].link;
-document.getElementById("destaqueRep").onclick=function(){location.href = link}
+document.getElementById("desDescRep").innerHTML = vetNoticias[0].subtitulo;	
 
+function link(i){
+	location.href = vetNoticias[i-1].link;
+}
