@@ -1,8 +1,6 @@
 Design
 
 * inicio.html  : gráfico do primeiro turno.
-* inicio.html  : gráfico do segundo turno.
-* eleicao.html : gráfico da votação do site.
 
 Banco de Dados
 
@@ -12,7 +10,6 @@ Banco de Dados
 JavaScript
 
 * geral.js    : código da aba de pesquisa.
-* eleicao.js  : código do gráfico.
 
 
 Ideias e Sugestões
