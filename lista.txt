@@ -1,11 +1,10 @@
-Banco de Dados
+Design
 
-* Inserção de dados na tabela Noticia.
-
+* noticias.html: ajustar div.
 
 JavaScript
 
-* geral.js : código da aba de pesquisa.
+* geral.js : código da barra de pesquisa.
 
 
 Ideias e Sugestões
