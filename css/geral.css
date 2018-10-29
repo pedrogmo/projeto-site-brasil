@@ -36,7 +36,6 @@ body{
 	list-style       : none;
 	font-size        : 16pt; 
 	font-family      : 'Raleway';
-  display          : flex;
 }
 
 #menu ul li { display : inline; }
@@ -111,7 +110,10 @@ body{
 }
 
 .busca-container{
-  position: relative;
+  position: absolute;
+  top: 17.5px;
+  left: 73.65%;
+  transform: translateX(-73.65%);
   width: 15%;
   border-radius: 5px;
   padding: 5px;
@@ -120,6 +122,8 @@ body{
 
 .busca-container.active{
   width: 30%;
+  left: 70%;
+  transform: translateX(-70%);
 }
 
 .busca-container i{
