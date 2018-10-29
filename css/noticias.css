@@ -177,7 +177,7 @@ body{
 	padding: 5px;
 	color: #fff;
 	background: #1db954;
-	width: 80px;
+	width: 100px;
 }
 
 .row .card-container .card-desc .card-icones{
@@ -218,9 +218,10 @@ body{
 .row .card-container .card-desc p{
 	font-family: 'Roboto Condensed';
 	font-size: 16px;
+	height: 100px;
 	margin: 15px;
 	padding: 0;
-	opacity: 0;
+	opacity: 1;
 	transition: 0.5s;
 }
 

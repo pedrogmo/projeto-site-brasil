@@ -21,17 +21,29 @@ window.onload = function(){
 
 document.getElementById("salvarAlteracoes").onclick = function(){
 	
-	novaSenhaUsuario = document.getElementById("novaSenhaUsuario").value;
-	var updateSenha = new XMLHttpRequest();
-    updateSenha.open("PATCH", "http://localhost:3000/senha/" + usuarioPerfil.codUsuario + '/' + novaSenhaUsuario, true);
-    updateSenha.send();
-    document.getElementById("salvarAlteracoes").hidden = true;
-    document.getElementById("novaSenha").style.visibility = "hidden";
-    usuarioPerfil.senha = novaSenhaUsuario;
-    sessionStorage.setItem("usuario", JSON.stringify(usuarioPerfil));
-	alert("Senha Alterada!");
-	location.reload();
+	novaSenhaUsuario = document.getElementById("novaSenhaUsuario").value.trim();
+	if (novaSenhaUsuario == ""){
+		alert("Nova senha inválida!");
+		document.getElementById("novaSenhaUsuario").value = "";
+	}
+	else
+		if (novaSenhaUsuario == usuarioPerfil.senha){
+			alert("Senha é a mesma!")
+			document.getElementById("novaSenhaUsuario").value = "";
+		}
+		else{
+			var updateSenha = new XMLHttpRequest();
+		    updateSenha.open("PATCH", "http://localhost:3000/senha/" + usuarioPerfil.codUsuario + '/' + novaSenhaUsuario, true);
+		    updateSenha.send();
+		    document.getElementById("salvarAlteracoes").hidden = true;
+		    document.getElementById("novaSenha").style.visibility = "hidden";
+		    usuarioPerfil.senha = novaSenhaUsuario;
+		    sessionStorage.setItem("usuario", JSON.stringify(usuarioPerfil));
+			alert("Senha Alterada!");
+			location.reload();
+		}
 }
+
 
 document.getElementById("excluirConta").onclick = function(){
 	var confirmacao = confirm("Você deseja excluir sua conta?");
@@ -73,7 +85,7 @@ function readURL(input)
 	    	})
 	    	usuarioPerfil.foto = objPerfil.urlImagem;
 	    	sessionStorage.setItem("usuario", JSON.stringify(usuarioPerfil));
-	    	setTimeout(  function(){alert('Foto de perfil alterada'); location.reload();}  , 100);
+	    	setTimeout(  function(){alert('Foto de perfil alterada!'); location.reload();}  , 100);
 		};
 		reader.readAsDataURL(input.files[0]);    	    
 	}
