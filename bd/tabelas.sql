@@ -197,7 +197,7 @@ create table Noticia
 	codNoticia int primary key,
 	tema varchar(20) not null,
 	titulo ntext not null,
-	subtitulo ntext not null,	
+	lide ntext not null,	
 	urlImagem varchar(30) not null,
 	link  ntext not null,
 	siteFonte varchar(20) not null,
