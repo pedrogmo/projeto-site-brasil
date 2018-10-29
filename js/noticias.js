@@ -45,3 +45,9 @@ for(var i = 0; i < vetNoticias.length; i++)
 	document.getElementById(noticia).onclick=function(){location.href = link}
 }
 
+document.getElementById("destaqueRep").style.backgroundImage = 'url(' + vetNoticias[0].urlImagem + ')';
+document.getElementById("desTituloRep").innerHTML = vetNoticias[0].titulo;
+document.getElementById("desDescRep").innerHTML = vetNoticias[0].lide;	
+var link = vetNoticias[0].link;
+document.getElementById("destaqueRep").onclick=function(){location.href = link}
+
