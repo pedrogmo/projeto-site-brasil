@@ -197,17 +197,17 @@ create table Noticia
 	codNoticia int primary key,
 	tema varchar(20) not null,
 	titulo ntext not null,
-	lide ntext not null,	
+	subtitulo ntext not null,	
 	urlImagem varchar(30) not null,
 	link  ntext not null,
 	siteFonte varchar(20) not null,
 	dataPublicacao varchar(10) not null
 )
 select * from Noticia
-insert into Noticia values(1,  '', '', '', '', '', '', '')
-insert into Noticia values(2,  '', '', '', '', '', '', '')
-insert into Noticia values(3,  '', '', '', '', '', '', '')
-insert into Noticia values(4,  '', '', '', '', '', '', '')
+insert into Noticia values(1,  'Política', 'Eleições 2018: Jair Bolsonaro é eleito presidente do Brasil', 'Capitão da reserva obteve 55,13% dos votos válidos; seu adversário, Fernando Haddad (PT) ficou com 44,87%', '/img/noticias/1.jpg', 'https://veja.abril.com.br/politica/eleicoes-2018-segundo-turno-apuracao-resultado-presidente-ao-vivo/', 'Veja', '28/10/2018')--https://veja.abril.com.br/politica/eleicoes-2018-segundo-turno-apuracao-resultado-presidente-ao-vivo/
+insert into Noticia values(2,  'Política', 'As promessas de Bolsonaro', 'Segurança, trabalho, educação: o que deve mudar no Brasil em 2019 com uma nova equipe no governo federal.', '/img/noticias/2.jpg', 'https://www.uol/eleicoes/especiais/as-propostas-de-governo-de-bolsonaro-e-seus-impactos-a-partir-de-2019.htm#tematico-1', 'Uol', '29/10/2018')--https://www.uol/eleicoes/especiais/as-propostas-de-governo-de-bolsonaro-e-seus-impactos-a-partir-de-2019.htm#tematico-1
+insert into Noticia values(3,  'Política', 'Após derrota, Haddad visitará Lula nesta semana', 'Nesta segunda-feira, 29, Haddad deve passar o dia em casa, no Planalto Paulista, sem agenda pública, segundo sua assessoria de imprensa.', './img/noticias/3.jpg', 'https://exame.abril.com.br/brasil/apos-derrota-haddad-visitara-lula-nesta-semana/', 'Abril', '28/10/2018')--https://exame.abril.com.br/brasil/apos-derrota-haddad-visitara-lula-nesta-semana/
+insert into Noticia values(4,  'Política', "Hamilton Mourão e Manuela D'Ávila, os aspirantes a vice-presidente", "Eles nasceram em Porto Alegre, no  Rio Grande do Sul, e são os vices dos finalistas à corrida presidencial: esses são os únicos pontos comuns entre Manuela d'Ávila e o general Hamilton Mourão, de perfis diametralmente opostos.", './img/noticias/4.jpg', 'http://atarde.uol.com.br/politica/eleicoes/noticias/2005700-hamilton-mourao-e-manuela-davila-os-aspirantes-a-vicepresidente', 'A Tarde', '26/10/2018')--http://atarde.uol.com.br/politica/eleicoes/noticias/2005700-hamilton-mourao-e-manuela-davila-os-aspirantes-a-vicepresidente
 insert into Noticia values(5,  'Política' , 'Veja as propostas de Paulo Guedes, assessor econômico da campanha de Jair Bolsonaro', 'Entre as propostas, economista fala em mudar as regras do orçamento da União, instituir o sistema de capitalização para a Previdência e avançar na agenda de privatizações.', './img/noticias/5.jpg', 'https://g1.globo.com/politica/eleicoes/2018/noticia/2018/10/21/veja-as-propostas-de-paulo-guedes-assessor-economico-da-campanha-de-jair-bolsonaro.ghtml', 'G1', '25/10/2018')
 insert into Noticia values(6,  '', '', '', '', '', '', '')
 insert into Noticia values(7,  '', '', '', '', '', '', '')
