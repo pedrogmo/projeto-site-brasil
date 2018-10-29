@@ -1,7 +1,3 @@
-Design
-
-
-
 Banco de Dados
 
 * Inserção de dados na tabela Noticia.
@@ -9,11 +5,12 @@ Banco de Dados
 
 JavaScript
 
-* geral.js    : código da aba de pesquisa.
+* geral.js : código da aba de pesquisa.
 
 
 Ideias e Sugestões
 
+* Colocar cores para os temas das notícias.
 * Criar página do facebook, twitter e instagram.
 * Botar width da barra em %.
 * Barra de pesquisa procura usuários, mostra ranking de pontuação.
