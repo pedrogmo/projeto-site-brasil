@@ -1,6 +1,6 @@
 Design
 
-* inicio.html  : gráfico do primeiro turno.
+
 
 Banco de Dados
 

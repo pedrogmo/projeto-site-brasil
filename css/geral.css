@@ -433,7 +433,7 @@ div.infoUser p{
 div.infoUser p:hover{
   transition    : 0.5s ease-in; 
   cursor        : pointer; 
-  color         : blue;
+  color         : #009c3b;
 }
 
 /*ÍCONES*/
