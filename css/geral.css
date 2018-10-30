@@ -32,7 +32,7 @@ body{
 	right            : 0px; 
 	top              : 0px;
 	background       : rgba(0, 0, 0, 0.75); 
-  box-shadow       : 0 5px 10px rgba(0, 0, 0, 0.25); 
+  	box-shadow       : 0 5px 10px rgba(0, 0, 0, 0.25); 
 	list-style       : none;
 	font-size        : 16pt; 
 	font-family      : 'Raleway';
@@ -329,11 +329,11 @@ ul, ol{
   background-color : #fafafa;
   margin           : 5% auto; 
   padding-bottom   : 30px; 
-  width            : 50%;
+  width            : 700px;
   border-radius    : 5px; 
   box-shadow       : 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);    
   overflow         : hidden;
-  animation        : bounceInDown 0.5s; 
+  animation        : slideInDown 1s; 
 }
 
 .alert-content img{
@@ -360,7 +360,6 @@ ul, ol{
 
 .alert-content .alert-opcoes{
   border-top: 1px solid lightgray;
-  width: 100%;
   position: relative;
   right: 0;
 }
