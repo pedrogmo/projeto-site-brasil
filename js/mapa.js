@@ -25,17 +25,24 @@ for (var i = 0; i < vetEstados.length; i++)
 {
   estados[i] = vetEstados[i].nome;
 	dados =  "Região: " + vetEstados[i].regiao;
-  dados += "\nPopulação: " + vetEstados[i].populacao;
-	dados += "\nPIB: " + vetEstados[i].pib;
-  dados += "\nEsperança de vida: " + vetEstados[i].esperancaDeVida;
-  dados += "\nMortalidade infantil: " + vetEstados[i].mortalidadeInfantil;
-  dados += "\nAlfabetização: " + vetEstados[i].alfabetizacao;
-  dados += "\nIDH: " + vetEstados[i].idh;
-  dados += "\nÁrea: " + vetEstados[i].area;
+  dados += "<br>População: " + vetEstados[i].populacao;
+	dados += "<br>PIB: " + vetEstados[i].pib;
+  dados += "<br>Esperança de vida: " + vetEstados[i].esperancaDeVida;
+  dados += "<br>Mortalidade infantil: " + vetEstados[i].mortalidadeInfantil;
+  dados += "<br>Alfabetização: " + vetEstados[i].alfabetizacao;
+  dados += "<br>IDH: " + vetEstados[i].idh;
+  dados += "<br>Área: " + vetEstados[i].area;
   info[i] = dados;
 }
 
 document.getElementById('cbxEstados').onchange = function(){
 	var indice = document.getElementById("cbxEstados").selectedIndex;
-  setTimeout(  function(){alert('Você selecionou: ' + estados[indice - 1] + "\n" + info[indice - 1]);}  , 100);
+  var mensagem = 'Você selecionou: ' + estados[indice - 1] + "<br><br>" + info[indice - 1];
+  setTimeout(  function(){alertModal(mensagem);}  , 100);
+}
+
+function alertModal(msg){
+  document.getElementById("cancelar").style.visibility = "hidden";
+  document.getElementById("modalAlert").style.display = "block";
+  document.getElementById("mensagem").innerHTML = msg;
 }

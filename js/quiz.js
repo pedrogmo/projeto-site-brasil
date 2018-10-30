@@ -7,7 +7,7 @@ window.onload = function() //vai dar ruim
     if (sessionStorage.getItem("logou") == "sim")
       inicioQuiz();
     else
-      alert('Você não está logado, faça login para começar o quiz!');
+      alertModal('Você não está logado, faça login para começar o quiz!');
 }
 
 function inicioQuiz(){
@@ -92,7 +92,7 @@ document.getElementById("enviar").onclick = function()
       sessionStorage.setItem("usuario", JSON.stringify(usuarioQuiz));
       document.getElementById('highScore').innerHTML = "&nbsp;&nbsp;&nbsp;<i class='fas fa-trophy'></i>&nbsp;&nbsp;&nbsp;Highscore do quiz: " + usuarioQuiz.pontuacao;
     }
-    alert(fim);
+    alertModal(fim);
 }
 
 document.getElementById('resp').onclick = function()
@@ -104,4 +104,10 @@ document.getElementById('resp').onclick = function()
     var janela = window.open("", "_blank", 'height=800,width=1000');
     janela.document.write(texto);
     janela.focus();
+}
+
+function alertModal(msg){
+  document.getElementById("cancelar").style.visibility = "hidden";
+  document.getElementById("modalAlert").style.display = "block";
+  document.getElementById("mensagem").innerHTML = msg;
 }

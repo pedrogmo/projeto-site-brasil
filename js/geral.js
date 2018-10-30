@@ -38,6 +38,7 @@ var url = "http://localhost:3000/usuario";
 var nome,email,pontos;
 var exibirSenha = true;
 var fundoSB = document.getElementById("fundoSideBar");
+var modalAlert = document.getElementById("modalAlert");
 
 //Banco de dados e usuário
 
@@ -88,6 +89,9 @@ window.onclick = function(event){
   if(event.target == fundoSB){
   	fundoSB.style.display = 'none';
     login.style.left = '-35%';
+  }else
+  if(event.target == modalAlert){
+    modalAlert.style.display = 'none';
   }
 }
 
@@ -127,14 +131,14 @@ document.getElementById('btnEntrar').onclick = function(){
 		}
 	}
 	if (!existe)
-		alert ('Email e/ou Senha incorreto(a)!');	
+		alertModal('Email e/ou Senha incorreto(a)!');	
 	else
 	{
 		usuario = arr[i];
 		sessionStorage.setItem("usuario", JSON.stringify(usuario));
 		sessionStorage.setItem("logou", "sim");
 		logou = true;
-		alert ('Logado com sucesso!');
+		alertModal('Logado com sucesso!');
 		modal.style.display = 'none';
 		location.reload();
 	}
@@ -147,7 +151,7 @@ document.getElementById('btnEntrar').onclick = function(){
 document.getElementById("sair").onclick = function(){
 	sessionStorage.removeItem("logou");
 	sessionStorage.removeItem("usuario");
-	alert('Você foi deslogado!');
+	alertModal('Você foi deslogado!');
 	location.reload();
 }
 
@@ -158,9 +162,17 @@ document.getElementById("emailUser").onclick = function(){location.href = "perfi
 
 //Alert da Bandeira:
 
-document.getElementById("bandeira").onclick = function(){ alert(band); }
+document.getElementById("bandeira").onclick = function(){ alertModal(band); }
 
 var band = 'A bandeira atual da República Federativa do Brasil foi feita em 1889, durante a República Velha. A frase "Ordem e Progresso"'+
 ' representa o positivismo, ideia segundo a qual a sociedade deve ser científica e autoritária, para que haja desenvolvimento. Acredita-se ' +
 'que as cores verde e amarelo tenham surgido da riqueza presente nas matas e dos metais preciosos (o outro). Contudo, historiadores afirmam que ' +
 'a escolha dessas cores provém da união entre as famílias reais Bragança (Brasil) e Habsburgo (Áustria).';
+
+function alertModal(msg){
+	document.getElementById("cancelar").style.visibility = "hidden";
+	modalAlert.style.display = "block";
+	document.getElementById("mensagem").innerHTML = msg;
+}
+
+document.getElementById("ok").onclick = function(){modalAlert.style.display = "none";}

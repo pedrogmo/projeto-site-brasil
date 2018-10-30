@@ -79,7 +79,7 @@ window.onload = function(){
 
 function votar(cand){
 	cand--;
-	alert('Você votou em ' + candidatos[cand].nome + '!');
+	alertModal('Você votou em ' + candidatos[cand].nome + '!');
 	eleitor.jaVotou = 1;
 	sessionStorage.setItem("usuario", JSON.stringify(eleitor));
 	var updateEleitor = new XMLHttpRequest();
@@ -114,4 +114,10 @@ function info(cand){
 		}
 		location.href = link;
 	}
+}
+
+function alertModal(msg){
+  document.getElementById("cancelar").style.visibility = "hidden";
+  document.getElementById("modalAlert").style.display = "block";
+  document.getElementById("mensagem").innerHTML = msg;
 }
