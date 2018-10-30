@@ -8,3 +8,4 @@ Erros
 * F5 para carregar resultado da eleição.
 * F5 depois de excluir conta.
 * Demora par atualizar foto.
+* Colocar um banner para as guias.
