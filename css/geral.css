@@ -223,10 +223,11 @@ ul, ol{
 }
 
 .modal-logo{
-  position : relative; 
-  left     : 20.5%;
-  height   : 70px;
-  width    : 250px;  
+  position      : relative; 
+  left          : 50%;
+  transform     : translateX(-50%); 
+  height        : 70px;
+  width         : 250px;  
   margin-bottom : 45px;  
 }
 
@@ -308,6 +309,86 @@ ul, ol{
   transition : 0.5s; 
   color      : #009c3b;
   cursor     : pointer;  
+}
+
+/*ALERTS*/
+
+.alert{
+  /*display  : none;*/
+  position         : fixed;
+  z-index          : 100000;
+  left             : 0px;
+  top              : 0px;
+  height           : 100%;
+  width            : 100%;
+  background-color : rgba(0, 0, 0, 0.5);       
+}
+
+.alert-content{
+  position         : relative;
+  background-color : #fafafa;
+  margin           : 5% auto; 
+  padding-bottom   : 30px; 
+  width            : 50%;
+  border-radius    : 5px; 
+  box-shadow       : 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);    
+  overflow         : hidden;
+  animation        : bounceInDown 0.5s; 
+}
+
+.alert-content img{
+  margin: 0;
+}
+
+.alert-content .alert-desc{
+  margin: 0;
+  width: 100%;
+  height: 300px;
+  overflow-y: scroll;
+} 
+
+.alert-content .alert-desc h2{
+  color: #2b2c33;
+  text-align: left;
+  margin: 30px;
+}
+
+.alert-content .alert-desc p{
+  margin: 30px;
+  font-size: 14pt;
+}
+
+.alert-content .alert-opcoes{
+  border-top: 1px solid lightgray;
+  width: 100%;
+  position: relative;
+  right: 0;
+}
+
+.alert-content .alert-opcoes button{
+  position: relative;
+  top: 15px;
+  left: 61.5%;
+  height: 40px;
+  width: 110px;
+  margin: 5px;
+  font-family: 'Raleway';
+  font-size: 12pt;
+  border: none;
+  background: none;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.5s;
+}
+
+.alert-content .alert-opcoes button:hover{
+  cursor: pointer;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
+}
+
+.alert-content .alert-opcoes button.green-button{
+  background: #1db954;
+  color: #fff;
 }
 
 /*CUSTOMIZAÇÃO DA SIDEBAR*/
