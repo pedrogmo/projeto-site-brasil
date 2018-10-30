@@ -39,7 +39,8 @@ document.getElementById("salvarAlteracoes").onclick = function(){
 		    document.getElementById("novaSenha").style.visibility = "hidden";
 		    usuarioPerfil.senha = novaSenhaUsuario;
 		    sessionStorage.setItem("usuario", JSON.stringify(usuarioPerfil));
-			setTimeout(  function(){alertModal('Senha alterada!'); location.reload();}  , 100);
+			alert('Senha alterada!');
+			setTimeout(  function(){location.reload();}  , 100);
 		}
 }
 
@@ -52,7 +53,8 @@ document.getElementById("excluirConta").onclick = function(){
 	    excluirConta.send();
 	    sessionStorage.removeItem("usuario");
 	    sessionStorage.removeItem("logou");
-	    setTimeout(  function(){alertModal('Sua conta foi excluída do Brasilee!'); location.href = "inicio.html";}  , 100);
+	    alert('Sua conta foi excluída do Brasilee!');
+		setTimeout(  function(){location.href = "inicio.html";}  , 100);
 	}
 }
 
@@ -72,7 +74,6 @@ function readURL(input)
 				.attr('src', e.target.result)
 				.height('100%')
 				.width('100%');
-
 	    	var objPerfil = new Object();
 	        objPerfil.urlImagem = $('#user-photo').attr('src');
 	        var urlFotoPerfil = "http://localhost:3000/foto/" + usuarioPerfil.codUsuario;
@@ -82,9 +83,9 @@ function readURL(input)
 	            data: objPerfil
 	    	})
 	    	usuarioPerfil.foto = objPerfil.urlImagem;
-	    	sessionStorage.setItem("usuario", JSON.stringify(usuarioPerfil));
-	    	setTimeout(  function(){alertModal('Foto de perfil alterada!'); location.reload();}  , 100);
-		};
+	    	sessionStorage.setItem("usuario", JSON.stringify(usuarioPerfil));	    	
+			setTimeout(  function(){alert('Foto de perfil alterada!'); location.reload();}  , 100);
+		}
 		reader.readAsDataURL(input.files[0]);    	    
 	}
 }
@@ -92,10 +93,4 @@ function readURL(input)
 document.getElementById("mudarSenha").onclick = function(){
 	document.getElementById("novaSenha").style.visibility = "visible";
 	document.getElementById("salvarAlteracoes").hidden = false;
-}
-
-function alertModal(msg){
-  document.getElementById("cancelar").style.visibility = "hidden";
-  document.getElementById("modalAlert").style.display = "block";
-  document.getElementById("mensagem").innerHTML = msg;
 }

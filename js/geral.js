@@ -131,16 +131,15 @@ document.getElementById('btnEntrar').onclick = function(){
 		}
 	}
 	if (!existe)
-		alertModal('Email e/ou Senha incorreto(a)!');	
+		alert('Email e/ou Senha incorreto(a)!');	
 	else
 	{
 		usuario = arr[i];
 		sessionStorage.setItem("usuario", JSON.stringify(usuario));
 		sessionStorage.setItem("logou", "sim");
 		logou = true;
-		alertModal('Logado com sucesso!');
 		modal.style.display = 'none';
-		location.reload();
+		alert('Logado com sucesso!');
 	}
 		document.getElementById("txtEmail").value = "";
 		document.getElementById("txtSenha").value = "";
@@ -151,8 +150,8 @@ document.getElementById('btnEntrar').onclick = function(){
 document.getElementById("sair").onclick = function(){
 	sessionStorage.removeItem("logou");
 	sessionStorage.removeItem("usuario");
-	alertModal('Você foi deslogado!');
-	location.reload();
+	alert('Você foi deslogado!');
+	setTimeout(  function(){location.reload();}  , 100);
 }
 
 document.getElementById("perfil").onclick = function(){location.href = "perfil.html";}
@@ -170,7 +169,6 @@ var band = 'A bandeira atual da República Federativa do Brasil foi feita em 188
 'a escolha dessas cores provém da união entre as famílias reais Bragança (Brasil) e Habsburgo (Áustria).';
 
 function alertModal(msg){
-	document.getElementById("cancelar").style.visibility = "hidden";
 	modalAlert.style.display = "block";
 	document.getElementById("mensagem").innerHTML = msg;
 }

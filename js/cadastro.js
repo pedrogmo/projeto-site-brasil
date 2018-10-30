@@ -12,31 +12,31 @@ document.getElementById("criarConta").onclick = function(){
 	var ano = parseInt(data.substring(6,10));	
 	if (senha == "" || senha2 == "")
 	{
-		alertModal("Senha inválida!");
+		alert("Senha inválida!");
 		document.getElementById("senha").value = document.getElementById("confirmarSenha").value = "";	
 	}
 	else if (nome == "" || patternNome.test(nome) == false)
 	{
-		alertModal("Nome inválido!");
+		alert("Nome inválido!");
 		document.getElementById("nome").value = "";
 	}	
 	else if (pais == "")
 	{
-		alertModal("País inválido!");
+		alert("País inválido!");
 		document.getElementById("nacionalidade").value = "";
 	}
 	else if (isNaN(dia) || isNaN(mes) || isNaN(ano) || dia > 31 || mes > 12 || ano > 2018 || ano < 1890 || dia < 1 || mes < 1)
 	{
-		alertModal('Data inválida!');
+		alert('Data inválida!');
 		document.getElementById("data").value = "";
 	}
 	else if (email.indexOf("@") == -1 || email.indexOf(".com") == -1){
-		alertModal('Email inválido!');
+		alert('Email inválido!');
 		document.getElementById("email").value = "";
 	}
 	else if (senha != senha2)
 	{
-		alertModal("As senhas não estão iguais!");
+		alert("As senhas não estão iguais!");
 		document.getElementById("senha").value = document.getElementById("confirmarSenha").value = "";
 	}
 	else{
@@ -45,7 +45,7 @@ document.getElementById("criarConta").onclick = function(){
 		for(var i=0; i<usuarios.length; i++)
 			if(email == usuarios[i].email)
 			{
-				alertModal('Email já existente no site!');
+				alert('Email já existente no site!');
 				emailJaExiste = true;
 				document.getElementById("email").value = "";
 				break;
@@ -59,13 +59,8 @@ document.getElementById("criarConta").onclick = function(){
 			user.aniversario = data;
 			user.pais = pais;
 			$.post('http://localhost:3000/usuario', user);
-			setTimeout(  function(){alert('Conta criada!'); location.href = "inicio.html";}  , 100);
+			alert('Conta criada!');
+			setTimeout(  function(){ location.href = "inicio.html";}  , 100);
 		}
 	}
-}
-
-function alertModal(msg){
-  document.getElementById("cancelar").style.visibility = "hidden";
-  document.getElementById("modalAlert").style.display = "block";
-  document.getElementById("mensagem").innerHTML = msg;
 }

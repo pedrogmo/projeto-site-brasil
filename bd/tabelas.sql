@@ -54,6 +54,7 @@ create table Usuario
 )
 
 select * from usuario
+update usuario set foto = './img/presidentes/22.jpg'
 
 create table Pergunta
 (

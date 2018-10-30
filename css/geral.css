@@ -314,7 +314,7 @@ ul, ol{
 /*ALERTS*/
 
 .alert{
-  /*display  : none;*/
+  display  : none;
   position         : fixed;
   z-index          : 100000;
   left             : 0px;

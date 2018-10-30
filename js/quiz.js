@@ -7,7 +7,7 @@ window.onload = function() //vai dar ruim
     if (sessionStorage.getItem("logou") == "sim")
       inicioQuiz();
     else
-      alertModal('Você não está logado, faça login para começar o quiz!');
+      alert('Você não está logado, faça login para começar o quiz!');
 }
 
 function inicioQuiz(){
@@ -80,7 +80,7 @@ document.getElementById("enviar").onclick = function()
     document.getElementById('acertos').innerHTML = "Acertos: " + acertos;
     document.getElementById('erros').innerHTML = "Erros: " + erros;
     usuarioQuiz = JSON.parse(sessionStorage.getItem("usuario"));
-    var fim = 'Fim do Quiz.' + '\nUsuário: ' + usuarioQuiz.nomeUsuario + '\nAcertos: ' + acertos + '\nPontos: ' + pontosUsuario + '\nHighscore: ' + usuarioQuiz.pontuacao;
+    var fim = 'Fim do Quiz.' + '<br>Usuário: ' + usuarioQuiz.nomeUsuario + '<br>Acertos: ' + acertos + '<br>Pontos: ' + pontosUsuario + '<br>Highscore: ' + usuarioQuiz.pontuacao;
     if (pontosUsuario > usuarioQuiz.pontuacao)
     {
       fim += '\nHighscore atualizado!';
@@ -92,7 +92,7 @@ document.getElementById("enviar").onclick = function()
       sessionStorage.setItem("usuario", JSON.stringify(usuarioQuiz));
       document.getElementById('highScore').innerHTML = "&nbsp;&nbsp;&nbsp;<i class='fas fa-trophy'></i>&nbsp;&nbsp;&nbsp;Highscore do quiz: " + usuarioQuiz.pontuacao;
     }
-    alertModal(fim);
+    alert(fim);
 }
 
 document.getElementById('resp').onclick = function()
@@ -104,10 +104,4 @@ document.getElementById('resp').onclick = function()
     var janela = window.open("", "_blank", 'height=800,width=1000');
     janela.document.write(texto);
     janela.focus();
-}
-
-function alertModal(msg){
-  document.getElementById("cancelar").style.visibility = "hidden";
-  document.getElementById("modalAlert").style.display = "block";
-  document.getElementById("mensagem").innerHTML = msg;
 }
