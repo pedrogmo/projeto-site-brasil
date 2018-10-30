@@ -140,6 +140,7 @@ document.getElementById('btnEntrar').onclick = function(){
 		logou = true;
 		modal.style.display = 'none';
 		alert('Logado com sucesso!');
+		location.reload();		
 	}
 		document.getElementById("txtEmail").value = "";
 		document.getElementById("txtSenha").value = "";
@@ -151,7 +152,7 @@ document.getElementById("sair").onclick = function(){
 	sessionStorage.removeItem("logou");
 	sessionStorage.removeItem("usuario");
 	alert('Você foi deslogado!');
-	setTimeout(  function(){location.reload();}  , 100);
+	location.reload();
 }
 
 document.getElementById("perfil").onclick = function(){location.href = "perfil.html";}

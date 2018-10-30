@@ -40,7 +40,7 @@ document.getElementById("salvarAlteracoes").onclick = function(){
 		    usuarioPerfil.senha = novaSenhaUsuario;
 		    sessionStorage.setItem("usuario", JSON.stringify(usuarioPerfil));
 			alert('Senha alterada!');
-			setTimeout(  function(){location.reload();}  , 100);
+			location.reload();
 		}
 }
 
