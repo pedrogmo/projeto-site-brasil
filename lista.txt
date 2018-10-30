@@ -1,15 +1,10 @@
-Design
-
-* noticias.html: ajustar div.
-
-JavaScript
-
-* geral.js : código da barra de pesquisa.
-
-
 Ideias e Sugestões
 
 * Colocar cores para os temas das notícias.
 * Criar página do facebook, twitter e instagram.
-* Botar width da barra em %.
-* Barra de pesquisa procura usuários, mostra ranking de pontuação.
+
+Erros
+
+* F5 para carregar resultado da eleição.
+* F5 depois de excluir conta.
+* Demora par atualizar foto.
