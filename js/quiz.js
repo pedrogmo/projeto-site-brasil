@@ -80,10 +80,10 @@ document.getElementById("enviar").onclick = function()
     document.getElementById('acertos').innerHTML = "Acertos: " + acertos;
     document.getElementById('erros').innerHTML = "Erros: " + erros;
     usuarioQuiz = JSON.parse(sessionStorage.getItem("usuario"));
-    var fim = 'Fim do Quiz.' + '<br>Usuário: ' + usuarioQuiz.nomeUsuario + '<br>Acertos: ' + acertos + '<br>Pontos: ' + pontosUsuario + '<br>Highscore: ' + usuarioQuiz.pontuacao;
+    var fim = 'Fim do Quiz.' + '<br><br>Usuário: ' + usuarioQuiz.nomeUsuario + '<br>Highscore: ' + usuarioQuiz.pontuacao + '<br>Acertos: ' + acertos + '<br>Pontos: ' + pontosUsuario;
     if (pontosUsuario > usuarioQuiz.pontuacao)
     {
-      fim += '\nHighscore atualizado!';
+      fim += '<br><br>Highscore atualizado!';
       var updatePontos = new XMLHttpRequest();
       var urlUsuarios = "http://localhost:3000/usuario" + "/" + usuarioQuiz.codUsuario;
       updatePontos.open('PATCH', urlUsuarios + "/" + pontosUsuario, true);
@@ -92,7 +92,7 @@ document.getElementById("enviar").onclick = function()
       sessionStorage.setItem("usuario", JSON.stringify(usuarioQuiz));
       document.getElementById('highScore').innerHTML = "&nbsp;&nbsp;&nbsp;<i class='fas fa-trophy'></i>&nbsp;&nbsp;&nbsp;Highscore do quiz: " + usuarioQuiz.pontuacao;
     }
-    alert(fim);
+    alertModal(fim);
 }
 
 document.getElementById('resp').onclick = function()
@@ -104,4 +104,9 @@ document.getElementById('resp').onclick = function()
     var janela = window.open("", "_blank", 'height=800,width=1000');
     janela.document.write(texto);
     janela.focus();
+}
+
+function alertModal(msg){
+  document.getElementById("modalAlert").style.display = "block";
+  document.getElementById("mensagem").innerHTML = msg;
 }
