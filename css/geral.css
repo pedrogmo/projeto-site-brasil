@@ -32,10 +32,37 @@ body{
 	right            : 0px; 
 	top              : 0px;
 	background       : rgba(0, 0, 0, 0.75); 
-  	box-shadow       : 0 5px 10px rgba(0, 0, 0, 0.25); 
+  box-shadow       : 0 5px 10px rgba(0, 0, 0, 0.25); 
 	list-style       : none;
 	font-size        : 16pt; 
-	font-family      : 'Raleway';
+	font-family      : 'Raleway'; 
+}
+
+#menu ul#barra i{
+  display: none;
+}
+
+#menu.active ul#barra i{
+  position: absolute;
+  top: 5px;
+  font-size: 24pt;
+  color: #fff;
+  margin: 15px;
+  display: block;
+  cursor: pointer;
+}
+
+#menu.active ul#barra img{
+  position     : relative; 
+  left         : 65px; 
+  margin       : 15px; 
+  width        : 142px;
+  height       : 39px; 
+  transition   : 0.5s;
+}
+
+#menu.active ul.menu{
+  display: none;
 }
 
 #menu ul li { display : inline; }
@@ -54,6 +81,7 @@ body{
   background-color : #009c3b; 
   list-style       : none; 
   box-shadow       : 0px 5px 10px rgba(0, 0, 0, 0.4); 
+  transition       : 0.5s;
 }
 
 #menu .menu li a{
@@ -89,23 +117,15 @@ body{
   cursor                     : pointer;
 }
 
-.logo{
-	height       : 85px;
-	width        : 45px; 
-	border-style : none;
-	position     : absolute;  
-	top          : 0px;
-}
-
 .logo-text{
 	margin : 15px; 
 	width  : 196px;
 	height : 55px; 
-  cursor : pointer;  
+  cursor : pointer;
+  transition: 0.5s;  
 }
 
 .logo-text:hover{
-	transition : 0.5s ease-in;
 	transform  : scale(1.05);  
 }
 

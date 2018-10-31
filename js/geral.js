@@ -1,9 +1,12 @@
 ﻿//Desabilita mudança de zoom da página:
 
-$(document).ready(function(){
-	$('#txtBusca').click(function(){
-		$('.busca-container').toggleClass('active')
-	})
+$(window).on('scroll', function(){
+	if($(window).scrollTop()){
+		$('#menu').addClass('active');
+	}
+	else{
+		$('#menu').removeClass('active');
+	}
 });
 
 $(document).keydown(function(event) {
