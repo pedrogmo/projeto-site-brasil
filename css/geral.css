@@ -368,7 +368,7 @@ ul, ol{
 /*ALERTS*/
 
 .alert{
-  /*display          : none;*/
+  display          : none;
   position         : fixed;
   z-index          : 100000;
   left             : 0px;
@@ -402,6 +402,13 @@ ul, ol{
 } 
 
 .alert-content .alert-desc h2{
+  color: #2b2c33;
+  text-align: left;
+  margin: 30px;
+}
+
+.alert-content .alert-desc h3{
+  font-size: 18pt;
   color: #2b2c33;
   text-align: left;
   margin: 30px;

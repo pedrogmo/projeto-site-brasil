@@ -2,10 +2,10 @@ Ideias e Sugestões
 
 * Colocar cores para os temas das notícias.
 * Criar página do facebook, twitter e instagram.
+* Colocar um banner para as guias.
 
 Erros
 
 * F5 para carregar resultado da eleição.
 * F5 depois de excluir conta.
-* Demora par atualizar foto.
-* Colocar um banner para as guias.
+* Demora para atualizar foto.

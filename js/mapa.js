@@ -40,6 +40,7 @@ document.getElementById('cbxEstados').onchange = function(){
   setTimeout(function(){
     document.getElementById("modalAlert").style.display = "block";
     document.getElementById("tituloMensagem").innerHTML = estados[indice - 1];
+    // document.getElementById("imagemEstado").src = vetEstados[indice - 1].imagem;
     document.getElementById("mensagem").innerHTML = info[indice - 1];
   }, 100);
 }
