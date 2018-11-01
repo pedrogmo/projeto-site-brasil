@@ -368,7 +368,7 @@ ul, ol{
 /*ALERTS*/
 
 .alert{
-  display  : none;
+  /*display          : none;*/
   position         : fixed;
   z-index          : 100000;
   left             : 0px;
@@ -421,7 +421,7 @@ ul, ol{
 .alert-content .alert-opcoes button{
   position: relative;
   top: 15px;
-  left: 61.5%;
+  left: 565px;
   height: 40px;
   width: 110px;
   margin: 5px;

@@ -37,8 +37,11 @@ for (var i = 0; i < vetEstados.length; i++)
 
 document.getElementById('cbxEstados').onchange = function(){
 	var indice = document.getElementById("cbxEstados").selectedIndex;
-  var mensagem = 'Você selecionou: ' + estados[indice - 1] + "<br><br>" + info[indice - 1];
-  setTimeout(  function(){alertModal(mensagem);}  , 100);
+  setTimeout(function(){
+    document.getElementById("modalAlert").style.display = "block";
+    document.getElementById("tituloMensagem").innerHTML = estados[indice - 1];
+    document.getElementById("mensagem").innerHTML = info[indice - 1];
+  }, 100);
 }
 
 function alertModal(msg){
