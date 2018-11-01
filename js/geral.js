@@ -9,6 +9,24 @@ $(window).on('scroll', function(){
 	}
 });
 
+var mostrarMenu = true;
+document.getElementById("menu-icon").onclick = function(){
+	if(mostrarMenu)
+	{
+		$('.menu-container').css('animation', 'slideInLeft 1s');
+		$('.menu-container').css('display', 'block');
+		mostrarMenu = false;
+	}
+	else
+	{		
+		$('.menu-container').css('animation', 'slideOutLeft 1s');
+		setTimeout(function(){
+			$('.menu-container').css('display', 'none');
+		}, 1000)
+		mostrarMenu = true;
+	}
+}
+
 $(document).keydown(function(event) {
 if (event.ctrlKey==true && (event.which == '61' || event.which == '107' || event.which == '173' || event.which == '109'  || event.which == '187'  || event.which == '189'  ) ) {
         event.preventDefault();

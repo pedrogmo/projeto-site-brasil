@@ -20,7 +20,7 @@ body{
 
 #menu{
 	position: relative;
-	z-index: 10000;
+	z-index: 100;
 	width: 100%;
 }
 
@@ -32,7 +32,7 @@ body{
 	right            : 0px; 
 	top              : 0px;
 	background       : rgba(0, 0, 0, 0.75); 
-  box-shadow       : 0 5px 10px rgba(0, 0, 0, 0.25); 
+    box-shadow       : 0 5px 10px rgba(0, 0, 0, 0.25); 
 	list-style       : none;
 	font-size        : 16pt; 
 	font-family      : 'Raleway'; 
@@ -117,10 +117,44 @@ body{
   cursor                     : pointer;
 }
 
+div.menu-container{
+  position: fixed;
+  top: 74.25px;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 250px;
+  border-bottom-right-radius: 5px;
+  z-index: 1000;
+  display: none;
+  animation: slideInLeft 1s;
+}
+
+div.menu-container ul{
+  padding: 0;
+  margin: 0;
+}
+
+div.menu-container ul li{
+  list-style: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-family: "Raleway";
+  font-weight: bold;
+  color: #fff;  
+  border-left: 3px solid rgba(0, 0, 0, 0);
+}
+
+div.menu-container ul li:hover{
+  background: rgba(0, 0, 0, 0.65);
+  color: #009c3b;
+  border-color: #009c3b;
+}
+
 .logo-text{
-	margin : 15px; 
-	width  : 196px;
-	height : 55px; 
+  margin : 15px; 
+  width  : 196px;
+  height : 55px; 
   cursor : pointer;
   transition: 0.5s;  
 }
@@ -232,13 +266,13 @@ ul, ol{
 }
 
 .modal-content{
-	background-color : #fafafa;
-	margin           : 5% auto;
+  background-color : #fafafa;
+  margin           : 5% auto;
   padding          : 20px; 
   padding-bottom   : 30px; 
-	width            : 30%;
+  width            : 30%;
   border-radius    : 10px; 
-	box-shadow       : 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);    
+  box-shadow       : 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);    
   animation        : bounceInDown 0.5s; 
 }
 
