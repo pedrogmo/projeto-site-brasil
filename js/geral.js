@@ -6,6 +6,8 @@ $(window).on('scroll', function(){
 	}
 	else{
 		$('#menu').removeClass('active');
+		$('.menu-container').css('display', 'none');
+		mostrarMenu = true;
 	}
 });
 
