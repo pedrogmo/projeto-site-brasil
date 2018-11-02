@@ -1,15 +1,18 @@
-Photoshop + Banco
+Google + Banco
 
-* Fotos dos Estados.
+* Colocar as imagens dos estados no banco;
+* Selecionar as imagens das bandeiras dos Estados e
+  salvar na pasta que eu criei com o nome estados-bandeira.
 
 Ideias e Sugestões
 
-* Colocar cores para os temas das notícias.
-* Criar página do facebook, twitter e instagram.
+* Colocar cores para os temas das notícias;
+* Criar página do facebook, twitter e instagram;
 * Colocar um banner para as guias.
 
 Erros
 
-* F5 para carregar resultado da eleição.
-* F5 depois de excluir conta.
+* F5 para carregar resultado da eleição;
+* Votar duas ou mais vezes em guias diferentes;
+* F5 depois de excluir conta;
 * Demora para atualizar foto.
