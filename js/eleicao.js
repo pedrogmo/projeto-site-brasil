@@ -1,8 +1,8 @@
 ﻿var candidatos;
 var eleitor;
 var xmlCandidatos = new XMLHttpRequest();
-var urlCand = "http://localhost:3000/candidato";
 
+var urlCand = "http://localhost:3000/candidato";
 xmlCandidatos.onreadystatechange=function(){
   if (this.readyState == 4 && this.status == 200)
     localStorage.setItem("candidatos", this.responseText);
@@ -10,6 +10,16 @@ xmlCandidatos.onreadystatechange=function(){
 xmlCandidatos.open("GET", urlCand, true);
 xmlCandidatos.send();
 candidatos = JSON.parse(localStorage.getItem("candidatos"));
+
+var xmlCandOrd = new XMLHttpRequest();
+	var urlCandOrd = "http://localhost:3000/votos";
+	xmlCandOrd.onreadystatechange=function(){
+	  if (this.readyState == 4 && this.status == 200)
+	    localStorage.setItem("candOrd", this.responseText);
+	}
+xmlCandOrd.open("GET", urlCandOrd, true);
+xmlCandOrd.send();
+var candOrd = JSON.parse(localStorage.getItem("candOrd"));
 
 window.onload = function(){
 	if (sessionStorage.getItem("logou") != "sim")
@@ -41,16 +51,6 @@ window.onload = function(){
 		document.getElementById(imgPart).src = candidatos[i].urlPart;		
 		votosTotais += candidatos[i].votos;
 	}
-
-	var xmlCandOrd = new XMLHttpRequest();
-	var urlCandOrd = "http://localhost:3000/votos";
-	xmlCandOrd.onreadystatechange=function(){
-	  if (this.readyState == 4 && this.status == 200)
-	    localStorage.setItem("candOrd", this.responseText);
-	}
-	xmlCandOrd.open("GET", urlCandOrd, true);
-	xmlCandOrd.send();
-	var candOrd = JSON.parse(localStorage.getItem("candOrd"));
 
 	for (var i = 0; i < candOrd.length; i++)
 	{
