@@ -127,6 +127,7 @@ div.menu-container{
   z-index: 1000;
   display: none;
   animation: slideInLeft 1s;
+  overflow: hidden;
 }
 
 div.menu-container ul{
