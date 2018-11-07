@@ -6,7 +6,6 @@ function initMap() {
   });
 }
 
-var arr;
 var xmlEstados = new XMLHttpRequest();
 var urlEstados = "http://localhost:3000/estado";
 
@@ -19,7 +18,7 @@ xmlEstados.onreadystatechange=function(){
 }
 xmlEstados.open("GET", urlEstados, true);
 xmlEstados.send();
-vetEstados = JSON.parse(localStorage.getItem("estadoMapa"));
+var vetEstados = JSON.parse(localStorage.getItem("estadoMapa"));
 var dados = "";
 for (var i = 0; i < vetEstados.length; i++)
 {
