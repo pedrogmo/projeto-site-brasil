@@ -54,9 +54,6 @@ create table Usuario
 	foto varchar(max)
 )
 
-select * from usuario
-update usuario set foto = './img/presidentes/22.jpg'
-
 create table Pergunta
 (
 	codPergunta int primary key,
@@ -73,14 +70,14 @@ insert into Pergunta values(5,'Qual é a unidade federativa brasileira que tem ma
 insert into Pergunta values(6,'Por quanto tempo Dom Pedro II governou o Brasil?','59 anos',10)
 insert into Pergunta values(7,'Qual foi a sigla dada à Revolução Constitucionalista em São Paulo?','MMDC',15)
 insert into Pergunta values(8,'Qual o estado brasileiro com maior número de habitantes?','São Paulo',5)
-insert into Pergunta values(9,'Qual o estado brasileiro com com menor densidade demografica?','Roraima',10)
-insert into Pergunta values(10,'Qual unidade federativa brasileira com com maior densidade demografica?','Distrito Federal',10)
+insert into Pergunta values(9,'Qual o estado brasileiro com menor densidade demografica?','Roraima',10)
+insert into Pergunta values(10,'Qual unidade federativa brasileira com maior densidade demografica?','Distrito Federal',10)
 insert into Pergunta values(11,'Qual o estado brasileiro com com maior PIB?','São Paulo',5)
 insert into Pergunta values(12,'Qual é o estado brasileiro com menor PIB?','Roraima',10)
 insert into Pergunta values(13,'Quem foi o principal atuante do movimento tenentista?','Luís Carlos Prestes',15)
 insert into Pergunta values(14,'Quem foi o jornalista opositor de Getúlio Vargas?','Carlos Lacerda',15)
 insert into Pergunta values(15,'Qual presidente se suicidou como estratégia política?','Getúlio Vargas',5)
-insert into Pergunta values(16,'Qual foi o primeiro pressidente a assumir após a redemocratização?','José Sarney',5)
+insert into Pergunta values(16,'Qual foi o primeiro presidente a assumir após a redemocratização?','José Sarney',5)
 insert into Pergunta values(17,'Qual foi o rei português que veio ao Brasil em 1808?','Dom João VI',5)
 insert into Pergunta values(18,'Qual foi o nome do movimento do qual Tiradentes fez parte?','Inconfidência Mineira',15)
 insert into Pergunta values(19,'Qual é o menor estado brasileiro?','Sergipe',10)
@@ -96,15 +93,13 @@ insert into Pergunta values(28,'Qual foi o primeiro presidente a sofrer um proce
 insert into Pergunta values(29,'Qual foi o presidente do brasil que entregou uma carta de renúncia, na esperança de que fosse negada, mas foi aceita?','Jânio Quadros',5)
 insert into Pergunta values(30,'Qual foi o nome dado ao Brasil após o Golpe da República?','Estados Unidos do Brasil',10)
 
-select * from Pergunta
-
 create table EraHistorica
 (
 	codEra int primary key,
 	nome varchar(30) not null,
 	inicio varchar(10) not null,
 	fim varchar(10) not null,
-	desricao ntext not null
+	desricao ntext not null	
 )
 
 insert into EraHistorica values(1, 'Brasil Pré-Colonial', '1500', '1530', 'O Brasil ainda território das muitas tribos nativas indígenas e que se surpreendeu com o que viria a ser o processo de colonização da coroa portuguesa.')
@@ -124,49 +119,52 @@ create table Governante
 	inicio varchar(10) not null,
 	fim varchar(10) not null,
 	partido varchar(30) not null,
-	urlImagem varchar(30) not null
+	urlImagem varchar(30) not null,
+	codEra int not null
+
+	constraint fkCodEra foreign key(codEra) references EraHistorica(codEra)
 )
 
-insert into Governante values(1,  '1 (Império)', 'Dom Pedro I', '1822', '1831', 'Nenhum (Imperador)', '.\img\presidentes\-1.jpg')
-insert into Governante values(2,  '2 (Império)', 'Dom Pedro II', '1840', '1889', 'Nenhum (Imperador)', '.\img\presidentes\0.jpg')
-insert into Governante values(3,  '1 (República)', 'Deodoro da Fonseca', '1889', '1891', 'Nenhum (Militar)', '.\img\presidentes\1.jpg')
-insert into Governante values(4,  '2 (República)', 'Floriano Peixoto', '1891', '1894', 'Nenhum (Militar)', '.\img\presidentes\2.jpg')
-insert into Governante values(5,  '3 (República)', 'Prudente de Morais', '1894', '1898', 'PR Federal', '.\img\presidentes\3.jpg')
-insert into Governante values(6,  '4 (República)', 'Campos Sales', '1898', '1902', 'PRP', '.\img\presidentes\4.jpg')
-insert into Governante values(7,  '5 (República)', 'Rodrigues Alves', '1902', '1906', 'PRP', '.\img\presidentes\5.jpg')
-insert into Governante values(8,  '6 (República)', 'Afonso Pena', '1906', '1909', 'PRM', '.\img\presidentes\6.jpg')
-insert into Governante values(9,  '7 (República)', 'Nilo Peçanha', '1909', '1910', 'PRF', '.\img\presidentes\7.jpg')
-insert into Governante values(10, '8 (República)',  'Hermes da Fonseca', '1910', '1914', 'PRC', '.\img\presidentes\8.jpg')
-insert into Governante values(11, '9 (República)',  'Venceslau Brás', '1914', '1918', 'PRP', '.\img\presidentes\9.jpg')
-insert into Governante values(12, '10 (República)',  'Delfim Moreira', '1918', '1919', 'PRM', '.\img\presidentes\10.jpg')
-insert into Governante values(13, '11 (República)',  'Epitácio Pessoa', '1919', '1922', 'PRM', '.\img\presidentes\11.jpg')
-insert into Governante values(14, '12 (República)',  'Artur Bernardes', '1922', '1926', 'PRM', '.\img\presidentes\12.jpg')
-insert into Governante values(15, '13 (República)',  'Washington Luís', '1926', '1930', 'PRP', '.\img\presidentes\13.jpg')
-insert into Governante values(16, '14 (República)',  'Getúlio Vargas', '1930', '1945', 'AL', '.\img\presidentes\14.jpg')
-insert into Governante values(17, '15 (República)',  'José Linhares', '1945', '1946', 'Nenhum (Civil)', '.\img\presidentes\15.jpg')
-insert into Governante values(18, '16 (República)',  'Eurico Gaspar Dutra', '1946', '1951', 'PSD', '.\img\presidentes\16.jpg')
-insert into Governante values(19, '17 (República)',  'Getúlio Vargas', '1951', '1954', 'PTB', '.\img\presidentes\17.jpg')
-insert into Governante values(20, '18 (República)',  'Café Filho', '1954', '1955', 'PSP', '.\img\presidentes\18.jpg')
-insert into Governante values(21, '19 (República)',  'Carlos Luz', '1955', '1955', 'PSD', '.\img\presidentes\19.jpg')
-insert into Governante values(22, '20 (República)',  'Nereu Ramos', '1955', '1956', 'PSD', '.\img\presidentes\20.jpg')
-insert into Governante values(23, '21 (República)',  'Juscelino Kubitschek', '1956', '1961', 'PSD', '.\img\presidentes\21.jpg')
-insert into Governante values(24, '22 (República)',  'Jânio Quadros', '1961', '1961', 'PTN', '.\img\presidentes\22.jpg')
-insert into Governante values(25, '23 (República)',  'Rainieri Mazilli', '1961', '1961', 'PSD', '.\img\presidentes\23.jpg')
-insert into Governante values(26, '24 (República)',  'João Goulart', '1961', '1964', 'PTB', '.\img\presidentes\24.jpg')
-insert into Governante values(27, '25 (República)',  'Rainieri Mazilli', '1964', '1964', 'PSD', '.\img\presidentes\25.jpg')
-insert into Governante values(28, '26 (República)',  'Humberto Castelo Branco', '1964', '1967', 'ARENA', '.\img\presidentes\26.jpg')
-insert into Governante values(29, '27 (República)',  'Artur da Costa e Silva', '1967', '1969', 'ARENA', '.\img\presidentes\27.jpg')
-insert into Governante values(30, '28 (República)', 'Emílio Garrastazu Médici', '1969', '1974', 'ARENA', '.\img\presidentes\28.jpg')
-insert into Governante values(31, '29 (República)', 'Ernesto Geisel', '1974', '1979', 'ARENA', '.\img\presidentes\29.jpg')
-insert into Governante values(32, '30 (República)', 'João Figueiredo', '1979', '1985', 'ARENA', '.\img\presidentes\30.jpg')
-insert into Governante values(33, '31 (República)', 'José Sarney', '1985', '1990', 'PMDB', '.\img\presidentes\31.jpg')
-insert into Governante values(34, '32 (República)', 'Fernando Collor', '1990', '1992', 'PRN', '.\img\presidentes\32.jpg')
-insert into Governante values(35, '33 (República)', 'Itamar Franco', '1992', '1995', 'PMDB', '.\img\presidentes\33.jpg')
-insert into Governante values(36, '34 (República)', 'Fernando Henrique Cardoso', '1995', '2003', 'PSDB', '.\img\presidentes\34.jpg')
-insert into Governante values(37, '35 (República)', 'Luiz Inácio Lula da Silva', '2003', '2011', 'PT', '.\img\presidentes\35.jpg')
-insert into Governante values(38, '36 (República)', 'Dilma Rousseff', '2011', '2016', 'PT', '.\img\presidentes\36.jpg')
-insert into Governante values(39, '37 (República)', 'Michel Temer', '2016', '2019', 'PMDB', '.\img\presidentes\37.jpg')
-insert into Governante values(40, '38 (República)', 'Jair Bolsonaro', '2019', '-', 'PSL', '.\img\presidentes\38.jpg')
+insert into Governante values(1,  '1 (Império)', 'Dom Pedro I', '1822', '1831', 'Nenhum (Imperador)', '.\img\presidentes\-1.jpg', 3)
+insert into Governante values(2,  '2 (Império)', 'Dom Pedro II', '1840', '1889', 'Nenhum (Imperador)', '.\img\presidentes\0.jpg', 3)
+insert into Governante values(3,  '1 (República)', 'Deodoro da Fonseca', '1889', '1891', 'Nenhum (Militar)', '.\img\presidentes\1.jpg', 4)
+insert into Governante values(4,  '2 (República)', 'Floriano Peixoto', '1891', '1894', 'Nenhum (Militar)', '.\img\presidentes\2.jpg', 4)
+insert into Governante values(5,  '3 (República)', 'Prudente de Morais', '1894', '1898', 'PR Federal', '.\img\presidentes\3.jpg', 4)
+insert into Governante values(6,  '4 (República)', 'Campos Sales', '1898', '1902', 'PRP', '.\img\presidentes\4.jpg', 4)
+insert into Governante values(7,  '5 (República)', 'Rodrigues Alves', '1902', '1906', 'PRP', '.\img\presidentes\5.jpg', 4)
+insert into Governante values(8,  '6 (República)', 'Afonso Pena', '1906', '1909', 'PRM', '.\img\presidentes\6.jpg', 4)
+insert into Governante values(9,  '7 (República)', 'Nilo Peçanha', '1909', '1910', 'PRF', '.\img\presidentes\7.jpg', 4)
+insert into Governante values(10, '8 (República)',  'Hermes da Fonseca', '1910', '1914', 'PRC', '.\img\presidentes\8.jpg', 4)
+insert into Governante values(11, '9 (República)',  'Venceslau Brás', '1914', '1918', 'PRP', '.\img\presidentes\9.jpg', 4)
+insert into Governante values(12, '10 (República)',  'Delfim Moreira', '1918', '1919', 'PRM', '.\img\presidentes\10.jpg', 4)
+insert into Governante values(13, '11 (República)',  'Epitácio Pessoa', '1919', '1922', 'PRM', '.\img\presidentes\11.jpg', 4)
+insert into Governante values(14, '12 (República)',  'Artur Bernardes', '1922', '1926', 'PRM', '.\img\presidentes\12.jpg', 4)
+insert into Governante values(15, '13 (República)',  'Washington Luís', '1926', '1930', 'PRP', '.\img\presidentes\13.jpg', 4)
+insert into Governante values(16, '14 (República)',  'Getúlio Vargas', '1930', '1945', 'AL', '.\img\presidentes\14.jpg', 3)
+insert into Governante values(17, '15 (República)',  'José Linhares', '1945', '1946', 'Nenhum (Civil)', '.\img\presidentes\15.jpg', 6)
+insert into Governante values(18, '16 (República)',  'Eurico Gaspar Dutra', '1946', '1951', 'PSD', '.\img\presidentes\16.jpg', 6)
+insert into Governante values(19, '17 (República)',  'Getúlio Vargas', '1951', '1954', 'PTB', '.\img\presidentes\17.jpg', 6)
+insert into Governante values(20, '18 (República)',  'Café Filho', '1954', '1955', 'PSP', '.\img\presidentes\18.jpg', 6)
+insert into Governante values(21, '19 (República)',  'Carlos Luz', '1955', '1955', 'PSD', '.\img\presidentes\19.jpg', 6)
+insert into Governante values(22, '20 (República)',  'Nereu Ramos', '1955', '1956', 'PSD', '.\img\presidentes\20.jpg', 6)
+insert into Governante values(23, '21 (República)',  'Juscelino Kubitschek', '1956', '1961', 'PSD', '.\img\presidentes\21.jpg', 6)
+insert into Governante values(24, '22 (República)',  'Jânio Quadros', '1961', '1961', 'PTN', '.\img\presidentes\22.jpg', 6)
+insert into Governante values(25, '23 (República)',  'Rainieri Mazilli', '1961', '1961', 'PSD', '.\img\presidentes\23.jpg', 6)
+insert into Governante values(26, '24 (República)',  'João Goulart', '1961', '1964', 'PTB', '.\img\presidentes\24.jpg', 6)
+insert into Governante values(27, '25 (República)',  'Rainieri Mazilli', '1964', '1964', 'PSD', '.\img\presidentes\25.jpg', 7)
+insert into Governante values(28, '26 (República)',  'Humberto Castelo Branco', '1964', '1967', 'ARENA', '.\img\presidentes\26.jpg', 7)
+insert into Governante values(29, '27 (República)',  'Artur da Costa e Silva', '1967', '1969', 'ARENA', '.\img\presidentes\27.jpg', 7)
+insert into Governante values(30, '28 (República)', 'Emílio Garrastazu Médici', '1969', '1974', 'ARENA', '.\img\presidentes\28.jpg', 7)
+insert into Governante values(31, '29 (República)', 'Ernesto Geisel', '1974', '1979', 'ARENA', '.\img\presidentes\29.jpg', 7)
+insert into Governante values(32, '30 (República)', 'João Figueiredo', '1979', '1985', 'ARENA', '.\img\presidentes\30.jpg', 7)
+insert into Governante values(33, '31 (República)', 'José Sarney', '1985', '1990', 'PMDB', '.\img\presidentes\31.jpg', 8)
+insert into Governante values(34, '32 (República)', 'Fernando Collor', '1990', '1992', 'PRN', '.\img\presidentes\32.jpg', 8)
+insert into Governante values(35, '33 (República)', 'Itamar Franco', '1992', '1995', 'PMDB', '.\img\presidentes\33.jpg', 8)
+insert into Governante values(36, '34 (República)', 'Fernando Henrique Cardoso', '1995', '2003', 'PSDB', '.\img\presidentes\34.jpg', 8)
+insert into Governante values(37, '35 (República)', 'Luiz Inácio Lula da Silva', '2003', '2011', 'PT', '.\img\presidentes\35.jpg', 8)
+insert into Governante values(38, '36 (República)', 'Dilma Rousseff', '2011', '2016', 'PT', '.\img\presidentes\36.jpg', 8)
+insert into Governante values(39, '37 (República)', 'Michel Temer', '2016', '2019', 'PMDB', '.\img\presidentes\37.jpg', 8)
+insert into Governante values(40, '38 (República)', 'Jair Bolsonaro', '2019', ' ', 'PSL', '.\img\presidentes\38.jpg', 8)
 
 create table Candidato
 (
@@ -178,10 +176,6 @@ create table Candidato
 	cor varchar(7) not null,
 	votos int not null
 )
-
-select * from Candidato
-update Candidato set votos = 0
-select * from Candidato order by votos desc
 
 insert into Candidato values(1 , 'Marina Silva', 'Marina Osmarina da Silva Vaz de Lima, nascida Maria Osmarina da Silva é uma historiadora, professora, psicopedagoga, ambientalista e política brasileira filiada à Rede Sustentabilidade.', './img/eleicoes/marina.jpg', './img/partidos/rede.png', '#4e5152', 0)
 insert into Candidato values(2 , 'Jair Bolsonaro', 'Jair Messias Bolsonaro é um militar da reserva e político brasileiro, filiado ao Partido Social Liberal. É deputado federal desde 1991, atualmente em seu sétimo mandato, eleito pelo Partido Progressista.', './img/eleicoes/bolsonaro.jpg', './img/partidos/psl.png', '#1d6434', 0)
@@ -208,8 +202,7 @@ create table Noticia
 	siteFonte varchar(20) not null,
 	dataPublicacao varchar(10) not null
 )
-drop table Noticia
-select * from Noticia
+
 insert into Noticia values(1,  'Política', 'Eleições 2018: Jair Bolsonaro é eleito presidente do Brasil', 'Capitão da reserva obteve 55,13% dos votos válidos; seu adversário, Fernando Haddad (PT) ficou com 44,87%', './img/noticias/1.jpg', 'https://veja.abril.com.br/politica/eleicoes-2018-segundo-turno-apuracao-resultado-presidente-ao-vivo/', 'Veja', '28/10/2018')--https://veja.abril.com.br/politica/eleicoes-2018-segundo-turno-apuracao-resultado-presidente-ao-vivo/
 insert into Noticia values(2,  'Política', 'As promessas de Bolsonaro', 'Segurança, trabalho, educação: o que deve mudar no Brasil em 2019 com uma nova equipe no governo federal.', './img/noticias/2.jpg', 'https://www.uol/eleicoes/especiais/as-propostas-de-governo-de-bolsonaro-e-seus-impactos-a-partir-de-2019.htm#tematico-1', 'Uol', '29/10/2018')--https://www.uol/eleicoes/especiais/as-propostas-de-governo-de-bolsonaro-e-seus-impactos-a-partir-de-2019.htm#tematico-1
 insert into Noticia values(3,  'Política', 'Após derrota, Haddad visitará Lula nesta semana', 'Nesta segunda-feira, 29, Haddad deve passar o dia em casa, no Planalto Paulista, sem agenda pública, segundo sua assessoria de imprensa.', './img/noticias/3.jpg', 'https://exame.abril.com.br/brasil/apos-derrota-haddad-visitara-lula-nesta-semana/', 'Abril', '28/10/2018')--https://exame.abril.com.br/brasil/apos-derrota-haddad-visitara-lula-nesta-semana/
@@ -267,18 +260,7 @@ insert into Curiosidade values(35 , 'Mais de 1.000 línguas eram faladas no Brasi
 insert into Curiosidade values(36 , 'A viola é um instrumento exclusivamente brasileiro.')
 insert into Curiosidade values(37 , 'Segundo uma pesquisa da USP de 2009, 19,3% de todos os homens da cidade do Rio de Janeiro são gays ou bissexuais.')
 
-
 /*
-create table EraGovernante
-(
-	codigo int primary key,
-	codGovernante int not null,
-	codEra int not null
-
-	constraint fkGovernante foreign key(codGovernante) references Governante(codGovernante),
-	constraint fkEra foreign key(codEra) references EraPolitica(codEra)
-)
-
 create table UsuarioPergunta
 (
 	codigo int primary key,

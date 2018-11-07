@@ -1,7 +1,6 @@
-﻿var candidatos;
+﻿var candidatos, candOrd;
 var eleitor;
 var xmlCandidatos = new XMLHttpRequest();
-
 var urlCand = "http://localhost:3000/candidato";
 xmlCandidatos.onreadystatechange=function(){
   if (this.readyState == 4 && this.status == 200)
@@ -9,8 +8,6 @@ xmlCandidatos.onreadystatechange=function(){
 }
 xmlCandidatos.open("GET", urlCand, true);
 xmlCandidatos.send();
-candidatos = JSON.parse(localStorage.getItem("candidatos"));
-
 var xmlCandOrd = new XMLHttpRequest();
 	var urlCandOrd = "http://localhost:3000/votos";
 	xmlCandOrd.onreadystatechange=function(){
@@ -19,9 +16,11 @@ var xmlCandOrd = new XMLHttpRequest();
 	}
 xmlCandOrd.open("GET", urlCandOrd, true);
 xmlCandOrd.send();
-var candOrd = JSON.parse(localStorage.getItem("candOrd"));
+
 
 window.onload = function(){
+	candidatos = JSON.parse(localStorage.getItem("candidatos"));
+	candOrd = JSON.parse(localStorage.getItem("candOrd"));
 	if (sessionStorage.getItem("logou") != "sim")
 	{
 		$('button.btnVotar').prop('disabled', true);

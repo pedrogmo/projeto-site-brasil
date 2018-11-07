@@ -175,6 +175,6 @@ execSQL('SELECT * FROM CURIOSIDADE', resposta);
 /////////////////////////////////////////////////////////////////////////////////
 // Governantes
 
-rota.get('/governantes', (requisicao, resposta) =>{
-execSQL('SELECT * FROM GOVERNANTES', resposta);
+rota.get('/governante', (requisicao, resposta) =>{
+execSQL('SELECT * FROM GOVERNANTE', resposta);
 })

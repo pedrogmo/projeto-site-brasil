@@ -1,23 +1,29 @@
 var arrGovernantes;
 var xmlGovernantes = new XMLHttpRequest();
-var urlLP = "http://localhost:3000/governantes";
 
+var urlGov = "http://localhost:3000/governante";
 xmlGovernantes.onreadystatechange=function(){
   if (this.readyState == 4 && this.status == 200)
     localStorage.setItem("vetGovernantes", this.responseText);	
 }
-xmlGovernantes.open("GET", urlLP, true);
+xmlGovernantes.open("GET", urlGov, true);
 xmlGovernantes.send();
 
 window.onload = function(){
 	arrGovernantes = JSON.parse(localStorage.getItem("vetGovernantes"));
 	for(var i=0; i<arrGovernantes.length; i++)
-	{
+	{		
 		var nome = "nome" + (i+1);
 		var numero = "numero" + (i+1);
 		var foto = "foto" + (i+1);
 		var mandato = "mandato" + (i+1);
 		var partido = "partido" + (i+1);
+
+		document.getElementById(nome).innerHTML = arrGovernantes[i].nome;
+		document.getElementById(numero).innerHTML = arrGovernantes[i].posicao;
+		document.getElementById(mandato).innerHTML = arrGovernantes[i].inicio + " - " + arrGovernantes[i].fim;
+		document.getElementById(partido).innerHTML = arrGovernantes[i].partido;
+		document.getElementById(foto).src = arrGovernantes[i].urlImagem;
 	}
 }
 

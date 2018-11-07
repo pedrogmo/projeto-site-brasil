@@ -1,5 +1,14 @@
 var acertos, erros, respostas, o, p, r, pontos, pontosUsuario, t, usuarioQuiz;
 
+var xmlPerguntas = new XMLHttpRequest();
+    var urlPerguntas = "http://localhost:3000/pergunta";
+    xmlPerguntas.onreadystatechange=function(){
+      if (this.readyState == 4 && this.status == 200)
+        localStorage.setItem("perguntaQuiz", this.responseText);
+    }
+    xmlPerguntas.open("GET", urlPerguntas, true);
+    xmlPerguntas.send();
+
 window.onload = function() //vai dar ruim
 {
     document.getElementById("enviar").style.visibility = "hidden";
@@ -24,15 +33,6 @@ function inicioQuiz(){
     p[0] = "";
     r[0] = "";
     pontos[0] = 0;
-
-    var xmlPerguntas = new XMLHttpRequest();
-    var urlPerguntas = "http://localhost:3000/pergunta";
-    xmlPerguntas.onreadystatechange=function(){
-      if (this.readyState == 4 && this.status == 200)
-        localStorage.setItem("perguntaQuiz", this.responseText);
-    }
-    xmlPerguntas.open("GET", urlPerguntas, true);
-    xmlPerguntas.send();
 
     var vetPerguntas = JSON.parse(localStorage.getItem("perguntaQuiz"));
     for(var i = 0; i < t; i++)

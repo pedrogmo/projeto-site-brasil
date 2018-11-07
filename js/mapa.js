@@ -8,7 +8,7 @@ function initMap() {
 
 var xmlEstados = new XMLHttpRequest();
 var urlEstados = "http://localhost:3000/estado";
-
+var vetEstados;
 var estados = new Array();
 var info = new Array();
 
@@ -18,20 +18,23 @@ xmlEstados.onreadystatechange=function(){
 }
 xmlEstados.open("GET", urlEstados, true);
 xmlEstados.send();
-var vetEstados = JSON.parse(localStorage.getItem("estadoMapa"));
-var dados = "";
-for (var i = 0; i < vetEstados.length; i++)
-{
-  estados[i] = vetEstados[i].nome;
-	dados =  "Região: " + vetEstados[i].regiao;
-  dados += "<br>População: " + vetEstados[i].populacao;
-	dados += "<br>PIB: " + vetEstados[i].pib;
-  dados += "<br>Esperança de vida: " + vetEstados[i].esperancaDeVida;
-  dados += "<br>Mortalidade infantil: " + vetEstados[i].mortalidadeInfantil;
-  dados += "<br>Alfabetização: " + vetEstados[i].alfabetizacao;
-  dados += "<br>IDH: " + vetEstados[i].idh;
-  dados += "<br>Área: " + vetEstados[i].area;
-  info[i] = dados;
+
+window.onload = function(){
+  vetEstados = JSON.parse(localStorage.getItem("estadoMapa"));
+  var dados = "";
+  for (var i = 0; i < vetEstados.length; i++)
+  {
+    estados[i] = vetEstados[i].nome;
+  	dados =  "Região: " + vetEstados[i].regiao;
+    dados += "<br>População: " + vetEstados[i].populacao;
+  	dados += "<br>PIB: " + vetEstados[i].pib;
+    dados += "<br>Esperança de vida: " + vetEstados[i].esperancaDeVida;
+    dados += "<br>Mortalidade infantil: " + vetEstados[i].mortalidadeInfantil;
+    dados += "<br>Alfabetização: " + vetEstados[i].alfabetizacao;
+    dados += "<br>IDH: " + vetEstados[i].idh;
+    dados += "<br>Área: " + vetEstados[i].area;
+    info[i] = dados;
+  }
 }
 
 document.getElementById('cbxEstados').onchange = function(){

@@ -58,7 +58,6 @@ var usuario;
 var arr;
 var xmlhttp = new XMLHttpRequest();
 var url = "http://localhost:3000/usuario";
-var nome,email,pontos;
 var exibirSenha = true;
 var fundoSB = document.getElementById("fundoSideBar");
 var modalAlert = document.getElementById("modalAlert");
