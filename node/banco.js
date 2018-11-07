@@ -171,3 +171,10 @@ execSQL('SELECT * from PERGUNTA' + filtro, resposta);
 rota.get('/curiosidade', (requisicao, resposta) =>{
 execSQL('SELECT * FROM CURIOSIDADE', resposta);
 })
+
+/////////////////////////////////////////////////////////////////////////////////
+// Governantes
+
+rota.get('/governantes', (requisicao, resposta) =>{
+execSQL('SELECT * FROM GOVERNANTES', resposta);
+})
