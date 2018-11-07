@@ -6,7 +6,7 @@ window.onload = function(){
 	if (sessionStorage.getItem("logou") != "sim")
 		location.href = "inicio.html";
 	usuarioPerfil = JSON.parse(sessionStorage.getItem("usuario"));
-	urlMudanca = "http://localhost:3000/usuario/" + usuarioPerfil.codUsuario + '/';
+	urlMudanca = "http://localhost:3000/usuario/" + usuarioPerfil.codUsuario;
 	document.getElementById("nomeUsuario").value = usuarioPerfil.nomeUsuario;
 	document.getElementById("emailUsuario").value = usuarioPerfil.email;
 	document.getElementById("aniversarioUsuario").value = usuarioPerfil.dataAniversario;
@@ -53,6 +53,10 @@ document.getElementById("excluirConta").onclick = function(){
 	    excluirConta.send();
 	    sessionStorage.removeItem("usuario");
 	    sessionStorage.removeItem("logou");
+	    var getContas = new XMLHttpRequest();
+	    localStorage.setItem("usuarioGeral", getContas.responseText);
+	    getContas.open("GET", "http://localhost:3000/usuario", true);
+	    getContas.send();
 	    alert('Sua conta foi excluída do Brasilee!');
 		setTimeout(  function(){location.href = "inicio.html";}  , 100);
 	}

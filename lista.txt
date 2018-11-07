@@ -1,5 +1,6 @@
 Ideias e Sugestões
 
+* Botar tabela só para foto de perfil.
 * Trocar onclick do Bolsonaro no governantes para página da wikpedia;
 * Colocar cores para os temas das notícias;
 * Criar página do facebook, twitter e instagram;
