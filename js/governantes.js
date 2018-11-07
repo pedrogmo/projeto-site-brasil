@@ -13,11 +13,11 @@ window.onload = function(){
 	arrGovernantes = JSON.parse(localStorage.getItem("vetGovernantes"));
 	for(var i=0; i<arrGovernantes.length; i++)
 	{
-		var nome
-		var numero
-		var foto
-		var mandato
-		var partido
+		var nome = "nome" + (i+1);
+		var numero = "numero" + (i+1);
+		var foto = "foto" + (i+1);
+		var mandato = "mandato" + (i+1);
+		var partido = "partido" + (i+1);
 	}
 }
 
