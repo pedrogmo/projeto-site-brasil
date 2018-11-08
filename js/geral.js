@@ -71,8 +71,10 @@ if (sessionStorage.getItem("logou") == "sim"){
 	document.getElementById("nomeUser").innerHTML = usuario.nomeUsuario;
 	document.getElementById("emailUser").innerHTML = usuario.email;
 	document.getElementById('highScore').innerHTML += usuario.pontuacao;
-	if (usuarioPerfil.temFoto == 1)
-		document.getElementById("imgUser").src = $.get("http://localhost:3000/foto/" + usuario.codUsuario);
+	if (usuario.temFoto == 1)
+		$.get("http://localhost:3000/fotoUsuario/" + usuario.codUsuario, function(dados){
+			document.getElementById("imgUser").src = dados[0];
+		});
 	/*$('#imgUser')
 		.attr('src', usuario.foto)		
 		.height('100%')

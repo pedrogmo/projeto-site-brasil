@@ -8,6 +8,7 @@ Ideias e Sugestões
 
 Erros
 
+* Abas da história com Perfil azul
 * F5 para carregar resultado da eleição;
 * Votar duas ou mais vezes em guias diferentes;
 * F5 depois de excluir conta;

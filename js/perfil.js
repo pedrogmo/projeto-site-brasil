@@ -13,11 +13,18 @@ window.onload = function(){
 	document.getElementById("paisUsuario").value = usuarioPerfil.nacionalidade;
 	document.getElementById("pontuacaoUsuario").value = usuarioPerfil.pontuacao;
 	document.getElementById("senhaUsuario").value = usuarioPerfil.senha;
+	var img;
 	if (usuarioPerfil.temFoto == 1)
-		$('#user-photo')
-			.attr('src', $.get("http://localhost:3000/foto/" + usuario.codUsuario))		
+		img = "./img/usuario.jpg";
+	else
+		$.get("http://localhost:3000/fotoUsuario/" + usuario.codUsuario, function(dados){
+			img = dados[0];
+		});
+	$('#user-photo')
+			.attr('src', img)
 			.height('100%')
 			.width('100%');
+
 }
 
 document.getElementById("salvarAlteracoes").onclick = function(){
@@ -54,10 +61,10 @@ document.getElementById("excluirConta").onclick = function(){
 	    excluirConta.send();
 	    sessionStorage.removeItem("usuario");
 	    sessionStorage.removeItem("logou");
-	    var getContas = new XMLHttpRequest();
-	    localStorage.setItem("usuarioGeral", getContas.responseText);
-	    getContas.open("GET", "http://localhost:3000/usuario", true);
-	    getContas.send();
+	    //var getContas = new XMLHttpRequest();
+	    localStorage.setItem("usuarioGeral", $.get("http://localhost:3000/usuario"));
+	    // getContas.open("GET", "http://localhost:3000/usuario", true);
+	    // getContas.send();
 	    alert('Sua conta foi excluída do Brasilee!');
 		setTimeout(  function(){location.href = "inicio.html";}  , 100);
 	}
@@ -81,13 +88,10 @@ function readURL(input)
 				.width('100%');
 	    	var objPerfil = new Object();
 	        objPerfil.urlImagem = $('#user-photo').attr('src');
-	        var urlFotoPerfil = "http://localhost:3000/foto/" + usuarioPerfil.codUsuario;
-	        $.post(urlFotoPerfil, objPerfil);
-	    	// $.ajax({
-	     //        url: urlFotoPerfil,
-	     //        type: 'PATCH',
-	     //        data: objPerfil
-	    	// })	    	
+	        objPerfil.codUsuario = usuarioPerfil.codUsuario;
+	        $.post("http://localhost:3000/fotoUsuario", objPerfil);
+	        usuarioPerfil.temFoto = 1;
+	        sessionStorage.setItem("usuario", JSON.stringify(usuarioPerfil));
 			setTimeout(  function(){alert('Foto de perfil alterada!'); location.reload();}  , 100);
 		}
 		reader.readAsDataURL(input.files[0]);    	    

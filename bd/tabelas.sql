@@ -73,13 +73,12 @@ create trigger excluiuUsuario_tg on Usuario instead of delete
 as
 declare @codUsuario int
 select @codUsuario = codUsuario from Deleted
-
 alter table FotoUsuario
 nocheck constraint fkCodUsuario
-delete * from FotoUsuario where codUsuario = @codUsuario
+delete from FotoUsuario where codUsuario = @codUsuario
 alter table FotoUsuario
 check constraint fkCodUsuario 
-delete * from Usuario where codUsuario = @codUsuario
+delete from Usuario where codUsuario = @codUsuario
 
 create table Pergunta
 (
