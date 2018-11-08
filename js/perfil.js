@@ -13,10 +13,11 @@ window.onload = function(){
 	document.getElementById("paisUsuario").value = usuarioPerfil.nacionalidade;
 	document.getElementById("pontuacaoUsuario").value = usuarioPerfil.pontuacao;
 	document.getElementById("senhaUsuario").value = usuarioPerfil.senha;
-	$('#user-photo')
-		.attr('src', usuarioPerfil.foto)		
-		.height('100%')
-		.width('100%');
+	if (usuarioPerfil.temFoto == 1)
+		$('#user-photo')
+			.attr('src', $.get("http://localhost:3000/foto/" + usuario.codUsuario))		
+			.height('100%')
+			.width('100%');
 }
 
 document.getElementById("salvarAlteracoes").onclick = function(){
@@ -81,13 +82,12 @@ function readURL(input)
 	    	var objPerfil = new Object();
 	        objPerfil.urlImagem = $('#user-photo').attr('src');
 	        var urlFotoPerfil = "http://localhost:3000/foto/" + usuarioPerfil.codUsuario;
-	    	$.ajax({
-	            url: urlFotoPerfil,
-	            type: 'PATCH',
-	            data: objPerfil
-	    	})
-	    	usuarioPerfil.foto = objPerfil.urlImagem;
-	    	sessionStorage.setItem("usuario", JSON.stringify(usuarioPerfil));	    	
+	        $.post(urlFotoPerfil, objPerfil);
+	    	// $.ajax({
+	     //        url: urlFotoPerfil,
+	     //        type: 'PATCH',
+	     //        data: objPerfil
+	    	// })	    	
 			setTimeout(  function(){alert('Foto de perfil alterada!'); location.reload();}  , 100);
 		}
 		reader.readAsDataURL(input.files[0]);    	    
