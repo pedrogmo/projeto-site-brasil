@@ -69,7 +69,7 @@ rota.get('/usuario', (requisicao, resposta) =>{
 execSQL('SELECT * FROM USUARIO', resposta);
 })
 
-rota.get('/usuario/:id?', (requisicao, resposta) => {
+rota.get('/usuario/:id', (requisicao, resposta) => {
 let filtro = '';
 if (requisicao.params.id)
 	filtro = ' WHERE CODUSUARIO =' + parseInt(requisicao.params.id);
@@ -84,38 +84,51 @@ const pontos = 0;
 const aniversario = requisicao.body.aniversario;
 const pais = requisicao.body.pais;
 const jaVotou = 0;
-const imagemPerfil = "./img/usuario.jpg";
-execSQL(`INSERT INTO USUARIO VALUES('${nome}', '${email}','${senha}', ${pontos}, '${aniversario}', '${pais}', ${jaVotou}, '${imagemPerfil}')`, resposta)
+const temFoto = 0;
+execSQL(`INSERT INTO USUARIO VALUES('${nome}', '${email}','${senha}', ${pontos}, '${aniversario}', '${pais}', ${jaVotou}, '${temFoto}')`, resposta)
 })
 
-rota.patch('/usuario/:id?/:p?', (requisicao, resposta) =>{	
+rota.patch('/usuario/:id/:p', (requisicao, resposta) =>{	
 	const id = parseInt(requisicao.params.id); 
 	const highscore = parseInt(requisicao.params.p);
 	execSQL(`UPDATE Usuario SET pontuacao = ${highscore} WHERE codUsuario=${id}`, resposta);
 })
 
-rota.delete('/usuario/:id?', (requisicao, resposta) =>{ 
+rota.delete('/usuario/:id', (requisicao, resposta) =>{ 
 	const codigo = parseInt(requisicao.params.id);
 	execSQL(`DELETE USUARIO WHERE codUsuario = ${codigo}`, resposta);
 })
 
-rota.patch('/eleitor/:id?', (requisicao, resposta) =>{	
+rota.patch('/eleitor/:id', (requisicao, resposta) =>{	
 	const id = parseInt(requisicao.params.id); 
 	execSQL(`UPDATE Usuario SET jaVotou = 1 WHERE codUsuario=${id}`, resposta);
 })
 
-rota.patch('/senha/:id?/:senha?', (requisicao, resposta) =>{	
+rota.patch('/senha/:id/:senha', (requisicao, resposta) =>{	
 	const id = parseInt(requisicao.params.id); 
 	const senha = requisicao.params.senha;
 	execSQL(`UPDATE Usuario SET senha = '${senha}' WHERE codUsuario=${id}`, resposta); 
 	// resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
 })
 
-rota.patch('/foto/:id?', (requisicao, resposta) =>{	
+rota.patch('/foto/:id', (requisicao, resposta) =>{	
 	const id = parseInt(requisicao.params.id); 
 	const foto = requisicao.body.urlImagem;
 	execSQL(`UPDATE Usuario SET foto = '${foto}' WHERE codUsuario=${id}`, resposta); 
 	// resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
+})
+
+rota.get('/foto/:id', (requisicao, resposta) =>{	
+	const id = parseInt(requisicao.params.id); 
+	const foto = requisicao.body.urlImagem;
+	execSQL(`UPDATE Usuario SET foto = '${foto}' WHERE codUsuario=${id}`, resposta); 
+	// resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
+})
+
+rota.post('/foto', (requisicao, resposta) =>{
+const foto = requisicao.urlImagem;
+const cod = requisicao.codUsuario;
+execSQL(`INSERT INTO FOTOUSUARIO VALUES(${cod}, '${foto}')`, resposta)
 })
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -143,7 +156,7 @@ execSQL('SELECT * FROM NOTICIA', resposta);
 })
 
 
-rota.get('/noticia/:id?', (requisicao, resposta) => {
+rota.get('/noticia/:id', (requisicao, resposta) => {
 let filtro = '';
 if (requisicao.params.id)
 	filtro = ' WHERE CODNOTICIA =' + parseInt(requisicao.params.id);
@@ -158,7 +171,7 @@ execSQL('SELECT * FROM PERGUNTA', resposta);
 })
 
 
-rota.get('/pergunta/:id?', (requisicao, resposta) => {
+rota.get('/pergunta/:id', (requisicao, resposta) => {
 let filtro = '';
 if (requisicao.params.id)
 	filtro = ' WHERE CODPERGUNTA =' + parseInt(requisicao.params.id);

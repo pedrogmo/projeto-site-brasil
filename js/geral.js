@@ -71,7 +71,7 @@ if (sessionStorage.getItem("logou") == "sim"){
 	document.getElementById("nomeUser").innerHTML = usuario.nomeUsuario;
 	document.getElementById("emailUser").innerHTML = usuario.email;
 	document.getElementById('highScore').innerHTML += usuario.pontuacao;
-	document.getElementById("imgUser").src = usuario.foto;
+	document.getElementById("imgUser").src = $.get("http://localhost:3000/foto/" + usuario.codUsuario);
 	/*$('#imgUser')
 		.attr('src', usuario.foto)		
 		.height('100%')

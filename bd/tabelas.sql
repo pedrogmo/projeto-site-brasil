@@ -51,8 +51,35 @@ create table Usuario
 	dataAniversario varchar(10) not null,
 	nacionalidade varchar(30) not null,
 	jaVotou bit not null,
-	foto varchar(max)
+	temFoto bit not null
 )
+
+create table FotoUsuario
+(
+	codigo int identity(1,1) primary key,
+	codUsuario int not null,
+	foto varchar(max)
+
+	constraint fkCodUsuario foreign key(codUsuario) references Usuario(codUsuario)
+)
+
+create trigger inseriuFoto_tg on FotoUsuario for insert
+as
+declare @codUsuario int
+select @codUsuario = codUsuario from Inserted
+update Usuario set temFoto = 1 where codUsuario = @codUsuario
+
+create trigger excluiuUsuario_tg on Usuario instead of delete
+as
+declare @codUsuario int
+select @codUsuario = codUsuario from Deleted
+
+alter table FotoUsuario
+nocheck constraint fkCodUsuario
+delete * from FotoUsuario where codUsuario = @codUsuario
+alter table FotoUsuario
+check constraint fkCodUsuario 
+delete * from Usuario where codUsuario = @codUsuario
 
 create table Pergunta
 (
