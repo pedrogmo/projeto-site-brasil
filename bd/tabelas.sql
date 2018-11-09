@@ -63,10 +63,14 @@ create table FotoUsuario
 	constraint fkCodUsuario foreign key(codUsuario) references Usuario(codUsuario)
 )
 
-create trigger inseriuFoto_tg on FotoUsuario for insert
+alter trigger inseriuFoto_tg on FotoUsuario instead of insert
 as
 declare @codUsuario int
+declare @urlFoto varchar(max)
 select @codUsuario = codUsuario from Inserted
+select @urlFoto = foto from Inserted
+delete from FotoUsuario where codUsuario = @codUsuario
+insert into FotoUsuario values(@codUsuario, @urlFoto)
 update Usuario set temFoto = 1 where codUsuario = @codUsuario
 
 create trigger excluiuUsuario_tg on Usuario instead of delete

@@ -113,14 +113,13 @@ rota.patch('/senha/:id/:senha', (requisicao, resposta) =>{
 
 rota.get('/fotoUsuario/:id', (requisicao, resposta) =>{	
 	const id = parseInt(requisicao.params.id); 
-	execSQL(`SELECT FOTO FROM FOTOUSUARIO WHERE CODUSUARIO = ${id}`, resposta); 
+	execSQL(`SELECT * FROM FOTOUSUARIO WHERE CODUSUARIO = ${id}`, resposta); 
 	// resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
 })
 
 rota.post('/fotoUsuario', (requisicao, resposta) =>{
 const foto = requisicao.body.urlImagem;
 const cod = parseInt(requisicao.body.codUsuario);
-console.log(cod);
 execSQL(`INSERT INTO FotoUsuario VALUES(${cod}, '${foto}')`, resposta)
 })
 

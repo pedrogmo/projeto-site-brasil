@@ -14,12 +14,24 @@ window.onload = function(){
 	document.getElementById("pontuacaoUsuario").value = usuarioPerfil.pontuacao;
 	document.getElementById("senhaUsuario").value = usuarioPerfil.senha;
 	var img;
-	if (usuarioPerfil.temFoto == 1)
+	if (usuarioPerfil.temFoto == 0)
 		img = "./img/usuario.jpg";
 	else
-		$.get("http://localhost:3000/fotoUsuario/" + usuario.codUsuario, function(dados){
-			img = dados[0];
-		});
+	{
+		var registroTabela;
+		var xmlFotoPerfil = new XMLHttpRequest();
+		xmlFotoPerfil.onreadystatechange=function(){
+  			if (this.readyState == 4 && this.status == 200)
+  			{
+  				registroTabela = JSON.parse(this.responseText);
+    			sessionStorage.setItem("fotoPerfil", registroTabela[0].foto);
+    		}
+    	}
+    	
+		xmlFotoPerfil.open("GET", "http://localhost:3000/fotoUsuario/" + usuario.codUsuario, true);
+		xmlFotoPerfil.send();
+		img = sessionStorage.getItem("fotoPerfil");
+	}
 	$('#user-photo')
 			.attr('src', img)
 			.height('100%')
@@ -61,10 +73,13 @@ document.getElementById("excluirConta").onclick = function(){
 	    excluirConta.send();
 	    sessionStorage.removeItem("usuario");
 	    sessionStorage.removeItem("logou");
-	    //var getContas = new XMLHttpRequest();
-	    localStorage.setItem("usuarioGeral", $.get("http://localhost:3000/usuario"));
-	    // getContas.open("GET", "http://localhost:3000/usuario", true);
-	    // getContas.send();
+	    var xmlNovosUsuarios;
+	    xmlNovosUsuarios.onreadystatechange=function(){
+  			if (this.readyState == 4 && this.status == 200)    
+    			localStorage.setItem("usuarioGeral", this.responseText);
+		}
+		xmlNovosUsuarios.open("GET", url, true);
+		xmlNovosUsuarios.send();
 	    alert('Sua conta foi excluída do Brasilee!');
 		setTimeout(  function(){location.href = "inicio.html";}  , 100);
 	}
@@ -92,6 +107,7 @@ function readURL(input)
 	        $.post("http://localhost:3000/fotoUsuario", objPerfil);
 	        usuarioPerfil.temFoto = 1;
 	        sessionStorage.setItem("usuario", JSON.stringify(usuarioPerfil));
+	        sessionStorage.setItem("fotoPerfil", objPerfil.urlImagem);
 			setTimeout(  function(){alert('Foto de perfil alterada!'); location.reload();}  , 100);
 		}
 		reader.readAsDataURL(input.files[0]);    	    
