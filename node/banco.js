@@ -85,7 +85,7 @@ const aniversario = requisicao.body.aniversario;
 const pais = requisicao.body.pais;
 const jaVotou = 0;
 const temFoto = 0;
-execSQL(`INSERT INTO USUARIO VALUES('${nome}', '${email}','${senha}', ${pontos}, '${aniversario}', '${pais}', ${jaVotou}, '${temFoto}')`, resposta)
+execSQL(`INSERT INTO USUARIO VALUES('${nome}', '${email}','${senha}', ${pontos}, '${aniversario}', '${pais}', ${jaVotou}, '${temFoto}', '')`, resposta)
 })
 
 rota.patch('/usuario/:id/:p', (requisicao, resposta) =>{	
@@ -111,18 +111,12 @@ rota.patch('/senha/:id/:senha', (requisicao, resposta) =>{
 	// resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
 })
 
-rota.get('/fotoUsuario/:id', (requisicao, resposta) =>{	
-	const id = parseInt(requisicao.params.id); 
-	execSQL(`SELECT * FROM FOTOUSUARIO WHERE CODUSUARIO = ${id}`, resposta); 
-	// resposta.end(resposta.json({ mensagem: 'Alterado!'})); 
+rota.patch('/foto', (requisicao, resposta) =>{	
+	const id = parseInt(requisicao.body.codUsuario); 
+	const foto = requisicao.body.urlImagem;
+	execSQL(`UPDATE Usuario SET foto = '${foto}' WHERE codUsuario=${id}`, resposta); 
+	execSQL(`UPDATE Usuario SET temFoto = 1 WHERE codUsuario=${id}`, resposta); 
 })
-
-rota.post('/fotoUsuario', (requisicao, resposta) =>{
-const foto = requisicao.body.urlImagem;
-const cod = parseInt(requisicao.body.codUsuario);
-execSQL(`INSERT INTO FotoUsuario VALUES(${cod}, '${foto}')`, resposta)
-})
-
 /////////////////////////////////////////////////////////////////////////////////
 // Estado
 

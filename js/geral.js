@@ -72,20 +72,7 @@ if (sessionStorage.getItem("logou") == "sim"){
 	document.getElementById("emailUser").innerHTML = usuario.email;
 	document.getElementById('highScore').innerHTML += usuario.pontuacao;
 	if (usuario.temFoto == 1)
-	{
-		var registroTabela;
-		var xmlFotoPerfil = new XMLHttpRequest();
-		xmlFotoPerfil.onreadystatechange=function(){
-  			if (this.readyState == 4 && this.status == 200)
-  			{
-  				registroTabela = JSON.parse(this.responseText);
-    			sessionStorage.setItem("fotoPerfil", registroTabela[0].foto);
-    		}
-    	}
-		xmlFotoPerfil.open("GET", "http://localhost:3000/fotoUsuario/" + usuario.codUsuario, true);
-		xmlFotoPerfil.send();
-		document.getElementById("imgUser").src = sessionStorage.getItem("fotoPerfil");
-	}
+		document.getElementById("imgUser").src = usuario.foto;
 } else logou = false;
 
 xmlhttp.onreadystatechange=function(){

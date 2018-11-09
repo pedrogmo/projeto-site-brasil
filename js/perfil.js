@@ -13,25 +13,7 @@ window.onload = function(){
 	document.getElementById("paisUsuario").value = usuarioPerfil.nacionalidade;
 	document.getElementById("pontuacaoUsuario").value = usuarioPerfil.pontuacao;
 	document.getElementById("senhaUsuario").value = usuarioPerfil.senha;
-	var img;
-	if (usuarioPerfil.temFoto == 0)
-		img = "./img/usuario.jpg";
-	else
-	{
-		var registroTabela;
-		var xmlFotoPerfil = new XMLHttpRequest();
-		xmlFotoPerfil.onreadystatechange=function(){
-  			if (this.readyState == 4 && this.status == 200)
-  			{
-  				registroTabela = JSON.parse(this.responseText);
-    			sessionStorage.setItem("fotoPerfil", registroTabela[0].foto);
-    		}
-    	}
-    	
-		xmlFotoPerfil.open("GET", "http://localhost:3000/fotoUsuario/" + usuario.codUsuario, true);
-		xmlFotoPerfil.send();
-		img = sessionStorage.getItem("fotoPerfil");
-	}
+	var img = usuarioPerfil.temFoto==1?usuarioPerfil.foto:"./img/usuario.jpg";
 	$('#user-photo')
 			.attr('src', img)
 			.height('100%')
@@ -104,10 +86,14 @@ function readURL(input)
 	    	var objPerfil = new Object();
 	        objPerfil.urlImagem = $('#user-photo').attr('src');
 	        objPerfil.codUsuario = usuarioPerfil.codUsuario;
-	        $.post("http://localhost:3000/fotoUsuario", objPerfil);
-	        usuarioPerfil.temFoto = 1;
-	        sessionStorage.setItem("usuario", JSON.stringify(usuarioPerfil));
-	        sessionStorage.setItem("fotoPerfil", objPerfil.urlImagem);
+	        $.ajax({
+	            url: "http://localhost:3000/foto",
+	            type: 'PATCH',
+	            data: objPerfil
+	    	})
+	    	usuarioPerfil.foto = objPerfil.urlImagem;
+	    	usuarioPerfil.temFoto = 1;
+	    	sessionStorage.setItem("usuario", JSON.stringify(usuarioPerfil));
 			setTimeout(  function(){alert('Foto de perfil alterada!'); location.reload();}  , 100);
 		}
 		reader.readAsDataURL(input.files[0]);    	    
