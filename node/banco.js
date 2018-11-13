@@ -177,3 +177,10 @@ execSQL('SELECT * FROM CURIOSIDADE', resposta);
 rota.get('/governante', (requisicao, resposta) =>{
 execSQL('SELECT * FROM GOVERNANTE', resposta);
 })
+
+/////////////////////////////////////////////////////////////////////////////////
+// EraHistorica
+
+rota.get('/historia', (requisicao, resposta) =>{
+execSQL('SELECT * FROM ERAHISTORICA', resposta);
+})
