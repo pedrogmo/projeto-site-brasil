@@ -12,6 +12,13 @@ xmlGovernantes.send();
 window.onload = function(){
 	arrGovernantes = JSON.parse(localStorage.getItem("vetGovernantes"));
 	var tabela = document.getElementById("tabelaGov");
+	tabela.innerHTML +=`<tr class="cabecalho-tabela">
+		<td class = "cabecalho">Nome</td>
+		<td class = "cabecalho">Número</td>
+		<td class = "cabecalho">Foto</td>
+		<td class = "cabecalho">Tempo de mandato</td>
+		<td class = "cabecalho">Partido</td>
+	</tr>`;
 	for(var i=0; i<arrGovernantes.length; i++)
 	{
 		var indice = i+1;
