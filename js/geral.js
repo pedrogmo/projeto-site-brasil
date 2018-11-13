@@ -1,4 +1,15 @@
-﻿//Desabilita mudança de zoom da página:
+﻿var xmlhttp = new XMLHttpRequest();
+var url = "http://localhost:3000/usuario";
+var arr;
+xmlhttp.onreadystatechange=function(){
+  if (this.readyState == 4 && this.status == 200)    
+    localStorage.setItem("usuarioGeral", this.responseText);
+}
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+arr = JSON.parse(localStorage.getItem("usuarioGeral"));
+
+//Desabilita mudança de zoom da página:
 
 $(window).on('scroll', function(){
 	if($(window).scrollTop()){
@@ -10,6 +21,19 @@ $(window).on('scroll', function(){
 		mostrarMenu = true;
 	}
 });
+
+$(document).keydown(function(event) {
+if (event.ctrlKey==true && (event.which == '61' || event.which == '107' || event.which == '173' || event.which == '109'  || event.which == '187'  || event.which == '189'  ) ) {
+        event.preventDefault();
+     }
+});
+
+$(window).bind('mousewheel DOMMouseScroll', function (event) {
+       if (event.ctrlKey == true) {
+       event.preventDefault();
+       }
+});
+
 
 var mostrarMenu = true;
 document.getElementById("menu-icon").onclick = function(){
@@ -29,17 +53,7 @@ document.getElementById("menu-icon").onclick = function(){
 	}
 }
 
-$(document).keydown(function(event) {
-if (event.ctrlKey==true && (event.which == '61' || event.which == '107' || event.which == '173' || event.which == '109'  || event.which == '187'  || event.which == '189'  ) ) {
-        event.preventDefault();
-     }
-});
 
-$(window).bind('mousewheel DOMMouseScroll', function (event) {
-       if (event.ctrlKey == true) {
-       event.preventDefault();
-       }
-});
 
 //Ir para topo da página no clique do logo:
 
@@ -53,19 +67,20 @@ var modal = document.getElementById('simpleModal');
 var modalBtn  = document.getElementById('btnLogin');
 var closeBtn = document.getElementsByClassName('closeBtn')[0];
 var sideBar = document.getElementById('login');
-var logou;
-var usuario;
-var arr;
-var xmlhttp = new XMLHttpRequest();
-var url = "http://localhost:3000/usuario";
-var exibirSenha = true;
 var fundoSB = document.getElementById("fundoSideBar");
 var modalAlert = document.getElementById("modalAlert");
 
 //Banco de dados e usuário
 
+var logou;
+var usuario;
 if (sessionStorage.getItem("logou") == "sim"){
 	logou = true;
+	carregaDados();
+} else logou = false;
+
+function carregaDados()
+{
 	usuario = JSON.parse(sessionStorage.getItem("usuario"));
 	document.getElementById("btnLogin").innerHTML = "CONTA";
 	document.getElementById("nomeUser").innerHTML = usuario.nomeUsuario;
@@ -73,16 +88,7 @@ if (sessionStorage.getItem("logou") == "sim"){
 	document.getElementById('highScore').innerHTML += usuario.pontuacao;
 	if (usuario.temFoto == 1)
 		document.getElementById("imgUser").src = usuario.foto;
-} else logou = false;
-
-xmlhttp.onreadystatechange=function(){
-  if (this.readyState == 4 && this.status == 200)    
-    localStorage.setItem("usuarioGeral", this.responseText);
 }
-
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
-arr = JSON.parse(localStorage.getItem("usuarioGeral"));
 
 //Modal de login:
 
@@ -122,6 +128,7 @@ document.getElementById('fechaModal').onclick = function(){
  	 modal.style.display = 'none';
 }
 
+var exibirSenha = true;
 document.getElementById("btnExibirSenha").onclick = function(){
 	exibirSenha	= !exibirSenha;
 	if (exibirSenha)
