@@ -37,36 +37,36 @@ section#principal .governantes td img:hover{
 	filter     : brightness(75%);    
 }
 
-section#principal .governantes tr.imperio
+section#principal .governantes tr.his_3
 {
 	background: #fed330;
 }
 
-section#principal .governantes tr.r_velha
+section#principal .governantes tr.his_4
 {
 	background: #45aaf2;
 	color: #fff;
 }
 
-section#principal .governantes tr.era_vargas
+section#principal .governantes tr.his_5
 {
 	background: #fd9644;
 	color: #fff;
 }
 
-section#principal .governantes tr.r_popul
+section#principal .governantes tr.his_6
 {
 	background: #20bf6b;
 	color: #fff;
 }
 
-section#principal .governantes tr.r_militar
+section#principal .governantes tr.his_7
 {
 	background: #e74c3c;
 	color: #fff;
 }
 
-section#principal .governantes tr.r_nova
+section#principal .governantes tr.his_8
 {
 	background: #d1d8e0;
 }

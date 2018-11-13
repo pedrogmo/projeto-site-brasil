@@ -11,8 +11,21 @@ xmlGovernantes.send();
 
 window.onload = function(){
 	arrGovernantes = JSON.parse(localStorage.getItem("vetGovernantes"));
+	var tabela = document.getElementById("tabelaGov");
 	for(var i=0; i<arrGovernantes.length; i++)
-	{		
+	{
+		var indice = i+1;
+		var classe = "his_" + arrGovernantes[i].codEra;
+		var colunasTabela = 
+		`<tr class = ${classe}>
+		<td id = "nome${indice}"></td>
+		<td id = "numero${indice}"></td>
+		<td><img id = "foto${indice}" class = "govern" onclick = "clicouGovern(${indice});"></td>
+		<td id = "mandato${indice}"></td>
+		<td id = "partido${indice}"></td>
+		</tr>`;
+		tabela.innerHTML += colunasTabela;
+
 		var nome = "nome" + (i+1);
 		var numero = "numero" + (i+1);
 		var foto = "foto" + (i+1);
