@@ -89,6 +89,7 @@ function clicouGovern(govern){
 		case 37: url = "https://pt.wikipedia.org/wiki/Luiz_In%C3%A1cio_Lula_da_Silva"; break;
 		case 38: url = "https://pt.wikipedia.org/wiki/Dilma_Rousseff"; break;
 		case 39: url = "https://pt.wikipedia.org/wiki/Michel_Temer"; break;
+		case 40: url = "https://pt.wikipedia.org/wiki/Jair_Bolsonaro"; break;
 	}
 	window.location.href = url;
 }

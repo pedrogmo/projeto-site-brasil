@@ -20,22 +20,7 @@ xmlCandOrd.send();
 
 window.onload = function(){
 	candidatos = JSON.parse(localStorage.getItem("candidatos"));
-	candOrd = JSON.parse(localStorage.getItem("candOrd"));
-	if (sessionStorage.getItem("logou") != "sim")
-	{
-		$('button.btnVotar').prop('disabled', true);
-		$('button.btnVotar').css('filter', 'brightness(60%)');
-		setTimeout(  function(){alert('Logue no site para votar!');}  , 100);
-	}
-	else
-	{
-		eleitor = JSON.parse(sessionStorage.getItem("usuario"));
-		if (usuario.jaVotou == 1)
-		{
-			$('button.btnVotar').prop('disabled', true);
-			$('button.btnVotar').css('filter', 'brightness(60%)');
-		}
-	}
+	candOrd = JSON.parse(localStorage.getItem("candOrd"));	
 	var votosTotais = 0;
 	for(var i = 0; i < candidatos.length; i++)
 	{
@@ -72,6 +57,21 @@ window.onload = function(){
 			porcentagemVotos = porcentagemVotos.toFixed(2);			
 			document.getElementById(votos).innerHTML = porcentagemVotos + '%';
 			document.getElementById(barra).style.width = porcentagemVotos + '%';
+		}
+	}
+	if (sessionStorage.getItem("logou") != "sim")
+	{
+		$('button.btnVotar').prop('disabled', true);
+		$('button.btnVotar').css('filter', 'brightness(60%)');
+		setTimeout(  function(){alert('Logue no site para votar!');}  , 100);
+	}
+	else
+	{
+		eleitor = JSON.parse(sessionStorage.getItem("usuario"));
+		if (usuario.jaVotou == 1)
+		{
+			$('button.btnVotar').prop('disabled', true);
+			$('button.btnVotar').css('filter', 'brightness(60%)');
 		}
 	}
 }
