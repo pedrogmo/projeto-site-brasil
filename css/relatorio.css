@@ -1,0 +1,31 @@
+table{
+	border: 1px solid lightgray;
+	border-collapse: collapse;
+}
+
+#cabecalho{
+	font-size: 14pt;
+	padding: 5px;
+	background: #1db954;
+	color: #fff;
+	border: 1px solid #009c3b;
+	text-align: center;
+}
+
+section#principal{
+	overflow: hidden;
+}
+
+table td{
+	border: 1px solid lightgray;
+	padding: 10px;
+}
+
+td#codigo{
+	text-align: center;
+}
+
+tr.linhasPares
+{
+	background: whitesmoke;
+}

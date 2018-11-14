@@ -21,49 +21,80 @@ window.onload = function(){
 	vetEras = JSON.parse(localStorage.getItem("erasHistoricas"));
 	vetNoticias = JSON.parse(localStorage.getItem("noticias"));
 	var tabelaEras = document.getElementById("eras");
-	tabelaEras.innerHTML += `<tr><th>Eras Históricas</th></tr>
-	<tr>
-	<td>Código</td>
-	<td>Nome</td>
-	<td>Início</td>
-	<td>Fim</td>
-	<td>Descrição</td>
-	<td>UrlImagem</td>
+	tabelaEras.innerHTML += `
+	<td id="cabecalho">Código</td>
+	<td id="cabecalho">Nome</td>
+	<td id="cabecalho">Início</td>
+	<td id="cabecalho">Fim</td>
+	<td id="cabecalho">Descrição</td>
+	<td id="cabecalho">UrlImagem</td>
 	</tr>`;
 	var tabelaNoticias = document.getElementById("noticias");
-	tabelaNoticias.innerHTML += `<tr><th>Notícias</th></tr>
-	<tr>
-	<td>Código</td>
-	<td>Tema</td>
-	<td>Título</td>
-	<td>SubTítulo</td>
-	<td>UrlImagem</td>
-	<td>Link</td>
-	<td>SiteFonte</td>
-	<td>DataPublicação</td>
+	tabelaNoticias.innerHTML += `
+	<td id="cabecalho">Cód.</td>
+	<td id="cabecalho">Tema</td>
+	<td id="cabecalho">Título</td>
+	<td id="cabecalho">Sub<br>Título</td>
+	<td id="cabecalho">Url<br>Img.</td>
+	<td id="cabecalho" class="link">Link</td>
+	<td id="cabecalho">Fonte</td>
+	<td id="cabecalho">Data</td>
 	</tr>`;	
 	for(var i=0; i<vetEras.length; i++){
-		var colunas = `<tr>
-		<td>${vetEras[i].codEra}</td>
-		<td>${vetEras[i].nome}</td>
-		<td>${vetEras[i].inicio}</td>
-		<td>${vetEras[i].fim}</td>
-		<td>${vetEras[i].descricao}</td>
-		<td>${vetEras[i].urlImagem}</td>
-		</tr>`;
-		tabelaEras.innerHTML += colunas;
+		if(i % 2 == 0)
+		{
+			var colunas = `<tr class="linhasPares">
+			<td id="codigo">${vetEras[i].codEra}</td>
+			<td>${vetEras[i].nome}</td>
+			<td>${vetEras[i].inicio}</td>
+			<td>${vetEras[i].fim}</td>
+			<td>${vetEras[i].descricao}</td>
+			<td>${vetEras[i].urlImagem}</td>
+			</tr>`;
+			tabelaEras.innerHTML += colunas;
+		}
+		else
+		{
+			var colunas = `<tr>
+			<td id="codigo">${vetEras[i].codEra}</td>
+			<td>${vetEras[i].nome}</td>
+			<td>${vetEras[i].inicio}</td>
+			<td>${vetEras[i].fim}</td>
+			<td>${vetEras[i].descricao}</td>
+			<td>${vetEras[i].urlImagem}</td>
+			</tr>`;
+			tabelaEras.innerHTML += colunas;
+		}
+		
 	}
 	for(var i=0; i<vetNoticias.length; i++){
-		var colunas = `<tr>
-		<td>${vetNoticias[i].codNoticia}</td>
-		<td>${vetNoticias[i].tema}</td>
-		<td>${vetNoticias[i].titulo}</td>
-		<td>${vetNoticias[i].subtitulo}</td>
-		<td>${vetNoticias[i].urlImagem}</td>
-		<td>${vetNoticias[i].link}</td>
-		<td>${vetNoticias[i].siteFonte}</td>
-		<td>${vetNoticias[i].dataPublicacao}</td>
-		</tr>`;
-		tabelaNoticias.innerHTML += colunas;
+		if(i % 2 == 0)
+		{
+			var colunas = `<tr class="linhasPares">
+			<td id="codigo">${vetNoticias[i].codNoticia}</td>
+			<td>${vetNoticias[i].tema}</td>
+			<td>${vetNoticias[i].titulo}</td>
+			<td>${vetNoticias[i].subtitulo}</td>
+			<td>${vetNoticias[i].urlImagem}</td>
+			<td>${vetNoticias[i].link}</td>
+			<td>${vetNoticias[i].siteFonte}</td>
+			<td>${vetNoticias[i].dataPublicacao}</td>
+			</tr>`;
+			tabelaNoticias.innerHTML += colunas;
+		}
+		else
+		{
+			var colunas = `<tr>
+			<td id="codigo">${vetNoticias[i].codNoticia}</td>
+			<td>${vetNoticias[i].tema}</td>
+			<td>${vetNoticias[i].titulo}</td>
+			<td>${vetNoticias[i].subtitulo}</td>
+			<td>${vetNoticias[i].urlImagem}</td>
+			<td>${vetNoticias[i].link}</td>
+			<td>${vetNoticias[i].siteFonte}</td>
+			<td>${vetNoticias[i].dataPublicacao}</td>
+			</tr>`;
+			tabelaNoticias.innerHTML += colunas;
+		}
 	}
 }
