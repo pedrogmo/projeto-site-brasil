@@ -142,7 +142,7 @@ insert into Governante values(12, '10 (República)',  'Delfim Moreira', '1918', '
 insert into Governante values(13, '11 (República)',  'Epitácio Pessoa', '1919', '1922', 'PRM', '.\img\presidentes\11.jpg', 4)
 insert into Governante values(14, '12 (República)',  'Artur Bernardes', '1922', '1926', 'PRM', '.\img\presidentes\12.jpg', 4)
 insert into Governante values(15, '13 (República)',  'Washington Luís', '1926', '1930', 'PRP', '.\img\presidentes\13.jpg', 4)
-insert into Governante values(16, '14 (República)',  'Getúlio Vargas', '1930', '1945', 'AL', '.\img\presidentes\14.jpg', 3)
+insert into Governante values(16, '14 (República)',  'Getúlio Vargas', '1930', '1945', 'AL', '.\img\presidentes\14.jpg', 5)
 insert into Governante values(17, '15 (República)',  'José Linhares', '1945', '1946', 'Nenhum (Civil)', '.\img\presidentes\15.jpg', 6)
 insert into Governante values(18, '16 (República)',  'Eurico Gaspar Dutra', '1946', '1951', 'PSD', '.\img\presidentes\16.jpg', 6)
 insert into Governante values(19, '17 (República)',  'Getúlio Vargas', '1951', '1954', 'PTB', '.\img\presidentes\17.jpg', 6)
